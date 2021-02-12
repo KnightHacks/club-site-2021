@@ -4,6 +4,7 @@ import Newsletter from "../components/newsletter.js";
 import Navbar from "../components/navbar.js";
 import Calendar from "../components/calendar.js";
 import "./index.css";
+import "fontsource-roboto";
 
 const logoHeight = 100;
 const logoWidth = 200;
