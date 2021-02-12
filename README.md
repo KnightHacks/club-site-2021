@@ -4,36 +4,30 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby minimal starter
+  Knight Hacks Club Site 2021
 </h1>
 
 ## 🚀 Quick start
 
-1.  **Create a Gatsby site.**
-
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+1.  **Navigate into your new site’s directory and start it up.**
 
     ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
-
-2.  **Start developing.**
-
-    Navigate into your new site’s directory and start it up.
-
-    ```shell
-    cd my-gatsby-site/
+    cd club-site-2021/
     npm run develop
     ```
+    or
+    ```shell
+    cd club-site-2021/
+    gatsby develop
+    ```
 
-3.  **Open the code and start customizing!**
+2.  **Open the code and start customizing!**
 
     Your site is now running at http://localhost:8000!
 
     Edit `src/pages/index.js` to see your site update in real-time!
 
-4.  **Learn more**
+3.  **Learn more**
 
     - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
 
