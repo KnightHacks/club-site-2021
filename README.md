@@ -15,7 +15,9 @@
     cd club-site-2021/
     npm run develop
     ```
+
     or
+
     ```shell
     cd club-site-2021/
     gatsby develop

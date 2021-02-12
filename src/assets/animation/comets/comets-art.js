@@ -1,40 +1,35 @@
 let canvas = document.querySelector("canvas");
-let ctx = canvas.getContext('2d');
+let ctx = canvas.getContext("2d");
 
 const fps = 30;
-const frameRate = 1000/fps;
+const frameRate = 1000 / fps;
 let past = Date.now();
 let elapsed = 0;
 
-const ALPHA_RATE = .008;
+const ALPHA_RATE = 0.008;
 let stars = [];
 let comets = [];
 
-class Color
-{
+class Color {
   r;
   g;
   b;
 
-  constructor(r, g, b)
-  {
+  constructor(r, g, b) {
     this.r = r;
     this.g = g;
     this.b = b;
   }
 
-  add(color)
-  {
-    return new Color(this.r+color.r, this.g+color.g, this.b+color.b);
+  add(color) {
+    return new Color(this.r + color.r, this.g + color.g, this.b + color.b);
   }
 
-  subtract(color)
-  {
-    return new Color(this.r-color.r, this.g-color.g, this.b-color.b);
+  subtract(color) {
+    return new Color(this.r - color.r, this.g - color.g, this.b - color.b);
   }
 
-  scalarMult(x)
-  {
+  scalarMult(x) {
     let r = Math.floor(this.r * x);
     let g = Math.floor(this.g * x);
     let b = Math.floor(this.b * x);
@@ -42,8 +37,7 @@ class Color
     return new Color(r, g, b);
   }
 
-  static lerpColor(color1, color2, lerp)
-  {
+  static lerpColor(color1, color2, lerp) {
     let colorDiff = color2.subtract(color1);
     colorDiff = colorDiff.scalarMult(lerp);
 
@@ -76,105 +70,87 @@ colorPalette.push(PURPLE);
 //colorPalette.add(PURPLEGRAY);
 //colorPalette.add(CHARCOAL);
 
-function resizeCanvas()
-{
+function resizeCanvas() {
   canvas.width = canvas.parentElement.clientWidth;
   canvas.height = canvas.parentElement.clientHeight;
 }
 
 // Call update function at constant frame rate
-function setFrameRate()
-{
+function setFrameRate() {
   // Game loop
   requestAnimationFrame(setFrameRate);
 
   elapsed = Date.now() - past;
 
-  if(elapsed >= frameRate){
-    past = Date.now() - (elapsed%(1000/fps));
+  if (elapsed >= frameRate) {
+    past = Date.now() - (elapsed % (1000 / fps));
 
-    if(typeof update === "function")
-      update();
+    if (typeof update === "function") update();
   }
 }
 
-function setup()
-{
+function setup() {
   setFrameRate();
   resizeCanvas();
 }
 
-function update()
-{
-  ctx.clearRect(0,0,canvas.width,canvas.height);
+function update() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   let randNum = Math.random();
 
   // Creates star based on probability
-  if(randNum > .93)
-    stars.push(new Star);
+  if (randNum > 0.93) stars.push(new Star());
 
   // Creates comet based on probability
-  if(randNum > .95)
-    comets.push(new Comet);
+  if (randNum > 0.95) comets.push(new Comet());
 
   drawElements(stars);
   drawElements(comets);
 }
 
-function drawElements(arr)
-{
+function drawElements(arr) {
   // Goes through elements backwards to remove
   // any artifacting when removing elements from
   // the element array
-  for (let i = arr.length-1; i >= 0; i--)
-  {
+  for (let i = arr.length - 1; i >= 0; i--) {
     arr[i].update();
 
-    if(!arr[i].alive)
-      arr.splice(i, 1);
+    if (!arr[i].alive) arr.splice(i, 1);
   }
 }
 
-function sigmoid(x)
-{
-  return 1/(1 + Math.exp(-10 * (x - 0.2)));
+function sigmoid(x) {
+  return 1 / (1 + Math.exp(-10 * (x - 0.2)));
 }
 
-class PVector
-{
+class PVector {
   x;
   y;
 
-  constructor(x, y)
-  {
+  constructor(x, y) {
     this.x = x;
     this.y = y;
   }
 
-  add(pos)
-  {
+  add(pos) {
     return new PVector(this.x + pos.x, this.y + pos.y);
   }
 
-  subtract(pos)
-  {
+  subtract(pos) {
     return new PVector(this.x - pos.x, this.y - pos.y);
   }
 
-  mult(x)
-  {
+  mult(x) {
     return new PVector(this.x * x, this.y * x);
   }
 
-  clone()
-  {
+  clone() {
     return new PVector(this.x, this.y);
   }
 }
 
-class Comet
-{
+class Comet {
   position;
   velocity;
   maxRadius = 10;
@@ -182,64 +158,59 @@ class Comet
   alive = true;
   trail = [];
 
-  constructor()
-  {
+  constructor() {
     let x, y, xVel, yVel;
 
-    if(Math.random() > 0.5)
-    {
-      x = Math.random()*canvas.width;
+    if (Math.random() > 0.5) {
+      x = Math.random() * canvas.width;
       y = -this.maxRadius;
-    }
-    else
-    {
+    } else {
       x = canvas.width + this.maxRadius;
-      y = Math.random()*canvas.height;
+      y = Math.random() * canvas.height;
     }
 
-    xVel = -(Math.random()*1 + 3);
-    yVel = Math.random()*1 + 3;
+    xVel = -(Math.random() * 1 + 3);
+    yVel = Math.random() * 1 + 3;
 
     this.position = new PVector(x, y);
     this.velocity = new PVector(xVel, yVel);
   }
 
-  checkAlive()
-  {
-    if(this.trail[this.trail.length-1].x < 0 || this.trail[this.trail.length-1].y > canvas.height)
+  checkAlive() {
+    if (
+      this.trail[this.trail.length - 1].x < 0 ||
+      this.trail[this.trail.length - 1].y > canvas.height
+    )
       this.alive = false;
   }
 
-  draw()
-  {
+  draw() {
     ctx.beginPath();
-    ctx.arc(this.position.x, this.position.y, this.maxRadius, 0, 2*Math.PI);
+    ctx.arc(this.position.x, this.position.y, this.maxRadius, 0, 2 * Math.PI);
     ctx.fillStyle = `rgb(${PALEYELLOW.r}, ${PALEYELLOW.g}, ${PALEYELLOW.b})`;
     ctx.fill();
     ctx.closePath();
 
     for (let i = 0; i < this.trail.length; i++) {
-      let ratio = i/(this.trail.length-1);
+      let ratio = i / (this.trail.length - 1);
       let color = Color.lerpColor(PALEYELLOW, PINKRED, sigmoid(ratio));
-      let radius = (1-ratio)*this.maxRadius;
+      let radius = (1 - ratio) * this.maxRadius;
 
       ctx.beginPath();
-      ctx.arc(this.trail[i].x, this.trail[i].y, radius, 0, 2*Math.PI);
+      ctx.arc(this.trail[i].x, this.trail[i].y, radius, 0, 2 * Math.PI);
       ctx.fillStyle = `rgb(${color.r}, ${color.g}, ${color.b})`;
-      ctx.globalAlpha = .6*(1-ratio)
+      ctx.globalAlpha = 0.6 * (1 - ratio);
       ctx.fill();
       ctx.globalAlpha = 1;
       ctx.closePath();
     }
   }
 
-  update()
-  {
+  update() {
     this.draw();
 
     this.trail.unshift(this.position);
-    if(this.trail.length > this.length)
-      this.trail.pop();
+    if (this.trail.length > this.length) this.trail.pop();
 
     this.position = this.position.add(this.velocity);
 
@@ -247,8 +218,7 @@ class Comet
   }
 }
 
-class Star
-{
+class Star {
   position;
   color;
   alpha = -1;
@@ -256,47 +226,42 @@ class Star
   maxRadius = 30;
   alive = true;
 
-  constructor()
-  {
-    this.radius = Math.random()*this.maxRadius + 10;
-    let x = Math.random()*canvas.width;
-    let y = Math.random()*canvas.height;
+  constructor() {
+    this.radius = Math.random() * this.maxRadius + 10;
+    let x = Math.random() * canvas.width;
+    let y = Math.random() * canvas.height;
     this.position = new PVector(x, y);
 
-    let index = Math.floor(Math.random()*colorPalette.length);
+    let index = Math.floor(Math.random() * colorPalette.length);
     this.color = colorPalette[index];
   }
 
-  draw()
-  {
-      let angle = 2.0 * Math.PI / 4.0;
-      let halfAngle = angle/2.0;
-      ctx.beginPath();
-      ctx.moveTo(this.position.x + this.radius/2, this.position.y);
-      for (let a = 0; a < 2*Math.PI; a += angle) {
-          let sx = this.position.x + Math.cos(a) * this.radius * 0.5;
-          let sy = this.position.y + Math.sin(a) * this.radius * 0.5;
-          ctx.lineTo(sx, sy);
-          sx = this.position.x + Math.cos(a + halfAngle) * this.radius * 0.2;
-          sy = this.position.y + Math.sin(a + halfAngle) * this.radius * 0.2;
-          ctx.lineTo(sx, sy);
-      }
-      ctx.closePath();
+  draw() {
+    let angle = (2.0 * Math.PI) / 4.0;
+    let halfAngle = angle / 2.0;
+    ctx.beginPath();
+    ctx.moveTo(this.position.x + this.radius / 2, this.position.y);
+    for (let a = 0; a < 2 * Math.PI; a += angle) {
+      let sx = this.position.x + Math.cos(a) * this.radius * 0.5;
+      let sy = this.position.y + Math.sin(a) * this.radius * 0.5;
+      ctx.lineTo(sx, sy);
+      sx = this.position.x + Math.cos(a + halfAngle) * this.radius * 0.2;
+      sy = this.position.y + Math.sin(a + halfAngle) * this.radius * 0.2;
+      ctx.lineTo(sx, sy);
+    }
+    ctx.closePath();
 
-      ctx.fillStyle = `rgb(${this.color.r}, ${this.color.g}, ${this.color.b}`;
-      ctx.globalAlpha = -Math.abs(this.alpha)+1;
-      ctx.fill();
-      ctx.globalAlpha = 1;
+    ctx.fillStyle = `rgb(${this.color.r}, ${this.color.g}, ${this.color.b}`;
+    ctx.globalAlpha = -Math.abs(this.alpha) + 1;
+    ctx.fill();
+    ctx.globalAlpha = 1;
   }
 
-  update()
-  {
+  update() {
     this.draw();
 
-    if(this.alpha+ALPHA_RATE > 1)
-      this.alive = false;
-    else
-      this.alpha += ALPHA_RATE;
+    if (this.alpha + ALPHA_RATE > 1) this.alive = false;
+    else this.alpha += ALPHA_RATE;
   }
 }
 
