@@ -1,7 +1,6 @@
 import * as React from "react"
 import KnightHacksLogo from "../assets/logos/knightHacksLogoGold.svg"
 import Newsletter from "../components/newsletter.js"
-import NavBar from "../components/navbar.js"
 import Navbar from "../components/navbar.js"
 import Calendar from "../components/calendar.js"
 import "./index.css"
