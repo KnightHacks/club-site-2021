@@ -13,7 +13,7 @@ const IndexPage = () => {
   return (
     <div className="LandingPage">
       <title>Home Page</title>
-      <div class="KnightHacksLogo">
+      <div className="KnightHacksLogo">
         <img
           src={KnightHacksLogo}
           className="KHLogo"
