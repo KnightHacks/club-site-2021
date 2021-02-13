@@ -24,9 +24,11 @@ const Newsletter = () => {
         body: JSON.stringify({ EMAIL: email }),
         redirect: "follow",
       };
-      fetch(endpoint, requestOptions).then((res) => {
-        window.open(res.url);
-      });
+      fetch(endpoint, requestOptions)
+        .then((res) => {
+          window.open(res.url);
+        })
+        .catch((err) => console.log(err));
       setValid(true);
       setEmail("");
     } else {
