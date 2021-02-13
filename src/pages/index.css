@@ -1,3 +1,7 @@
+* {
+  background-color: #051169;
+  font-family: "Avenir Next Regular", sans-serif;
+}
 .LandingPage {
   font-family: "-apple-system, Roboto, sans-serif, serif";
   background-color: #051169;
@@ -5,4 +9,18 @@
 .KnightHacksLogo {
   text-align: center;
   vertical-align: baseline;
+}
+
+@font-face {
+  font-family: "Avenir Next Regular";
+  src: local("AvenirNext-Regular"),
+    url("../fonts/avenirnext-regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Avenir Next Ultra Light";
+  src: local("AvenirNext-UltraLight"),
+    url("../fonts/avenirnext-ultralight.ttf") format("truetype");
+  font-weight: normal;
 }
