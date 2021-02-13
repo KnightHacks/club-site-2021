@@ -1,16 +1,10 @@
 import * as React from "react";
 import "./newsletter.css";
-// styles
-const pageStyles = {
-  color: "#000000",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-  padding: 50,
-};
+import { TextField, Button } from '@material-ui/core';
 
-// markup
 const Newsletter = () => {
   return (
-    <main style={pageStyles}>
+    <div className="Newsletter">
       <div className="Email-Signup">
         <h1 className="email-signup-page__content__header">
           Sign up for our newsletter!
@@ -24,24 +18,28 @@ const Newsletter = () => {
           target="_blank"
           noValidate
         >
-          <input
+          <TextField
             type="email"
             name="EMAIL"
             className="email-signup-page__email"
             id="mce-EMAIL"
-            placeholder="Email"
+            placeholder="Email *"
             required
-          ></input>
-          <button
+            InputProps={{
+              style: {color: "#eee", width: "25vw"}
+            }}
+          />
+          <Button
             mat-raised-button
-            color="primary"
+            variant="contained"
+            color="secondary"
             className="email-signup-page__content__form__submit"
           >
             Subscribe
-          </button>
+          </Button>
         </form>
       </div>
-    </main>
+    </div>
   );
 };
 
