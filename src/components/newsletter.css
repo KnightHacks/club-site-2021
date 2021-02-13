@@ -1,16 +1,19 @@
 .Newsletter {
-    display: flex;
-    justify-content: flex-start;
-    padding: 5rem;
+  display: flex;
+  justify-content: flex-start;
+  padding: 5rem;
 }
 
 .Email-Signup {
-    text-align: center;
-    color: white;
-    margin-top: 10px;
+  text-align: center;
+  color: white;
+  margin-top: 10px;
 }
 
 .Email-Field {
-    color: white;
+  color: white;
 }
 
+.Email-Submit {
+    margin-top: 10px;
+}
