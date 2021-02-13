@@ -22,8 +22,13 @@ const Newsletter = () => {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ EMAIL: email }),
+        redirect: "follow",
       };
-      fetch(endpoint, requestOptions);
+      fetch(endpoint, requestOptions).then((res) => {
+        window.open(res.url);
+      });
+      setValid(true);
+      setEmail("");
     } else {
       setValid(false);
     }
@@ -49,19 +54,15 @@ const Newsletter = () => {
             placeholder="Email *"
             required
             InputProps={{
-              style: { color: "#eee", width: "25vw" },
+              style: { color: "white", width: "25vw" },
             }}
             onChange={(e) => setEmail(e.target.value)}
             error={!valid}
+            value={email}
           />
           {valid ? null : <p className="Email-Error">Invalid Email!</p>}
           <div className="Email-Submit">
-            <Button
-              mat-raised-button
-              variant="contained"
-              color="secondary"
-              type="submit"
-            >
+            <Button variant="contained" color="secondary" type="submit">
               Subscribe
             </Button>
           </div>
