@@ -4,6 +4,10 @@
   padding: 5rem;
 }
 
+.form {
+  display: flex;
+  flex-direction: column;
+}
 .Email-Signup {
   text-align: center;
   color: white;
@@ -15,5 +19,9 @@
 }
 
 .Email-Submit {
-    margin-top: 10px;
+  margin-top: 10px;
+}
+
+.Email-Error {
+  color: red;
 }

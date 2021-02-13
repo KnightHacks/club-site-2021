@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import "./newsletter.css";
 import { TextField, Button } from "@material-ui/core";
 
@@ -9,6 +9,26 @@ const endpoint =
     : "https://getform.io/f/ae1214c2-1cf8-4b4d-8a4e-84af4c07d08c";
 
 const Newsletter = () => {
+  const [email, setEmail] = useState("");
+  const [valid, setValid] = useState(true);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    if (re.test(email.toLowerCase())) {
+      const requestOptions = {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ EMAIL: email }),
+      };
+      fetch(endpoint, requestOptions);
+    } else {
+      setValid(false);
+    }
+  };
+
   return (
     <div className="Newsletter">
       <div className="Email-Signup">
@@ -16,7 +36,7 @@ const Newsletter = () => {
           Sign up for our newsletter!
         </h1>
         <form
-          action={endpoint}
+          onSubmit={handleSubmit}
           method="post"
           id="mc-embedded-subscribe-form"
           name="mc-embedded-subscribe-form"
@@ -26,14 +46,15 @@ const Newsletter = () => {
         >
           <TextField
             type="email"
-            name="EMAIL"
-            id="mce-EMAIL"
             placeholder="Email *"
             required
             InputProps={{
               style: { color: "#eee", width: "25vw" },
             }}
+            onChange={(e) => setEmail(e.target.value)}
+            error={!valid}
           />
+          {valid ? null : <p className="Email-Error">Invalid Email!</p>}
           <div className="Email-Submit">
             <Button
               mat-raised-button
