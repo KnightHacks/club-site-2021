@@ -8,8 +8,8 @@ import "@fontsource/roboto";
 import '../fonts/avenirnext-regular.ttf';
 import '../fonts/avenirnext-ultralight.ttf';
 
-const logoHeight = 100;
-const logoWidth = 200;
+const logoHeight = 450;
+const logoWidth = 900;
 
 const IndexPage = () => {
   return (
