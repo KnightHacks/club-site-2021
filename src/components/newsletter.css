@@ -1,7 +1,9 @@
 .Newsletter {
   display: flex;
-  justify-content: flex-start;
-  padding: 5rem;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
 }
 
 .form {

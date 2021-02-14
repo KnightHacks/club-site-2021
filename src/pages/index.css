@@ -12,6 +12,14 @@ body {
   vertical-align: baseline;
 }
 
+.Footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 30rem;
+  width: 100%;
+}
+
 @font-face {
   font-family: "Avenir Next Regular";
   src: local("AvenirNext-Regular"),

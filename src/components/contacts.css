@@ -1,0 +1,26 @@
+.Socials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+  height: 100%;
+  color: white;
+}
+
+.Discord {
+  margin-bottom: 3rem;
+}
+
+.Links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Others {
+  width: 450px;
+  display: flex;
+  justify-content: space-between;
+}
