@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./newsletter.css";
 import { TextField, Button } from "@material-ui/core";
-
+import { TextFieldStyle } from "./styles";
 // Only submits email to real enpoint when in production
 const endpoint =
   process.env.NODE_ENV === "production"
@@ -56,7 +56,7 @@ const Newsletter = () => {
             placeholder="Email *"
             required
             InputProps={{
-              style: { color: "white", width: "25vw" },
+              style: TextFieldStyle,
             }}
             onChange={(e) => setEmail(e.target.value)}
             error={!valid}
