@@ -7,7 +7,7 @@ import {
   faTwitter,
   faDiscord,
 } from "@fortawesome/free-brands-svg-icons";
-import "./navbar.css";
+import "./contacts.css";
 
 const Contacts = () => {
   return (
