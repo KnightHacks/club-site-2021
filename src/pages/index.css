@@ -1,7 +1,12 @@
 * {
-  background-color: #051169;
   font-family: "Avenir Next Regular", sans-serif;
 }
+
+body {
+  margin: 0;
+  background-color: #051169;
+}
+
 .LandingPage {
   background-color: #051169;
 }
