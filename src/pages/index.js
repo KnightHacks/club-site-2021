@@ -5,6 +5,8 @@ import Navbar from "../components/navbar.js";
 import Calendar from "../components/calendar.js";
 import "./index.css";
 import "@fontsource/roboto";
+import '../fonts/avenirnext-regular.ttf';
+import '../fonts/avenirnext-ultralight.ttf';
 
 const logoHeight = 100;
 const logoWidth = 200;
