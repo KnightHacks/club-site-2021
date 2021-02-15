@@ -25,9 +25,12 @@ const IndexPage = () => {
         />
       </div>
       <Calendar></Calendar>
-      <div className="Footer">
-        <Newsletter></Newsletter>
-        <Contacts></Contacts>
+      <div className="FooterContainer">
+        <h1>connect with us</h1>
+        <div className="Footer">
+          <Newsletter></Newsletter>
+          <Contacts></Contacts>
+        </div>
       </div>
     </div>
   );
