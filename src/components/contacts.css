@@ -10,7 +10,9 @@
 }
 
 .Discord {
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
+  font-size: 6vw;
+  color: #7289DA;
 }
 
 .Links {
@@ -20,7 +22,8 @@
   align-items: center;
 }
 .Others {
-  width: 450px;
+  width: 15vw;
+  font-size: 3vw;
   display: flex;
   justify-content: space-between;
 }
