@@ -1,19 +1,11 @@
 import React from "react";
 import { AppBar as MaterialAppBar, Toolbar, Button } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core";
-
-const useStyles = makeStyles({
-  appbar: {
-    marginLeft: "auto",
-    minHeight: 0,
-  },
-});
+import "./AppBar.css";
 
 const AppBar = () => {
-  const classes = useStyles();
   return (
     <MaterialAppBar position="static">
-      <Toolbar variant="dense" className={classes.appbar}>
+      <Toolbar className="appbar">
         <Button color="inherit">About</Button>
         <Button color="inherit">Events</Button>
         <Button color="inherit">Team</Button>
