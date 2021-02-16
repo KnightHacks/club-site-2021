@@ -3,12 +3,10 @@
   justify-content: center;
   align-items: center;
   width: 50%;
-  height: 100%;
 }
 
 .Newsletter_Header {
-  margin-top: 0;
-  font-family: "Avenir Next Ultra Light";
+  font-family: "Avenir Next Ultra Light", sans-serif;
 }
 
 .form {
@@ -16,9 +14,11 @@
   display: flex;
   flex-direction: column;
 }
+
 .Email-Signup {
   text-align: center;
   color: white;
+  margin-left: 20px;
 }
 
 .Email-Field {

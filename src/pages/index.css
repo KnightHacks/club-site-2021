@@ -16,18 +16,8 @@ body {
 .FooterContainer {
   display: flex;
   flex-direction: column;
-  /* margin-top: 5rem; */
   margin-bottom: 1.2rem;
 }
-
-/* .FooterContainer > h1 {
-  padding: 0;
-  margin: 0;
-  color: white;
-  font-size: 3rem;
-  width: 50%;
-  text-align: center;
-} */
 
 .Subtitle {
   display: flex;
