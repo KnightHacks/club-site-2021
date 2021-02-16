@@ -10,11 +10,11 @@ body {
   overflow: hidden;
 }
 
-.ParticlesContainer {
+.ParticlesContainer canvas {
   position: absolute;
 }
 
-.particles {
+.particles canvas {
   height: 100vh;
   width: 100vw;
 }
