@@ -7,6 +7,7 @@ body {
 .LandingPage {
   background-color: #051169;
 }
+
 .KnightHacksLogo {
   text-align: center;
   vertical-align: baseline;
@@ -15,23 +16,31 @@ body {
 .FooterContainer {
   display: flex;
   flex-direction: column;
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
   margin-bottom: 1.2rem;
 }
 
-.FooterContainer > h1 {
+/* .FooterContainer > h1 {
   padding: 0;
   margin: 0;
   color: white;
   font-size: 3rem;
   width: 50%;
   text-align: center;
+} */
+
+.Subtitle {
+  padding-left: 6rem;
+  color: white;
+  font-size: 3rem;
+  width: 100%;
 }
 
 .Footer {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   height: 20rem;
   width: 100%;
 }

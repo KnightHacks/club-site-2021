@@ -11,7 +11,7 @@
 
 .Discord {
   margin-bottom: 1rem;
-  font-size: 6vw;
+  font-size: 7vw;
   color: #7289DA;
 }
 
@@ -22,12 +22,16 @@
   align-items: center;
 }
 .Others {
-  width: 15vw;
-  font-size: 3vw;
+  width: 20vw;
+  font-size: 4vw;
   display: flex;
   justify-content: space-between;
 }
 
 .Icon:hover {
   color: gray;
+}
+
+a:visited {
+  color: #7289DA;
 }

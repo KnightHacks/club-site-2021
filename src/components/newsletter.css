@@ -6,14 +6,18 @@
   height: 100%;
 }
 
+.Newsletter_Header {
+  margin-top: 0;
+}
+
 .form {
+  padding-top: 30px;
   display: flex;
   flex-direction: column;
 }
 .Email-Signup {
   text-align: center;
   color: white;
-  margin-top: 10px;
 }
 
 .Email-Field {
@@ -21,7 +25,7 @@
 }
 
 .Email-Submit {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .Email-Error {
