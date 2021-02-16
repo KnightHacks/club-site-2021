@@ -12,25 +12,50 @@ import "./contacts.css";
 const Contacts = () => {
   return (
     <div className="Socials">
-      <h1>join the conversation</h1>
+      <h1>Join the conversation</h1>
       <div className="Links">
         <div className="Discord">
           <a href="https://discord.gg/Kv5g9vf">
-            <FontAwesomeIcon icon={faDiscord} size="7x" color="#7289da" />
+            <FontAwesomeIcon
+              icon={faDiscord}
+              size="7x"
+              color="#7289da"
+              className="Icon"
+            />
           </a>
         </div>
         <div className="Others">
           <a href="https://github.com/KnightHacks">
-            <FontAwesomeIcon icon={faGithub} size="5x" color="white" />
+            <FontAwesomeIcon
+              icon={faGithub}
+              size="5x"
+              color="white"
+              className="Icon"
+            />
           </a>
           <a href="https://www.instagram.com/knighthacks/">
-            <FontAwesomeIcon icon={faInstagram} size="5x" color="white" />
+            <FontAwesomeIcon
+              icon={faInstagram}
+              size="5x"
+              color="white"
+              className="Icon"
+            />
           </a>
           <a href="https://www.facebook.com/KnightHacks/">
-            <FontAwesomeIcon icon={faFacebook} size="5x" color="white" />
+            <FontAwesomeIcon
+              icon={faFacebook}
+              size="5x"
+              color="white"
+              className="Icon"
+            />
           </a>
           <a href="https://twitter.com/KnightHacks?lang=en/">
-            <FontAwesomeIcon icon={faTwitter} size="5x" color="white" />
+            <FontAwesomeIcon
+              icon={faTwitter}
+              size="5x"
+              color="white"
+              className="Icon"
+            />
           </a>
         </div>
       </div>
