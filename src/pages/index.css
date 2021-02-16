@@ -5,7 +5,19 @@
 .LandingPage {
   font-family: "-apple-system, Roboto, sans-serif, serif";
   background-color: #051169;
+  position: relative;
+  overflow: hidden;
 }
+
+.ParticlesContainer {
+  position: absolute;
+}
+
+.particles {
+  height: 100vh;
+  width: 100vw;
+}
+
 .KnightHacksLogo {
   text-align: center;
   vertical-align: baseline;
