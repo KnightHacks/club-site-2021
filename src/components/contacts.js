@@ -12,7 +12,7 @@ import "./contacts.css";
 const Contacts = () => {
   return (
     <div className="Socials">
-      <h1>Join the conversation.</h1>
+      <h1 className="Socials-Header">Join the conversation.</h1>
       <div className="Links">
         <div className="Discord">
           <a href="https://discord.gg/Kv5g9vf">

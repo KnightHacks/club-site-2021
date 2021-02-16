@@ -9,6 +9,10 @@
   color: white;
 }
 
+.Socials-Header {
+  font-family: "Avenir Next Ultra Light";
+}
+
 .Discord {
   margin-bottom: 1rem;
   font-size: 7vw;

@@ -30,7 +30,8 @@ body {
 } */
 
 .Subtitle {
-  padding-left: 6rem;
+  display: flex;
+  justify-content: center;
   color: white;
   font-size: 3rem;
   width: 100%;
@@ -44,6 +45,8 @@ body {
   height: 20rem;
   width: 100%;
 }
+
+/* Avenir font faces */
 
 @font-face {
   font-family: "Avenir Next Regular";
