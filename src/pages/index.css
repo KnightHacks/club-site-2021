@@ -12,6 +12,13 @@ body {
   vertical-align: baseline;
 }
 
+.Description {
+  color: white;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
 @font-face {
   font-family: "Avenir Next Regular";
   src: local("AvenirNext-Regular"),

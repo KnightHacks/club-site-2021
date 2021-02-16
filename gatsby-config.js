@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "KnightHacks Club Site",
+    description: "Lorem ipsum dolor sit amet",
   },
   plugins: [
     {
