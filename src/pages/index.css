@@ -1,9 +1,10 @@
-* {
+body {
+  margin: 0;
   background-color: #051169;
   font-family: "Avenir Next Regular", sans-serif;
 }
+
 .LandingPage {
-  font-family: "-apple-system, Roboto, sans-serif, serif";
   background-color: #051169;
   position: relative;
   overflow: hidden;
