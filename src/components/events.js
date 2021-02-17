@@ -21,7 +21,6 @@ const Events = () => {
       className="AccordionCard"
       >
         <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1bh-content"
           id="panel1bh-header"
         >
@@ -34,9 +33,9 @@ const Events = () => {
           </h3>
         </AccordionDetails>
       </Accordion>
-      <Accordion defaultExpanded>
+      <Accordion defaultExpanded
+      className="AccordionCard">
         <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2bh-content"
           id="panel2bh-header"
         >

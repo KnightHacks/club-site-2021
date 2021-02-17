@@ -4,17 +4,18 @@
 }
 
 .AccordionCard {
-  margin-bottom: 2px;
+  border-radius: 10px !important;
+  margin-bottom: 20px;
 }
 
 .Heading {
   font-family: "Avenir Next Regular", sans-serif;
-  font-size: 2em;
+  font-size: 1.5em;
   flex-shrink: 0;
 }
 
 .Secondary {
   font-family: "Avenir Next Ultra Light", sans-serif;
-  font-size: 1.5em;
+  font-size: 1.3em;
   color: gray;
 }
