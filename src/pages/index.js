@@ -3,6 +3,7 @@ import KnightHacksLogo from "../assets/logos/knightHacksLogoGold.svg";
 import Newsletter from "../components/newsletter.js";
 import Contacts from "../components/contacts.js";
 import Calendar from "../components/calendar.js";
+import Events from "../components/events.js";
 import "./index.css";
 import "@fontsource/roboto";
 import "../fonts/avenirnext-regular.ttf";
@@ -24,7 +25,10 @@ const IndexPage = () => {
           alt="Knight Hacks Logo"
         />
       </div>
-      <Calendar></Calendar>
+      <div className="EventsContainer">
+        <h1 className="Subtitle">Upcoming Events</h1>
+        <Events></Events>
+      </div>
       <div className="FooterContainer">
         <h1 className="Subtitle">Connect With Us</h1>
         <div className="Footer">

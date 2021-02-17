@@ -1,0 +1,15 @@
+.CalendarContainer {
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.Heading {
+  font-size: 15px;
+  flex-basis: 33.33%;
+  flex-shrink: 0;
+}
+
+.Secondary {
+  font-size: 15px;
+  color: gray;
+}
