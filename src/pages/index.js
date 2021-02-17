@@ -1,12 +1,12 @@
 import * as React from "react";
 import KnightHacksLogo from "../assets/logos/knightHacksLogoGold.svg";
 import Newsletter from "../components/newsletter.js";
-import Navbar from "../components/navbar.js";
+import Contacts from "../components/contacts.js";
 import Calendar from "../components/calendar.js";
 import "./index.css";
 import "@fontsource/roboto";
-import '../fonts/avenirnext-regular.ttf';
-import '../fonts/avenirnext-ultralight.ttf';
+import "../fonts/avenirnext-regular.ttf";
+import "../fonts/avenirnext-ultralight.ttf";
 
 const logoHeight = 100;
 const logoWidth = 200;
@@ -25,8 +25,13 @@ const IndexPage = () => {
         />
       </div>
       <Calendar></Calendar>
-      <Newsletter></Newsletter>
-      <Navbar></Navbar>
+      <div className="FooterContainer">
+        <h1 className="Subtitle">Connect With Us</h1>
+        <div className="Footer">
+          <Newsletter></Newsletter>
+          <Contacts></Contacts>
+        </div>
+      </div>
     </div>
   );
 };

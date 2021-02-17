@@ -1,0 +1,41 @@
+.Socials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+  height: 100%;
+  color: white;
+}
+
+.Socials-Header {
+  font-family: "Avenir Next Ultra Light";
+}
+
+.Discord {
+  margin-bottom: 1rem;
+  font-size: 7vw;
+  color: #7289DA;
+}
+
+.Links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Others {
+  width: 20vw;
+  font-size: 4vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Icon:hover {
+  color: gray;
+}
+
+a:visited {
+  color: #7289DA;
+}
