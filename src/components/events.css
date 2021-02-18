@@ -1,6 +1,5 @@
 .CalendarContainer {
-  margin-left: 5vw;
-  margin-right: 5vw;
+  margin: 0 10vw;
 }
 
 .AccordionCard {
@@ -8,14 +7,37 @@
   margin-bottom: 20px;
 }
 
+.AccordionCard:hover {
+  background: linear-gradient(90deg, #1890FF 1%, #FFFFFF 0%);
+}
+
+/* #panel1bh-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+} */
+
+.AccordionContent {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
 .Heading {
   font-family: "Avenir Next Regular", sans-serif;
   font-size: 1.5em;
+  padding-left: 5px;
   flex-shrink: 0;
 }
 
 .Secondary {
   font-family: "Avenir Next Ultra Light", sans-serif;
   font-size: 1.3em;
+  padding: 0px 10px;
   color: gray;
 }
+
+/* .EventDate {
+  font-size: 3em;
+} */

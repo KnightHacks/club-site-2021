@@ -13,10 +13,14 @@ body {
   vertical-align: baseline;
 }
 
+.EventsContainer {
+ margin: 1.2rem 0;
+}
+
 .FooterContainer {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1.2rem;
+  margin: 1.2rem 0;
 }
 
 .Subtitle {
