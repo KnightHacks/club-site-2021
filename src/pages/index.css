@@ -6,7 +6,19 @@ body {
 
 .LandingPage {
   background-color: #051169;
+  position: relative;
+  overflow: hidden;
 }
+
+.ParticlesContainer canvas {
+  position: absolute;
+}
+
+.particles canvas {
+  height: 100vh;
+  width: 100vw;
+}
+
 .KnightHacksLogo {
   text-align: center;
   vertical-align: baseline;
@@ -18,6 +30,31 @@ body {
   padding: 0;
   margin-bottom: 1rem;
 }
+
+.FooterContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.2rem;
+}
+
+.Subtitle {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 3rem;
+  width: 100%;
+}
+
+.Footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 20rem;
+  width: 100%;
+}
+
+/* Avenir font faces */
 
 @font-face {
   font-family: "Avenir Next Regular";
