@@ -24,6 +24,7 @@
     "gatsby": "^2.31.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-particles-js": "^3.4.1",
     "typeface-roboto": "^1.1.13"
   },
   "devDependencies": {
