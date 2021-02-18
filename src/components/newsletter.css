@@ -1,17 +1,24 @@
 .Newsletter {
   display: flex;
-  justify-content: flex-start;
-  padding: 5rem;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.Newsletter_Header {
+  font-family: "Avenir Next Ultra Light", sans-serif;
 }
 
 .form {
+  padding-top: 30px;
   display: flex;
   flex-direction: column;
 }
+
 .Email-Signup {
   text-align: center;
   color: white;
-  margin-top: 10px;
+  margin-left: 20px;
 }
 
 .Email-Field {
@@ -19,7 +26,7 @@
 }
 
 .Email-Submit {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .Email-Error {
