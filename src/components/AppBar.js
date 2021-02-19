@@ -19,10 +19,18 @@ const AppBar = () => {
       position="fixed"
     >
       <Toolbar className="buttons">
-        <Button color="inherit">About</Button>
-        <Button color="inherit">Events</Button>
-        <Button color="inherit">Team</Button>
-        <Button color="inherit">Contact Us</Button>
+        <Button className="button" color="inherit">
+          About
+        </Button>
+        <Button className="button" color="inherit">
+          Events
+        </Button>
+        <Button className="button" color="inherit">
+          Team
+        </Button>
+        <Button className="button" color="inherit">
+          Contact Us
+        </Button>
       </Toolbar>
     </MaterialAppBar>,
     { elevation: trigger ? 10 : 0 }
