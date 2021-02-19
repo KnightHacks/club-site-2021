@@ -1,16 +1,15 @@
 .buttons {
-  display: flex;
-  justify-content: space-between;
+  margin-left: auto;
 }
 
 .button {
-  font-family: "Avenir Next Regular", sans-serif;
+  font-family: "Avenir Next", sans-serif;
   text-transform: none;
   font-size: 1em;
 }
 
 .opaque {
-  color: rbga(196, 196, 196, 0.2);
+  color: rbg(196, 196, 196, 0.2);
   transition: background-color 200ms linear;
 }
 
