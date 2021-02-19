@@ -4,7 +4,7 @@ import "./AppBar.css";
 
 const AppBar = () => {
   return (
-    <MaterialAppBar position="static">
+    <MaterialAppBar position="sticky">
       <Toolbar className="appbar">
         <Button color="inherit">About</Button>
         <Button color="inherit">Events</Button>
