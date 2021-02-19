@@ -3,6 +3,7 @@ import {
   AppBar as MaterialAppBar,
   Toolbar,
   Button,
+  ButtonGroup,
   useScrollTrigger,
 } from "@material-ui/core";
 import "./AppBar.css";
@@ -19,18 +20,20 @@ const AppBar = () => {
       position="fixed"
     >
       <Toolbar className="buttons">
-        <Button className="button" color="inherit">
-          About
-        </Button>
-        <Button className="button" color="inherit">
-          Events
-        </Button>
-        <Button className="button" color="inherit">
-          Team
-        </Button>
-        <Button className="button" color="inherit">
-          Contact Us
-        </Button>
+        <ButtonGroup variant="text">
+          <Button className="button" color="inherit">
+            About
+          </Button>
+          <Button className="button" color="inherit">
+            Events
+          </Button>
+          <Button className="button" color="inherit">
+            Team
+          </Button>
+          <Button className="button" color="inherit">
+            Contact Us
+          </Button>
+        </ButtonGroup>
       </Toolbar>
     </MaterialAppBar>,
     { elevation: trigger ? 10 : 0 }
