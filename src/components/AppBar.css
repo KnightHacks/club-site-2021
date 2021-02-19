@@ -1,3 +1,7 @@
+a:visited {
+  color: white;
+}
+
 .buttons {
   display: flex;
   justify-content: space-between;

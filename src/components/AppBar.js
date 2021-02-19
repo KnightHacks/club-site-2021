@@ -20,7 +20,11 @@ const AppBar = () => {
       position="fixed"
     >
       <Toolbar className="buttons">
-        <Button className="button" color="inherit">
+        <Button
+          href="https://linktr.ee/knighthacks"
+          className="button"
+          color="inherit"
+        >
           Linktree
         </Button>
         <ButtonGroup variant="text">
