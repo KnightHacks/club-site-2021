@@ -16,7 +16,7 @@ const AppBar = () => {
   return React.cloneElement(
     <MaterialAppBar
       className={trigger ? "opaque" : "transparent"}
-      position="sticky"
+      position="fixed"
     >
       <Toolbar className="buttons">
         <Button color="inherit">About</Button>
