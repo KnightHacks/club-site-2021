@@ -6,17 +6,6 @@ body {
 
 .LandingPage {
   background-color: #051169;
-  position: relative;
-  overflow: hidden;
-}
-
-.ParticlesContainer canvas {
-  position: absolute;
-}
-
-.particles canvas {
-  height: 100vh;
-  width: 100vw;
 }
 
 .KnightHacksLogo {
