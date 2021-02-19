@@ -1,4 +1,13 @@
-.appbar {
+.buttons {
   margin-left: auto;
-  min-height: 0;
+}
+
+.opaque {
+  color: rbg(196, 196, 196, 0.2);
+  transition: background-color 200ms linear;
+}
+
+.transparent {
+  background-color: transparent;
+  transition: background-color 200ms linear;
 }
