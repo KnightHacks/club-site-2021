@@ -10,18 +10,26 @@ body {
   overflow: hidden;
 }
 
-.ParticlesContainer canvas {
-  position: absolute;
-}
-
-.particles canvas {
-  height: 100vh;
-  width: 100vw;
-}
-
 .KnightHacksLogo {
   text-align: center;
   vertical-align: baseline;
+}
+
+.ParticlesContainer {
+  position: relative;
+}
+
+.Particles {
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+.Children {
+  position: relative;
 }
 
 .FooterContainer {
