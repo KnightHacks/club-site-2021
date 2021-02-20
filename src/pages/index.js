@@ -18,14 +18,16 @@ const IndexPage = () => {
     <div className="LandingPage">
       <Particles className="particles" params={{ ...particles_config }}>
         <title>Home Page</title>
-        <div className="KnightHacksLogo">
-          <img
+        <div className="LogoContainer">
+          <div className="KnightHacksLogo">
+            <img
             src={KnightHacksLogo}
             className="KHLogo"
             height={logoHeight}
             width={logoWidth}
             alt="Knight Hacks Logo"
-          />
+            />
+          </div>
         </div>
         <Calendar></Calendar>
         <div className="FooterContainer">
