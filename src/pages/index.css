@@ -22,6 +22,27 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.KHLogo {
+  /*
+  I updated the width to be vw, which stands for viewport width.
+  It means that it'll adjust the width to be 75 * some math of the
+  viewport the person is using (desktop, laptop, ipad, whatever)
+
+  Actual math behind vw:
+  Relative to ___% of the width of the viewport
+  Feel free to delete this comment after playing around with vw a bit!!
+  */
+  width: 75vw;
+  /*
+  HINTs:
+  (1) adjust the top / bottom / left / right margin!
+  that will allow you to get it in the middle of the screen.
+  (2) try to make the units for the margin "rem" instead of "px".
+  that will allow the margin sizes to be responsive to the
+  size of the screen.
+  */
+}
+
 .ParticlesContainer {
   position: relative;
 }
