@@ -10,8 +10,19 @@ import "@fontsource/roboto";
 import "../fonts/avenirnext-regular.ttf";
 import "../fonts/avenirnext-ultralight.ttf";
 
-const logoHeight = 450;
-const logoWidth = 900;
+/*
+LEAH:
+The entire div containing our logo has
+the classname KnightHacksLogo.
+The image itself has the classname
+KHLogo.
+When you want to modify the styling of these
+elements, look in the index.css for the
+classes .KnightHacksLogo and .KHLogo
+and apply your changes there.
+
+p.s. delete this when you're done lol
+*/
 
 const IndexPage = () => {
   return (
@@ -22,8 +33,6 @@ const IndexPage = () => {
           <img
             src={KnightHacksLogo}
             className="KHLogo"
-            height={logoHeight}
-            width={logoWidth}
             alt="Knight Hacks Logo"
           />
         </div>
