@@ -36,6 +36,11 @@
   color: gray;
 }
 
+.Contact-Email {
+  font-family: "Avenir Next Ultra Light";
+  font-size: 2.5vmin;
+}
+
 a:visited {
   color: #7289da;
 }
