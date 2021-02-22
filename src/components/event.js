@@ -1,16 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import Accordion from '@material-ui/core/Accordion';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import "./event.css";
 
 const Events = () => {
-
-  const [expanded, setExpanded] = useState('panel1');
-
-  const handleChange = (panel) => (event, isExpanded) => {
-    setExpanded(isExpanded ? panel : false);
-  };
 
   return (
     <div className="CalendarContainer">
