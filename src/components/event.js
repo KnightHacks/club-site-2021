@@ -9,7 +9,6 @@ const Events = () => {
   return (
     <div className="CalendarContainer">
       <Accordion
-      defaultExpanded
       className="AccordionCard"
       id="panel1bh"
       >
@@ -31,9 +30,14 @@ const Events = () => {
         <AccordionDetails
         className="AccordionContent"
         >
+        <div className="ContentContainer">
+          <p className="EventTime">
+          Time   |   Location
+          </p>
           <h3 className="EventDescription">
             Event Description.
           </h3>
+        </div>
         </AccordionDetails>
       </Accordion>
     </div>
