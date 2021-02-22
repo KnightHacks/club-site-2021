@@ -14,6 +14,7 @@ import "../fonts/avenirnext-ultralight.ttf";
 
 const IndexPage = () => {
   return (
+    <StylesProvider injectFirst>
       <AppBar />
       <div className="LandingPage">
         <Particles>
