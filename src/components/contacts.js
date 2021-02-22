@@ -37,8 +37,8 @@ const Contacts = () => {
             <FontAwesomeIcon icon={faTwitter} color="white" className="Icon" />
           </a>
         </div>
-        <p className="Contact-Email">team@knighthacks.org</p>
       </div>
+      <p className="Contact-Email">team@knighthacks.org</p>
     </div>
   );
 };

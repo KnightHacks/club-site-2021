@@ -38,8 +38,9 @@
 
 .Contact-Email {
   font-family: "Avenir Next Ultra Light";
-  font-size: 2.5vmin;
-  margin: 10px 0;
+  font-size: 1.5rem;
+  margin: 0;
+  margin-bottom: 3vw;
 }
 
 a:visited {
