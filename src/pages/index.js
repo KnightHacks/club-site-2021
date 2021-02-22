@@ -3,6 +3,8 @@ import KnightHacksLogo from "../assets/logos/knightHacksLogoGold.svg";
 import Newsletter from "../components/newsletter.js";
 import Contacts from "../components/contacts.js";
 import Calendar from "../components/calendar.js";
+import AppBar from "../components/AppBar.js";
+import { StylesProvider } from "@material-ui/core/styles";
 import ReactParticles from "react-particles-js";
 import particles_config from "../particles-config";
 import "./index.css";
@@ -15,28 +17,31 @@ const logoWidth = 200;
 
 const IndexPage = () => {
   return (
-    <div className="LandingPage">
-      <Particles className="particles" params={{ ...particles_config }}>
-        <title>Home Page</title>
-        <div className="KnightHacksLogo">
-          <img
-            src={KnightHacksLogo}
-            className="KHLogo"
-            height={logoHeight}
-            width={logoWidth}
-            alt="Knight Hacks Logo"
-          />
-        </div>
-        <Calendar></Calendar>
-        <div className="FooterContainer">
-          <h1 className="Subtitle">Connect With Us</h1>
-          <div className="Footer">
-            <Newsletter></Newsletter>
-            <Contacts></Contacts>
+    <StylesProvider injectFirst>
+      <AppBar />
+      <div className="LandingPage">
+        <Particles>
+          <title>Home Page</title>
+          <div className="KnightHacksLogo">
+            <img
+              src={KnightHacksLogo}
+              className="KHLogo"
+              height={logoHeight}
+              width={logoWidth}
+              alt="Knight Hacks Logo"
+            />
           </div>
-        </div>
-      </Particles>
-    </div>
+          <Calendar></Calendar>
+          <div className="FooterContainer">
+            <h1 className="Subtitle">Connect With Us</h1>
+            <div className="Footer">
+              <Newsletter></Newsletter>
+              <Contacts></Contacts>
+            </div>
+          </div>
+        </Particles>
+      </div>
+    </StylesProvider>
   );
 };
 

@@ -14,9 +14,9 @@
 }
 
 .Discord {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   font-size: 7vw;
-  color: #7289DA;
+  color: #7289da;
 }
 
 .Links {
@@ -36,6 +36,13 @@
   color: gray;
 }
 
+.Contact-Email {
+  font-family: "Avenir Next Ultra Light";
+  font-size: 1.5rem;
+  margin: 0;
+  margin-bottom: 3vw;
+}
+
 a:visited {
-  color: #7289DA;
+  color: #7289da;
 }
