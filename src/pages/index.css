@@ -26,6 +26,15 @@ body {
   width: 75vw;
 }
 
+.LogoSubheading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Avenir Next Ultra Light";
+    color: white;
+    font-size: 5vw;
+}
+
 .ParticlesContainer {
   position: relative;
 }

@@ -22,6 +22,7 @@ const IndexPage = () => {
             className="KHLogo"
             alt="Knight Hacks Logo"
             />
+            <h1 className ="LogoSubheading">UCFs Hackathon Club</h1>
           </div>
         </div>
         <Calendar></Calendar>
