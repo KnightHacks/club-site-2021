@@ -16,9 +16,11 @@ a:visited {
 .opaque {
   background-color: #3b3d5b;
   transition: background-color 200ms linear;
+  transition-timing-function: ease-out;
 }
 
 .transparent {
   background-color: transparent;
   transition: background-color 200ms linear;
+  transition-timing-function: ease-out;
 }
