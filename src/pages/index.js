@@ -4,6 +4,7 @@ import Newsletter from "../components/newsletter.js";
 import Contacts from "../components/contacts.js";
 import Calendar from "../components/calendar.js";
 import AppBar from "../components/AppBar.js";
+import AboutUs from "../components/aboutUs.js";
 import { StylesProvider } from "@material-ui/core/styles";
 import ReactParticles from "react-particles-js";
 import particles_config from "../particles-config";
@@ -29,6 +30,7 @@ const IndexPage = () => {
               <h1 className ="LogoSubheading">UCFs Hackathon Club</h1>
             </div>
           </div>
+          <AboutUs></AboutUs>
           <Calendar></Calendar>
           <div className="FooterContainer">
             <h1 className="Subtitle">Connect With Us</h1>
