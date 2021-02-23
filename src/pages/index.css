@@ -54,6 +54,13 @@ body {
   position: relative;
 }
 
+.Description {
+  color: white;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
 .FooterContainer {
   display: flex;
   flex-direction: column;
