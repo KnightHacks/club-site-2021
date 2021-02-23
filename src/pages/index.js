@@ -4,13 +4,14 @@ import Newsletter from "../components/newsletter.js";
 import Contacts from "../components/contacts.js";
 import Calendar from "../components/calendar.js";
 import Event from "../components/event.js";
+import AppBar from "../components/AppBar.js";
+import { StylesProvider } from "@material-ui/core/styles";
+import ReactParticles from "react-particles-js";
+import particles_config from "../particles-config";
 import "./index.css";
 import "@fontsource/roboto";
-import "../fonts/avenirnext-regular.ttf";
-import "../fonts/avenirnext-ultralight.ttf";
-
-const logoHeight = 100;
-const logoWidth = 200;
+import "../fonts/AvenirNext-Regular.ttf";
+import "../fonts/AvenirNext-UltraLight.ttf";
 
 const IndexPage = () => {
   const allEvents = [
@@ -33,38 +34,53 @@ const IndexPage = () => {
   ]
 
   return (
-    <div className="LandingPage">
-      <title>Home Page</title>
-      <div className="KnightHacksLogo">
-        <img
-          src={KnightHacksLogo}
-          className="KHLogo"
-          height={logoHeight}
-          width={logoWidth}
-          alt="Knight Hacks Logo"
-        />
+    <StylesProvider injectFirst>
+      <AppBar />
+      <div className="LandingPage">
+        <Particles>
+          <title>Home Page</title>
+          <div className="LogoContainer">
+            <div className="KnightHacksLogo">
+              <img
+              src={KnightHacksLogo}
+              className="KHLogo"
+              alt="Knight Hacks Logo"
+              />
+              <h1 className ="LogoSubheading">UCFs Hackathon Club</h1>
+            </div>
+          </div>
+          <div className="EventsContainer">
+            <h1 className="Subtitle">Upcoming Events</h1>
+            {allEvents.map((event, index) =>(
+              <Event
+                key={index}
+                title={event.title}
+                description={event.description}
+                time={event.time}
+                location={event.location}
+                date={event.date}
+                month={event.month}
+              />
+            ))}
+          </div>
+          <div className="FooterContainer">
+            <h1 className="Subtitle">Connect With Us</h1>
+            <div className="Footer">
+              <Newsletter></Newsletter>
+              <Contacts></Contacts>
+            </div>
+          </div>
+        </Particles>
       </div>
-      <div className="EventsContainer">
-        <h1 className="Subtitle">Upcoming Events</h1>
-        {allEvents.map((event, index) =>(
-          <Event
-            key={index}
-            title={event.title}
-            description={event.description}
-            time={event.time}
-            location={event.location}
-            date={event.date}
-            month={event.month}
-          />
-        ))}
-      </div>
-      <div className="FooterContainer">
-        <h1 className="Subtitle">Connect With Us</h1>
-        <div className="Footer">
-          <Newsletter></Newsletter>
-          <Contacts></Contacts>
-        </div>
-      </div>
+    </StylesProvider>
+  );
+};
+
+const Particles = ({ children }) => {
+  return (
+    <div className="ParticlesContainer">
+      <ReactParticles params={particles_config} className="Particles" />
+      {children && <div className="Children">{children}</div>}
     </div>
   );
 };
