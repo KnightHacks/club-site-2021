@@ -6,16 +6,15 @@ const AboutUs = () => {
     <div className="AboutUsContainer">
       <h1 className="Subtitle">About Us</h1>
       <p className="AboutUsText">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eleifend
-        dui et nisi pulvinar, posuere ornare dolor commodo. Etiam eget commodo
-        enim. Vivamus vulputate velit at elementum tincidunt. Integer id eros
-        sed lectus eleifend lacinia. Phasellus auctor viverra arcu, a tincidunt
-        mauris rutrum non. Aenean massa nulla, molestie in egestas quis,
-        condimentum in felis. Cras aliquam neque et justo pretium dapibus.
-        Curabitur pellentesque cursus mi vitae volutpat. Aenean blandit aliquam
-        viverra. Donec faucibus nulla in consectetur varius. Morbi faucibus, est
-        at fermentum facilisis, metus lacus malesuada lorem, non sollicitudin ex
-        massa id lacus. Quisque et posuere mi, non fringilla sem.
+        The mission of Knight Hacks is to develop the computer science skills of
+        UCF students and to build an appreciation for real-world uses of
+        programming. We provide weekly workshops on cutting-edge technologies,
+        programming, tech interviews, and career development. Members receive
+        career guidance through our mentorship program, and develop their skills
+        in our projects program. Each year, Knight Hacks hosts UCF's largest
+        hackathon, a technology fair and invention marathon where students race
+        to build tech projects in 36 hours. Above all, Knight Hacks aims to
+        support a diverse, welcoming, and inclusive tech community at UCF.
       </p>
     </div>
   );
