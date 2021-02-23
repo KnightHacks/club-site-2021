@@ -7,8 +7,12 @@
   margin-bottom: 30px;
 }
 
+.Expanded {
+  margin-bottom: 30px;
+}
+
 .AccordionCard:hover {
-  background: linear-gradient(90deg, #1890FF 1.5%, #FFFFFF 0%);
+  background: linear-gradient(90deg, #1890ff 1.5%, #ffffff 0%);
 }
 
 .AccordionContent {
