@@ -12,7 +12,7 @@
 }
 
 .AccordionCard:hover {
-  background: linear-gradient(90deg, #1890FF 1.5%, #FFFFFF 0%);
+  background: linear-gradient(90deg, #dbc04a 1.5%, #FFFFFF 0%);
 }
 
 .AccordionContent {
