@@ -12,9 +12,6 @@ import "@fontsource/roboto";
 import "../fonts/AvenirNext-Regular.ttf";
 import "../fonts/AvenirNext-UltraLight.ttf";
 
-const logoHeight = 100;
-const logoWidth = 200;
-
 const IndexPage = () => {
   return (
     <StylesProvider injectFirst>
@@ -22,14 +19,15 @@ const IndexPage = () => {
       <div className="LandingPage">
         <Particles>
           <title>Home Page</title>
-          <div className="KnightHacksLogo">
-            <img
+          <div className="LogoContainer">
+            <div className="KnightHacksLogo">
+              <img
               src={KnightHacksLogo}
               className="KHLogo"
-              height={logoHeight}
-              width={logoWidth}
               alt="Knight Hacks Logo"
-            />
+              />
+              <h1 className ="LogoSubheading">UCFs Hackathon Club</h1>
+            </div>
           </div>
           <Calendar></Calendar>
           <div className="FooterContainer">

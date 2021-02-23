@@ -10,9 +10,31 @@ body {
   overflow: hidden;
 }
 
+.LogoContainer {
+  height: 100vh;
+  position: relative;
+}
+
 .KnightHacksLogo {
-  text-align: center;
   vertical-align: baseline;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.KHLogo {
+  width: 75vw;
+}
+
+.LogoSubheading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Avenir Next Ultra Light";
+    color: white;
+    font-size: 5vw;
 }
 
 .ParticlesContainer {
