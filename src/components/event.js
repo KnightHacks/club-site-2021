@@ -11,13 +11,10 @@ const Events = (props) => {
     <div className={`CalendarContainer ${expanded ? "Expanded" : ""}`}>
       <Accordion
         className="AccordionCard"
-        id="panel1bh"
         onChange={() => setExpanded(!expanded)}
       >
         <AccordionSummary
           className="AccordionHeader"
-          aria-controls="panel1bh-content"
-          id="panel1bh-header"
         >
           <div className="AccordionSchedule">
             <h1 className="EventTitle"> {props.title} </h1>

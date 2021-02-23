@@ -15,16 +15,16 @@ const logoWidth = 200;
 const IndexPage = () => {
   const allEvents = [
     {
-      title: "Event One",
-      description: "A long description",
+      title: "Long Length Title for Event One",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae turpis massa sed elementum tempus egestas sed sed risus. Eleifend donec pretium vulputate sapien nec. Vitae semper quis lectus nulla at volutpat diam.",
       time: "4:00",
       location: "Zoom",
       date: "14",
       month: "August",
     },
     {
-      title: "Event Two",
-      description: "A longer description",
+      title: "Long Length Title for Event Two",
+      description: "Tempor orci dapibus ultrices in iaculis nunc sed. Eget sit amet tellus cras adipiscing. Diam donec adipiscing tristique risus nec feugiat. Purus ut faucibus pulvinar elementum integer enim neque volutpat. Et netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum. Faucibus a pellentesque sit amet. A lacus vestibulum sed arcu non odio euismod lacinia. Justo nec ultrices dui sapien eget.",
       time: "6:00",
       location: "Discord",
       date: "2",

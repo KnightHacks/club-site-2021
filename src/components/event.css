@@ -12,7 +12,7 @@
 }
 
 .AccordionCard:hover {
-  background: linear-gradient(90deg, #1890ff 1.5%, #ffffff 0%);
+  background: linear-gradient(90deg, #1890FF 1.5%, #FFFFFF 0%);
 }
 
 .AccordionContent {
@@ -42,11 +42,11 @@
 
 .EventDate {
   margin: 0 25px;
-  padding: 10px;
+  padding: 1vw;
   position: absolute;
   right: 0;
   top: 0;
-  font-size: 5.5vmin;
+  font-size: 4vmin;
 }
 
 .EventMonth {
