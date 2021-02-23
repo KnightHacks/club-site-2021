@@ -67,6 +67,6 @@ body {
 @font-face {
   font-family: "Avenir Next Ultra Light";
   src: local("AvenirNext-UltraLight"),
-    url("../fonts/AvenirNext-Ultralight.ttf") format("truetype");
+    url("../fonts/AvenirNext-UltraLight.ttf") format("truetype");
   font-weight: normal;
 }

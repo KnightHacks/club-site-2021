@@ -10,7 +10,7 @@ import particles_config from "../particles-config";
 import "./index.css";
 import "@fontsource/roboto";
 import "../fonts/AvenirNext-Regular.ttf";
-import "../fonts/AvenirNext-Ultralight.ttf";
+import "../fonts/AvenirNext-UltraLight.ttf";
 
 const logoHeight = 100;
 const logoWidth = 200;
