@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import KnightHacksLogo from "../assets/logos/knightHacksLogoGold.svg";
 import Newsletter from "../components/newsletter.js";
 import Contacts from "../components/contacts.js";
@@ -17,7 +17,8 @@ const IndexPage = () => {
   const allEvents = [
     {
       title: "Long Length Title for Event One",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae turpis massa sed elementum tempus egestas sed sed risus. Eleifend donec pretium vulputate sapien nec. Vitae semper quis lectus nulla at volutpat diam.",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae turpis massa sed elementum tempus egestas sed sed risus. Eleifend donec pretium vulputate sapien nec. Vitae semper quis lectus nulla at volutpat diam.",
       time: "4:00",
       location: "Zoom",
       date: "14",
@@ -25,7 +26,8 @@ const IndexPage = () => {
     },
     {
       title: "Long Length Title for Event Two",
-      description: "Tempor orci dapibus ultrices in iaculis nunc sed. Eget sit amet tellus cras adipiscing. Diam donec adipiscing tristique risus nec feugiat. Purus ut faucibus pulvinar elementum integer enim neque volutpat. Et netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum. Faucibus a pellentesque sit amet. A lacus vestibulum sed arcu non odio euismod lacinia. Justo nec ultrices dui sapien eget.",
+      description:
+        "Tempor orci dapibus ultrices in iaculis nunc sed. Eget sit amet tellus cras adipiscing. Diam donec adipiscing tristique risus nec feugiat. Purus ut faucibus pulvinar elementum integer enim neque volutpat. Et netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum. Faucibus a pellentesque sit amet. A lacus vestibulum sed arcu non odio euismod lacinia. Justo nec ultrices dui sapien eget.",
       time: "6:00",
       location: "Discord",
       date: "02",
@@ -33,7 +35,8 @@ const IndexPage = () => {
     },
     {
       title: "Long Length Title for Event Three",
-      description: "Tempor orci dapibus ultrices in iaculis nunc sed. Eget sit amet tellus cras adipiscing. Diam donec adipiscing tristique risus nec feugiat. Purus ut faucibus pulvinar elementum integer enim neque volutpat. Et netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum. Faucibus a pellentesque sit amet. A lacus vestibulum sed arcu non odio euismod lacinia. Justo nec ultrices dui sapien eget.",
+      description:
+        "Tempor orci dapibus ultrices in iaculis nunc sed. Eget sit amet tellus cras adipiscing. Diam donec adipiscing tristique risus nec feugiat. Purus ut faucibus pulvinar elementum integer enim neque volutpat. Et netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum. Faucibus a pellentesque sit amet. A lacus vestibulum sed arcu non odio euismod lacinia. Justo nec ultrices dui sapien eget.",
       time: "6:00",
       location: "Discord",
       date: "23",
@@ -41,7 +44,8 @@ const IndexPage = () => {
     },
     {
       title: "Long Length Title for Event Four",
-      description: "Tempor orci dapibus ultrices in iaculis nunc sed. Eget sit amet tellus cras adipiscing. Diam donec adipiscing tristique risus nec feugiat. Purus ut faucibus pulvinar elementum integer enim neque volutpat. Et netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum. Faucibus a pellentesque sit amet. A lacus vestibulum sed arcu non odio euismod lacinia. Justo nec ultrices dui sapien eget.",
+      description:
+        "Tempor orci dapibus ultrices in iaculis nunc sed. Eget sit amet tellus cras adipiscing. Diam donec adipiscing tristique risus nec feugiat. Purus ut faucibus pulvinar elementum integer enim neque volutpat. Et netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum. Faucibus a pellentesque sit amet. A lacus vestibulum sed arcu non odio euismod lacinia. Justo nec ultrices dui sapien eget.",
       time: "6:00",
       location: "Discord",
       date: "12",
@@ -49,7 +53,8 @@ const IndexPage = () => {
     },
     {
       title: "Long Length Title for Event Five",
-      description: "Tempor orci dapibus ultrices in iaculis nunc sed. Eget sit amet tellus cras adipiscing. Diam donec adipiscing tristique risus nec feugiat. Purus ut faucibus pulvinar elementum integer enim neque volutpat. Et netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum. Faucibus a pellentesque sit amet. A lacus vestibulum sed arcu non odio euismod lacinia. Justo nec ultrices dui sapien eget.",
+      description:
+        "Tempor orci dapibus ultrices in iaculis nunc sed. Eget sit amet tellus cras adipiscing. Diam donec adipiscing tristique risus nec feugiat. Purus ut faucibus pulvinar elementum integer enim neque volutpat. Et netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum. Faucibus a pellentesque sit amet. A lacus vestibulum sed arcu non odio euismod lacinia. Justo nec ultrices dui sapien eget.",
       time: "6:00",
       location: "Discord",
       date: "09",
@@ -57,7 +62,8 @@ const IndexPage = () => {
     },
     {
       title: "Long Length Title for Event Six",
-      description: "Tempor orci dapibus ultrices in iaculis nunc sed. Eget sit amet tellus cras adipiscing. Diam donec adipiscing tristique risus nec feugiat. Purus ut faucibus pulvinar elementum integer enim neque volutpat. Et netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum. Faucibus a pellentesque sit amet. A lacus vestibulum sed arcu non odio euismod lacinia. Justo nec ultrices dui sapien eget.",
+      description:
+        "Tempor orci dapibus ultrices in iaculis nunc sed. Eget sit amet tellus cras adipiscing. Diam donec adipiscing tristique risus nec feugiat. Purus ut faucibus pulvinar elementum integer enim neque volutpat. Et netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum. Faucibus a pellentesque sit amet. A lacus vestibulum sed arcu non odio euismod lacinia. Justo nec ultrices dui sapien eget.",
       time: "6:00",
       location: "Discord",
       date: "22",
@@ -65,13 +71,14 @@ const IndexPage = () => {
     },
     {
       title: "Long Length Title for Event Seven",
-      description: "Tempor orci dapibus ultrices in iaculis nunc sed. Eget sit amet tellus cras adipiscing. Diam donec adipiscing tristique risus nec feugiat. Purus ut faucibus pulvinar elementum integer enim neque volutpat. Et netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum. Faucibus a pellentesque sit amet. A lacus vestibulum sed arcu non odio euismod lacinia. Justo nec ultrices dui sapien eget.",
+      description:
+        "Tempor orci dapibus ultrices in iaculis nunc sed. Eget sit amet tellus cras adipiscing. Diam donec adipiscing tristique risus nec feugiat. Purus ut faucibus pulvinar elementum integer enim neque volutpat. Et netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum. Faucibus a pellentesque sit amet. A lacus vestibulum sed arcu non odio euismod lacinia. Justo nec ultrices dui sapien eget.",
       time: "6:00",
       location: "Discord",
       date: "30",
       month: "Apr",
-    }
-  ]
+    },
+  ];
 
   return (
     <StylesProvider injectFirst>
@@ -82,16 +89,16 @@ const IndexPage = () => {
           <div className="LogoContainer">
             <div className="KnightHacksLogo">
               <img
-              src={KnightHacksLogo}
-              className="KHLogo"
-              alt="Knight Hacks Logo"
+                src={KnightHacksLogo}
+                className="KHLogo"
+                alt="Knight Hacks Logo"
               />
-              <h1 className ="LogoSubheading">UCFs Hackathon Club</h1>
+              <h1 className="LogoSubheading">UCFs Hackathon Club</h1>
             </div>
           </div>
           <div className="EventsContainer">
             <h1 className="Subtitle">Upcoming Events</h1>
-            {allEvents.map((event, index) =>(
+            {allEvents.map((event, index) => (
               <Event
                 key={index}
                 title={event.title}
@@ -119,7 +126,12 @@ const IndexPage = () => {
 const Particles = ({ children }) => {
   return (
     <div className="ParticlesContainer">
-      <ReactParticles params={particles_config} className="Particles" />
+      <ReactParticles
+        params={particles_config}
+        className="Particles"
+        width="100vw"
+        height="100vh"
+      />
       {children && <div className="Children">{children}</div>}
     </div>
   );

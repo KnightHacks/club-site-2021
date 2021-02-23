@@ -7,7 +7,6 @@ body {
 .LandingPage {
   background-color: #181d41;
   position: relative;
-  overflow: hidden;
 }
 
 .LogoContainer {
@@ -29,24 +28,21 @@ body {
 }
 
 .LogoSubheading {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: "Avenir Next Ultra Light";
-    color: white;
-    font-size: 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Avenir Next Ultra Light";
+  color: white;
+  font-size: 5vw;
 }
 
 .ParticlesContainer {
-  position: relative;
+  position: absolute;
 }
 
 .Particles {
-  position: absolute;
-  z-index: 0;
+  position: fixed;
   left: 0;
-  right: 0;
-  bottom: 0;
   top: 0;
 }
 
@@ -55,7 +51,7 @@ body {
 }
 
 .EventsContainer {
- margin: 1.2rem 0;
+  margin: 1.2rem 0;
 }
 
 .FooterContainer {

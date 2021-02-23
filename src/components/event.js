@@ -12,9 +12,7 @@ const Events = (props) => {
         className="AccordionCard"
         onChange={() => setExpanded(!expanded)}
       >
-        <AccordionSummary
-          className="AccordionHeader"
-        >
+        <AccordionSummary className="AccordionHeader">
           <div className="AccordionSchedule">
             <h1 className="EventTitle"> {props.title} </h1>
             <span className="EventDate">
@@ -24,8 +22,8 @@ const Events = (props) => {
           </div>
         </AccordionSummary>
         <AccordionDetails
-        className="AccordionContent"
-        onChange={() => setExpanded(!expanded)}
+          className="AccordionContent"
+          onChange={() => setExpanded(!expanded)}
         >
           <div className="ContentContainer">
             <p className="EventTime">
