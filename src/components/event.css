@@ -4,7 +4,7 @@
 
 .AccordionCard {
   border-radius: 10px !important;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .AccordionCard:hover {
@@ -38,10 +38,11 @@
 
 .EventDate {
   margin: 0 25px;
+  padding: 10px;
   position: absolute;
   right: 0;
-
-  font-size: 45px;
+  top: 0;
+  font-size: 5.5vmin;
 }
 
 .EventMonth {

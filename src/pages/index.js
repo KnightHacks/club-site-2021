@@ -13,6 +13,25 @@ const logoHeight = 100;
 const logoWidth = 200;
 
 const IndexPage = () => {
+  const allEvents = [
+    {
+      title: "Event One",
+      description: "A long description",
+      time: "4:00",
+      location: "Zoom",
+      date: "14",
+      month: "August",
+    },
+    {
+      title: "Event Two",
+      description: "A longer description",
+      time: "6:00",
+      location: "Discord",
+      date: "2",
+      month: "May",
+    }
+  ]
+
   return (
     <div className="LandingPage">
       <title>Home Page</title>
@@ -27,7 +46,17 @@ const IndexPage = () => {
       </div>
       <div className="EventsContainer">
         <h1 className="Subtitle">Upcoming Events</h1>
-        <Event></Event>
+        {allEvents.map((event, index) =>(
+          <Event
+            key={index}
+            title={event.title}
+            description={event.description}
+            time={event.time}
+            location={event.location}
+            date={event.date}
+            month={event.month}
+          />
+        ))}
       </div>
       <div className="FooterContainer">
         <h1 className="Subtitle">Connect With Us</h1>
