@@ -41,9 +41,11 @@
 }
 
 .EventDate {
-  margin: 0 25px;
+  margin-right: 25px;
   padding: 1vw;
   position: absolute;
+  width: 15%;
+  text-align: center;
   right: 0;
   top: 0;
   font-size: 4vmin;
@@ -63,4 +65,9 @@
   font-size: 1.3em;
   padding: 0px 10px;
   color: gray;
+}
+
+a, a:visited {
+  color: black;
+  text-decoration: none;
 }
