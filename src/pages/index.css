@@ -29,12 +29,17 @@ body {
 }
 
 .LogoSubheading {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: "Avenir Next Ultra Light";
-    color: white;
-    font-size: 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Avenir Next Ultra Light";
+  color: white;
+  font-size: 5vw;
+}
+
+.Arrow {
+  font-size: 7vw;
+  color: #dbc04a;
 }
 
 .ParticlesContainer {

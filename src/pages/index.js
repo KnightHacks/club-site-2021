@@ -8,6 +8,8 @@ import AboutUs from "../components/aboutUs.js";
 import { StylesProvider } from "@material-ui/core/styles";
 import ReactParticles from "react-particles-js";
 import particles_config from "../particles-config";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import "./index.css";
 import "@fontsource/roboto";
 import "../fonts/AvenirNext-Regular.ttf";
@@ -23,11 +25,14 @@ const IndexPage = () => {
           <div className="LogoContainer">
             <div className="KnightHacksLogo">
               <img
-              src={KnightHacksLogo}
-              className="KHLogo"
-              alt="Knight Hacks Logo"
+                src={KnightHacksLogo}
+                className="KHLogo"
+                alt="Knight Hacks Logo"
               />
-              <h1 className ="LogoSubheading">UCFs Hackathon Club</h1>
+              <h1 className="LogoSubheading">UCFs Hackathon Club</h1>
+              <div>
+                <FontAwesomeIcon icon={faChevronDown} className="Arrow" />
+              </div>
             </div>
           </div>
           <AboutUs></AboutUs>
