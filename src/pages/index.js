@@ -9,8 +9,8 @@ import ReactParticles from "react-particles-js";
 import particles_config from "../particles-config";
 import "./index.css";
 import "@fontsource/roboto";
-import "../fonts/avenirnext-regular.ttf";
-import "../fonts/avenirnext-ultralight.ttf";
+import "../fonts/AvenirNext-Regular.ttf";
+import "../fonts/AvenirNext-Ultralight.ttf";
 
 const logoHeight = 100;
 const logoWidth = 200;

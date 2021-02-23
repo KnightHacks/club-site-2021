@@ -60,13 +60,13 @@ body {
 @font-face {
   font-family: "Avenir Next Regular";
   src: local("AvenirNext-Regular"),
-    url("../fonts/avenirnext-regular.ttf") format("truetype");
+    url("../fonts/AvenirNext-Regular.ttf") format("truetype");
   font-weight: normal;
 }
 
 @font-face {
   font-family: "Avenir Next Ultra Light";
   src: local("AvenirNext-UltraLight"),
-    url("../fonts/avenirnext-ultralight.ttf") format("truetype");
+    url("../fonts/AvenirNext-Ultralight.ttf") format("truetype");
   font-weight: normal;
 }
