@@ -1,27 +1,94 @@
 body {
   margin: 0;
-  background-color: #051169;
+  background-color: #181d41;
   font-family: "Avenir Next Regular", sans-serif;
 }
 
 .LandingPage {
-  background-color: #051169;
+  background-color: #181d41;
+  position: relative;
+  overflow: hidden;
 }
+
+.LogoContainer {
+  height: 100vh;
+  position: relative;
+}
+
 .KnightHacksLogo {
-  text-align: center;
   vertical-align: baseline;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
 }
+
+.KHLogo {
+  width: 75vw;
+}
+
+.LogoSubheading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Avenir Next Ultra Light";
+  color: white;
+  font-size: 3.5vw;
+}
+
+.ParticlesContainer {
+  position: relative;
+}
+
+.Particles {
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+.Children {
+  position: relative;
+}
+
+.FooterContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.2rem;
+}
+
+.Subtitle {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 3rem;
+  width: 100%;
+}
+
+.Footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 20rem;
+  width: 100%;
+}
+
+/* Avenir font faces */
 
 @font-face {
   font-family: "Avenir Next Regular";
   src: local("AvenirNext-Regular"),
-    url("../fonts/avenirnext-regular.ttf") format("truetype");
+    url("../fonts/AvenirNext-Regular.ttf") format("truetype");
   font-weight: normal;
 }
 
 @font-face {
   font-family: "Avenir Next Ultra Light";
   src: local("AvenirNext-UltraLight"),
-    url("../fonts/avenirnext-ultralight.ttf") format("truetype");
+    url("../fonts/AvenirNext-UltraLight.ttf") format("truetype");
   font-weight: normal;
 }

@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "KnightHacks Club Site",
+    description: "UCF's Software Development & Hackathon RSO",
   },
   plugins: [
     {

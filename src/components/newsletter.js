@@ -39,9 +39,7 @@ const Newsletter = () => {
   return (
     <div className="Newsletter">
       <div className="Email-Signup">
-        <h1 className="email-signup-page__content__header">
-          Sign up for our newsletter!
-        </h1>
+        <h1 className="Newsletter_Header">Sign up for our newsletter!</h1>
         <form
           onSubmit={handleSubmit}
           method="post"
