@@ -1,4 +1,5 @@
 import * as React from "react";
+import { graphql } from "gatsby";
 import KnightHacksLogo from "../assets/logos/knightHacksLogoGold.svg";
 import Newsletter from "../components/newsletter.js";
 import Contacts from "../components/contacts.js";
@@ -15,7 +16,8 @@ import "@fontsource/roboto";
 import "../fonts/AvenirNext-Regular.ttf";
 import "../fonts/AvenirNext-UltraLight.ttf";
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
+  console.log(data);
   return (
     <StylesProvider injectFirst>
       <AppBar />
@@ -29,10 +31,16 @@ const IndexPage = () => {
                 className="KHLogo"
                 alt="Knight Hacks Logo"
               />
+<<<<<<< HEAD
               <h1 className="LogoSubheading">UCFs Hackathon Club</h1>
               <div>
                 <FontAwesomeIcon icon={faChevronDown} className="Arrow" />
               </div>
+=======
+              <h1 className="LogoSubheading">
+                {data.site.siteMetadata.description}
+              </h1>
+>>>>>>> develop
             </div>
           </div>
           <AboutUs></AboutUs>
@@ -58,5 +66,15 @@ const Particles = ({ children }) => {
     </div>
   );
 };
+
+export const query = graphql`
+  query MyQuery {
+    site {
+      siteMetadata {
+        description
+      }
+    }
+  }
+`;
 
 export default IndexPage;

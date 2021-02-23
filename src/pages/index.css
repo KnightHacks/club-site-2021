@@ -34,7 +34,7 @@ body {
   justify-content: center;
   font-family: "Avenir Next Ultra Light";
   color: white;
-  font-size: 5vw;
+  font-size: 3.5vw;
 }
 
 .Arrow {
@@ -57,6 +57,13 @@ body {
 
 .Children {
   position: relative;
+}
+
+.Description {
+  color: white;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1rem;
 }
 
 .FooterContainer {
