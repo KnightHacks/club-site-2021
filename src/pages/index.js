@@ -2,6 +2,7 @@ import React from "react";
 import KnightHacksLogo from "../assets/logos/knightHacksLogoGold.svg";
 import Newsletter from "../components/newsletter.js";
 import Contacts from "../components/contacts.js";
+import Teams from "../components/teams.js";
 import Calendar from "../components/calendar.js";
 import Event from "../components/event.js";
 import AppBar from "../components/AppBar.js";
@@ -79,6 +80,59 @@ const IndexPage = () => {
       month: "Apr",
     },
   ];
+  const allMembers = [
+    {
+      name: "Abraham",
+      position:"....",
+      major:
+        "....",
+        image:"./src/images/Abraham.jpeg",
+      linkedin: "...",
+
+    },
+    {
+      name: "Arjuin",
+      position:"...",
+      major:
+        "....",
+      image:"./src/images/Arjuin.jpeg",
+      linkedin: "....",
+
+    },
+    {
+      name: "Chris",
+      position:"...",
+      major:
+        "...",
+      image:"./src/images/chrisjpeg",
+      linkedin: "..",
+    },
+    {
+      name: "Cydni",
+      position:"...",
+      major:
+        "...",
+      image:"./src/images/Cydni.jpeg",
+
+      linkedin: "..",
+    },
+    {
+      name: "Dennis",
+      position:"...",
+      major:
+        "...",
+      image:"./src/images/Dennis.jpeg",
+      linkedin: "..",
+    },
+    {
+      name: "Dima",
+      position:"...",
+      major:
+        "...",
+      image:" ./src/images/Dima.jpeg",
+      linkedin: "..",
+    },
+  ];
 
   return (
     <StylesProvider injectFirst>
@@ -109,6 +163,7 @@ const IndexPage = () => {
                 month={event.month}
               />
             ))}
+          <Teams members={allMembers} />
           </div>
           <div className="FooterContainer">
             <h1 className="Subtitle">Connect With Us</h1>
