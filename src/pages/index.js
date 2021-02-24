@@ -22,7 +22,7 @@ const IndexPage = () => {
       time: "4:00",
       location: "Zoom",
       date: "14",
-      month: "Aug",
+      month: "Nov",
     },
     {
       title: "Long Length Title for Event Two",
