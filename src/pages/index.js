@@ -31,16 +31,12 @@ const IndexPage = ({ data }) => {
                 className="KHLogo"
                 alt="Knight Hacks Logo"
               />
-<<<<<<< HEAD
-              <h1 className="LogoSubheading">UCFs Hackathon Club</h1>
-              <div>
-                <FontAwesomeIcon icon={faChevronDown} className="Arrow" />
-              </div>
-=======
               <h1 className="LogoSubheading">
                 {data.site.siteMetadata.description}
               </h1>
->>>>>>> develop
+            </div>
+            <div className="ArrowContainer">
+              <FontAwesomeIcon icon={faChevronDown} className="Arrow" />
             </div>
           </div>
           <AboutUs></AboutUs>
