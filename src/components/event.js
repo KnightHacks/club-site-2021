@@ -23,7 +23,7 @@ const Events = (props) => {
         </AccordionSummary>
         <AccordionDetails
           className="AccordionContent"
-          onChange={() => setExpanded(!expanded)}
+          onToggle={() => setExpanded(!expanded)}
         >
           <div className="ContentContainer">
             <p className="EventTime">
