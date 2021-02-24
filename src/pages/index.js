@@ -16,6 +16,8 @@ import "./index.css";
 import "@fontsource/roboto";
 import "../fonts/AvenirNext-Regular.ttf";
 import "../fonts/AvenirNext-UltraLight.ttf";
+import "../fonts/AvenirNext-Heavy.ttf";
+import "../fonts/AvenirNext-Medium.ttf";
 
 const IndexPage = ({ data }) => {
   const scrollRef = useRef(null);

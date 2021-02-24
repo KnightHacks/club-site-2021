@@ -5,7 +5,7 @@ import AccordionSummary from "@material-ui/core/AccordionSummary";
 import Collapse from "@material-ui/core/Collapse";
 import "./event.css";
 
-const Events = (props) => {
+const Event = (props) => {
   const [expanded, setExpanded] = useState(false);
 
   return (
@@ -40,4 +40,4 @@ const Events = (props) => {
   );
 };
 
-export default Events;
+export default Event;
