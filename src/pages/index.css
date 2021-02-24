@@ -7,7 +7,6 @@ body {
 .LandingPage {
   background-color: #181d41;
   position: relative;
-  overflow: hidden;
 }
 
 .LogoContainer {
@@ -53,15 +52,12 @@ body {
 }
 
 .ParticlesContainer {
-  position: relative;
+  position: absolute;
 }
 
 .Particles {
-  position: absolute;
-  z-index: 0;
+  position: fixed;
   left: 0;
-  right: 0;
-  bottom: 0;
   top: 0;
 }
 
@@ -69,17 +65,14 @@ body {
   position: relative;
 }
 
-.Description {
-  color: white;
-  margin: 0;
-  padding: 0;
-  margin-bottom: 1rem;
+.EventsContainer {
+  margin: 1.2rem 0;
 }
 
 .FooterContainer {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1.2rem;
+  margin: 1.2rem 0;
 }
 
 .Subtitle {
@@ -112,5 +105,19 @@ body {
   font-family: "Avenir Next Ultra Light";
   src: local("AvenirNext-UltraLight"),
     url("../fonts/AvenirNext-UltraLight.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Avenir Next Heavy";
+  src: local("AvenirNext-Heavy"),
+    url("../fonts/AvenirNext-Heavy.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Avenir Next Medium";
+  src: local("AvenirNext-Medium"),
+    url("../fonts/AvenirNext-Medium.ttf") format("truetype");
   font-weight: normal;
 }
