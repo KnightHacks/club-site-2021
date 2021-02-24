@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useRef } from "react";
 import { graphql } from "gatsby";
 import KnightHacksLogo from "../assets/logos/knightHacksLogoGold.svg";
 import Newsletter from "../components/newsletter.js";
@@ -17,7 +17,7 @@ import "../fonts/AvenirNext-Regular.ttf";
 import "../fonts/AvenirNext-UltraLight.ttf";
 
 const IndexPage = ({ data }) => {
-  console.log(data);
+  const scrollRef = useRef(null);
   return (
     <StylesProvider injectFirst>
       <AppBar />
@@ -36,10 +36,19 @@ const IndexPage = ({ data }) => {
               </h1>
             </div>
             <div className="ArrowContainer">
-              <FontAwesomeIcon icon={faChevronDown} className="Arrow" />
+              <FontAwesomeIcon
+                icon={faChevronDown}
+                className="Arrow"
+                onClick={() =>
+                  scrollRef.current.scrollIntoView({
+                    block: "center",
+                    behavior: "smooth",
+                  })
+                }
+              />
             </div>
           </div>
-          <AboutUs></AboutUs>
+          <AboutUs ref={scrollRef}></AboutUs>
           <Calendar></Calendar>
           <div className="FooterContainer">
             <h1 className="Subtitle">Connect With Us</h1>

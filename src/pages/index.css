@@ -48,6 +48,10 @@ body {
   color: #dbc04a;
 }
 
+.Arrow:hover {
+  cursor: pointer;
+}
+
 .ParticlesContainer {
   position: relative;
 }
