@@ -1,5 +1,6 @@
 .CalendarContainer {
   margin: 0 20vw;
+  margin-bottom: 30px;
 }
 
 .AccordionCard {
@@ -12,13 +13,17 @@
 }
 
 .AccordionCard:hover {
-  background: linear-gradient(90deg, #dbc04a 1.5%, #FFFFFF 0%);
+  background: linear-gradient(90deg, #dbc04a 1.5%, #ffffff 0%);
 }
 
 .AccordionContent {
   display: flex;
   flex-direction: row;
   align-items: baseline;
+}
+
+.AccordionContent:hover {
+  cursor: pointer;
 }
 
 .AccordionHeader {
@@ -68,7 +73,8 @@
   color: gray;
 }
 
-a, a:visited {
+a,
+a:visited {
   color: black;
   text-decoration: none;
 }
