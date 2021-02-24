@@ -7,6 +7,9 @@ import "./event.css";
 
 const Events = (props) => {
   const [expanded, setExpanded] = useState(false);
+  const handleExpandClick = () => {
+    setExpanded(!expanded);
+  };
   return (
     <div className={`CalendarContainer ${expanded ? "Expanded" : ""}`}>
       <Accordion
@@ -24,7 +27,7 @@ const Events = (props) => {
         </AccordionSummary>
         <AccordionDetails
           className="AccordionContent"
-          onChange={() => setExpanded(!expanded)}
+          onClick={handleExpandClick}
         >
           <div className="ContentContainer">
             <p className="EventTime">
