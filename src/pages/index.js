@@ -82,55 +82,115 @@ const IndexPage = () => {
   ];
   const allMembers = [
     {
-      name: "Abraham",
-      position:"....",
+      name: "Chris Feltner",
+      position:"President",
       major:
-        "....",
-        image:"./src/images/Abraham.jpeg",
-      linkedin: "...",
+        "Computer Science & Political Science",
+      image:"./images/chris.jpg",
+      linkedin: "https://www.linkedin.com/",
+    },
+    {
+      name: "Cydni Turner",
+      position:"Mentorship Co-Director",
+      major:
+        "Computer Science",
+      image:"./images/Cydni.jpeg",
+
+      linkedin: "https://www.linkedin.com/",
+    },
+    
+    {
+      name: "Abraham Hernandez",
+      position:"Projects Co-Director",
+      major:
+        "Computer Science",
+        image:"./images/Abraham.jpg",
+      linkedin: "https://www.linkedin.com/",
 
     },
     {
-      name: "Arjuin",
-      position:"...",
+      name: "Arjun Pherwani  ",
+      position:"Development Director",
       major:
-        "....",
-      image:"./src/images/Arjuin.jpeg",
-      linkedin: "....",
+        "Computer Science",
+      image:"./images/Arjuin.jpeg",
+      linkedin: "https://www.linkedin.com/",
 
     },
+   
     {
-      name: "Chris",
-      position:"...",
+      name: "Melanie Ehrlich",
+      position:"Communications Director",
       major:
-        "...",
-      image:"./src/images/chrisjpeg",
-      linkedin: "..",
-    },
-    {
-      name: "Cydni",
-      position:"...",
-      major:
-        "...",
-      image:"./src/images/Cydni.jpeg",
+        "Computer Science",
+        image:"./images/Melanie.jpg",
+      linkedin: "https://www.linkedin.com/",
 
-      linkedin: "..",
+    },
+    
+    {
+      name: "Dennis Cepero",
+      position:"Sponsorship Director.",
+      major:
+        "Computer Science",
+      image:"./images/Dennis.jpeg",
+      linkedin: "https://www.linkedin.com/",
     },
     {
-      name: "Dennis",
-      position:"...",
+      name: "Dima Golubenko",
+      position:"Director of Projects",
       major:
-        "...",
-      image:"./src/images/Dennis.jpeg",
-      linkedin: "..",
+        "Computer Science",
+      image:'./images/Dima.jpeg',
+      linkedin: "https://www.linkedin.com/",
     },
     {
-      name: "Dima",
-      position:"...",
+      name: "Robert Boyd ",
+      position:"Workshops Director",
       major:
-        "...",
-      image:" ./src/images/Dima.jpeg",
-      linkedin: "..",
+        "Computer Science",
+      image:'./images/rob.jpg',
+      linkedin: "https://www.linkedin.com/",
+    },
+    {
+      name: "Fridjinah Francois ",
+      position:"Mentorship Co-Director",
+      major:
+        "Mathematics",
+      image:'./images/Fridjinah.jpg',
+      linkedin: "https://www.linkedin.com/",
+    },
+    {
+      name: "Rada Ursu ",
+      position:"Design Director",
+      major:
+        "Experimental Animation",
+      image:'./images/rada.jpg',
+      linkedin: "https://www.linkedin.com/",
+    },
+    {
+      name: "Abrahan Nevarez ",
+      position:"Development Director",
+      major:
+        "Information Technology",
+      image:'./images/abr.jpg',
+      linkedin: "https://www.linkedin.com/",
+    },
+    {
+      name: "Victoria Williamson",
+      position:"Lead Hackathon Organizer",
+      major:
+        "Computer Science ",
+      image:'./images/victoria_cropped.png',
+      linkedin: "https://www.linkedin.com/",
+    },
+    {
+      name: "Nicholas Yardich",
+      position:"Director of Logistics",
+      major:
+        "Computer Science",
+      image:'./images/nick_cropped.png',
+      linkedin: "https://www.linkedin.com/",
     },
   ];
 

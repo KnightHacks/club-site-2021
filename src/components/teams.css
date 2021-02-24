@@ -15,12 +15,12 @@
 .TeamCard {
   font-family: "Avenir Next Regular", sans-serif;
   left: 0;
-  width: 30%;
+  width: 60%;
 }
 
 .TeamPicture {
   height: 0;
-  padding-top: 56.25%;
+  padding-top: 100%;
 }
 
 .TeamSubtitle {
@@ -55,4 +55,7 @@
 
 .Counter {
   margin-bottom: 0;
+}
+.Icon {
+  width: 500px;
 }

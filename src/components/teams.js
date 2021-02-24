@@ -9,6 +9,16 @@ import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
 import Collapse from "@material-ui/core/Collapse";
 import Typography from "@material-ui/core/Typography";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faGithub,
+  faInstagram,
+  faLinkedin,
+  faTwitter,
+  faDiscord,
+} from "@fortawesome/free-brands-svg-icons";
+
 
 const Teams = ({members}) => {
   const breakPoints = [
@@ -37,9 +47,12 @@ const Teams = ({members}) => {
             title={member.name}
           />
           <CardContent>
-            <Typography variant="body2" color="textSecondary" component="p">
-              {member.linkedin}
+            {member.major}
+            <Typography variant="body2" color="textSecondary" component="p">             
             </Typography>
+            <a href={member.linkedin}>
+            <FontAwesomeIcon icon={faLinkedin} color="black" className="Icon" />
+          </a>
           </CardContent>
         </Card>
         )} 
