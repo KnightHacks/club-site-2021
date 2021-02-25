@@ -3,7 +3,6 @@ import { graphql } from "gatsby";
 import KnightHacksLogo from "../assets/logos/knightHacksLogoGold.svg";
 import Newsletter from "../components/newsletter.js";
 import Contacts from "../components/contacts.js";
-import Calendar from "../components/calendar.js";
 import Event from "../components/event.js";
 import AppBar from "../components/appBar.js";
 import AboutUs from "../components/aboutUs.js";
