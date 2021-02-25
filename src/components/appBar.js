@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import {
   AppBar as MaterialAppBar,
   Toolbar,
@@ -8,7 +8,7 @@ import {
 } from "@material-ui/core";
 import "./appBar.css";
 
-const AppBar = () => {
+const AppBar = forwardRef((props, ref) => {
   const trigger = useScrollTrigger({
     disableHysteresis: true,
     threshold: 0,
@@ -18,6 +18,7 @@ const AppBar = () => {
     <MaterialAppBar
       className={trigger ? "opaque" : "transparent"}
       position="fixed"
+      ref={ref}
     >
       <Toolbar className="buttons">
         <Button
@@ -45,6 +46,6 @@ const AppBar = () => {
     </MaterialAppBar>,
     { elevation: trigger ? 10 : 0 }
   );
-};
+});
 
 export default AppBar;

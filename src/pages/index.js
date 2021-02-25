@@ -19,7 +19,9 @@ import "../fonts/AvenirNext-Heavy.ttf";
 import "../fonts/AvenirNext-Medium.ttf";
 
 const IndexPage = ({ data }) => {
-  const scrollRef = useRef(null);
+  const aboutUsRef = useRef(null);
+  const appBarRef = useRef(null);
+
   const allEvents = [
     {
       title: "Long Length Title for Event One",
@@ -87,7 +89,7 @@ const IndexPage = ({ data }) => {
   ];
   return (
     <StylesProvider injectFirst>
-      <AppBar />
+      <AppBar ref={appBarRef} />
       <div className="LandingPage">
         <Particles>
           <title>Knight Hacks</title>
@@ -107,15 +109,17 @@ const IndexPage = ({ data }) => {
                 icon={faChevronDown}
                 className="Arrow"
                 onClick={() =>
-                  scrollRef.current.scrollIntoView({
-                    block: "center",
+                  window.scrollTo({
+                    top:
+                      aboutUsRef.current.offsetTop -
+                      appBarRef.current.clientHeight,
                     behavior: "smooth",
                   })
                 }
               />
             </div>
           </div>
-          <AboutUs ref={scrollRef}></AboutUs>
+          <AboutUs ref={aboutUsRef}></AboutUs>
           <div className="EventsContainer">
             <h1 className="Subtitle">Upcoming Events</h1>
             {allEvents.map((event, index) => (
