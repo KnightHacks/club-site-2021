@@ -139,7 +139,7 @@ const IndexPage = () => {
     
     {
       name: "Dennis Cepero",
-      position:"Sponsorship Director.",
+      position:"Sponsorship Director",
       major:
         "Computer Science",
       image:"./images/Dennis.jpeg",
