@@ -38,7 +38,11 @@ const Contacts = () => {
           </a>
         </div>
       </div>
-      <p className="Contact-Email">team@knighthacks.org</p>
+      <p className="Contact-Email">
+        <a href="mailto:team@knighthacks.org?subject=Let's%20talk.&body=Hey%20KnightHacks!">
+          team@knighthacks.org
+        </a>
+      </p>
     </div>
   );
 };

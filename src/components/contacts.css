@@ -43,6 +43,13 @@
   margin-bottom: 3vw;
 }
 
+a,
+a:link,
 a:visited {
-  color: #7289da;
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: gray;
 }
