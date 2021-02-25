@@ -91,7 +91,7 @@ const IndexPage = ({ data }) => {
       <AppBar />
       <div className="LandingPage">
         <Particles>
-          <title>Home Page</title>
+          <title>Knight Hacks</title>
           <div className="LogoContainer">
             <div className="KnightHacksLogo">
               <img
