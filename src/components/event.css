@@ -36,25 +36,19 @@
 .AccordionSchedule {
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
-  align-content: flex-end;
+  width: 100%;
 }
 
 .EventTitle {
   font-family: "Avenir Next Regular", sans-serif;
   font-size: 1.5em;
   padding: 0 5px;
-  align-self: bottom;
 }
 
 .EventDate {
-  align-self: flex-end;
   padding: 1vw;
-  position: absolute;
-  width: 15%;
-  text-align: center;
-  right: 0;
   font-size: 4.5vmin;
   font-family: "Avenir Next Medium", sans-serif;
 }
