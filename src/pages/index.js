@@ -19,8 +19,10 @@ import "../fonts/AvenirNext-Heavy.ttf";
 import "../fonts/AvenirNext-Medium.ttf";
 
 const IndexPage = ({ data }) => {
-  const aboutUsRef = useRef(null);
   const appBarRef = useRef(null);
+  const aboutUsRef = useRef(null);
+  const eventsRef = useRef(null);
+  const contactUsRef = useRef(null);
 
   const allEvents = [
     {
@@ -89,7 +91,13 @@ const IndexPage = ({ data }) => {
   ];
   return (
     <StylesProvider injectFirst>
-      <AppBar ref={appBarRef} />
+      <AppBar
+        ref={appBarRef}
+        appBarRef={appBarRef}
+        aboutUsRef={aboutUsRef}
+        eventsRef={eventsRef}
+        contactUsRef={contactUsRef}
+      />
       <div className="LandingPage">
         <Particles>
           <title>Knight Hacks</title>
@@ -120,7 +128,7 @@ const IndexPage = ({ data }) => {
             </div>
           </div>
           <AboutUs ref={aboutUsRef}></AboutUs>
-          <div className="EventsContainer">
+          <div className="EventsContainer" ref={eventsRef}>
             <h1 className="Subtitle">Upcoming Events</h1>
             {allEvents.map((event, index) => (
               <Event
@@ -134,7 +142,7 @@ const IndexPage = ({ data }) => {
               />
             ))}
           </div>
-          <div className="FooterContainer">
+          <div className="FooterContainer" ref={contactUsRef}>
             <h1 className="Subtitle">Connect With Us</h1>
             <div className="Footer">
               <Newsletter></Newsletter>
