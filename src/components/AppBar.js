@@ -6,7 +6,7 @@ import {
   ButtonGroup,
   useScrollTrigger,
 } from "@material-ui/core";
-import "./AppBar.css";
+import "./appBar.css";
 
 const AppBar = () => {
   const trigger = useScrollTrigger({

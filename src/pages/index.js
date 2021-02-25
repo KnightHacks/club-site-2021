@@ -5,7 +5,7 @@ import Newsletter from "../components/newsletter.js";
 import Contacts from "../components/contacts.js";
 import Calendar from "../components/calendar.js";
 import Event from "../components/event.js";
-import AppBar from "../components/AppBar.js";
+import AppBar from "../components/appBar.js";
 import AboutUs from "../components/aboutUs.js";
 import { StylesProvider } from "@material-ui/core/styles";
 import ReactParticles from "react-particles-js";
