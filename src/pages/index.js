@@ -113,7 +113,7 @@ const IndexPage = () => {
       position:"Outreach Director",
       major:
         "Computer Science",
-        image:"./images/jose.jpeg",
+      image:'../../images/jose.jpeg',
       linkedin: "https://www.linkedin.com/",
 
     },
