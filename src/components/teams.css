@@ -14,13 +14,24 @@
 
 .TeamCard {
   font-family: "Avenir Next Regular", sans-serif;
-  left: 0;
-  width: 50%;
-  min-height: 430px;
+  width: 76%;
 }
 
 .TeamPicture {
   padding-top: 100%;
+  padding-bottom: 10px;
+}
+.Major {
+  padding-left: 16px;
+  padding-top: -10px;
+  padding-bottom: 5px;
+  font-size: 13px;
+}
+.Iconlink {
+  font-size: 35px;
+}
+.Links {
+  padding-top: 0px;
 }
 
 .TeamSubtitle {
@@ -57,5 +68,8 @@
   margin-bottom: 0;
 }
 .Icon {
-  width: 500px;
+  height: -50px;
+}
+.TeamHeader {
+  padding-bottom: 0px;
 }

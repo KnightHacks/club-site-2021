@@ -40,20 +40,27 @@ const Teams = ({members}) => {
             className="TeamHeader"
             title={member.name}
             subheader={member.position}
+           
+            
           />
+           <Typography className="Major" align="left" variant="subtitle1" color="textSecondary" component="p">
+           {member.major}
+            </Typography>
+           
           <CardMedia
             className="TeamPicture"
             image ={member.image}
             title={member.name}
           />
-          <CardContent>
-            {member.major}
-            <Typography variant="body2" color="textSecondary" component="p">             
-            </Typography>
-            <a href={member.linkedin}>
-            <FontAwesomeIcon icon={faLinkedin} color="black" className="Icon" />
-          </a>
-          </CardContent>
+          <CardContent className="Icon">
+          <Typography variant="body2" color="textSecondary" component="p">   
+          <a href={member.linkedin}>
+          <FontAwesomeIcon icon={faLinkedin} color="#0E76A8" className="Iconlink" />
+          </a>          
+          </Typography>
+           
+            
+         </CardContent>
         </Card>
         )} 
         

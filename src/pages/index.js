@@ -109,6 +109,15 @@ const IndexPage = () => {
 
     },
     {
+      name: "Jose Puche",
+      position:"Outreach Director",
+      major:
+        "Computer Science",
+        image:"./images/jose.jpeg",
+      linkedin: "https://www.linkedin.com/",
+
+    },
+    {
       name: "Arjun Pherwani  ",
       position:"Development Director",
       major:
@@ -138,7 +147,7 @@ const IndexPage = () => {
     },
     {
       name: "Dima Golubenko",
-      position:"Director of Projects",
+      position:"Projects Director",
       major:
         "Computer Science",
       image:'./images/Dima.jpeg',
@@ -180,7 +189,7 @@ const IndexPage = () => {
       name: "Victoria Williamson",
       position:"Lead Hackathon Organizer",
       major:
-        "Computer Science ",
+        "Computer Science and Statistics ",
       image:'./images/victoria_cropped.png',
       linkedin: "https://www.linkedin.com/",
     },
