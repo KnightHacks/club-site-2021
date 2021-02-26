@@ -56,9 +56,8 @@
   outline: none;
   box-shadow: none;
 }
-.rec.rec-dot:hover,
-rec.rec-dot:active,
-rec.rec-dot:focus {
+
+.rec-dot:active {
   background-color: #dbc04a;
   box-shadow: #dbc04a;
 }
