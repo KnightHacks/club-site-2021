@@ -32,7 +32,7 @@ const Teams = ({members}) => {
   return (
     <div className="Teams">
       <h1 className="Subtitle">Meet the Team</h1>
-      <Carousel breakPoints={breakPoints}>
+      <Carousel breakPoints={breakPoints} style={{ width: "90vw" }}>
         {members.map(
           member => 
           <Card className="TeamCard">

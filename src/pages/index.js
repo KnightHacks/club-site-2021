@@ -86,7 +86,7 @@ const IndexPage = () => {
       position:"President",
       major:
         "Computer Science & Political Science",
-      image:"./images/chris.jpg",
+      image:require("../images/chris.jpg"),
       linkedin: "https://www.linkedin.com/",
     },
     {
@@ -94,7 +94,7 @@ const IndexPage = () => {
       position:"Mentorship Co-Director",
       major:
         "Computer Science",
-      image:"./images/Cydni.jpeg",
+      image:require("../images/Cydni.jpeg"),
 
       linkedin: "https://www.linkedin.com/",
     },
@@ -104,7 +104,7 @@ const IndexPage = () => {
       position:"Projects Co-Director",
       major:
         "Computer Science",
-        image:"./images/Abraham.jpg",
+        image:require("../images/Abraham.jpg"),
       linkedin: "https://www.linkedin.com/",
 
     },
@@ -113,7 +113,7 @@ const IndexPage = () => {
       position:"Outreach Director",
       major:
         "Computer Science",
-      image:'../../images/jose.jpeg',
+      image:require("../images/jose.jpeg"),
       linkedin: "https://www.linkedin.com/",
 
     },
@@ -122,7 +122,7 @@ const IndexPage = () => {
       position:"Development Director",
       major:
         "Computer Science",
-      image:"./images/Arjuin.jpeg",
+      image:require("../images/Arjun.jpeg"),
       linkedin: "https://www.linkedin.com/",
 
     },
@@ -132,7 +132,7 @@ const IndexPage = () => {
       position:"Communications Director",
       major:
         "Computer Science",
-        image:"./images/Melanie.jpg",
+        image:require("../images/mel.jpg"),
       linkedin: "https://www.linkedin.com/",
 
     },
@@ -142,7 +142,7 @@ const IndexPage = () => {
       position:"Sponsorship Director",
       major:
         "Computer Science",
-      image:"./images/Dennis.jpeg",
+      image:require("../images/Dennis.jpeg"),
       linkedin: "https://www.linkedin.com/",
     },
     {
@@ -150,7 +150,7 @@ const IndexPage = () => {
       position:"Projects Director",
       major:
         "Computer Science",
-      image:'./images/Dima.jpeg',
+      image:require("../images/Dima.jpeg"),
       linkedin: "https://www.linkedin.com/",
     },
     {
@@ -158,7 +158,7 @@ const IndexPage = () => {
       position:"Workshops Director",
       major:
         "Computer Science",
-      image:'./images/rob.jpg',
+      image:require("../images/rob.jpg"),
       linkedin: "https://www.linkedin.com/",
     },
     {
@@ -166,7 +166,7 @@ const IndexPage = () => {
       position:"Mentorship Co-Director",
       major:
         "Mathematics",
-      image:'./images/Fridjinah.jpg',
+      image:require("../images/Fridjinah.jpg"),
       linkedin: "https://www.linkedin.com/",
     },
     {
@@ -174,7 +174,7 @@ const IndexPage = () => {
       position:"Design Director",
       major:
         "Experimental Animation",
-      image:'./images/rada.jpg',
+      image:require("../images/rada.jpg"),
       linkedin: "https://www.linkedin.com/",
     },
     {
@@ -182,7 +182,7 @@ const IndexPage = () => {
       position:"Development Director",
       major:
         "Information Technology",
-      image:'./images/abr.jpg',
+      image:require("../images/abr.jpg"),
       linkedin: "https://www.linkedin.com/",
     },
     {
@@ -190,7 +190,7 @@ const IndexPage = () => {
       position:"Lead Hackathon Organizer",
       major:
         "Computer Science and Statistics ",
-      image:'./images/victoria_cropped.png',
+      image:require("../images/victoria.png"),
       linkedin: "https://www.linkedin.com/",
     },
     {
@@ -198,7 +198,7 @@ const IndexPage = () => {
       position:"Director of Logistics",
       major:
         "Computer Science",
-      image:'./images/nick_cropped.png',
+      image:require("../images/nicholas.png"),
       linkedin: "https://www.linkedin.com/",
     },
   ];
