@@ -29,11 +29,27 @@ body {
 
 .LogoSubheading {
   display: flex;
-  align-items: center;
   justify-content: center;
   font-family: "Avenir Next Ultra Light";
   color: white;
-  font-size: 5vw;
+  font-size: 3.5vw;
+  white-space: nowrap;
+}
+
+.ArrowContainer {
+  display: flex;
+  position: absolute;
+  bottom: 5%;
+  left: 48%;
+}
+
+.Arrow {
+  font-size: 7vw;
+  color: #dbc04a;
+}
+
+.Arrow:hover {
+  cursor: pointer;
 }
 
 .ParticlesContainer {
@@ -90,5 +106,19 @@ body {
   font-family: "Avenir Next Ultra Light";
   src: local("AvenirNext-UltraLight"),
     url("../fonts/AvenirNext-UltraLight.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Avenir Next Heavy";
+  src: local("AvenirNext-Heavy"),
+    url("../fonts/AvenirNext-Heavy.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Avenir Next Medium";
+  src: local("AvenirNext-Medium"),
+    url("../fonts/AvenirNext-Medium.ttf") format("truetype");
   font-weight: normal;
 }

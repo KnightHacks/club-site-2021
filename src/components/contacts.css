@@ -16,7 +16,7 @@
 .Discord {
   margin-bottom: 2rem;
   font-size: 7vw;
-  color: #7289da;
+  color: white;
 }
 
 .Links {
@@ -43,6 +43,13 @@
   margin-bottom: 3vw;
 }
 
+a,
+a:link,
 a:visited {
-  color: #7289da;
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: gray;
 }

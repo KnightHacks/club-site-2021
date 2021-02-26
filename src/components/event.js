@@ -5,11 +5,13 @@ import AccordionSummary from "@material-ui/core/AccordionSummary";
 import Collapse from "@material-ui/core/Collapse";
 import "./event.css";
 
-const Events = (props) => {
+const Event = (props) => {
   const [expanded, setExpanded] = useState(false);
+
   return (
     <div className={`CalendarContainer ${expanded ? "Expanded" : ""}`}>
       <Accordion
+        expanded={expanded}
         className="AccordionCard"
         onChange={() => setExpanded(!expanded)}
       >
@@ -24,7 +26,7 @@ const Events = (props) => {
         </AccordionSummary>
         <AccordionDetails
           className="AccordionContent"
-          onChange={() => setExpanded(!expanded)}
+          onClick={() => setExpanded(!expanded)}
         >
           <div className="ContentContainer">
             <p className="EventTime">
@@ -38,4 +40,4 @@ const Events = (props) => {
   );
 };
 
-export default Events;
+export default Event;
