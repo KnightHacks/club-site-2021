@@ -35,7 +35,33 @@
 }
 .Iconlink {
   font-size: 35px;
+  padding-left: 8px;
 }
+.Iconlink2 {
+  padding-left: 10px;
+  font-size: 35px;
+}
+/*
+button.rec-dot {
+  outline: #dbc04a;
+}
+
+button.rec-dot:hover,
+button.rec-dot:active,
+button.rec-dot:focus {
+  box-shadow: 0 0 1px 3px rgba(59, 59, 42, 0.5);
+}
+
+button.rec-arrow {
+  background-color: rgb(235, 219, 8);
+  box-shadow: 0 0 1px 3px rgba(219, 192, 74);
+  outline: none;
+}
+ button.rec-arrow:hover {
+  outline: #dbc04a;
+  background-color: #dbc04a;
+}
+*/
 .Links {
   padding-top: 0px;
 }

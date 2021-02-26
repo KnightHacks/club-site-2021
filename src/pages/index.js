@@ -88,6 +88,7 @@ const IndexPage = () => {
         "Computer Science & Political Science",
       image:require("../images/chris.jpg"),
       linkedin: "https://www.linkedin.com/",
+      twitter:"https://twitter.com/?lang=en",
     },
     {
       name: "Cydni Turner",
@@ -97,6 +98,7 @@ const IndexPage = () => {
       image:require("../images/Cydni.jpeg"),
 
       linkedin: "https://www.linkedin.com/",
+      twitter:"https://twitter.com/?lang=en",
     },
     
     {
@@ -106,17 +108,9 @@ const IndexPage = () => {
         "Computer Science",
         image:require("../images/Abraham.jpg"),
       linkedin: "https://www.linkedin.com/",
-
+      twitter:"https://twitter.com/?lang=en",
     },
-    {
-      name: "Jose Puche",
-      position:"Outreach Director",
-      major:
-        "Computer Science",
-      image:require("../images/jose.jpeg"),
-      linkedin: "https://www.linkedin.com/",
-
-    },
+  
     {
       name: "Arjun Pherwani  ",
       position:"Development Director",
@@ -124,6 +118,7 @@ const IndexPage = () => {
         "Computer Science",
       image:require("../images/Arjun.jpeg"),
       linkedin: "https://www.linkedin.com/",
+      twitter:"https://twitter.com/?lang=en",
 
     },
    
@@ -134,17 +129,11 @@ const IndexPage = () => {
         "Computer Science",
         image:require("../images/mel.jpg"),
       linkedin: "https://www.linkedin.com/",
+      twitter:"https://twitter.com/?lang=en",
 
     },
     
-    {
-      name: "Dennis Cepero",
-      position:"Sponsorship Director",
-      major:
-        "Computer Science",
-      image:require("../images/Dennis.jpeg"),
-      linkedin: "https://www.linkedin.com/",
-    },
+  
     {
       name: "Dima Golubenko",
       position:"Projects Director",
@@ -152,6 +141,7 @@ const IndexPage = () => {
         "Computer Science",
       image:require("../images/Dima.jpeg"),
       linkedin: "https://www.linkedin.com/",
+      twitter:"https://twitter.com/?lang=en",
     },
     {
       name: "Robert Boyd ",
@@ -160,6 +150,7 @@ const IndexPage = () => {
         "Computer Science",
       image:require("../images/rob.jpg"),
       linkedin: "https://www.linkedin.com/",
+      twitter:"https://twitter.com/?lang=en",
     },
     {
       name: "Fridjinah Francois ",
@@ -168,6 +159,7 @@ const IndexPage = () => {
         "Mathematics",
       image:require("../images/Fridjinah.jpg"),
       linkedin: "https://www.linkedin.com/",
+      twitter:"https://twitter.com/?lang=en",
     },
     {
       name: "Rada Ursu ",
@@ -176,6 +168,7 @@ const IndexPage = () => {
         "Experimental Animation",
       image:require("../images/rada.jpg"),
       linkedin: "https://www.linkedin.com/",
+      twitter:"https://twitter.com/?lang=en",
     },
     {
       name: "Abrahan Nevarez ",
@@ -184,6 +177,7 @@ const IndexPage = () => {
         "Information Technology",
       image:require("../images/abr.jpg"),
       linkedin: "https://www.linkedin.com/",
+      twitter:"https://twitter.com/?lang=en",
     },
     {
       name: "Victoria Williamson",
@@ -192,6 +186,7 @@ const IndexPage = () => {
         "Computer Science and Statistics ",
       image:require("../images/victoria.png"),
       linkedin: "https://www.linkedin.com/",
+      twitter:"https://twitter.com/?lang=en",
     },
     {
       name: "Nicholas Yardich",
@@ -200,6 +195,7 @@ const IndexPage = () => {
         "Computer Science",
       image:require("../images/nicholas.png"),
       linkedin: "https://www.linkedin.com/",
+      twitter:"https://twitter.com/?lang=en",
     },
   ];
 

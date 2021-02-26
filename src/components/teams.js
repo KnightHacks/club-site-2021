@@ -8,7 +8,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin,faTwitter } from "@fortawesome/free-brands-svg-icons";
 import  {useEffect, useState} from "react";
 
 const useWidth = () => {
@@ -78,7 +78,10 @@ const Teams = ({members}) => {
           <Typography variant="body2" color="textSecondary" component="p">   
           <a href={member.linkedin}>
           <FontAwesomeIcon icon={faLinkedin} color="#0E76A8" className="Iconlink" />
-          </a>          
+          </a>  
+          <a href={member.twitter}>
+          <FontAwesomeIcon icon={faTwitter} color="#00ACEE" className="Iconlink2" padding-left="50px"/>
+          </a>
           </Typography>
            
             
@@ -93,13 +96,13 @@ const Teams = ({members}) => {
       <div className="Members">
         <div className="ClubMembers">
           <h1 className="Counter">
-            <CountUp end={200} duration={7} />
+            <CountUp end={127} duration={7} />
           </h1>
           <span className="MemberSubtitle">active members</span>
         </div>
         <div className="ClubDirectors">
           <h1 className="Counter">
-            <CountUp end={50} duration={7} />
+            <CountUp end={24} duration={7} />
           </h1>
           <span className="MemberSubtitle">developers & directors</span>
         </div>
