@@ -6,33 +6,55 @@ import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
-import CardActions from "@material-ui/core/CardActions";
-import Collapse from "@material-ui/core/Collapse";
 import Typography from "@material-ui/core/Typography";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebook,
-  faGithub,
-  faInstagram,
-  faLinkedin,
-  faTwitter,
-  faDiscord,
-} from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import  {useEffect, useState} from "react";
+
+const useWidth = () => {
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return width;
+};
+
 
 
 const Teams = ({members}) => {
-  const breakPoints = [
-    { width: 500, itemsToShow: 1 },
-    { width: 768, itemsToShow: 2 },
-    { width: 1200, itemsToShow: 3 },
-    { width: 1500, itemsToShow: 4 },
-  ];
-  
+
+  const width = useWidth();
+  const getItemsToShow = () => {
+    switch (true) {
+      case width >= 1500:
+        return 4;
+      case width >= 1200:
+        return 3;
+      case width >= 768:
+        return 2;
+      default:
+        return 1;
+    }
+  };
+  const [itemsToShow, setItemsToShow] = useState(getItemsToShow());
+
+  useEffect(() => {
+    setItemsToShow(getItemsToShow());
+  }, [width]);
 
   return (
     <div className="Teams">
       <h1 className="Subtitle">Meet the Team</h1>
-      <Carousel breakPoints={breakPoints} style={{ width: "90vw" }}>
+      <Carousel itemsToShow={itemsToShow}
+        itemsToScroll={itemsToShow} style={{ width: "90vw" }}>
+
         {members.map(
           member => 
           <Card className="TeamCard">
@@ -68,14 +90,14 @@ const Teams = ({members}) => {
 
       <h1 className="TeamSubtitle">Our Members</h1>
 
-      <div class="Members">
-        <div class="ClubMembers">
+      <div className="Members">
+        <div className="ClubMembers">
           <h1 className="Counter">
             <CountUp end={200} duration={7} />
           </h1>
           <span className="MemberSubtitle">active members</span>
         </div>
-        <div class="ClubDirectors">
+        <div className="ClubDirectors">
           <h1 className="Counter">
             <CountUp end={50} duration={7} />
           </h1>
