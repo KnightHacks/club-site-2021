@@ -190,7 +190,7 @@ const IndexPage = () => {
     },
     {
       name: "Nicholas Yardich",
-      position:"Director of Logistics",
+      position:"Logistics Director",
       major:
         "Computer Science",
       image:require("../images/nicholas.png"),
