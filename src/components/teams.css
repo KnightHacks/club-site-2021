@@ -42,29 +42,26 @@
   font-size: 35px;
 }
 
-button.rec-dot {
-  outline: #dbc04a;
-}
-
-button.rec-dot:hover,
-button.rec-dot:active,
-button.rec-dot:focus {
+.rec.rec-arrow {
+  border-radius: 40px;
   background-color: #dbc04a;
 }
-
-button.rec-arrow {
-  background-color: rgb(235, 219, 8);
-  box-shadow: 0 0 1px 3px rgba(219, 192, 74);
+.rec.rec-arrow:hover {
+  background-color: #dbc04a;
+}
+.rec.rec-arrow:disabled {
+  visibility: hidden;
+}
+.rec-carousel-item:focus {
   outline: none;
+  box-shadow: none;
 }
-button.rec-arrow:hover {
-  outline: #dbc04a;
+.rec.rec-dot:hover,
+rec.rec-dot:active,
+rec.rec-dot:focus {
   background-color: #dbc04a;
+  box-shadow: #dbc04a;
 }
-button.rec-arrow:after {
-  background-color: #dbc04a;
-}
-
 .Links {
   padding-top: 0px;
 }
