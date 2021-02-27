@@ -23,67 +23,51 @@ const IndexPage = ({ data }) => {
   const scrollRef = useRef(null);
   const allEvents = [
     {
-      title: "Long Length Title for Event One",
+      title: "Alexa Stock Ticker",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae turpis massa sed elementum tempus egestas sed sed risus. Eleifend donec pretium vulputate sapien nec. Vitae semper quis lectus nulla at volutpat diam.",
+        "Learn how to make an Alexa skill with Knight Hacks! No coding experience is required. We will be making an Alexa skill that gets stock prices so you can ask your device what your favorite company is trading at. Along the way, we'll demonstrate some basic programming concepts for participants who are new to programming. We'll also be giving away an Amazon Echo device to a lucky workshop participant!",
       time: "4:00",
       location: "Zoom",
-      date: "14",
-      month: "Nov",
-    },
-    {
-      title: "Long Length Title for Event Two",
-      description:
-        "Tempor orci dapibus ultrices in iaculis nunc sed. Eget sit amet tellus cras adipiscing. Diam donec adipiscing tristique risus nec feugiat. Purus ut faucibus pulvinar elementum integer enim neque volutpat. Et netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum. Faucibus a pellentesque sit amet. A lacus vestibulum sed arcu non odio euismod lacinia. Justo nec ultrices dui sapien eget.",
-      time: "6:00",
-      location: "Discord",
-      date: "02",
-      month: "May",
-    },
-    {
-      title: "Long Length Title for Event Three",
-      description:
-        "Tempor orci dapibus ultrices in iaculis nunc sed. Eget sit amet tellus cras adipiscing. Diam donec adipiscing tristique risus nec feugiat. Purus ut faucibus pulvinar elementum integer enim neque volutpat. Et netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum. Faucibus a pellentesque sit amet. A lacus vestibulum sed arcu non odio euismod lacinia. Justo nec ultrices dui sapien eget.",
-      time: "6:00",
-      location: "Discord",
-      date: "23",
-      month: "Jun",
-    },
-    {
-      title: "Long Length Title for Event Four",
-      description:
-        "Tempor orci dapibus ultrices in iaculis nunc sed. Eget sit amet tellus cras adipiscing. Diam donec adipiscing tristique risus nec feugiat. Purus ut faucibus pulvinar elementum integer enim neque volutpat. Et netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum. Faucibus a pellentesque sit amet. A lacus vestibulum sed arcu non odio euismod lacinia. Justo nec ultrices dui sapien eget.",
-      time: "6:00",
-      location: "Discord",
-      date: "12",
-      month: "Jan",
-    },
-    {
-      title: "Long Length Title for Event Five",
-      description:
-        "Tempor orci dapibus ultrices in iaculis nunc sed. Eget sit amet tellus cras adipiscing. Diam donec adipiscing tristique risus nec feugiat. Purus ut faucibus pulvinar elementum integer enim neque volutpat. Et netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum. Faucibus a pellentesque sit amet. A lacus vestibulum sed arcu non odio euismod lacinia. Justo nec ultrices dui sapien eget.",
-      time: "6:00",
-      location: "Discord",
-      date: "09",
-      month: "Dec",
-    },
-    {
-      title: "Long Length Title for Event Six",
-      description:
-        "Tempor orci dapibus ultrices in iaculis nunc sed. Eget sit amet tellus cras adipiscing. Diam donec adipiscing tristique risus nec feugiat. Purus ut faucibus pulvinar elementum integer enim neque volutpat. Et netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum. Faucibus a pellentesque sit amet. A lacus vestibulum sed arcu non odio euismod lacinia. Justo nec ultrices dui sapien eget.",
-      time: "6:00",
-      location: "Discord",
-      date: "22",
+      date: "25",
       month: "Feb",
     },
     {
-      title: "Long Length Title for Event Seven",
+      title: "What's the Point of Pointers?",
       description:
-        "Tempor orci dapibus ultrices in iaculis nunc sed. Eget sit amet tellus cras adipiscing. Diam donec adipiscing tristique risus nec feugiat. Purus ut faucibus pulvinar elementum integer enim neque volutpat. Et netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum. Faucibus a pellentesque sit amet. A lacus vestibulum sed arcu non odio euismod lacinia. Justo nec ultrices dui sapien eget.",
+        "Memory allocation is one of the more difficult parts of CS1, so this week we are going to do a review of the topic to help you succeed in your class! Knight Hacks President Chris Feltner will go over what pointers are, how to use them, and how to allocate and free memory. We'll be making a meal ordering system for the terminal in C to demonstrate these techniques.",
+      time: "6:00",
+      location: "Zoom",
+      date: "02",
+      month: "Mar",
+    },
+    {
+      title: "Vim and Vigor",
+      description:
+        "Interested in a text editor included with nearly every Linux server and installation of MacOS? Ever typed `git commit` and gotten stuck in a strange program where the keys do seemingly random things? Curious about this `vim` thing you've seen Rob typing at `Hello, World!` ? Whatever your reason, this workshop is for you! We will learn the legendary Vim text editor, from basics like how to exit, to the powerful keybindings that have made it a popular choice for decades. No experience required!",
       time: "6:00",
       location: "Discord",
-      date: "30",
-      month: "Apr",
+      date: "04",
+      month: "Mar",
+    },
+    {
+      title: "Career Development Panel",
+      description:
+        "Join us for a panel with former students who have graduated and now work full time! You can listen and ask questions about their path into their current career and what they might have done differently. This panel is a great opportunity to learn about the reality of the job market and what you need to do to be successful!",
+      time: "6:00",
+      location: "Zoom",
+      date: "11",
+      month: "Mar",
+    },
+    {
+      title: "Rust",
+      description:
+        "Rust has been the undisputed " /
+        "most loved" /
+        " programming language on the Stack Overflow Developer Survey for several years. Why? Come to this workshop and find out! Anthony will be returning to teach us the basics of Rust's unique memory management model and answer any questions about this innovative and promising new programming language.",
+      time: "6:00",
+      location: "Discord",
+      date: "18",
+      month: "Mar",
     },
   ];
   const allMembers = [
@@ -239,8 +223,12 @@ const IndexPage = ({ data }) => {
           <div className="FooterContainer">
             <h1 className="Subtitle">Connect With Us</h1>
             <div className="Footer">
-              <Newsletter></Newsletter>
-              <Contacts></Contacts>
+              <div className="FooterElement">
+                <Newsletter></Newsletter>
+              </div>
+              <div className="FooterElement">
+                <Contacts></Contacts>
+              </div>
             </div>
           </div>
         </Particles>
