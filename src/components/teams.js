@@ -9,7 +9,7 @@ import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { useEffect, useState } from "react";
+import { useEffect, useState , forwardRef} from "react";
 
 const useWidth = () => {
   let tempWidth;
@@ -31,7 +31,7 @@ const useWidth = () => {
   return width;
 };
 
-const Teams = ({ members }) => {
+const Teams = forwardRef(({ members },ref) => {
   const width = useWidth();
   const getItemsToShow = () => {
     switch (true) {
@@ -52,7 +52,7 @@ const Teams = ({ members }) => {
   }, [width]);
 
   return (
-    <div className="Teams">
+    <div className="Teams" ref={ref}>
       <h1 className="Subtitle">Meet the Team</h1>
       <Carousel
         itemsToShow={itemsToShow}
@@ -122,6 +122,6 @@ const Teams = ({ members }) => {
       </div>
     </div>
   );
-};
+});
 
 export default Teams;

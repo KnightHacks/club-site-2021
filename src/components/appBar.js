@@ -9,7 +9,7 @@ import {
 import "./appBar.css";
 
 const AppBar = forwardRef(
-  ({ appBarRef, aboutUsRef, eventsRef, contactUsRef }, ref) => {
+  ({ appBarRef, aboutUsRef, eventsRef, contactUsRef,teamsRef}, ref) => {
     const trigger = useScrollTrigger({
       disableHysteresis: true,
       threshold: 0,
@@ -51,7 +51,7 @@ const AppBar = forwardRef(
             >
               Events
             </Button>
-            <Button className="button" color="inherit">
+            <Button className="button" color="inherit" onClick={() => scroll(teamsRef)}>
               Team
             </Button>
             <Button

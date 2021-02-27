@@ -23,6 +23,7 @@ const IndexPage = ({ data }) => {
   const appBarRef = useRef(null);
   const aboutUsRef = useRef(null);
   const eventsRef = useRef(null);
+  const teamsRef = useRef(null);
   const contactUsRef = useRef(null);
 
   const allEvents = [
@@ -201,7 +202,9 @@ const IndexPage = ({ data }) => {
         appBarRef={appBarRef}
         aboutUsRef={aboutUsRef}
         eventsRef={eventsRef}
+        teamsRef = {teamsRef}
         contactUsRef={contactUsRef}
+       
       />
       <div className="LandingPage">
         <Particles>
@@ -246,7 +249,7 @@ const IndexPage = ({ data }) => {
                 month={event.month}
               />
             ))}
-            <Teams members={allMembers} />
+            <Teams members={allMembers} ref = {teamsRef} />
           </div>
           <div className="FooterContainer" ref={contactUsRef}>
             <h1 className="Subtitle">Connect With Us</h1>
