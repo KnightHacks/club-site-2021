@@ -20,7 +20,12 @@ import "../fonts/AvenirNext-Heavy.ttf";
 import "../fonts/AvenirNext-Medium.ttf";
 
 const IndexPage = ({ data }) => {
-  const scrollRef = useRef(null);
+  const appBarRef = useRef(null);
+  const aboutUsRef = useRef(null);
+  const eventsRef = useRef(null);
+  const teamsRef = useRef(null);
+  const contactUsRef = useRef(null);
+
   const allEvents = [
     {
       title: "Alexa Stock Ticker",
@@ -176,7 +181,15 @@ const IndexPage = ({ data }) => {
 
   return (
     <StylesProvider injectFirst>
-      <AppBar />
+      <AppBar
+        ref={appBarRef}
+        appBarRef={appBarRef}
+        aboutUsRef={aboutUsRef}
+        eventsRef={eventsRef}
+        teamsRef = {teamsRef}
+        contactUsRef={contactUsRef}
+       
+      />
       <div className="LandingPage">
         <Particles>
           <title>Knight Hacks</title>
@@ -196,16 +209,18 @@ const IndexPage = ({ data }) => {
                 icon={faChevronDown}
                 className="Arrow"
                 onClick={() =>
-                  scrollRef.current.scrollIntoView({
-                    block: "center",
+                  window.scrollTo({
+                    top:
+                      aboutUsRef.current.offsetTop -
+                      appBarRef.current.clientHeight,
                     behavior: "smooth",
                   })
                 }
               />
             </div>
           </div>
-          <AboutUs ref={scrollRef}></AboutUs>
-          <div className="EventsContainer">
+          <AboutUs ref={aboutUsRef}></AboutUs>
+          <div className="EventsContainer" ref={eventsRef}>
             <h1 className="Subtitle">Upcoming Events</h1>
             {allEvents.map((event, index) => (
               <Event
@@ -218,9 +233,9 @@ const IndexPage = ({ data }) => {
                 month={event.month}
               />
             ))}
-            <Teams members={allMembers} />
+            <Teams members={allMembers} ref = {teamsRef} />
           </div>
-          <div className="FooterContainer">
+          <div className="FooterContainer" ref={contactUsRef}>
             <h1 className="Subtitle">Connect With Us</h1>
             <div className="Footer">
               <div className="FooterElement">
