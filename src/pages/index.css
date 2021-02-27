@@ -66,6 +66,14 @@ body {
   position: relative;
 }
 
+.Subtitle {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 3rem;
+  width: 100%;
+}
+
 .EventsContainer {
   margin: 1.2rem 0;
 }
@@ -76,21 +84,13 @@ body {
   margin: 1.2rem 0;
 }
 
-.Subtitle {
-  display: flex;
-  justify-content: center;
-  color: white;
-  font-size: 3rem;
-  width: 100%;
-}
-
 .Footer {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  height: 20rem;
+  align-items: flex-start;
+  justify-content: space-around;
   width: 100%;
+  text-align: center;
+  flex-wrap: wrap;
 }
 
 /* Avenir font faces */

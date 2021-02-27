@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  height: 100%;
 }
 
 .Newsletter_Header {
@@ -10,7 +10,7 @@
 }
 
 .form {
-  padding-top: 30px;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
 }
