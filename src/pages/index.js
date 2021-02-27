@@ -1,20 +1,26 @@
-import React from "react";
+import React, { useRef } from "react";
+import { graphql } from "gatsby";
 import KnightHacksLogo from "../assets/logos/knightHacksLogoGold.svg";
 import Newsletter from "../components/newsletter.js";
 import Contacts from "../components/contacts.js";
-import Teams from "../components/teams.js";
-import Calendar from "../components/calendar.js";
 import Event from "../components/event.js";
 import AppBar from "../components/appBar.js";
+import AboutUs from "../components/aboutUs.js";
+import Teams from "../components/teams.js";
 import { StylesProvider } from "@material-ui/core/styles";
 import ReactParticles from "react-particles-js";
 import particles_config from "../particles-config";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import "./index.css";
 import "@fontsource/roboto";
 import "../fonts/AvenirNext-Regular.ttf";
 import "../fonts/AvenirNext-UltraLight.ttf";
+import "../fonts/AvenirNext-Heavy.ttf";
+import "../fonts/AvenirNext-Medium.ttf";
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
+  const scrollRef = useRef(null);
   const allEvents = [
     {
       title: "Long Length Title for Event One",
@@ -189,7 +195,7 @@ const IndexPage = () => {
       <AppBar />
       <div className="LandingPage">
         <Particles>
-          <title>Home Page</title>
+          <title>Knight Hacks</title>
           <div className="LogoContainer">
             <div className="KnightHacksLogo">
               <img
@@ -197,9 +203,24 @@ const IndexPage = () => {
                 className="KHLogo"
                 alt="Knight Hacks Logo"
               />
-              <h1 className="LogoSubheading"> UCFs Hackathon Club</h1>
+              <h1 className="LogoSubheading">
+                {data.site.siteMetadata.description}
+              </h1>
+            </div>
+            <div className="ArrowContainer">
+              <FontAwesomeIcon
+                icon={faChevronDown}
+                className="Arrow"
+                onClick={() =>
+                  scrollRef.current.scrollIntoView({
+                    block: "center",
+                    behavior: "smooth",
+                  })
+                }
+              />
             </div>
           </div>
+          <AboutUs ref={scrollRef}></AboutUs>
           <div className="EventsContainer">
             <h1 className="Subtitle">Upcoming Events</h1>
             {allEvents.map((event, index) => (
@@ -241,5 +262,15 @@ const Particles = ({ children }) => {
     </div>
   );
 };
+
+export const query = graphql`
+  query MyQuery {
+    site {
+      siteMetadata {
+        description
+      }
+    }
+  }
+`;
 
 export default IndexPage;

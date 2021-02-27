@@ -59,8 +59,8 @@ const Teams = ({ members }) => {
         itemsToScroll={itemsToShow}
         style={{ width: "90vw" }}
       >
-        {members.map((member) => (
-          <Card className="TeamCard">
+        {members.map((member, index) => (
+          <Card className="TeamCard" key={index}>
             <CardHeader
               className="TeamHeader"
               title={member.name}
