@@ -6,6 +6,7 @@ import Contacts from "../components/contacts.js";
 import Event from "../components/event.js";
 import AppBar from "../components/appBar.js";
 import AboutUs from "../components/aboutUs.js";
+import Teams from "../components/teams.js";
 import { StylesProvider } from "@material-ui/core/styles";
 import ReactParticles from "react-particles-js";
 import particles_config from "../particles-config";
@@ -85,6 +86,110 @@ const IndexPage = ({ data }) => {
       month: "Apr",
     },
   ];
+  const allMembers = [
+    {
+      name: "Chris Feltner",
+      position: "President",
+      major: "Computer Science & Political Science",
+      image: require("../images/chris.jpg"),
+      linkedin: "https://www.linkedin.com/",
+      twitter: "https://twitter.com/?lang=en",
+    },
+    {
+      name: "Cydni Turner",
+      position: "Mentorship Co-Director",
+      major: "Computer Science",
+      image: require("../images/Cydni.jpeg"),
+
+      linkedin: "https://www.linkedin.com/",
+      twitter: "https://twitter.com/?lang=en",
+    },
+
+    {
+      name: "Abraham Hernandez",
+      position: "Projects Co-Director",
+      major: "Computer Science",
+      image: require("../images/Abraham.jpg"),
+      linkedin: "https://www.linkedin.com/",
+      twitter: "https://twitter.com/?lang=en",
+    },
+
+    {
+      name: "Arjun Pherwani  ",
+      position: "Development Director",
+      major: "Computer Science",
+      image: require("../images/Arjun.jpeg"),
+      linkedin: "https://www.linkedin.com/",
+      twitter: "https://twitter.com/?lang=en",
+    },
+
+    {
+      name: "Melanie Ehrlich",
+      position: "Communications Director",
+      major: "Computer Science",
+      image: require("../images/melanie.jpg"),
+      linkedin: "https://www.linkedin.com/",
+      twitter: "https://twitter.com/?lang=en",
+    },
+
+    {
+      name: "Dima Golubenko",
+      position: "Projects Director",
+      major: "Computer Science",
+      image: require("../images/Dima.jpeg"),
+      linkedin: "https://www.linkedin.com/",
+      twitter: "https://twitter.com/?lang=en",
+    },
+    {
+      name: "Robert Boyd ",
+      position: "Workshops Director",
+      major: "Computer Science",
+      image: require("../images/rob.jpg"),
+      linkedin: "https://www.linkedin.com/",
+      twitter: "https://twitter.com/?lang=en",
+    },
+    {
+      name: "Fridjinah Francois ",
+      position: "Mentorship Co-Director",
+      major: "Mathematics",
+      image: require("../images/Fridjinah.jpg"),
+      linkedin: "https://www.linkedin.com/",
+      twitter: "https://twitter.com/?lang=en",
+    },
+    {
+      name: "Rada Ursu ",
+      position: "Design Director",
+      major: "Experimental Animation",
+      image: require("../images/rada.jpg"),
+      linkedin: "https://www.linkedin.com/",
+      twitter: "https://twitter.com/?lang=en",
+    },
+    {
+      name: "Abrahan Nevarez ",
+      position: "Development Director",
+      major: "Information Technology",
+      image: require("../images/abr.jpg"),
+      linkedin: "https://www.linkedin.com/",
+      twitter: "https://twitter.com/?lang=en",
+    },
+    {
+      name: "Victoria Williamson",
+      position: "Lead Hackathon Organizer",
+      major: "Computer Science and Statistics ",
+      image: require("../images/victoria.png"),
+      linkedin: "https://www.linkedin.com/",
+      twitter: "https://twitter.com/?lang=en",
+    },
+    {
+      name: "Nicholas Yardich",
+      position: "Logistics Director",
+      major: "Computer Science",
+      image: require("../images/nicholas.png"),
+      linkedin: "https://www.linkedin.com/",
+      twitter: "https://twitter.com/?lang=en",
+    },
+  ];
+
   return (
     <StylesProvider injectFirst>
       <AppBar />
@@ -129,6 +234,7 @@ const IndexPage = ({ data }) => {
                 month={event.month}
               />
             ))}
+            <Teams members={allMembers} />
           </div>
           <div className="FooterContainer">
             <h1 className="Subtitle">Connect With Us</h1>
