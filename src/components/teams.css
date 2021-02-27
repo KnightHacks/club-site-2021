@@ -46,8 +46,9 @@
   border-radius: 40px;
   background-color: #dbc04a;
 }
+
 .rec.rec-arrow:hover {
-  background-color: #dbc04a;
+  background-color: #dbc04a !important;
 }
 .rec.rec-arrow:disabled {
   visibility: hidden;
