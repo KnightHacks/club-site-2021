@@ -8,11 +8,16 @@ import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin,faTwitter } from "@fortawesome/free-brands-svg-icons";
-import  {useEffect, useState} from "react";
+import { faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { useEffect, useState } from "react";
 
 const useWidth = () => {
-  const [width, setWidth] = useState(window.innerWidth);
+  let tempWidth;
+  if (typeof window !== "undefined") {
+    tempWidth = window.innerWidth;
+  }
+
+  const [width, setWidth] = useState(tempWidth);
 
   useEffect(() => {
     const handleResize = () => {
@@ -26,10 +31,7 @@ const useWidth = () => {
   return width;
 };
 
-
-
-const Teams = ({members}) => {
-
+const Teams = ({ members }) => {
   const width = useWidth();
   const getItemsToShow = () => {
     switch (true) {
@@ -52,43 +54,54 @@ const Teams = ({members}) => {
   return (
     <div className="Teams">
       <h1 className="Subtitle">Meet the Team</h1>
-      <Carousel itemsToShow={itemsToShow}
-        itemsToScroll={itemsToShow} style={{ width: "90vw" }}>
-
-        {members.map(
-          member => 
+      <Carousel
+        itemsToShow={itemsToShow}
+        itemsToScroll={itemsToShow}
+        style={{ width: "90vw" }}
+      >
+        {members.map((member) => (
           <Card className="TeamCard">
-          <CardHeader
-            className="TeamHeader"
-            title={member.name}
-            subheader={member.position}
-           
-            
-          />
-           <Typography className="Major" align="left" variant="subtitle1" color="textSecondary" component="p">
-           {member.major}
+            <CardHeader
+              className="TeamHeader"
+              title={member.name}
+              subheader={member.position}
+            />
+            <Typography
+              className="Major"
+              align="left"
+              variant="subtitle1"
+              color="textSecondary"
+              component="p"
+            >
+              {member.major}
             </Typography>
-           
-          <CardMedia
-            className="TeamPicture"
-            image ={member.image}
-            title={member.name}
-          />
-          <CardContent className="Icon">
-          <Typography variant="body2" color="textSecondary" component="p">   
-          <a href={member.linkedin}>
-          <FontAwesomeIcon icon={faLinkedin} color="#0E76A8" className="Iconlink" />
-          </a>  
-          <a href={member.twitter}>
-          <FontAwesomeIcon icon={faTwitter} color="#00ACEE" className="Iconlink2" padding-left="50px"/>
-          </a>
-          </Typography>
-           
-            
-         </CardContent>
-        </Card>
-        )} 
-        
+
+            <CardMedia
+              className="TeamPicture"
+              image={member.image}
+              title={member.name}
+            />
+            <CardContent className="Icon">
+              <Typography variant="body2" color="textSecondary" component="p">
+                <a href={member.linkedin}>
+                  <FontAwesomeIcon
+                    icon={faLinkedin}
+                    color="#0E76A8"
+                    className="Iconlink"
+                  />
+                </a>
+                <a href={member.twitter}>
+                  <FontAwesomeIcon
+                    icon={faTwitter}
+                    color="#00ACEE"
+                    className="Iconlink2"
+                    padding-left="50px"
+                  />
+                </a>
+              </Typography>
+            </CardContent>
+          </Card>
+        ))}
       </Carousel>
 
       <h1 className="TeamSubtitle">Our Members</h1>
