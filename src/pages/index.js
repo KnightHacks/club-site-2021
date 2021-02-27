@@ -121,7 +121,7 @@ const IndexPage = () => {
       name: "Melanie Ehrlich",
       position: "Communications Director",
       major: "Computer Science",
-      image: require("../images/mel.jpg"),
+      image: require("../images/melanie.jpg"),
       linkedin: "https://www.linkedin.com/",
       twitter: "https://twitter.com/?lang=en",
     },
