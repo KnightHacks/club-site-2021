@@ -1,9 +1,104 @@
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin imperdiet dignissim ante quis suscipit. Etiam felis odio, molestie sed magna ullamcorper, imperdiet convallis mauris. Aenean at ullamcorper magna. Nam pulvinar sapien mattis sapien tempus, vel pellentesque diam tempor. Nullam fermentum, elit sed varius egestas, nulla tellus sodales mauris, et scelerisque felis est quis lacus. Integer vel ultricies ex, sit amet malesuada nunc. Mauris at diam a tortor elementum maximus. Morbi rutrum, erat id feugiat dignissim, ex turpis efficitur leo, non vehicula lorem odio a urna. Maecenas lobortis lectus in congue convallis. Phasellus nisl sapien, aliquet eget dolor vitae, fringilla pellentesque nisl. Donec ac pretium quam, at laoreet est. Maecenas eleifend a mauris in ornare. Aliquam eu fermentum metus.
+---
+title: "Teams"
+members:
+  [
+    {
+      name: "Chris Feltner",
+      position: "President",
+      major: "Computer Science & Political Science",
+      image: "chris.jpg",
+      linkedin: "https://www.linkedin.com/",
+      twitter: "https://twitter.com/?lang=en",
+    },
+    {
+      name: "Cydni Turner",
+      position: "Mentorship Co-Director",
+      major: "Computer Science",
+      image: "Cydni.jpeg",
+      linkedin: "https://www.linkedin.com/",
+      twitter: "https://twitter.com/?lang=en",
+    },
 
-Suspendisse nec lectus pharetra, facilisis nulla finibus, volutpat nulla. Phasellus ac enim ullamcorper purus ullamcorper dignissim ut ut mauris. Phasellus ut feugiat tortor. Aenean tempor sit amet urna nec mollis. Praesent efficitur quam velit, in dignissim nibh egestas nec. Nunc feugiat libero purus, et feugiat sapien sagittis a. Curabitur pharetra nulla massa. Cras rhoncus non sem sit amet iaculis. Aenean at tortor felis. Curabitur nec diam lacinia, vulputate lectus a, porttitor mauris. Praesent vel augue in quam faucibus rhoncus id vel velit.
+    {
+      name: "Abraham Hernandez",
+      position: "Projects Co-Director",
+      major: "Computer Science",
+      image: "Abraham.jpg",
+      twitter: "https://twitter.com/?lang=en",
+    },
 
-Cras molestie eu felis eget lacinia. Phasellus tempor diam sed nulla dictum vulputate. Aenean sed imperdiet enim. Vivamus eros ante, commodo a auctor accumsan, condimentum quis purus. Nunc semper, mi vel aliquam bibendum, libero magna malesuada nisi, congue accumsan nibh massa ut justo. Vestibulum sagittis tortor id mauris congue, a pharetra velit bibendum. Nulla at maximus augue, vitae egestas diam. Mauris vehicula imperdiet mauris rhoncus imperdiet.
+    {
+      name: "Arjun Pherwani  ",
+      position: "Development Director",
+      major: "Computer Science",
+      image: "Arjun.jpeg",
+      linkedin: "https://www.linkedin.com/",
+      twitter: "https://twitter.com/?lang=en",
+    },
 
-Nunc et posuere dui. Nulla cursus neque tortor, vitae eleifend ante facilisis ac. Aliquam viverra vel sem a finibus. Phasellus condimentum ornare lacus, vitae venenatis magna pulvinar sit amet. Aliquam dolor mi, lacinia hendrerit nisi ultricies, lobortis facilisis nulla. Praesent felis sem, lacinia id diam eget, imperdiet cursus leo. Maecenas lectus dui, pretium sit amet malesuada quis, semper eget arcu. Pellentesque imperdiet eros purus, eget facilisis magna lobortis vitae. Quisque id lectus id elit cursus lacinia. Nulla laoreet metus eu lacus ultricies pellentesque. Aliquam erat volutpat. Quisque et gravida lectus.
+    {
+      name: "Melanie Ehrlich",
+      position: "Communications Director",
+      major: "Computer Science",
+      image: "melanie.jpg",
+      linkedin: "https://www.linkedin.com/",
+      twitter: "https://twitter.com/?lang=en",
+    },
 
-Nullam auctor ac eros blandit ultrices. Nulla consequat tincidunt nulla finibus mattis. Praesent et fringilla lorem. In hac habitasse platea dictumst. Donec leo diam, vulputate eu pretium id, congue vitae enim. Sed in turpis erat. Nam non magna ipsum. Praesent odio erat, fermentum at aliquam sagittis, viverra vel est. Suspendisse faucibus dui auctor leo ultrices, sodales porttitor enim venenatis. Curabitur dictum, sapien vitae convallis blandit, turpis ipsum luctus arcu, vel vulputate nisl lectus quis lectus.
+    {
+      name: "Dima Golubenko",
+      position: "Projects Director",
+      major: "Computer Science",
+      image: "Dima.jpeg",
+      linkedin: "https://www.linkedin.com/",
+      twitter: "https://twitter.com/?lang=en",
+    },
+    {
+      name: "Robert Boyd ",
+      position: "Workshops Director",
+      major: "Computer Science",
+      image: "rob.jpg",
+      linkedin: "https://www.linkedin.com/",
+      twitter: "https://twitter.com/?lang=en",
+    },
+    {
+      name: "Fridjinah Francois",
+      position: "Mentorship Co-Director",
+      major: "Mathematics",
+      image: "Fridjinah.jpg",
+      linkedin: "https://www.linkedin.com/",
+      twitter: "https://twitter.com/?lang=en",
+    },
+    {
+      name: "Rada Ursu ",
+      position: "Design Director",
+      major: "Experimental Animation",
+      image: "rada.jpg",
+      twitter: "https://twitter.com/?lang=en",
+    },
+    {
+      name: "Abrahan Nevarez ",
+      position: "Development Director",
+      major: "Information Technology",
+      image: "abr.jpg",
+      linkedin: "https://www.linkedin.com/",
+      twitter: "https://twitter.com/?lang=en",
+    },
+    {
+      name: "Victoria Williamson",
+      position: "Lead Hackathon Organizer",
+      major: "Computer Science and Statistics ",
+      image: "victoria.png",
+      linkedin: "https://www.linkedin.com/",
+      twitter: "https://twitter.com/?lang=en",
+    },
+    {
+      name: "Nicholas Yardich",
+      position: "Logistics Director",
+      major: "Computer Science",
+      image: "nicholas.png",
+      linkedin: "https://www.linkedin.com/",
+      twitter: "https://twitter.com/?lang=en",
+    },
+  ]
+---
