@@ -8,7 +8,11 @@ import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import {
+  faLinkedin,
+  faInstagram,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 
 import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState, forwardRef } from "react";
@@ -68,7 +72,8 @@ const Teams = forwardRef(({ members, ...props }, ref) => {
                   major
                   name
                   position
-                  twitter
+                  personal
+                  instagram
                 }
               }
             }
@@ -118,6 +123,15 @@ const Teams = forwardRef(({ members, ...props }, ref) => {
                         />
                       </a>
                     ) : null}
+                    {member.instagram ? (
+                      <a href={member.instagram}>
+                        <FontAwesomeIcon
+                          icon={faInstagram}
+                          color="#FCAF45"
+                          className="Iconlink"
+                        />
+                      </a>
+                    ) : null}
                     {member.twitter ? (
                       <a href={member.twitter}>
                         <FontAwesomeIcon
@@ -128,7 +142,7 @@ const Teams = forwardRef(({ members, ...props }, ref) => {
                       </a>
                     ) : null}
                     {member.personal ? (
-                      <a href={"https://google.com/"}>
+                      <a href={member.personal}>
                         <FontAwesomeIcon
                           icon={faLaptopCode}
                           className="Iconlink"
