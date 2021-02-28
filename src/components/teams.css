@@ -36,20 +36,14 @@
 .Iconlink {
   font-size: 35px;
   padding-left: 8px;
-}
-.Iconlink2 {
-  padding-left: 10px;
-  font-size: 35px;
+  padding-right: 2px;
 }
 
 .rec.rec-arrow {
   border-radius: 60%;
-  background-color: #dbc04a;
-}
-
-.rec.rec-arrow:hover {
   background-color: #dbc04a !important;
 }
+
 .rec.rec-arrow:disabled {
   visibility: hidden;
 }
@@ -58,9 +52,12 @@
   box-shadow: none;
 }
 
-.rec-dot:active {
-  background-color: #dbc04a;
-  box-shadow: #dbc04a;
+.rec-dot {
+  background-color: #dbc04a !important;
+}
+.rec-dot_active,
+.rec-dot:hover {
+  box-shadow: 0 0 1px 3px #dbc04a !important;
 }
 .Links {
   padding-top: 0px;

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Accordion from "@material-ui/core/Accordion";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
-import Collapse from "@material-ui/core/Collapse";
 import "./event.css";
 
 const Event = (props) => {
