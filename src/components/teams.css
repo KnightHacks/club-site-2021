@@ -1,0 +1,107 @@
+.rec.rec-arrow {
+  border: none;
+  background: transparent;
+  margin: 0;
+}
+
+.Subtitle {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 3rem;
+  width: 100%;
+}
+.Teams {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 2.5rem;
+}
+.TeamCard {
+  font-family: "Avenir Next Regular", sans-serif;
+  width: 76%;
+}
+
+.TeamPicture {
+  padding-top: 100%;
+  padding-bottom: 10px;
+}
+.Major {
+  padding-left: 16px;
+  padding-top: -10px;
+  padding-bottom: 5px;
+  font-size: 13px;
+}
+.Iconlink {
+  font-size: 35px;
+  padding-left: 8px;
+}
+.Iconlink2 {
+  padding-left: 10px;
+  font-size: 35px;
+}
+
+.rec.rec-arrow {
+  border-radius: 60%;
+  background-color: #dbc04a;
+}
+
+.rec.rec-arrow:hover {
+  background-color: #dbc04a !important;
+}
+.rec.rec-arrow:disabled {
+  visibility: hidden;
+}
+.rec-carousel-item:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.rec-dot:active {
+  background-color: #dbc04a;
+  box-shadow: #dbc04a;
+}
+.Links {
+  padding-top: 0px;
+}
+
+.TeamSubtitle {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  width: 100%;
+}
+
+.Members {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  font-family: "Avenir Next Ultra Light";
+  color: white;
+
+  margin-bottom: 50px;
+}
+
+.ClubMembers,
+.ClubDirectors {
+  font-size: 2rem;
+  text-align: center;
+  margin: 0 15px;
+}
+
+.MemberSubtitle {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.Counter {
+  margin-bottom: 0;
+}
+.Icon {
+  height: -50px;
+}
+.TeamHeader {
+  padding-bottom: 0px;
+}

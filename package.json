@@ -2,7 +2,7 @@
   "name": "knight-hacks-club-site",
   "version": "1.0.0",
   "private": true,
-  "description": "KnightHacks Club Site",
+  "description": "UCF's Software Development & Hackathon RSO",
   "author": "zenith110",
   "keywords": [
     "gatsby"
@@ -21,10 +21,16 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "@fortawesome/react-fontawesome": "^0.1.14",
     "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
     "gatsby": "^2.31.1",
+    "gatsby-source-filesystem": "^2.11.0",
+    "gatsby-transformer-remark": "^2.16.0",
     "react": "^16.13.1",
+    "react-countup": "^4.3.3",
     "react-dom": "^16.13.1",
+    "react-elastic-carousel": "^0.11.1",
     "react-particles-js": "^3.4.1",
+    "styled-components": "^5.2.1",
     "typeface-roboto": "^1.1.13"
   },
   "devDependencies": {
