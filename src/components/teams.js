@@ -109,7 +109,7 @@ const Teams = forwardRef(({ members, ...props }, ref) => {
                   image={require(`../images/${member.image}`)}
                   title={member.name}
                 />
-                <CardContent className="Icon">
+                <CardContent className="SocialIcons">
                   <Typography
                     variant="body2"
                     color="textSecondary"

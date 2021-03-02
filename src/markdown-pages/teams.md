@@ -48,7 +48,7 @@ members:
 
     {
       name: "Dima Golubenko",
-      position: "Projects Director",
+      position: "Projects Co-Director",
       major: "Computer Science",
       image: "Dima.jpeg",
       linkedin: "https://www.linkedin.com/in/dmitrii-golubenko/",
@@ -56,7 +56,7 @@ members:
       personal: "http://dmitrii-golubenko.tech/",
     },
     {
-      name: "Robert Boyd ",
+      name: "Robert Boyd",
       position: "Workshops Director",
       major: "Computer Science",
       image: "rob.jpg",
@@ -76,7 +76,7 @@ members:
       instagram: "https://www.instagram.com/radaursu/",
     },
     {
-      name: "Abrahan Nevarez ",
+      name: "Abrahan Nevarez",
       position: "Development Director",
       major: "Information Technology",
       image: "abr.jpg",
@@ -95,6 +95,14 @@ members:
       position: "Logistics Director",
       major: "Computer Science",
       image: "nicholas.png",
+    },
+    {
+      name: "Jonathan Dieu",
+      position: "Finance Director",
+      major: "Computer Science",
+      image: "jon.png",
+      linkedin: "https://www.linkedin.com/in/jonathan-h-dieu/",
+      instagram: "https://www.instagram.com/jonnydieuski/",
     },
   ]
 ---

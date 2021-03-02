@@ -94,8 +94,10 @@
 .Counter {
   margin-bottom: 0;
 }
-.Icon {
-  height: -50px;
+.SocialIcons {
+  display: flex;
+  align-items: flex-start;
+  height: 35px;
 }
 .TeamHeader {
   padding-bottom: 0px;
