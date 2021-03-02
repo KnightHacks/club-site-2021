@@ -103,7 +103,6 @@ const Teams = forwardRef(({ members, ...props }, ref) => {
                 >
                   {member.major}
                 </Typography>
-                {console.log(member.image)}
 
                 <CardMedia
                   className="TeamPicture"

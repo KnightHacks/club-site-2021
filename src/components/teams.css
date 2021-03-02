@@ -12,11 +12,10 @@
   width: 100%;
 }
 .Teams {
-  width: 95%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-left: 2.5rem;
 }
 .TeamCard {
   font-family: "Avenir Next Regular", sans-serif;
@@ -29,7 +28,6 @@
 }
 .Major {
   padding-left: 16px;
-  padding-top: -10px;
   padding-bottom: 5px;
   font-size: 13px;
 }
