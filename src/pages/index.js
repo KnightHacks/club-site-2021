@@ -35,6 +35,7 @@ const IndexPage = ({ data }) => {
       location: "Zoom",
       date: "25",
       month: "Feb",
+      presenter: "Chris Felter",
     },
     {
       title: "What's the Point of Pointers?",
@@ -44,6 +45,7 @@ const IndexPage = ({ data }) => {
       location: "Zoom",
       date: "02",
       month: "Mar",
+      presenter: "Chris Felter",
     },
     {
       title: "Vim and Vigor",
@@ -53,6 +55,7 @@ const IndexPage = ({ data }) => {
       location: "Discord",
       date: "04",
       month: "Mar",
+      presenter: "Robert Boyd",
     },
     {
       title: "Career Development Panel",
@@ -62,6 +65,7 @@ const IndexPage = ({ data }) => {
       location: "Zoom",
       date: "11",
       month: "Mar",
+      presenter: "",
     },
     {
       title: "Rust",
@@ -71,6 +75,7 @@ const IndexPage = ({ data }) => {
       location: "Discord",
       date: "18",
       month: "Mar",
+      presenter: "Anthony Hevia",
     },
   ];
   const allMembers = [
