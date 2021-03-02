@@ -33,7 +33,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return;
   }
 
-  console.log(result.data.markdownRemark.frontmatter.redirects);
   const redirectTemplate = path.resolve(`src/templates/redirect.js`);
   for (const [name, link] of Object.entries(
     result.data.markdownRemark.frontmatter.redirects
