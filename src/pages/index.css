@@ -36,6 +36,18 @@ body {
   white-space: nowrap;
 }
 
+.GoHome {
+  display: flex;
+  justify-content: center;
+  font-family: "Avenir Next Ultra Light";
+  color: white;
+  font-size: 1.5vw;
+}
+
+.GoHome:hover {
+  color: gray;
+}
+
 .ArrowContainer {
   display: flex;
   position: absolute;

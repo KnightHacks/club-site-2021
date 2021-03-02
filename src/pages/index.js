@@ -186,7 +186,7 @@ const IndexPage = ({ data }) => {
         appBarRef={appBarRef}
         aboutUsRef={aboutUsRef}
         eventsRef={eventsRef}
-        teamsRef = {teamsRef}
+        teamsRef={teamsRef}
         contactUsRef={contactUsRef}
        
       />
