@@ -66,9 +66,7 @@ const IndexPage = ({ data }) => {
     {
       title: "Rust",
       description:
-        "Rust has been the undisputed " /
-        "most loved" /
-        " programming language on the Stack Overflow Developer Survey for several years. Why? Come to this workshop and find out! Anthony will be returning to teach us the basics of Rust's unique memory management model and answer any questions about this innovative and promising new programming language.",
+        'Rust has been the undisputed "most loved" programming language on the Stack Overflow Developer Survey for several years. Why? Come to this workshop and find out! Anthony will be returning to teach us the basics of Rust\'s unique memory management model and answer any questions about this innovative and promising new programming language.',
       time: "6:00",
       location: "Discord",
       date: "18",
@@ -188,7 +186,6 @@ const IndexPage = ({ data }) => {
         eventsRef={eventsRef}
         teamsRef={teamsRef}
         contactUsRef={contactUsRef}
-       
       />
       <div className="LandingPage">
         <Particles>
@@ -233,7 +230,7 @@ const IndexPage = ({ data }) => {
                 month={event.month}
               />
             ))}
-            <Teams members={allMembers} ref = {teamsRef} />
+            <Teams members={allMembers} ref={teamsRef} />
           </div>
           <div className="FooterContainer" ref={contactUsRef}>
             <h1 className="Subtitle">Connect With Us</h1>
