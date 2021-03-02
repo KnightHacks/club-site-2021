@@ -24,13 +24,16 @@ members:
       major: "Computer Science",
       image: "Abraham.jpg",
       linkedin: "https://www.linkedin.com/in/abeher/",
+      github: "https://github.com/habraham2023",
     },
 
     {
-      name: "Arjun Pherwani  ",
+      name: "Arjun Pherwani",
       position: "Development Director",
       major: "Computer Science",
       image: "Arjun.jpeg",
+      linkedin: "https://www.linkedin.com/in/arjun-pherwani/",
+      github: "https://www.github.com/APherwani",
     },
 
     {
@@ -38,6 +41,9 @@ members:
       position: "Communications Director",
       major: "Computer Science",
       image: "melanie.jpg",
+      linkedin: "https://www.linkedin.com/in/melanie-ehrlich",
+      instagram: "https://instagram.com/melaniie.exe",
+      github: "https://github.com/mel4ni3",
     },
 
     {
@@ -45,6 +51,9 @@ members:
       position: "Projects Director",
       major: "Computer Science",
       image: "Dima.jpeg",
+      linkedin: "https://www.linkedin.com/in/dmitrii-golubenko/",
+      github: "https://github.com/Astatium5",
+      personal: "http://dmitrii-golubenko.tech/",
     },
     {
       name: "Robert Boyd ",

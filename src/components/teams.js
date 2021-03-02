@@ -12,6 +12,7 @@ import {
   faLinkedin,
   faInstagram,
   faTwitter,
+  faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 
 import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
@@ -74,6 +75,7 @@ const Teams = forwardRef(({ members, ...props }, ref) => {
                   position
                   personal
                   instagram
+                  github
                 }
               }
             }
@@ -138,6 +140,15 @@ const Teams = forwardRef(({ members, ...props }, ref) => {
                           icon={faTwitter}
                           color="#00ACEE"
                           className="Iconlink"
+                        />
+                      </a>
+                    ) : null}
+                    {member.github ? (
+                      <a href={member.github}>
+                        <FontAwesomeIcon
+                          icon={faGithub}
+                          className="Iconlink"
+                          color="black"
                         />
                       </a>
                     ) : null}
