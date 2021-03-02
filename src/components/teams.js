@@ -39,6 +39,15 @@ const useWidth = () => {
   return width;
 };
 
+const shuffleArray = (array) => {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * i);
+    const temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+};
+
 const Teams = forwardRef(({ members, ...props }, ref) => {
   const width = useWidth();
   const getItemsToShow = () => {
@@ -87,6 +96,7 @@ const Teams = forwardRef(({ members, ...props }, ref) => {
             itemsToScroll={itemsToShow}
             style={{ width: "90vw" }}
           >
+            {shuffleArray(data.markdownRemark.frontmatter.members)}
             {data.markdownRemark.frontmatter.members.map((member, index) => (
               <Card className="TeamCard" key={index}>
                 <CardHeader
