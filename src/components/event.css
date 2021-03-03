@@ -24,6 +24,7 @@
 
 .AccordionContent:hover {
   cursor: pointer;
+  margin-top: 0 !important;
 }
 
 .AccordionHeader {
@@ -59,9 +60,18 @@
   font-family: "Avenir Next Regular", sans-serif;
 }
 
+.EventDetails {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 0 !important;
+}
+
+.EventPresenter,
 .EventTime {
-  padding: 0px 10px;
-  font-size: 1.3rem;
+  font-size: 1rem;
+  padding: 0 1vw;
 }
 
 .EventDescription {
@@ -69,6 +79,7 @@
   font-size: 1.3em;
   padding: 0px 10px;
   color: gray;
+  margin-top: 0;
 }
 
 a,

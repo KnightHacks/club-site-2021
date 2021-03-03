@@ -29,9 +29,16 @@ const Event = (props) => {
           onClick={() => setExpanded(!expanded)}
         >
           <div className="ContentContainer">
-            <p className="EventTime">
-              {props.time} | {props.location}
-            </p>
+            <div className="EventDetails">
+              <p className="EventPresenter">{props.presenter} Presenter</p>
+              <div className="EventTime">
+                <p className="EventTime">
+                  {" "}
+                  {props.time}
+                  <a href="https://linktr.ee/knighthacks"> Linktree </a>
+                </p>
+              </div>
+            </div>
             <h3 className="EventDescription">{props.description}</h3>
           </div>
         </AccordionDetails>
