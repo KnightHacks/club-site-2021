@@ -17,7 +17,7 @@ import {
 
 import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState, forwardRef } from "react";
-import { StaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 
 const useWidth = () => {
   let tempWidth;
@@ -39,6 +39,19 @@ const useWidth = () => {
   return width;
 };
 
+const getItemsToShow = (width) => {
+  switch (true) {
+    case width >= 1500:
+      return 4;
+    case width >= 1200:
+      return 3;
+    case width >= 768:
+      return 2;
+    default:
+      return 1;
+  }
+};
+
 const shuffleArray = (array) => {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * i);
@@ -46,137 +59,127 @@ const shuffleArray = (array) => {
     array[i] = array[j];
     array[j] = temp;
   }
+
+  return array;
 };
 
-const Teams = forwardRef(({ members, ...props }, ref) => {
+const Teams = forwardRef((props, ref) => {
   const width = useWidth();
-  const getItemsToShow = () => {
-    switch (true) {
-      case width >= 1500:
-        return 4;
-      case width >= 1200:
-        return 3;
-      case width >= 768:
-        return 2;
-      default:
-        return 1;
+  const [itemsToShow, setItemsToShow] = useState(getItemsToShow(width));
+  const [members, setMembers] = useState([]);
+  const data = useStaticQuery(graphql`
+    query teamsQuery {
+      markdownRemark(frontmatter: { title: { eq: "Teams" } }) {
+        frontmatter {
+          members {
+            image
+            linkedin
+            major
+            name
+            position
+            personal
+            instagram
+            github
+          }
+        }
+      }
     }
-  };
-  const [itemsToShow, setItemsToShow] = useState(getItemsToShow());
+  `);
 
   useEffect(() => {
-    setItemsToShow(getItemsToShow());
+    const handleRandomize = () => {
+      const members = shuffleArray(data.markdownRemark.frontmatter.members);
+      setMembers(members);
+    };
+    handleRandomize();
+  }, []);
+
+  useEffect(() => {
+    setItemsToShow(getItemsToShow(width));
   }, [width]);
 
   return (
     <div className="Teams" ref={ref}>
       <h1 className="Subtitle">Meet the Team</h1>
-      <StaticQuery
-        query={graphql`
-          query teamsQuery {
-            markdownRemark(frontmatter: { title: { eq: "Teams" } }) {
-              frontmatter {
-                members {
-                  image
-                  linkedin
-                  major
-                  name
-                  position
-                  personal
-                  instagram
-                  github
-                }
-              }
-            }
-          }
-        `}
-        render={(data) => (
-          <Carousel
-            itemsToShow={itemsToShow}
-            itemsToScroll={itemsToShow}
-            style={{ width: "90vw" }}
-          >
-            {shuffleArray(data.markdownRemark.frontmatter.members)}
-            {data.markdownRemark.frontmatter.members.map((member, index) => (
-              <Card className="TeamCard" key={index}>
-                <CardHeader
-                  className="TeamHeader"
-                  title={member.name}
-                  subheader={member.position}
-                />
-                <Typography
-                  className="Major"
-                  align="left"
-                  variant="subtitle1"
-                  color="textSecondary"
-                  component="p"
-                >
-                  {member.major}
-                </Typography>
+      <Carousel
+        itemsToShow={itemsToShow}
+        itemsToScroll={itemsToShow}
+        style={{ width: "90vw" }}
+      >
+        {members.map((member, index) => (
+          <Card className="TeamCard" key={index}>
+            <CardHeader
+              className="TeamHeader"
+              title={member.name}
+              subheader={member.position}
+            />
+            <Typography
+              className="Major"
+              align="left"
+              variant="subtitle1"
+              color="textSecondary"
+              component="p"
+            >
+              {member.major}
+            </Typography>
 
-                <CardMedia
-                  className="TeamPicture"
-                  image={require(`../images/${member.image}`)}
-                  title={member.name}
-                />
-                <CardContent className="SocialIcons">
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    {member.linkedin ? (
-                      <a href={member.linkedin}>
-                        <FontAwesomeIcon
-                          icon={faLinkedin}
-                          color="#0E76A8"
-                          className="Iconlink"
-                        />
-                      </a>
-                    ) : null}
-                    {member.instagram ? (
-                      <a href={member.instagram}>
-                        <FontAwesomeIcon
-                          icon={faInstagram}
-                          color="#FCAF45"
-                          className="Iconlink"
-                        />
-                      </a>
-                    ) : null}
-                    {member.twitter ? (
-                      <a href={member.twitter}>
-                        <FontAwesomeIcon
-                          icon={faTwitter}
-                          color="#00ACEE"
-                          className="Iconlink"
-                        />
-                      </a>
-                    ) : null}
-                    {member.github ? (
-                      <a href={member.github}>
-                        <FontAwesomeIcon
-                          icon={faGithub}
-                          className="Iconlink"
-                          color="black"
-                        />
-                      </a>
-                    ) : null}
-                    {member.personal ? (
-                      <a href={member.personal}>
-                        <FontAwesomeIcon
-                          icon={faLaptopCode}
-                          className="Iconlink"
-                          color="#aaa"
-                        />
-                      </a>
-                    ) : null}
-                  </Typography>
-                </CardContent>
-              </Card>
-            ))}
-          </Carousel>
-        )}
-      />
+            <CardMedia
+              className="TeamPicture"
+              image={require(`../images/${member.image}`)}
+              title={member.name}
+            />
+            <CardContent className="SocialIcons">
+              <Typography variant="body2" color="textSecondary" component="p">
+                {member.linkedin ? (
+                  <a href={member.linkedin}>
+                    <FontAwesomeIcon
+                      icon={faLinkedin}
+                      color="#0E76A8"
+                      className="Iconlink"
+                    />
+                  </a>
+                ) : null}
+                {member.instagram ? (
+                  <a href={member.instagram}>
+                    <FontAwesomeIcon
+                      icon={faInstagram}
+                      color="#FCAF45"
+                      className="Iconlink"
+                    />
+                  </a>
+                ) : null}
+                {member.twitter ? (
+                  <a href={member.twitter}>
+                    <FontAwesomeIcon
+                      icon={faTwitter}
+                      color="#00ACEE"
+                      className="Iconlink"
+                    />
+                  </a>
+                ) : null}
+                {member.github ? (
+                  <a href={member.github}>
+                    <FontAwesomeIcon
+                      icon={faGithub}
+                      className="Iconlink"
+                      color="black"
+                    />
+                  </a>
+                ) : null}
+                {member.personal ? (
+                  <a href={member.personal}>
+                    <FontAwesomeIcon
+                      icon={faLaptopCode}
+                      className="Iconlink"
+                      color="#aaa"
+                    />
+                  </a>
+                ) : null}
+              </Typography>
+            </CardContent>
+          </Card>
+        ))}
+      </Carousel>
 
       <h1 className="TeamSubtitle">Our Members</h1>
 
