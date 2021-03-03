@@ -105,4 +105,6 @@ members:
       instagram: "https://www.instagram.com/jonnydieuski/",
     },
   ]
+memberCount: 127
+directorCount: 24
 ---

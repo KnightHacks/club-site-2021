@@ -81,6 +81,8 @@ const Teams = forwardRef((props, ref) => {
             instagram
             github
           }
+          memberCount
+          directorCount
         }
       }
     }
@@ -186,13 +188,19 @@ const Teams = forwardRef((props, ref) => {
       <div className="Members">
         <div className="ClubMembers">
           <h1 className="Counter">
-            <CountUp end={127} duration={7} />
+            <CountUp
+              end={data.markdownRemark.frontmatter.memberCount}
+              duration={7}
+            />
           </h1>
           <span className="MemberSubtitle">active members</span>
         </div>
         <div className="ClubDirectors">
           <h1 className="Counter">
-            <CountUp end={24} duration={7} />
+            <CountUp
+              end={data.markdownRemark.frontmatter.directorCount}
+              duration={7}
+            />
           </h1>
           <span className="MemberSubtitle">developers & directors</span>
         </div>
