@@ -61,6 +61,10 @@
   padding-top: 0px;
 }
 
+.Iconlink:hover {
+  color: gray;
+}
+
 .TeamSubtitle {
   display: flex;
   justify-content: center;

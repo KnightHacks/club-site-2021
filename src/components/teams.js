@@ -136,7 +136,7 @@ const Teams = forwardRef((props, ref) => {
                   <a href={member.linkedin}>
                     <FontAwesomeIcon
                       icon={faLinkedin}
-                      color="#0E76A8"
+                      color="#000000"
                       className="Iconlink"
                     />
                   </a>
@@ -145,7 +145,7 @@ const Teams = forwardRef((props, ref) => {
                   <a href={member.instagram}>
                     <FontAwesomeIcon
                       icon={faInstagram}
-                      color="#FCAF45"
+                      color="#000000"
                       className="Iconlink"
                     />
                   </a>
@@ -154,7 +154,7 @@ const Teams = forwardRef((props, ref) => {
                   <a href={member.twitter}>
                     <FontAwesomeIcon
                       icon={faTwitter}
-                      color="#00ACEE"
+                      color="#000000"
                       className="Iconlink"
                     />
                   </a>
@@ -164,7 +164,7 @@ const Teams = forwardRef((props, ref) => {
                     <FontAwesomeIcon
                       icon={faGithub}
                       className="Iconlink"
-                      color="black"
+                      color="#000000"
                     />
                   </a>
                 ) : null}
@@ -173,7 +173,7 @@ const Teams = forwardRef((props, ref) => {
                     <FontAwesomeIcon
                       icon={faLaptopCode}
                       className="Iconlink"
-                      color="#aaa"
+                      color="#000000"
                     />
                   </a>
                 ) : null}
