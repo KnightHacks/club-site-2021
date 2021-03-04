@@ -9,7 +9,7 @@ import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
-
+import Img from "gatsby-image";
 import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState, forwardRef } from "react";
 import { StaticQuery, graphql } from "gatsby";
@@ -63,7 +63,13 @@ const Teams = forwardRef(({ members, ...props }, ref) => {
             markdownRemark(frontmatter: { title: { eq: "Teams" } }) {
               frontmatter {
                 members {
-                  image
+                  image {
+                    childImageSharp {
+                      fluid(maxWidth: 300, maxHeight: 320) {
+                        ...GatsbyImageSharpFluid_withWebp
+                      }
+                    }
+                  }
                   linkedin
                   major
                   name
@@ -96,13 +102,13 @@ const Teams = forwardRef(({ members, ...props }, ref) => {
                 >
                   {member.major}
                 </Typography>
-                {console.log(member.image)}
 
-                <CardMedia
-                  className="TeamPicture"
-                  image={require(`../images/${member.image}`)}
+                <Img
                   title={member.name}
+                  alt={member.name}
+                  fluid={member.image.childImageSharp.fluid}
                 />
+
                 <CardContent className="Icon">
                   <Typography
                     variant="body2"
