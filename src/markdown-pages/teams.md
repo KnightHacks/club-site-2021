@@ -94,7 +94,7 @@ members:
       name: "Nicholas Yardich",
       position: "Logistics Director",
       major: "Computer Science",
-      image: "nicholas.png",
+      image: "nicholas.jpg",
     },
     {
       name: "Jonathan Dieu",
