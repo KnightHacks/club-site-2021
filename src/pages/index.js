@@ -14,10 +14,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import "./index.css";
 import "@fontsource/roboto";
+import "../fonts/AvenirNext-Italic.ttf";
 import "../fonts/AvenirNext-Regular.ttf";
 import "../fonts/AvenirNext-UltraLight.ttf";
+import "../fonts/AvenirNext-UltraLightItalic.ttf";
 import "../fonts/AvenirNext-Heavy.ttf";
 import "../fonts/AvenirNext-Medium.ttf";
+import "../fonts/AvenirNext-MediumItalic.ttf";
+
 
 const IndexPage = ({ data }) => {
   const appBarRef = useRef(null);
@@ -29,13 +33,13 @@ const IndexPage = ({ data }) => {
   const allEvents = [
     {
       title: "Alexa Stock Ticker",
-      presenter: "Chris Feltner",
       description:
         "Learn how to make an Alexa skill with Knight Hacks! No coding experience is required. We will be making an Alexa skill that gets stock prices so you can ask your device what your favorite company is trading at. Along the way, we'll demonstrate some basic programming concepts for participants who are new to programming. We'll also be giving away an Amazon Echo device to a lucky workshop participant!",
       time: "7:30 p.m.",
       location: "Zoom",
       date: "25",
       month: "Feb",
+      presenter: "Chris Feltner",
     },
     {
       title: "What's the Point of Pointers?",
@@ -227,12 +231,7 @@ const IndexPage = ({ data }) => {
             {allEvents.map((event, index) => (
               <Event
                 key={index}
-                title={event.title}
-                description={event.description}
-                time={event.time}
-                location={event.location}
-                date={event.date}
-                month={event.month}
+                {...event}
               />
             ))}
             <Teams members={allMembers} ref={teamsRef} />

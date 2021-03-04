@@ -68,10 +68,21 @@
   margin-bottom: 0 !important;
 }
 
+/* .EventPresenter {
+  font-family: "Avenir Next Italic", sans-serif;
+} */
+
 .EventPresenter,
-.EventTime {
+.EventTime,
+.EventLocation  {
   font-size: 1rem;
   padding: 0 1vw;
+  color: black !important;
+  /* font-family: "Avenir Next Italic", sans-serif; */
+}
+
+.EventLocation:hover {
+  color: gray !important;
 }
 
 .EventDescription {
