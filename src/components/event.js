@@ -36,7 +36,7 @@ const Event = (props) => {
                 {props.presenter}
               </p>
                 <p className="EventTime">
-                {props.time} ◦<a href="https://linktr.ee/knighthacks" className="EventLocation">{props.location}</a>
+                {props.time} |<a href="https://linktr.ee/knighthacks" className="EventLocation">{props.location}</a>
                 </p>
             </div>
             <h3 className="EventDescription">{props.description}</h3>
