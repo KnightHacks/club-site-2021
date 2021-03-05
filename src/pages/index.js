@@ -56,7 +56,7 @@ const IndexPage = ({ data }) => {
       description:
         "Interested in a text editor included with nearly every Linux server and installation of MacOS? Ever typed `git commit` and gotten stuck in a strange program where the keys do seemingly random things? Curious about this `vim` thing you've seen Rob typing at `Hello, World!` ? Whatever your reason, this workshop is for you! We will learn the legendary Vim text editor, from basics like how to exit, to the powerful keybindings that have made it a popular choice for decades. No experience required!",
       time: "7:30 p.m.",
-      location: "Discord",
+      location: "Zoom",
       date: "04",
       month: "Mar",
       presenter: "Robert Boyd",
@@ -76,7 +76,7 @@ const IndexPage = ({ data }) => {
       description:
         'Rust has been the undisputed "most loved" programming language on the Stack Overflow Developer Survey for several years. Why? Come to this workshop and find out! Anthony will be returning to teach us the basics of Rust\'s unique memory management model and answer any questions about this innovative and promising new programming language.',
       time: "7:30 p.m.",
-      location: "Discord",
+      location: "Zoom",
       date: "18",
       month: "Mar",
       presenter: "Anthony Hevia",
