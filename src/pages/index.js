@@ -66,9 +66,7 @@ const IndexPage = ({ data }) => {
     {
       title: "Rust",
       description:
-        "Rust has been the undisputed " /
-        "most loved" /
-        " programming language on the Stack Overflow Developer Survey for several years. Why? Come to this workshop and find out! Anthony will be returning to teach us the basics of Rust's unique memory management model and answer any questions about this innovative and promising new programming language.",
+        'Rust has been the undisputed "most loved" programming language on the Stack Overflow Developer Survey for several years. Why? Come to this workshop and find out! Anthony will be returning to teach us the basics of Rust\'s unique memory management model and answer any questions about this innovative and promising new programming language.',
       time: "6:00",
       location: "Discord",
       date: "18",
