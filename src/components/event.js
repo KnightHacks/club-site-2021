@@ -6,8 +6,6 @@ import Collapse from "@material-ui/core/Collapse";
 import "./event.css";
 
 const Event = (props) => {
-  console.log(props);
-  console.log(props.presenter)
   const [expanded, setExpanded] = useState(false);
 
   return (
@@ -32,12 +30,16 @@ const Event = (props) => {
         >
           <div className="ContentContainer">
             <div className="EventDetails">
-              <p className="EventPresenter">
-                {props.presenter}
+              <p className="EventPresenter">{props.presenter}</p>
+              <p className="EventTime">
+                {props.time} |
+                <a
+                  href="https://linktr.ee/knighthacks"
+                  className="EventLocation"
+                >
+                  {props.location}
+                </a>
               </p>
-                <p className="EventTime">
-                {props.time} |<a href="https://linktr.ee/knighthacks" className="EventLocation">{props.location}</a>
-                </p>
             </div>
             <h3 className="EventDescription">{props.description}</h3>
           </div>
