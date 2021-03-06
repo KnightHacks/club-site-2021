@@ -82,110 +82,6 @@ const IndexPage = ({ data }) => {
       presenter: "Anthony Hevia",
     },
   ];
-  const allMembers = [
-    {
-      name: "Chris Feltner",
-      position: "President",
-      major: "Computer Science & Political Science",
-      image: require("../images/chris.jpg"),
-      linkedin: "https://www.linkedin.com/",
-      twitter: "https://twitter.com/?lang=en",
-    },
-    {
-      name: "Cydni Turner",
-      position: "Mentorship Co-Director",
-      major: "Computer Science",
-      image: require("../images/Cydni.jpeg"),
-
-      linkedin: "https://www.linkedin.com/",
-      twitter: "https://twitter.com/?lang=en",
-    },
-
-    {
-      name: "Abraham Hernandez",
-      position: "Projects Co-Director",
-      major: "Computer Science",
-      image: require("../images/Abraham.jpg"),
-      linkedin: "https://www.linkedin.com/",
-      twitter: "https://twitter.com/?lang=en",
-    },
-
-    {
-      name: "Arjun Pherwani  ",
-      position: "Development Director",
-      major: "Computer Science",
-      image: require("../images/Arjun.jpeg"),
-      linkedin: "https://www.linkedin.com/",
-      twitter: "https://twitter.com/?lang=en",
-    },
-
-    {
-      name: "Melanie Ehrlich",
-      position: "Communications Director",
-      major: "Computer Science",
-      image: require("../images/melanie.jpg"),
-      linkedin: "https://www.linkedin.com/",
-      twitter: "https://twitter.com/?lang=en",
-    },
-
-    {
-      name: "Dima Golubenko",
-      position: "Projects Director",
-      major: "Computer Science",
-      image: require("../images/Dima.jpeg"),
-      linkedin: "https://www.linkedin.com/",
-      twitter: "https://twitter.com/?lang=en",
-    },
-    {
-      name: "Robert Boyd ",
-      position: "Workshops Director",
-      major: "Computer Science",
-      image: require("../images/rob.jpg"),
-      linkedin: "https://www.linkedin.com/",
-      twitter: "https://twitter.com/?lang=en",
-    },
-    {
-      name: "Fridjinah Francois ",
-      position: "Mentorship Co-Director",
-      major: "Mathematics",
-      image: require("../images/Fridjinah.jpg"),
-      linkedin: "https://www.linkedin.com/",
-      twitter: "https://twitter.com/?lang=en",
-    },
-    {
-      name: "Rada Ursu ",
-      position: "Design Director",
-      major: "Experimental Animation",
-      image: require("../images/rada.jpg"),
-      linkedin: "https://www.linkedin.com/",
-      twitter: "https://twitter.com/?lang=en",
-    },
-    {
-      name: "Abrahan Nevarez ",
-      position: "Development Director",
-      major: "Information Technology",
-      image: require("../images/abr.jpg"),
-      linkedin: "https://www.linkedin.com/",
-      twitter: "https://twitter.com/?lang=en",
-    },
-    {
-      name: "Victoria Williamson",
-      position: "Lead Hackathon Organizer",
-      major: "Computer Science and Statistics ",
-      image: require("../images/victoria.png"),
-      linkedin: "https://www.linkedin.com/",
-      twitter: "https://twitter.com/?lang=en",
-    },
-    {
-      name: "Nicholas Yardich",
-      position: "Logistics Director",
-      major: "Computer Science",
-      image: require("../images/nicholas.png"),
-      linkedin: "https://www.linkedin.com/",
-      twitter: "https://twitter.com/?lang=en",
-    },
-  ];
-
   return (
     <StylesProvider injectFirst>
       <AppBar
@@ -225,7 +121,7 @@ const IndexPage = ({ data }) => {
               />
             </div>
           </div>
-          <AboutUs ref={aboutUsRef}></AboutUs>
+          <AboutUs ref={aboutUsRef} />
           <div className="EventsContainer" ref={eventsRef}>
             <h1 className="Subtitle">Upcoming Events</h1>
             {allEvents.map((event, index) => (
@@ -234,16 +130,16 @@ const IndexPage = ({ data }) => {
                 {...event}
               />
             ))}
-            <Teams members={allMembers} ref={teamsRef} />
+            <Teams ref={teamsRef} />
           </div>
           <div className="FooterContainer" ref={contactUsRef}>
             <h1 className="Subtitle">Connect With Us</h1>
             <div className="Footer">
               <div className="FooterElement">
-                <Newsletter></Newsletter>
+                <Newsletter />
               </div>
               <div className="FooterElement">
-                <Contacts></Contacts>
+                <Contacts />
               </div>
             </div>
           </div>
