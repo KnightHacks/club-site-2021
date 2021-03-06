@@ -35,7 +35,7 @@ const IndexPage = ({ data }) => {
       location: "Zoom",
       date: "25",
       month: "Feb",
-      tags:"Series:Hello world!",
+      tags:"",
     },
     {
       title: "What's the Point of Pointers?",
@@ -45,7 +45,7 @@ const IndexPage = ({ data }) => {
       location: "Zoom",
       date: "02",
       month: "Mar",
-      tags:"",
+      tags:"Series:Hello world!",
     },
     {
       title: "Vim and Vigor",
