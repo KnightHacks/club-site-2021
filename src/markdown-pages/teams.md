@@ -60,6 +60,8 @@ members:
       position: "Workshops Director",
       major: "Computer Science",
       image: "rob.jpg",
+      linkedin: "https://www.linkedin.com/in/robertboyd3",
+      github: "https://github.com/rob-3",
     },
     {
       name: "Fridjinah Francois",
@@ -94,7 +96,8 @@ members:
       name: "Nicholas Yardich",
       position: "Logistics Director",
       major: "Computer Science",
-      image: "nicholas.jpg",
+      image: "nicholas.png",
+      linkedin: "https://www.linkedin.com/in/nyardich/",
     },
     {
       name: "Jonathan Dieu",
@@ -103,6 +106,15 @@ members:
       image: "jon.png",
       linkedin: "https://www.linkedin.com/in/jonathan-h-dieu/",
       instagram: "https://www.instagram.com/jonnydieuski/",
+    },
+    {
+      name: "Dylan Skelly",
+      position: "Treasurer",
+      major: "Computer Science",
+      image: "dylan.jpg",
+      linkedin: "https://www.linkedin.com/in/dylan-skelly/",
+      github: "https://github.com/Dylans123",
+      personal: "https://dylanskelly.me/",
     },
   ]
 memberCount: 127

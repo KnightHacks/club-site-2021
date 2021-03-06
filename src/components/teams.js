@@ -133,7 +133,7 @@ const Teams = forwardRef((props, ref) => {
             <CardContent className="SocialIcons">
               <Typography variant="body2" color="textSecondary" component="p">
                 {member.linkedin ? (
-                  <a href={member.linkedin}>
+                  <a href={member.linkedin} draggable="false">
                     <FontAwesomeIcon
                       icon={faLinkedin}
                       color="#000000"
@@ -142,7 +142,7 @@ const Teams = forwardRef((props, ref) => {
                   </a>
                 ) : null}
                 {member.instagram ? (
-                  <a href={member.instagram}>
+                  <a href={member.instagram} draggable="false">
                     <FontAwesomeIcon
                       icon={faInstagram}
                       color="#000000"
@@ -151,7 +151,7 @@ const Teams = forwardRef((props, ref) => {
                   </a>
                 ) : null}
                 {member.twitter ? (
-                  <a href={member.twitter}>
+                  <a href={member.twitter} draggable="false">
                     <FontAwesomeIcon
                       icon={faTwitter}
                       color="#000000"
@@ -160,7 +160,7 @@ const Teams = forwardRef((props, ref) => {
                   </a>
                 ) : null}
                 {member.github ? (
-                  <a href={member.github}>
+                  <a href={member.github} draggable="false">
                     <FontAwesomeIcon
                       icon={faGithub}
                       className="Iconlink"
@@ -169,7 +169,7 @@ const Teams = forwardRef((props, ref) => {
                   </a>
                 ) : null}
                 {member.personal ? (
-                  <a href={member.personal}>
+                  <a href={member.personal} draggable="false">
                     <FontAwesomeIcon
                       icon={faLaptopCode}
                       className="Iconlink"
