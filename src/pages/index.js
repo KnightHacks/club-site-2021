@@ -35,6 +35,7 @@ const IndexPage = ({ data }) => {
       location: "Zoom",
       date: "25",
       month: "Feb",
+      tags:"Series:Hello world!",
     },
     {
       title: "What's the Point of Pointers?",
@@ -44,6 +45,7 @@ const IndexPage = ({ data }) => {
       location: "Zoom",
       date: "02",
       month: "Mar",
+      tags:"",
     },
     {
       title: "Vim and Vigor",
@@ -53,6 +55,7 @@ const IndexPage = ({ data }) => {
       location: "Discord",
       date: "04",
       month: "Mar",
+      tags:"",
     },
     {
       title: "Career Development Panel",
@@ -62,6 +65,7 @@ const IndexPage = ({ data }) => {
       location: "Zoom",
       date: "11",
       month: "Mar",
+      tags:"",
     },
     {
       title: "Rust",
@@ -71,6 +75,7 @@ const IndexPage = ({ data }) => {
       location: "Discord",
       date: "18",
       month: "Mar",
+      tags:"",
     },
   ];
   const allMembers = [
@@ -222,6 +227,7 @@ const IndexPage = ({ data }) => {
             {allEvents.map((event, index) => (
               <Event
                 key={index}
+                tags={event.tags}
                 title={event.title}
                 description={event.description}
                 time={event.time}

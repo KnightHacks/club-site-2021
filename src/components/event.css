@@ -70,6 +70,12 @@
   padding: 0px 10px;
   color: gray;
 }
+.Tags {
+  font-family: "Avenir Next Ultra Light", sans-serif;
+  font-size: 1em;
+  padding: 0px 10px;
+  color: gray;
+}
 
 a,
 a:visited {
