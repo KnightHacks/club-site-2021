@@ -24,6 +24,7 @@
 
 .AccordionContent:hover {
   cursor: pointer;
+  margin-top: 0 !important;
 }
 
 .AccordionHeader {
@@ -59,16 +60,32 @@
   font-family: "Avenir Next Regular", sans-serif;
 }
 
-.EventTime {
-  padding: 0px 10px;
-  font-size: 1.3rem;
+.EventDetails {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 0 !important;
+}
+
+.EventPresenter,
+.EventTime,
+.EventLocation {
+  font-size: 1.2rem;
+  padding: 0 1vw;
+  color: black !important;
+}
+
+.EventLocation:hover {
+  color: gray !important;
 }
 
 .EventDescription {
-  font-family: "Avenir Next Ultra Light", sans-serif;
+  font-family: "Avenir Next Ultra Light Italic", sans-serif;
   font-size: 1.3em;
   padding: 0px 10px;
   color: gray;
+  margin-top: 0;
 }
 .Tags {
   font-family: "Avenir Next Ultra Light", sans-serif;

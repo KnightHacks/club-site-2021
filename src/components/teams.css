@@ -1,8 +1,3 @@
-.rec.rec-arrow {
-  border: none;
-  background: transparent;
-  margin: 0;
-}
 
 .Subtitle {
   display: flex;
@@ -12,11 +7,10 @@
   width: 100%;
 }
 .Teams {
-  width: 95%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-left: 2.5rem;
 }
 .TeamCard {
   font-family: "Avenir Next Regular", sans-serif;
@@ -29,27 +23,20 @@
 }
 .Major {
   padding-left: 16px;
-  padding-top: -10px;
   padding-bottom: 5px;
   font-size: 13px;
 }
 .Iconlink {
   font-size: 35px;
   padding-left: 8px;
-}
-.Iconlink2 {
-  padding-left: 10px;
-  font-size: 35px;
+  padding-right: 2px;
 }
 
 .rec.rec-arrow {
   border-radius: 60%;
-  background-color: #dbc04a;
-}
-
-.rec.rec-arrow:hover {
   background-color: #dbc04a !important;
 }
+
 .rec.rec-arrow:disabled {
   visibility: hidden;
 }
@@ -58,12 +45,19 @@
   box-shadow: none;
 }
 
-.rec-dot:active {
-  background-color: #dbc04a;
-  box-shadow: #dbc04a;
+.rec-dot {
+  background-color: #dbc04a !important;
+}
+.rec-dot_active,
+.rec-dot:hover {
+  box-shadow: 0 0 1px 3px #dbc04a !important;
 }
 .Links {
   padding-top: 0px;
+}
+
+.Iconlink:hover {
+  color: gray;
 }
 
 .TeamSubtitle {
@@ -99,8 +93,10 @@
 .Counter {
   margin-bottom: 0;
 }
-.Icon {
-  height: -50px;
+.SocialIcons {
+  display: flex;
+  align-items: flex-start;
+  height: 35px;
 }
 .TeamHeader {
   padding-bottom: 0px;

@@ -1,9 +1,122 @@
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin imperdiet dignissim ante quis suscipit. Etiam felis odio, molestie sed magna ullamcorper, imperdiet convallis mauris. Aenean at ullamcorper magna. Nam pulvinar sapien mattis sapien tempus, vel pellentesque diam tempor. Nullam fermentum, elit sed varius egestas, nulla tellus sodales mauris, et scelerisque felis est quis lacus. Integer vel ultricies ex, sit amet malesuada nunc. Mauris at diam a tortor elementum maximus. Morbi rutrum, erat id feugiat dignissim, ex turpis efficitur leo, non vehicula lorem odio a urna. Maecenas lobortis lectus in congue convallis. Phasellus nisl sapien, aliquet eget dolor vitae, fringilla pellentesque nisl. Donec ac pretium quam, at laoreet est. Maecenas eleifend a mauris in ornare. Aliquam eu fermentum metus.
+---
+title: "Teams"
+members:
+  [
+    {
+      name: "Chris Feltner",
+      position: "President",
+      major: "Computer Science & Political Science",
+      image: "chris.jpg",
+      linkedin: "https://www.linkedin.com/in/itschrisfeltner/",
+      instagram: "https://www.instagram.com/cfeltner98/",
+      personal: "https://www.chrisfeltner.com/",
+    },
+    {
+      name: "Cydni Turner",
+      position: "Mentorship Co-Director",
+      major: "Computer Science",
+      image: "Cydni.jpeg",
+    },
 
-Suspendisse nec lectus pharetra, facilisis nulla finibus, volutpat nulla. Phasellus ac enim ullamcorper purus ullamcorper dignissim ut ut mauris. Phasellus ut feugiat tortor. Aenean tempor sit amet urna nec mollis. Praesent efficitur quam velit, in dignissim nibh egestas nec. Nunc feugiat libero purus, et feugiat sapien sagittis a. Curabitur pharetra nulla massa. Cras rhoncus non sem sit amet iaculis. Aenean at tortor felis. Curabitur nec diam lacinia, vulputate lectus a, porttitor mauris. Praesent vel augue in quam faucibus rhoncus id vel velit.
+    {
+      name: "Abraham Hernandez",
+      position: "Projects Co-Director",
+      major: "Computer Science",
+      image: "Abraham.jpg",
+      linkedin: "https://www.linkedin.com/in/abeher/",
+      github: "https://github.com/habraham2023",
+    },
 
-Cras molestie eu felis eget lacinia. Phasellus tempor diam sed nulla dictum vulputate. Aenean sed imperdiet enim. Vivamus eros ante, commodo a auctor accumsan, condimentum quis purus. Nunc semper, mi vel aliquam bibendum, libero magna malesuada nisi, congue accumsan nibh massa ut justo. Vestibulum sagittis tortor id mauris congue, a pharetra velit bibendum. Nulla at maximus augue, vitae egestas diam. Mauris vehicula imperdiet mauris rhoncus imperdiet.
+    {
+      name: "Arjun Pherwani",
+      position: "Development Director",
+      major: "Computer Science",
+      image: "Arjun.jpeg",
+      linkedin: "https://www.linkedin.com/in/arjun-pherwani/",
+      github: "https://www.github.com/APherwani",
+    },
 
-Nunc et posuere dui. Nulla cursus neque tortor, vitae eleifend ante facilisis ac. Aliquam viverra vel sem a finibus. Phasellus condimentum ornare lacus, vitae venenatis magna pulvinar sit amet. Aliquam dolor mi, lacinia hendrerit nisi ultricies, lobortis facilisis nulla. Praesent felis sem, lacinia id diam eget, imperdiet cursus leo. Maecenas lectus dui, pretium sit amet malesuada quis, semper eget arcu. Pellentesque imperdiet eros purus, eget facilisis magna lobortis vitae. Quisque id lectus id elit cursus lacinia. Nulla laoreet metus eu lacus ultricies pellentesque. Aliquam erat volutpat. Quisque et gravida lectus.
+    {
+      name: "Melanie Ehrlich",
+      position: "Communications Director",
+      major: "Computer Science",
+      image: "melanie.jpg",
+      linkedin: "https://www.linkedin.com/in/melanie-ehrlich",
+      instagram: "https://instagram.com/melaniie.exe",
+      github: "https://github.com/mel4ni3",
+    },
 
-Nullam auctor ac eros blandit ultrices. Nulla consequat tincidunt nulla finibus mattis. Praesent et fringilla lorem. In hac habitasse platea dictumst. Donec leo diam, vulputate eu pretium id, congue vitae enim. Sed in turpis erat. Nam non magna ipsum. Praesent odio erat, fermentum at aliquam sagittis, viverra vel est. Suspendisse faucibus dui auctor leo ultrices, sodales porttitor enim venenatis. Curabitur dictum, sapien vitae convallis blandit, turpis ipsum luctus arcu, vel vulputate nisl lectus quis lectus.
+    {
+      name: "Dima Golubenko",
+      position: "Projects Co-Director",
+      major: "Computer Science",
+      image: "Dima.jpeg",
+      linkedin: "https://www.linkedin.com/in/dmitrii-golubenko/",
+      github: "https://github.com/Astatium5",
+      personal: "http://dmitrii-golubenko.tech/",
+    },
+    {
+      name: "Robert Boyd",
+      position: "Workshops Director",
+      major: "Computer Science",
+      image: "rob.jpg",
+      linkedin: "https://www.linkedin.com/in/robertboyd3",
+      github: "https://github.com/rob-3",
+    },
+    {
+      name: "Fridjinah Francois",
+      position: "Mentorship Co-Director",
+      major: "Mathematics",
+      image: "Fridjinah.jpg",
+    },
+    {
+      name: "Rada Ursu",
+      position: "Design Director",
+      major: "Experimental Animation",
+      image: "rada.jpg",
+      linkedin: "https://www.linkedin.com/in/rada-ursu-545b12b4/",
+      instagram: "https://www.instagram.com/radaursu/",
+    },
+    {
+      name: "Abrahan Nevarez",
+      position: "Development Director",
+      major: "Information Technology",
+      image: "abr.jpg",
+      linkedin: "https://www.linkedin.com/in/abrahan-nevarez/",
+    },
+    {
+      name: "Victoria Williamson",
+      position: "Lead Hackathon Organizer",
+      major: "Computer Science and Statistics ",
+      image: "victoria.png",
+      linkedin: "https://www.linkedin.com/in/victoria-n-williamson/",
+      instagram: "https://www.instagram.com/victdub/",
+    },
+    {
+      name: "Nicholas Yardich",
+      position: "Logistics Director",
+      major: "Computer Science",
+      image: "nicholas.png",
+      linkedin: "https://www.linkedin.com/in/nyardich/",
+    },
+    {
+      name: "Jonathan Dieu",
+      position: "Finance Director",
+      major: "Computer Science",
+      image: "jon.png",
+      linkedin: "https://www.linkedin.com/in/jonathan-h-dieu/",
+      instagram: "https://www.instagram.com/jonnydieuski/",
+    },
+    {
+      name: "Dylan Skelly",
+      position: "Treasurer",
+      major: "Computer Science",
+      image: "dylan.jpg",
+      linkedin: "https://www.linkedin.com/in/dylan-skelly/",
+      github: "https://github.com/Dylans123",
+      personal: "https://dylanskelly.me/",
+    },
+  ]
+memberCount: 127
+directorCount: 24
+---

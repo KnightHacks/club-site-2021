@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Accordion from "@material-ui/core/Accordion";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
-import Collapse from "@material-ui/core/Collapse";
 import "./event.css";
 
 const Event = (props) => {
@@ -29,9 +28,18 @@ const Event = (props) => {
           onClick={() => setExpanded(!expanded)}
         >
           <div className="ContentContainer">
-            <p className="EventTime">
-              {props.time} | {props.location}
-            </p>
+            <div className="EventDetails">
+              <p className="EventPresenter">{props.presenter}</p>
+              <p className="EventTime">
+                {props.time} |
+                <a
+                  href="https://linktr.ee/knighthacks"
+                  className="EventLocation"
+                >
+                  {props.location}
+                </a>
+              </p>
+            </div>
             <h3 className="EventDescription">{props.description}</h3>
             <h3 className="Tags">{props.tags}</h3>
           </div>
