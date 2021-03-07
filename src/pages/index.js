@@ -45,7 +45,7 @@ const IndexPage = ({ data }) => {
       location: "Zoom",
       date: "02",
       month: "Mar",
-      tags:"Series:Hello World!",
+      tags:"Hello World!",
     },
     {
       title: "Vim and Vigor",
