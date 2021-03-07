@@ -27,7 +27,6 @@
     "gatsby-source-filesystem": "^3.0.0",
     "gatsby-transformer-remark": "^3.0.0",
     "gatsby-transformer-sharp": "^3.0.0",
-    "postcss": "^8.2.7",
     "react": "^16.13.1",
     "react-countup": "^4.3.3",
     "react-dom": "^16.13.1",
@@ -38,8 +37,12 @@
     "webpack": "^5.24.3"
   },
   "devDependencies": {
+    "autoprefixer": "^10.2.5",
     "eslint": "^7.21.0",
     "eslint-plugin-react": "^7.22.0",
-    "prettier": "^2.2.1"
+    "gatsby-plugin-postcss": "^4.0.0",
+    "postcss": "^8.2.7",
+    "prettier": "^2.2.1",
+    "tailwindcss": "^2.0.3"
   }
 }
