@@ -18,6 +18,7 @@ import {
 import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState, forwardRef } from "react";
 import { useStaticQuery, graphql } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 
 const useWidth = () => {
   let tempWidth;
@@ -100,6 +101,10 @@ const Teams = forwardRef((props, ref) => {
     setItemsToShow(getItemsToShow(width));
   }, [width]);
 
+  // useEffect(() => {
+  //   import(`../images/${member.image}`).then((img) => setMembers(...members));
+  // });
+
   return (
     <div className="Teams" ref={ref}>
       <h1 className="Subtitle">Meet the Team</h1>
@@ -125,11 +130,8 @@ const Teams = forwardRef((props, ref) => {
               {member.major}
             </Typography>
 
-            <CardMedia
-              className="TeamPicture"
-              image={require(`../images/${member.image}`)}
-              title={member.name}
-            />
+            <StaticImage src="../images/chris.jpg" alt="please work" />
+
             <CardContent className="SocialIcons">
               <Typography variant="body2" color="textSecondary" component="p">
                 {member.linkedin ? (
