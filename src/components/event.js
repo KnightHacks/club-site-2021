@@ -33,7 +33,7 @@ const Event = (props) => {
               {props.time} | {props.location}
             </p>
             <h3 className="EventDescription">{props.description}</h3>
-            <h3 className="Tags">Series : {props.tags}</h3>
+            <h3 className="Tags">{props.tags}</h3>
           </div>
         </AccordionDetails>
       </Accordion>
