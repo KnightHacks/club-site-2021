@@ -116,6 +116,14 @@ members:
       github: "https://github.com/Dylans123",
       personal: "https://dylanskelly.me/",
     },
+    {
+      name: "Harold Padilla",
+      position: "Vice President",
+      major: "Information Technology",
+      image: "harold.jpg",
+      linkedin: "https://www.linkedin.com/in/harold-padilla/",
+      instagram: "https://www.instagram.com/that_big_music_nerd/",
+    },
   ]
 memberCount: 127
 directorCount: 24
