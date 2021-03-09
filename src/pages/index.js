@@ -13,13 +13,6 @@ import particles_config from "../particles-config";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import "./index.css";
-import "../fonts/AvenirNext-Italic.ttf";
-import "../fonts/AvenirNext-Regular.ttf";
-import "../fonts/AvenirNext-UltraLight.ttf";
-import "../fonts/AvenirNext-UltraLightItalic.ttf";
-import "../fonts/AvenirNext-Heavy.ttf";
-import "../fonts/AvenirNext-Medium.ttf";
-import "../fonts/AvenirNext-MediumItalic.ttf";
 
 const IndexPage = ({ data }) => {
   const appBarRef = useRef(null);
@@ -94,13 +87,13 @@ const IndexPage = ({ data }) => {
         <Particles>
           <title>Knight Hacks</title>
           <div className="LogoContainer relative h-screen">
-            <div className="KnightHacksLogo mx-auto absolute align-baseline top-1/2 left-1/2 text-xl xs:text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
+            <div className="KnightHacksLogo mx-auto absolute align-baseline top-1/2 left-1/2 text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
               <img
                 src={KnightHacksLogo}
                 className="KHLogo w-full p-6"
                 alt="Knight Hacks Logo"
               />
-              <h1 className="LogoSubheading flex justify-center mt-3.5 whitespace-nowrap text-gray-50">
+              <h1 className="LogoSubheading flex justify-center mt-3.5 whitespace-nowrap text-gray-50 font-light">
                 {data.site.siteMetadata.description}
               </h1>
             </div>
@@ -121,7 +114,7 @@ const IndexPage = ({ data }) => {
           </div>
           <AboutUs ref={aboutUsRef} />
           <div className="EventsContainer my-6" ref={eventsRef}>
-            <h1 className="Subtitle flex justify-center text-gray-50 text-5xl w-full my-5">
+            <h1 className="font-light flex justify-center text-gray-50 text-5xl w-full my-5">
               Upcoming Events
             </h1>
             {allEvents.map((event, index) => (
@@ -133,7 +126,7 @@ const IndexPage = ({ data }) => {
             className="FooterContainer flex flex-col my-5"
             ref={contactUsRef}
           >
-            <h1 className="Subtitle flex justify-center text-gray-50 text-5xl w-full my-5">
+            <h1 className="Subtitle font-light flex justify-center text-gray-50 text-5xl w-full my-5">
               Connect With Us
             </h1>
             <div className="Footer flex items-start justify-around w-full text-center flex-wrap">

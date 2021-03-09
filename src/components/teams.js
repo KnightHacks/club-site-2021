@@ -103,7 +103,9 @@ const Teams = forwardRef((props, ref) => {
 
   return (
     <div className="Teams" ref={ref}>
-      <h1 className="Subtitle">Meet the Team</h1>
+      <h1 className="font-light flex justify-center text-gray-50 text-5xl w-full my-5">
+        Meet the Team
+      </h1>
       <Carousel
         itemsToShow={itemsToShow}
         itemsToScroll={itemsToShow}
@@ -184,7 +186,9 @@ const Teams = forwardRef((props, ref) => {
         ))}
       </Carousel>
 
-      <h1 className="TeamSubtitle">Our Members</h1>
+      <h1 className="font-light flex justify-center text-gray-50 text-3xl w-full my-5">
+        Our Members
+      </h1>
 
       <div className="Members">
         <div className="ClubMembers">
