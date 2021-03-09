@@ -87,7 +87,7 @@ const IndexPage = ({ data }) => {
         <Particles>
           <title>Knight Hacks</title>
           <div className="relative h-screen">
-            <div className="KnightHacksLogo mx-auto absolute align-baseline top-1/2 left-1/2 text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+            <div className="KnightHacksLogo mx-auto absolute align-baseline top-1/2 left-1/2 text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl transform -translate-y-2/4 -translate-x-2/4">
               <img
                 src={KnightHacksLogo}
                 className="w-full p-6"
