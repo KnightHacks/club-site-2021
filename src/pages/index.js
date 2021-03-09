@@ -90,24 +90,24 @@ const IndexPage = ({ data }) => {
         teamsRef={teamsRef}
         contactUsRef={contactUsRef}
       />
-      <div className="LandingPage">
+      <div className="LandingPage bg-indigo-900	">
         <Particles>
           <title>Knight Hacks</title>
-          <div className="LogoContainer">
-            <div className="KnightHacksLogo">
+          <div className="LogoContainer relative h-screen">
+            <div className="KnightHacksLogo mx-auto absolute align-baseline top-1/2 left-1/2 text-xl xs:text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
               <img
                 src={KnightHacksLogo}
-                className="KHLogo"
+                className="KHLogo w-full p-6"
                 alt="Knight Hacks Logo"
               />
-              <h1 className="LogoSubheading">
+              <h1 className="LogoSubheading flex justify-center mt-3.5 whitespace-nowrap text-gray-50">
                 {data.site.siteMetadata.description}
               </h1>
             </div>
-            <div className="ArrowContainer">
+            <div className="ArrowContainer flex absolute left-2/4 bottom-2">
               <FontAwesomeIcon
                 icon={faChevronDown}
-                className="Arrow"
+                className="Arrow cursor-pointer"
                 onClick={() =>
                   window.scrollTo({
                     top:
@@ -120,16 +120,23 @@ const IndexPage = ({ data }) => {
             </div>
           </div>
           <AboutUs ref={aboutUsRef} />
-          <div className="EventsContainer" ref={eventsRef}>
-            <h1 className="Subtitle">Upcoming Events</h1>
+          <div className="EventsContainer my-6" ref={eventsRef}>
+            <h1 className="Subtitle flex justify-center text-gray-50 text-5xl w-full my-5">
+              Upcoming Events
+            </h1>
             {allEvents.map((event, index) => (
               <Event key={index} {...event} />
             ))}
             <Teams ref={teamsRef} />
           </div>
-          <div className="FooterContainer" ref={contactUsRef}>
-            <h1 className="Subtitle">Connect With Us</h1>
-            <div className="Footer">
+          <div
+            className="FooterContainer flex flex-col my-5"
+            ref={contactUsRef}
+          >
+            <h1 className="Subtitle flex justify-center text-gray-50 text-5xl w-full my-5">
+              Connect With Us
+            </h1>
+            <div className="Footer flex items-start justify-around w-full text-center flex-wrap">
               <div className="FooterElement">
                 <Newsletter />
               </div>
@@ -146,14 +153,14 @@ const IndexPage = ({ data }) => {
 
 const Particles = ({ children }) => {
   return (
-    <div className="ParticlesContainer">
+    <div className="ParticlesContainer absolute">
       <ReactParticles
         params={particles_config}
-        className="Particles"
+        className="Particles fixed top-0 left-0"
         width="100vw"
         height="100vh"
       />
-      {children && <div className="Children">{children}</div>}
+      {children && <div className="Children relative">{children}</div>}
     </div>
   );
 };

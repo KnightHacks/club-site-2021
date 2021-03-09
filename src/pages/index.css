@@ -4,108 +4,22 @@ body {
   font-family: "Avenir Next Regular", sans-serif;
 }
 
-.LandingPage {
-  background-color: #181d41;
-  position: relative;
-}
-
-.LogoContainer {
-  height: 100vh;
-  position: relative;
-}
-
 .KnightHacksLogo {
-  vertical-align: baseline;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-
   transform: translate(-50%, -50%);
 }
 
-.KHLogo {
-  width: 75vw !important;
-  padding: 25px !important;
-}
-
 .LogoSubheading {
-  display: flex;
-  justify-content: center;
   font-family: "Avenir Next Ultra Light";
-  color: white;
-  font-size: 3.5vw;
-  white-space: nowrap;
-  margin: 0;
-  margin-top: 15px;
 }
 
 .GoHome {
-  display: flex;
-  justify-content: center;
   font-family: "Avenir Next Ultra Light";
-  color: white;
   font-size: 1.5vw;
-}
-
-.GoHome:hover {
-  color: gray;
-}
-
-.ArrowContainer {
-  display: flex;
-  position: absolute;
-  bottom: 5%;
-  left: 48%;
 }
 
 .Arrow {
   font-size: 7vw;
   color: #dbc04a;
-}
-
-.Arrow:hover {
-  cursor: pointer;
-}
-
-.ParticlesContainer {
-  position: absolute;
-}
-
-.Particles {
-  position: fixed;
-  left: 0;
-  top: 0;
-}
-
-.Children {
-  position: relative;
-}
-
-.Subtitle {
-  display: flex;
-  justify-content: center;
-  color: white;
-  font-size: 3rem;
-  width: 100%;
-}
-
-.EventsContainer {
-  margin: 1.2rem 0;
-}
-
-.FooterContainer {
-  display: flex;
-  flex-direction: column;
-  margin: 1.2rem 0;
-}
-
-.Footer {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-around;
-  width: 100%;
-  text-align: center;
-  flex-wrap: wrap;
 }
 
 /* Avenir font faces */
