@@ -22,7 +22,6 @@ import "../fonts/AvenirNext-Heavy.ttf";
 import "../fonts/AvenirNext-Medium.ttf";
 import "../fonts/AvenirNext-MediumItalic.ttf";
 
-
 const IndexPage = ({ data }) => {
   const appBarRef = useRef(null);
   const aboutUsRef = useRef(null);
@@ -125,22 +124,15 @@ const IndexPage = ({ data }) => {
           <div className="EventsContainer" ref={eventsRef}>
             <h1 className="Subtitle">Upcoming Events</h1>
             {allEvents.map((event, index) => (
-              <Event
-                key={index}
-                {...event}
-              />
+              <Event key={index} {...event} />
             ))}
             <Teams ref={teamsRef} />
           </div>
           <div className="FooterContainer" ref={contactUsRef}>
             <h1 className="Subtitle">Connect With Us</h1>
             <div className="Footer">
-              <div className="FooterElement">
-                <Newsletter />
-              </div>
-              <div className="FooterElement">
-                <Contacts />
-              </div>
+              <Newsletter />
+              <Contacts />
             </div>
           </div>
         </Particles>
