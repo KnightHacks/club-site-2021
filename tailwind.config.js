@@ -4,6 +4,10 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      colors: {
+        KHgold: "#dbc04a",
+        KHblue: "#181d41",
+      },
       fontFamily: {
         sans: ["sans-serif"],
         regular: ["AvenirNext-Regular", "sans-serif"],

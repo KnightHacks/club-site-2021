@@ -83,24 +83,24 @@ const IndexPage = ({ data }) => {
         teamsRef={teamsRef}
         contactUsRef={contactUsRef}
       />
-      <div className="LandingPage bg-indigo-900	">
+      <div className="relative bg-KHblue">
         <Particles>
           <title>Knight Hacks</title>
-          <div className="LogoContainer relative h-screen">
+          <div className="relative h-screen">
             <div className="KnightHacksLogo mx-auto absolute align-baseline top-1/2 left-1/2 text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
               <img
                 src={KnightHacksLogo}
-                className="KHLogo w-full p-6"
+                className="w-full p-6"
                 alt="Knight Hacks Logo"
               />
-              <h1 className="LogoSubheading flex justify-center mt-3.5 whitespace-nowrap text-gray-50 font-light">
+              <h1 className="flex justify-center mt-3.5 whitespace-nowrap text-gray-50 font-light">
                 {data.site.siteMetadata.description}
               </h1>
             </div>
-            <div className="ArrowContainer flex absolute left-2/4 bottom-2">
+            <div className=" flex absolute left-2/4 bottom-2">
               <FontAwesomeIcon
                 icon={faChevronDown}
-                className="Arrow cursor-pointer"
+                className=" cursor-pointer text-KHgold text-5xl xs:text-4xl sm:text-5xl md:text-6xl"
                 onClick={() =>
                   window.scrollTo({
                     top:
