@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./newsletter.css";
 import { TextField, Button } from "@material-ui/core";
 import { TextFieldStyle } from "./styles";
 // Only submits email to real enpoint when in production
@@ -37,15 +36,17 @@ const Newsletter = () => {
   };
 
   return (
-    <div className="Newsletter">
-      <div className="Email-Signup">
-        <h1 className="Newsletter_Header">Sign up for our newsletter!</h1>
+    <div className="flex justify-center items-center h-full w-1/2">
+      <div className=" text-center text-white ml-5">
+        <h1 className="text-4xl font-light text-white">
+          Sign up for our newsletter!
+        </h1>
         <form
           onSubmit={handleSubmit}
           method="post"
           id="mc-embedded-subscribe-form"
           name="mc-embedded-subscribe-form"
-          className="form"
+          className="mt-10 flex flex-col"
           target="_blank"
           noValidate
         >
@@ -60,8 +61,8 @@ const Newsletter = () => {
             error={!valid}
             value={email}
           />
-          {valid ? null : <p className="Email-Error">Invalid Email!</p>}
-          <div className="Email-Submit">
+          {valid ? null : <p className="text-red-600">Invalid Email!</p>}
+          <div className="mt-5">
             <Button variant="contained" color="secondary" type="submit">
               Subscribe
             </Button>
