@@ -87,7 +87,7 @@ const IndexPage = ({ data }) => {
         <Particles>
           <title>Knight Hacks</title>
           <div className="relative h-screen">
-            <div className="KnightHacksLogo mx-auto absolute align-baseline top-1/2 left-1/2 text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl transform -translate-y-2/4 -translate-x-2/4">
+            <div className="mx-auto absolute align-baseline top-1/2 left-1/2 text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl transform -translate-y-2/4 -translate-x-2/4">
               <img
                 src={KnightHacksLogo}
                 className="w-full p-6"
@@ -113,7 +113,7 @@ const IndexPage = ({ data }) => {
             </div>
           </div>
           <AboutUs ref={aboutUsRef} />
-          <div className="EventsContainer my-6" ref={eventsRef}>
+          <div className="my-6" ref={eventsRef}>
             <h1 className="font-light flex justify-center text-gray-50 text-5xl w-full my-5">
               Upcoming Events
             </h1>
@@ -122,18 +122,15 @@ const IndexPage = ({ data }) => {
             ))}
             <Teams ref={teamsRef} />
           </div>
-          <div
-            className="FooterContainer flex flex-col my-5"
-            ref={contactUsRef}
-          >
-            <h1 className="Subtitle font-light flex justify-center text-gray-50 text-5xl w-full my-5">
+          <div className="flex flex-col my-5" ref={contactUsRef}>
+            <h1 className="font-light flex justify-center text-gray-50 text-5xl w-full my-5">
               Connect With Us
             </h1>
-            <div className="Footer flex items-start justify-around w-full text-center flex-wrap">
-              <div className="FooterElement">
+            <div className="flex items-start justify-around w-full text-center flex-wrap">
+              <div>
                 <Newsletter />
               </div>
-              <div className="FooterElement">
+              <div>
                 <Contacts />
               </div>
             </div>
@@ -146,14 +143,14 @@ const IndexPage = ({ data }) => {
 
 const Particles = ({ children }) => {
   return (
-    <div className="ParticlesContainer absolute">
+    <div className="absolute">
       <ReactParticles
         params={particles_config}
-        className="Particles fixed top-0 left-0"
+        className="fixed top-0 left-0"
         width="100vw"
         height="100vh"
       />
-      {children && <div className="Children relative">{children}</div>}
+      {children && <div className="relative">{children}</div>}
     </div>
   );
 };
