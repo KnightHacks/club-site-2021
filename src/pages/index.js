@@ -127,12 +127,8 @@ const IndexPage = ({ data }) => {
               Connect With Us
             </h1>
             <div className="flex items-start justify-around w-full text-center flex-wrap">
-              <div>
-                <Newsletter />
-              </div>
-              <div>
-                <Contacts />
-              </div>
+              <Newsletter />
+              <Contacts />
             </div>
           </div>
         </Particles>
