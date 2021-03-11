@@ -39,6 +39,7 @@ const IndexPage = ({ data }) => {
       location: "Zoom",
       date: "25",
       month: "Feb",
+      tags:"",
       presenter: "Chris Feltner",
     },
     {
@@ -49,6 +50,7 @@ const IndexPage = ({ data }) => {
       location: "Zoom",
       date: "02",
       month: "Mar",
+      tags:"Hello World!",
       presenter: "Chris Feltner",
     },
     {
@@ -59,6 +61,7 @@ const IndexPage = ({ data }) => {
       location: "Zoom",
       date: "04",
       month: "Mar",
+      tags:"",
       presenter: "Robert Boyd",
     },
     {
@@ -69,6 +72,7 @@ const IndexPage = ({ data }) => {
       location: "Zoom",
       date: "11",
       month: "Mar",
+      tags:"",
       presenter: "",
     },
     {
@@ -79,6 +83,7 @@ const IndexPage = ({ data }) => {
       location: "Zoom",
       date: "18",
       month: "Mar",
+      tags:"",
       presenter: "Anthony Hevia",
     },
   ];
@@ -127,6 +132,13 @@ const IndexPage = ({ data }) => {
             {allEvents.map((event, index) => (
               <Event
                 key={index}
+                tags={event.tags}
+                title={event.title}
+                description={event.description}
+                time={event.time}
+                location={event.location}
+                date={event.date}
+                month={event.month}
                 {...event}
               />
             ))}
