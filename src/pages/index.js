@@ -13,7 +13,6 @@ import particles_config from "../particles-config";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import "./index.css";
-import "@fontsource/roboto";
 import "../fonts/AvenirNext-Italic.ttf";
 import "../fonts/AvenirNext-Regular.ttf";
 import "../fonts/AvenirNext-UltraLight.ttf";
@@ -21,7 +20,6 @@ import "../fonts/AvenirNext-UltraLightItalic.ttf";
 import "../fonts/AvenirNext-Heavy.ttf";
 import "../fonts/AvenirNext-Medium.ttf";
 import "../fonts/AvenirNext-MediumItalic.ttf";
-
 
 const IndexPage = ({ data }) => {
   const appBarRef = useRef(null);
@@ -125,10 +123,7 @@ const IndexPage = ({ data }) => {
           <div className="EventsContainer" ref={eventsRef}>
             <h1 className="Subtitle">Upcoming Events</h1>
             {allEvents.map((event, index) => (
-              <Event
-                key={index}
-                {...event}
-              />
+              <Event key={index} {...event} />
             ))}
             <Teams ref={teamsRef} />
           </div>
