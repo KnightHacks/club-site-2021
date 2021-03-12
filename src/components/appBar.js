@@ -6,7 +6,6 @@ import {
   ButtonGroup,
   useScrollTrigger,
 } from "@material-ui/core";
-import "./appBar.css";
 
 const AppBar = forwardRef(
   ({ appBarRef, aboutUsRef, eventsRef, contactUsRef, teamsRef }, ref) => {
@@ -42,28 +41,28 @@ const AppBar = forwardRef(
           </Button>
           <ButtonGroup variant="text">
             <Button
-              className="font-regular normal-case text-xl"
+              className="font-regular normal-case text-xl focus:outline-none focus:ring-2 focus:ring-white rounded-md"
               color="inherit"
               onClick={() => scroll(aboutUsRef)}
             >
               About
             </Button>
             <Button
-              className="font-regular normal-case text-xl"
+              className="font-regular normal-case text-xl focus:outline-none focus:ring-2 focus:ring-white rounded-md"
               color="inherit"
               onClick={() => scroll(eventsRef)}
             >
               Events
             </Button>
             <Button
-              className="font-regular normal-case text-xl"
+              className="font-regular normal-case text-xl focus:outline-none focus:ring-2 focus:ring-white rounded-md"
               color="inherit"
               onClick={() => scroll(teamsRef)}
             >
               Team
             </Button>
             <Button
-              className="font-regular normal-case text-xl"
+              className="font-regular normal-case text-xl focus:outline-none focus:ring-2 focus:ring-white rounded-md"
               color="inherit"
               onClick={() => scroll(contactUsRef)}
             >
