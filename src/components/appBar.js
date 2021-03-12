@@ -9,7 +9,7 @@ import {
 import "./appBar.css";
 
 const AppBar = forwardRef(
-  ({ appBarRef, aboutUsRef, eventsRef, contactUsRef,teamsRef}, ref) => {
+  ({ appBarRef, aboutUsRef, eventsRef, contactUsRef, teamsRef }, ref) => {
     const trigger = useScrollTrigger({
       disableHysteresis: true,
       threshold: 0,
@@ -24,38 +24,46 @@ const AppBar = forwardRef(
 
     return React.cloneElement(
       <MaterialAppBar
-        className={trigger ? "opaque" : "transparent"}
+        className={
+          trigger
+            ? "bg-KHnavbar transition ease-out duration-300"
+            : "bg-transparent transition ease-out duration-300"
+        }
         position="fixed"
         ref={ref}
       >
-        <Toolbar className="buttons">
+        <Toolbar className="flex justify-between">
           <Button
             href="https://linktr.ee/knighthacks"
-            className="button"
+            className="text-white font-regular normal-case text-xl"
             color="inherit"
           >
             Linktree
           </Button>
           <ButtonGroup variant="text">
             <Button
-              className="button"
+              className="font-regular normal-case text-xl"
               color="inherit"
               onClick={() => scroll(aboutUsRef)}
             >
               About
             </Button>
             <Button
-              className="button"
+              className="font-regular normal-case text-xl"
               color="inherit"
               onClick={() => scroll(eventsRef)}
             >
               Events
             </Button>
-            <Button className="button" color="inherit" onClick={() => scroll(teamsRef)}>
+            <Button
+              className="font-regular normal-case text-xl"
+              color="inherit"
+              onClick={() => scroll(teamsRef)}
+            >
               Team
             </Button>
             <Button
-              className="button"
+              className="font-regular normal-case text-xl"
               color="inherit"
               onClick={() => scroll(contactUsRef)}
             >
