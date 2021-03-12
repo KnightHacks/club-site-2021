@@ -36,9 +36,9 @@ const Newsletter = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-full w-1/2">
-      <div className=" text-center text-white ml-5">
-        <h1 className="text-4xl font-light text-white">
+    <div className="flex justify-center items-center h-full w-full md:w-1/2 mb-4">
+      <div className=" text-center text-white w-full">
+        <h1 className="text-2xl md:text-4xl font-light text-white w-full">
           Sign up for our newsletter!
         </h1>
         <form
@@ -60,6 +60,7 @@ const Newsletter = () => {
             onChange={(e) => setEmail(e.target.value)}
             error={!valid}
             value={email}
+            className="flex justify-center items-center w-full"
           />
           {valid ? null : <p className="text-red-600">Invalid Email!</p>}
           <div className="mt-5">

@@ -10,15 +10,17 @@ import {
 
 const Contacts = () => {
   return (
-    <div className="flex flex-col justify-center items-center text-center text-white w-1/2">
-      <h1 className="font-light text-3xl my-6">Join the conversation.</h1>
+    <div className="flex flex-col justify-center items-center text-center text-white w-full md:w-1/2">
+      <h1 className="font-light text-2xl md:text-4xl my-6 w-full">
+        Join the conversation.
+      </h1>
       <div className="flex flex-col items-center justify-center w-full">
         <div className="w-full">
           <a href="https://discord.gg/Kv5g9vf">
             <FontAwesomeIcon
               icon={faDiscord}
               color="white"
-              className="mb-8 text-9xl hover:text-gray-500"
+              className="mb-8 text-7xl md:text-9xl hover:text-gray-500"
             />
           </a>
         </div>
@@ -27,28 +29,28 @@ const Contacts = () => {
             <FontAwesomeIcon
               icon={faGithub}
               color="white"
-              className="text-7xl hover:text-gray-500"
+              className="text-5xl md:text-7xl hover:text-gray-500"
             />
           </a>
           <a href="https://www.instagram.com/knighthacks/">
             <FontAwesomeIcon
               icon={faInstagram}
               color="white"
-              className="text-7xl hover:text-gray-500"
+              className="text-5xl md:text-7xl hover:text-gray-500"
             />
           </a>
           <a href="https://www.facebook.com/KnightHacks/">
             <FontAwesomeIcon
               icon={faFacebook}
               color="white"
-              className="text-7xl hover:text-gray-500"
+              className="text-5xl md:text-7xl hover:text-gray-500"
             />
           </a>
           <a href="https://twitter.com/KnightHacks?lang=en/">
             <FontAwesomeIcon
               icon={faTwitter}
               color="white"
-              className="text-7xl hover:text-gray-500"
+              className="text-5xl md:text-7xl hover:text-gray-500"
             />
           </a>
         </div>
