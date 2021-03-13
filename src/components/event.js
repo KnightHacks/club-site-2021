@@ -41,6 +41,7 @@ const Event = (props) => {
               </p>
             </div>
             <h3 className="EventDescription">{props.description}</h3>
+            <h3 className="Tags">{props.tags}</h3>
           </div>
         </AccordionDetails>
       </Accordion>
