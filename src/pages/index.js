@@ -22,7 +22,6 @@ import "../fonts/AvenirNext-Heavy.ttf";
 import "../fonts/AvenirNext-Medium.ttf";
 import "../fonts/AvenirNext-MediumItalic.ttf";
 
-
 const IndexPage = ({ data }) => {
   const appBarRef = useRef(null);
   const aboutUsRef = useRef(null);
@@ -147,12 +146,8 @@ const IndexPage = ({ data }) => {
           <div className="FooterContainer" ref={contactUsRef}>
             <h1 className="Subtitle">Connect With Us</h1>
             <div className="Footer">
-              <div className="FooterElement">
-                <Newsletter />
-              </div>
-              <div className="FooterElement">
-                <Contacts />
-              </div>
+              <Newsletter />
+              <Contacts />
             </div>
           </div>
         </Particles>
