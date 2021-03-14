@@ -23,6 +23,7 @@
     "@material-ui/icons": "^4.11.2",
     "gatsby": "^3.0.3",
     "gatsby-plugin-image": "^1.0.0",
+    "gatsby-plugin-mailchimp": "^5.2.2",
     "gatsby-plugin-sharp": "^3.0.0",
     "gatsby-source-filesystem": "^3.0.0",
     "gatsby-transformer-remark": "^3.0.0",
