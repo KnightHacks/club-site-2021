@@ -34,35 +34,35 @@ const AppBar = forwardRef(
         <Toolbar className="flex justify-between">
           <Button
             href="https://linktr.ee/knighthacks"
-            className="text-white font-regular normal-case text-xl"
+            className="text-white font-regular normal-case xs:text-base sm:text-lg md:text-xl"
             color="inherit"
           >
             Linktree
           </Button>
           <ButtonGroup variant="text">
             <Button
-              className="font-regular normal-case text-xl focus:outline-none focus:ring-2 focus:ring-white rounded-md"
+              className="font-regular normal-case focus:outline-none focus:ring-2 focus:ring-white rounded-md xs:text-base sm:text-lg md:text-xl"
               color="inherit"
               onClick={() => scroll(aboutUsRef)}
             >
               About
             </Button>
             <Button
-              className="font-regular normal-case text-xl focus:outline-none focus:ring-2 focus:ring-white rounded-md"
+              className="font-regular normal-case focus:outline-none focus:ring-2 focus:ring-white rounded-md xs:text-base sm:text-lg md:text-xl"
               color="inherit"
               onClick={() => scroll(eventsRef)}
             >
               Events
             </Button>
             <Button
-              className="font-regular normal-case text-xl focus:outline-none focus:ring-2 focus:ring-white rounded-md"
+              className="font-regular normal-case focus:outline-none focus:ring-2 focus:ring-white rounded-md xs:text-base sm:text-lg md:text-xl"
               color="inherit"
               onClick={() => scroll(teamsRef)}
             >
               Team
             </Button>
             <Button
-              className="font-regular normal-case text-xl focus:outline-none focus:ring-2 focus:ring-white rounded-md"
+              className="font-regular normal-case focus:outline-none focus:ring-2 focus:ring-white rounded-md xs:text-base sm:text-lg md:text-xl"
               color="inherit"
               onClick={() => scroll(contactUsRef)}
             >
