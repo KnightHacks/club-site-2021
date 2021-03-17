@@ -1,6 +1,6 @@
 import React, { forwardRef } from "react";
 import { StaticQuery, graphql } from "gatsby";
-import "./aboutUs.css";
+
 
 const AboutUs = forwardRef((props, ref) => {
   return (
@@ -17,7 +17,7 @@ const AboutUs = forwardRef((props, ref) => {
           }
         `}
         render={(data) => (
-          <p className="text-gray-300 text-2xl leading-loose ml-28 mr-28">{data.markdownRemark.rawMarkdownBody}</p>
+          <p className="text-gray-300 sm:text-sm md:text-base lg:text-xl xl:text-2xl 2xl:text-4xl leading-loose ml-28 mr-28">{data.markdownRemark.rawMarkdownBody}</p>
         )}
       />
     </div>
