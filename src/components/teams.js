@@ -102,7 +102,7 @@ const Teams = forwardRef((props, ref) => {
   }, [width]);
 
   return (
-    <div className="flex flex-col items-center w-screen" ref={ref}>
+    <div className="Teams" ref={ref}>
       <h1 className="font-light flex justify-center text-gray-50 text-5xl w-full my-5">
         Meet the Team
       </h1>
@@ -112,17 +112,14 @@ const Teams = forwardRef((props, ref) => {
         style={{ width: "90vw" }}
       >
         {members.map((member, index) => (
-          <Card
-            className="font-regular w-5/6 focus:outline-none focus:ring-2 focus:ring-white rounded-md"
-            key={index}
-          >
+          <Card className="TeamCard" key={index}>
             <CardHeader
-              className="pb-0"
+              className="TeamHeader"
               title={member.name}
               subheader={member.position}
             />
             <Typography
-              className="pl-4 pb-1.5 text-sm"
+              className="Major"
               align="left"
               variant="subtitle1"
               color="textSecondary"
@@ -132,18 +129,18 @@ const Teams = forwardRef((props, ref) => {
             </Typography>
 
             <CardMedia
-              className="pt-60 pb-2.5"
+              className="TeamPicture"
               image={Chris}
               title={member.name}
             />
-            <CardContent className="flex items-start h-14">
+            <CardContent className="SocialIcons">
               <Typography variant="body2" color="textSecondary" component="p">
                 {member.linkedin ? (
                   <a href={member.linkedin} draggable="false">
                     <FontAwesomeIcon
                       icon={faLinkedin}
                       color="#000000"
-                      className="mr-2 pr-0.5 pl-2 mt-0 text-4xl hover:text-gray-400"
+                      className="Iconlink"
                     />
                   </a>
                 ) : null}
@@ -152,7 +149,7 @@ const Teams = forwardRef((props, ref) => {
                     <FontAwesomeIcon
                       icon={faInstagram}
                       color="#000000"
-                      className="mr-2 pr-0.5 pl-2 text-4xl hover:text-gray-400"
+                      className="Iconlink"
                     />
                   </a>
                 ) : null}
@@ -161,7 +158,7 @@ const Teams = forwardRef((props, ref) => {
                     <FontAwesomeIcon
                       icon={faTwitter}
                       color="#000000"
-                      className="mr-2 pr-0.5 pl-2 text-4xl hover:text-gray-400"
+                      className="Iconlink"
                     />
                   </a>
                 ) : null}
@@ -169,7 +166,7 @@ const Teams = forwardRef((props, ref) => {
                   <a href={member.github} draggable="false">
                     <FontAwesomeIcon
                       icon={faGithub}
-                      className="mr-2 pr-0.5 pl-2 text-4xl hover:text-gray-400"
+                      className="Iconlink"
                       color="#000000"
                     />
                   </a>
@@ -178,7 +175,7 @@ const Teams = forwardRef((props, ref) => {
                   <a href={member.personal} draggable="false">
                     <FontAwesomeIcon
                       icon={faLaptopCode}
-                      className="mr-1 pr-0.5 pl-2 text-3xl hover:text-gray-400"
+                      className="Iconlink"
                       color="#000000"
                     />
                   </a>
@@ -193,24 +190,24 @@ const Teams = forwardRef((props, ref) => {
         Our Members
       </h1>
 
-      <div className="font-light flex justify-center flex-row text-white mb-12">
-        <div className="text-4xl text-center my-0 mx-3.5">
-          <h1 className="mb-0">
+      <div className="Members">
+        <div className="ClubMembers">
+          <h1 className="Counter">
             <CountUp
               end={data.markdownRemark.frontmatter.memberCount}
               duration={7}
             />
           </h1>
-          <span className="m-0 text-2xl">active members</span>
+          <span className="MemberSubtitle">active members</span>
         </div>
-        <div className="text-4xl text-center">
-          <h1 className="mb-0">
+        <div className="ClubDirectors">
+          <h1 className="Counter">
             <CountUp
               end={data.markdownRemark.frontmatter.directorCount}
               duration={7}
             />
           </h1>
-          <span className="m-0 text-2xl">developers & directors</span>
+          <span className="MemberSubtitle">developers & directors</span>
         </div>
       </div>
     </div>
