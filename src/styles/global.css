@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+
+/* Avenir font faces */
+
+@font-face {
+  font-family: "Avenir Next Italic";
+  src: local("AvenirNext-Italic"),
+    url("../fonts/AvenirNext-Italic.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Avenir Next Regular";
+  src: local("AvenirNext-Regular"),
+    url("../fonts/AvenirNext-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Avenir Next Ultra Light";
+  src: local("AvenirNext-UltraLight"),
+    url("../fonts/AvenirNext-UltraLight.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Avenir Next Heavy";
+  src: local("AvenirNext-Heavy"),
+    url("../fonts/AvenirNext-Heavy.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Avenir Next Medium";
+  src: local("AvenirNext-Medium"),
+    url("../fonts/AvenirNext-Medium.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Avenir Next Medium Italic";
+  src: local("AvenirNext-MediumItalic"),
+    url("../fonts/AvenirNext-MediumItalic.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Avenir Next Ultra Light Italic";
+  src: local("AvenirNext-UltraLightItalic"),
+    url("../fonts/AvenirNext-UltraLight.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@tailwind utilities;

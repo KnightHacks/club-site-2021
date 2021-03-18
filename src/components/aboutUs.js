@@ -5,7 +5,9 @@ import "./aboutUs.css";
 const AboutUs = forwardRef((props, ref) => {
   return (
     <div className="AboutUsContainer" ref={ref}>
-      <h1 className="Subtitle">About Us</h1>
+      <h1 className="font-light flex justify-center text-gray-50 text-5xl w-full my-5">
+        About Us
+      </h1>
       <StaticQuery
         query={graphql`
           query aboutQuery {

@@ -13,13 +13,6 @@ import particles_config from "../particles-config";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import "./index.css";
-import "../fonts/AvenirNext-Italic.ttf";
-import "../fonts/AvenirNext-Regular.ttf";
-import "../fonts/AvenirNext-UltraLight.ttf";
-import "../fonts/AvenirNext-UltraLightItalic.ttf";
-import "../fonts/AvenirNext-Heavy.ttf";
-import "../fonts/AvenirNext-Medium.ttf";
-import "../fonts/AvenirNext-MediumItalic.ttf";
 
 const IndexPage = ({ data }) => {
   const appBarRef = useRef(null);
@@ -83,24 +76,24 @@ const IndexPage = ({ data }) => {
         teamsRef={teamsRef}
         contactUsRef={contactUsRef}
       />
-      <div className="LandingPage">
+      <div className="relative bg-KHblue">
         <Particles>
           <title>Knight Hacks</title>
-          <div className="LogoContainer">
-            <div className="KnightHacksLogo">
+          <div className="relative h-screen">
+            <div className="mx-auto absolute align-baseline top-1/2 left-1/2 text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl transform -translate-y-2/4 -translate-x-2/4">
               <img
                 src={KnightHacksLogo}
-                className="KHLogo"
+                className="w-full p-6"
                 alt="Knight Hacks Logo"
               />
-              <h1 className="LogoSubheading">
+              <h1 className="flex justify-center mt-3.5 whitespace-nowrap text-gray-50 font-light">
                 {data.site.siteMetadata.description}
               </h1>
             </div>
-            <div className="ArrowContainer">
+            <div className=" flex absolute left-2/4 bottom-2">
               <FontAwesomeIcon
                 icon={faChevronDown}
-                className="Arrow"
+                className=" cursor-pointer text-KHgold text-5xl xs:text-4xl sm:text-5xl md:text-6xl"
                 onClick={() =>
                   window.scrollTo({
                     top:
@@ -113,18 +106,26 @@ const IndexPage = ({ data }) => {
             </div>
           </div>
           <AboutUs ref={aboutUsRef} />
-          <div className="EventsContainer" ref={eventsRef}>
-            <h1 className="Subtitle">Upcoming Events</h1>
+          <div className="my-6" ref={eventsRef}>
+            <h1 className="font-light flex justify-center text-gray-50 text-5xl w-full my-5">
+              Upcoming Events
+            </h1>
             {allEvents.map((event, index) => (
               <Event key={index} {...event} />
             ))}
             <Teams ref={teamsRef} />
           </div>
-          <div className="FooterContainer" ref={contactUsRef}>
-            <h1 className="Subtitle">Connect With Us</h1>
-            <div className="Footer">
-              <Newsletter />
-              <Contacts />
+          <div className="flex flex-col my-5" ref={contactUsRef}>
+            <h1 className="font-light flex justify-center text-gray-50 text-5xl w-full my-5">
+              Connect With Us
+            </h1>
+            <div className="flex items-start justify-around w-full text-center flex-wrap">
+              <div>
+                <Newsletter />
+              </div>
+              <div>
+                <Contacts />
+              </div>
             </div>
           </div>
         </Particles>
@@ -135,14 +136,14 @@ const IndexPage = ({ data }) => {
 
 const Particles = ({ children }) => {
   return (
-    <div className="ParticlesContainer">
+    <div className="absolute">
       <ReactParticles
         params={particles_config}
-        className="Particles"
+        className="fixed top-0 left-0"
         width="100vw"
         height="100vh"
       />
-      {children && <div className="Children">{children}</div>}
+      {children && <div className="relative">{children}</div>}
     </div>
   );
 };

@@ -20,5 +20,6 @@ module.exports = {
         timeout: 3500,
       },
     },
+    `gatsby-plugin-postcss`,
   ],
 };
