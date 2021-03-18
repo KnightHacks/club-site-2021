@@ -6,6 +6,7 @@ import "./event.css";
 
 const Event = (props) => {
   const [expanded, setExpanded] = useState(false);
+  console.log("test");
 
   return (
     <div className={`CalendarContainer ${expanded ? "Expanded" : ""}`}>
