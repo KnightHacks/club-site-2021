@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { graphql } from "gatsby";
 import KnightHacksLogo from "../assets/logos/knightHacksLogoGold.svg";
 import Newsletter from "../components/newsletter.js";
@@ -14,6 +14,21 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import "./index.css";
 
+const months = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+
 const IndexPage = ({ data }) => {
   const appBarRef = useRef(null);
   const aboutUsRef = useRef(null);
@@ -21,51 +36,78 @@ const IndexPage = ({ data }) => {
   const teamsRef = useRef(null);
   const contactUsRef = useRef(null);
 
-  const allEvents = [
-    {
-      title: "Unit Testing",
-      description:
-        "Everyone knows testing your code is important, but how can you do it? At this workshop, we'll talk about the motivations for testing, how to write tests, and how tests can greatly improve your codebase and workflow. We'll be using JavaScript and the Mocha.js testing framework, but the concepts will be applicable to any language. No experience required.",
-      time: "7:30 p.m.",
-      location: "Zoom",
-      date: "16",
-      month: "Mar",
-      tags: "Hello World!",
-      presenter: "Robert Boyd",
-    },
-    {
-      title: "Rust",
-      description:
-        'Rust has been the undisputed "most loved" programming language on the Stack Overflow Developer Survey for several years. Why? Come to this workshop and find out! Anthony will be returning to teach us the basics of Rust\'s unique memory management model and answer any questions about this innovative and promising new programming language.',
-      time: "7:30 p.m.",
-      location: "Zoom",
-      date: "18",
-      month: "Mar",
-      tags: "",
-      presenter: "Anthony Hevia",
-    },
-    {
-      title: "TypeScript",
-      description:
-        "Does JavaScript want to make you tear your hair out with errors like `undefined is not a function` and `name is not defined`? Do you miss Java features like `interface` and `enum`? Do you just like typing out the types of your variables? TypeScript might just be what you're looking for! In this workshop, we'll explore TypeScript, a popular compile-to-JS language with a surprisingly good static type system and some other cool features.",
-      time: "7:30 p.m.",
-      location: "Zoom",
-      date: "23",
-      month: "Mar",
-      tags: "Hello World!",
-      presenter: "Robert Boyd",
-    },
-    {
-      title: "Getting Into Grad School",
-      description: "",
-      time: "7:30 p.m.",
-      location: "Zoom",
-      date: "25",
-      month: "Mar",
-      tags: "",
-      presenter: "Irene Tanner",
-    },
-  ];
+  const [allEvents, setAllEvents] = useState([]);
+
+  useEffect(() => {
+    const getEvents = async () => {
+      const isoDate = new Date().toISOString();
+      console.log(isoDate);
+      const blob = await fetch(
+        "https://api.knighthacks.org/api/club/get_events/?start_date=" + isoDate
+      );
+      const data = await blob.json();
+      console.log(data);
+      const fixedData = data.events.map((event) => {
+        const date = new Date(event.date);
+        const day = date.getDate();
+        const month = months[date.getMonth()];
+        return {
+          ...event,
+          date: day,
+          month,
+        };
+      });
+      setAllEvents(fixedData);
+    };
+    getEvents();
+  }, []);
+  console.log(allEvents);
+
+  // const allEvents = [
+  //   {
+  //     title: "Unit Testing",
+  //     description:
+  //       "Everyone knows testing your code is important, but how can you do it? At this workshop, we'll talk about the motivations for testing, how to write tests, and how tests can greatly improve your codebase and workflow. We'll be using JavaScript and the Mocha.js testing framework, but the concepts will be applicable to any language. No experience required.",
+  //     time: "7:30 p.m.",
+  //     location: "Zoom",
+  //     date: "16",
+  //     month: "Mar",
+  //     tags: "Hello World!",
+  //     presenter: "Robert Boyd",
+  //   },
+  //   {
+  //     title: "Rust",
+  //     description:
+  //       'Rust has been the undisputed "most loved" programming language on the Stack Overflow Developer Survey for several years. Why? Come to this workshop and find out! Anthony will be returning to teach us the basics of Rust\'s unique memory management model and answer any questions about this innovative and promising new programming language.',
+  //     time: "7:30 p.m.",
+  //     location: "Zoom",
+  //     date: "18",
+  //     month: "Mar",
+  //     tags: "",
+  //     presenter: "Anthony Hevia",
+  //   },
+  //   {
+  //     title: "TypeScript",
+  //     description:
+  //       "Does JavaScript want to make you tear your hair out with errors like `undefined is not a function` and `name is not defined`? Do you miss Java features like `interface` and `enum`? Do you just like typing out the types of your variables? TypeScript might just be what you're looking for! In this workshop, we'll explore TypeScript, a popular compile-to-JS language with a surprisingly good static type system and some other cool features.",
+  //     time: "7:30 p.m.",
+  //     location: "Zoom",
+  //     date: "23",
+  //     month: "Mar",
+  //     tags: "Hello World!",
+  //     presenter: "Robert Boyd",
+  //   },
+  //   {
+  //     title: "Getting Into Grad School",
+  //     description: "",
+  //     time: "7:30 p.m.",
+  //     location: "Zoom",
+  //     date: "25",
+  //     month: "Mar",
+  //     tags: "",
+  //     presenter: "Irene Tanner",
+  //   },
+  // ];
   return (
     <StylesProvider injectFirst>
       <AppBar

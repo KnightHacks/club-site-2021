@@ -16,7 +16,7 @@ const Event = (props) => {
       >
         <AccordionSummary className="AccordionHeader">
           <div className="AccordionSchedule">
-            <h1 className="EventTitle"> {props.title} </h1>
+            <h1 className="EventTitle"> {props.name} </h1>
             <span className="EventDate">
               {props.date}
               <span className="EventMonth">{props.month}</span>
