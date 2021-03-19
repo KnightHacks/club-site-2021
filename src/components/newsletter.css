@@ -33,3 +33,9 @@
 .Email-Error {
   color: red;
 }
+
+.Email-Subscribed {
+  display: flex;
+  color: aquamarine;
+  flex-wrap: wrap;
+}
