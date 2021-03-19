@@ -3,6 +3,9 @@ import Accordion from "@material-ui/core/Accordion";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
 import "./event.css";
+import ColorHash from "color-hash-ts";
+
+const hash = new ColorHash({ lightness: 0.8 });
 
 const Event = (props) => {
   const [expanded, setExpanded] = useState(false);
@@ -41,7 +44,16 @@ const Event = (props) => {
               </p>
             </div>
             <h3 className="EventDescription">{props.description}</h3>
-            <h3 className="Tags">{props.tags}</h3>
+            <div className="flex justify-end">
+              {props.tags.map((tag) => (
+                <div
+                  style={{ backgroundColor: hash.hex(tag) }}
+                  className="rounded-full mx-1 mt-2 px-3 text-gray-700 font-light"
+                >
+                  {tag}
+                </div>
+              ))}
+            </div>
           </div>
         </AccordionDetails>
       </Accordion>
