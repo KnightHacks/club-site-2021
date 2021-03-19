@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./newsletter.css";
 import { TextField, Button } from "@material-ui/core";
 import { TextFieldStyle } from "./styles";
 import addToMailchimp from "gatsby-plugin-mailchimp";
@@ -27,15 +26,17 @@ const Newsletter = () => {
   };
 
   return (
-    <div className="Newsletter">
-      <div className="Email-Signup">
-        <h1 className="Newsletter_Header">Sign up for our newsletter!</h1>
+    <div className="flex justify-center items-center h-full w-full md:w-1/2 mb-4">
+      <div className=" text-center text-white w-full">
+        <h1 className="text-2xl md:text-4xl font-light text-white w-full">
+          Sign up for our newsletter!
+        </h1>
         <form
           onSubmit={handleSubmit}
           method="post"
           id="mc-embedded-subscribe-form"
           name="mc-embedded-subscribe-form"
-          className="form"
+          className="mt-10 flex flex-col"
           target="_blank"
           noValidate
         >
@@ -49,6 +50,7 @@ const Newsletter = () => {
             onChange={(e) => setEmail(e.target.value)}
             error={invalid}
             value={email}
+            className="flex justify-center items-center w-full"
           />
           {invalid ? (
             <div
