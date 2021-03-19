@@ -113,8 +113,8 @@ const IndexPage = ({ data }) => {
             {allEvents.map((event, index) => (
               <Event key={index} {...event} />
             ))}
-            <Teams ref={teamsRef} />
           </div>
+          <Teams ref={teamsRef} />
           <div className="flex flex-col my-5" ref={contactUsRef}>
             <h1 className="font-light flex justify-center text-gray-50 text-4xl md:text-5xl w-full my-5">
               Connect With Us

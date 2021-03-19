@@ -59,7 +59,7 @@ const Newsletter = () => {
             />
           ) : null}
           {subscribed ? <p className="Email-Subscribed">{message}</p> : null}
-          <div className="Email-Submit">
+          <div className="Email-Submit mt-5">
             <Button variant="contained" color="secondary" type="submit">
               Subscribe
             </Button>

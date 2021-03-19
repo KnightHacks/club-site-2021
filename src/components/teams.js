@@ -102,7 +102,7 @@ const Teams = forwardRef((props, ref) => {
   }, [width]);
 
   return (
-    <div className="flex flex-col items-center w-screen" ref={ref}>
+    <div className="flex flex-col items-center w-full" ref={ref}>
       <h1 className="font-light flex justify-center text-gray-50 text-5xl w-full my-5">
         Meet the Team
       </h1>
