@@ -7,6 +7,7 @@ module.exports = {
       colors: {
         KHgold: "#dbc04a",
         KHblue: "#181d41",
+        KHnavbar: "#3b3d5b",
       },
       fontFamily: {
         sans: ["sans-serif"],

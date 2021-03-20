@@ -23,48 +23,15 @@ const IndexPage = ({ data }) => {
 
   const allEvents = [
     {
-      title: "Alexa Stock Ticker",
+      title: "Unit Testing",
       description:
-        "Learn how to make an Alexa skill with Knight Hacks! No coding experience is required. We will be making an Alexa skill that gets stock prices so you can ask your device what your favorite company is trading at. Along the way, we'll demonstrate some basic programming concepts for participants who are new to programming. We'll also be giving away an Amazon Echo device to a lucky workshop participant!",
+        "Everyone knows testing your code is important, but how can you do it? At this workshop, we'll talk about the motivations for testing, how to write tests, and how tests can greatly improve your codebase and workflow. We'll be using JavaScript and the Mocha.js testing framework, but the concepts will be applicable to any language. No experience required.",
       time: "7:30 p.m.",
       location: "Zoom",
-      date: "25",
-      month: "Feb",
-      tags:"",
-      presenter: "Chris Feltner",
-    },
-    {
-      title: "What's the Point of Pointers?",
-      description:
-        "Memory allocation is one of the more difficult parts of CS1, so this week we are going to do a review of the topic to help you succeed in your class! Knight Hacks President Chris Feltner will go over what pointers are, how to use them, and how to allocate and free memory. We'll be making a meal ordering system for the terminal in C to demonstrate these techniques.",
-      time: "7:30 p.m.",
-      location: "Zoom",
-      date: "02",
+      date: "16",
       month: "Mar",
-      tags:"Hello World!",
-      presenter: "Chris Feltner",
-    },
-    {
-      title: "Vim and Vigor",
-      description:
-        "Interested in a text editor included with nearly every Linux server and installation of MacOS? Ever typed `git commit` and gotten stuck in a strange program where the keys do seemingly random things? Curious about this `vim` thing you've seen Rob typing at `Hello, World!` ? Whatever your reason, this workshop is for you! We will learn the legendary Vim text editor, from basics like how to exit, to the powerful keybindings that have made it a popular choice for decades. No experience required!",
-      time: "7:30 p.m.",
-      location: "Zoom",
-      date: "04",
-      month: "Mar",
-      tags:"",
+      tags: "Hello World!",
       presenter: "Robert Boyd",
-    },
-    {
-      title: "Career Development Panel",
-      description:
-        "Join us for a panel with former students who have graduated and now work full time! You can listen and ask questions about their path into their current career and what they might have done differently. This panel is a great opportunity to learn about the reality of the job market and what you need to do to be successful!",
-      time: "7:30 p.m.",
-      location: "Zoom",
-      date: "11",
-      month: "Mar",
-      tags:"",
-      presenter: "",
     },
     {
       title: "Rust",
@@ -74,8 +41,29 @@ const IndexPage = ({ data }) => {
       location: "Zoom",
       date: "18",
       month: "Mar",
-      tags:"",
+      tags: "",
       presenter: "Anthony Hevia",
+    },
+    {
+      title: "TypeScript",
+      description:
+        "Does JavaScript want to make you tear your hair out with errors like `undefined is not a function` and `name is not defined`? Do you miss Java features like `interface` and `enum`? Do you just like typing out the types of your variables? TypeScript might just be what you're looking for! In this workshop, we'll explore TypeScript, a popular compile-to-JS language with a surprisingly good static type system and some other cool features.",
+      time: "7:30 p.m.",
+      location: "Zoom",
+      date: "23",
+      month: "Mar",
+      tags: "Hello World!",
+      presenter: "Robert Boyd",
+    },
+    {
+      title: "Getting Into Grad School",
+      description: "",
+      time: "7:30 p.m.",
+      location: "Zoom",
+      date: "25",
+      month: "Mar",
+      tags: "",
+      presenter: "Irene Tanner",
     },
   ];
   return (
@@ -102,10 +90,10 @@ const IndexPage = ({ data }) => {
                 {data.site.siteMetadata.description}
               </h1>
             </div>
-            <div className=" flex absolute left-2/4 bottom-2">
+            <div className="flex absolute left-2/4 bottom-2">
               <FontAwesomeIcon
                 icon={faChevronDown}
-                className=" cursor-pointer text-KHgold text-5xl xs:text-4xl sm:text-5xl md:text-6xl"
+                className="cursor-pointer text-KHgold text-5xl xs:text-4xl sm:text-5xl md:text-6xl"
                 onClick={() =>
                   window.scrollTo({
                     top:
@@ -125,10 +113,10 @@ const IndexPage = ({ data }) => {
             {allEvents.map((event, index) => (
               <Event key={index} {...event} />
             ))}
-            <Teams ref={teamsRef} />
           </div>
+          <Teams ref={teamsRef} />
           <div className="flex flex-col my-5" ref={contactUsRef}>
-            <h1 className="font-light flex justify-center text-gray-50 text-5xl w-full my-5">
+            <h1 className="font-light flex justify-center text-gray-50 text-4xl md:text-5xl w-full my-5">
               Connect With Us
             </h1>
             <div className="flex items-start justify-around w-full text-center flex-wrap">
@@ -148,7 +136,7 @@ const IndexPage = ({ data }) => {
 
 const Particles = ({ children }) => {
   return (
-    <div className="absolute">
+    <div className="absolute w-full">
       <ReactParticles
         params={particles_config}
         className="fixed top-0 left-0"
