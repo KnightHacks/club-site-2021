@@ -21,9 +21,9 @@ const AboutUs = forwardRef((props, ref) => {
         render={(data) => (
           <p
             className={`
-              text-gray-300 mx-20 text-xl leading-9
-              sm:text-justify
-              md:mx-24
+              text-gray-300 mx-8 text-xl leading-9
+              sm:text-justify sm:mx-16
+              md:mx-20
               lg:text-2xl lg:mx-28 lg:leading-loose
               xl:text-3xl lg:mx-32 xl:leading-loose
               2xl:mx-40
