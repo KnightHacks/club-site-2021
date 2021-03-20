@@ -90,10 +90,10 @@ const IndexPage = ({ data }) => {
                 {data.site.siteMetadata.description}
               </h1>
             </div>
-            <div className=" flex absolute left-2/4 bottom-2">
+            <div className="flex absolute left-2/4 bottom-2">
               <FontAwesomeIcon
                 icon={faChevronDown}
-                className=" cursor-pointer text-KHgold text-5xl xs:text-4xl sm:text-5xl md:text-6xl"
+                className="cursor-pointer text-KHgold text-5xl xs:text-4xl sm:text-5xl md:text-6xl"
                 onClick={() =>
                   window.scrollTo({
                     top:
@@ -113,19 +113,15 @@ const IndexPage = ({ data }) => {
             {allEvents.map((event, index) => (
               <Event key={index} {...event} />
             ))}
-            <Teams ref={teamsRef} />
           </div>
+          <Teams ref={teamsRef} />
           <div className="flex flex-col my-5" ref={contactUsRef}>
-            <h1 className="font-light flex justify-center text-gray-50 text-5xl w-full my-5">
+            <h1 className="font-light flex justify-center text-gray-50 text-4xl md:text-5xl w-full my-5">
               Connect With Us
             </h1>
-            <div className="flex items-start justify-around w-full text-center flex-wrap">
-              <div>
-                <Newsletter />
-              </div>
-              <div>
-                <Contacts />
-              </div>
+            <div className="flex flex-col md:flex-row items-center justify-around w-full text-center">
+              <Newsletter />
+              <Contacts />
             </div>
           </div>
         </Particles>
@@ -136,7 +132,7 @@ const IndexPage = ({ data }) => {
 
 const Particles = ({ children }) => {
   return (
-    <div className="absolute">
+    <div className="absolute w-full">
       <ReactParticles
         params={particles_config}
         className="fixed top-0 left-0"
