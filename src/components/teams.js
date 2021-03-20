@@ -68,6 +68,7 @@ const Teams = forwardRef((props, ref) => {
   const width = useWidth();
   const [itemsToShow, setItemsToShow] = useState(getItemsToShow(width));
   const [members, setMembers] = useState([]);
+  
   const data = useStaticQuery(graphql`
     query teamsQuery {
       markdownRemark(frontmatter: { title: { eq: "Teams" } }) {
