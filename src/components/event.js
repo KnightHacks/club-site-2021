@@ -20,7 +20,7 @@ const Event = (props) => {
         <AccordionSummary>
           <div className="flex items-center justify-between w-full">
             <h1 className="font-regular text-2xl px-1">{props.title}</h1>
-            <span className="EventDate">
+            <span className="font-medium text-2xl p-2">
               {props.date}
               <span className="EventMonth">{props.month}</span>
             </span>
