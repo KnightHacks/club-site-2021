@@ -80,7 +80,16 @@ const IndexPage = ({ data }) => {
         <Particles>
           <title>Knight Hacks</title>
           <div className="relative h-screen">
-            <div className="mx-auto absolute align-baseline top-1/2 left-1/2 text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl transform -translate-y-2/4 -translate-x-2/4">
+            <div
+              className={`
+              mx-auto absolute align-baseline
+              top-1/2 left-1/2 text-xl
+              transform -translate-y-2/4 -translate-x-2/4
+              sm:text-3xl
+              md:text-4xl
+              xl:text-5xl
+              `}
+            >
               <img
                 src={KnightHacksLogo}
                 className="w-full p-6"
@@ -90,7 +99,7 @@ const IndexPage = ({ data }) => {
                 {data.site.siteMetadata.description}
               </h1>
             </div>
-            <div className="flex absolute left-2/4 bottom-2">
+            <div className="flex absolute left-2/4 bottom-2 visible">
               <FontAwesomeIcon
                 icon={faChevronDown}
                 className="cursor-pointer text-KHgold text-5xl xs:text-4xl sm:text-5xl md:text-6xl"

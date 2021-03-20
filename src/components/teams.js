@@ -68,7 +68,7 @@ const Teams = forwardRef((props, ref) => {
   const width = useWidth();
   const [itemsToShow, setItemsToShow] = useState(getItemsToShow(width));
   const [members, setMembers] = useState([]);
-  
+
   const data = useStaticQuery(graphql`
     query teamsQuery {
       markdownRemark(frontmatter: { title: { eq: "Teams" } }) {
@@ -190,7 +190,7 @@ const Teams = forwardRef((props, ref) => {
         ))}
       </Carousel>
 
-      <h1 className="font-light flex justify-center text-gray-50 text-3xl w-full my-5">
+      <h1 className="font-light flex items-start justify-around text-center text-gray-50 text-3xl w-full my-5 flex-wrap">
         Our Members
       </h1>
 
