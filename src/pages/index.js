@@ -30,7 +30,7 @@ const IndexPage = ({ data }) => {
       location: "Zoom",
       date: "16",
       month: "Mar",
-      tags: "Hello World!",
+      tags: ["Hello World!"],
       presenter: "Robert Boyd",
     },
     {
@@ -41,7 +41,7 @@ const IndexPage = ({ data }) => {
       location: "Zoom",
       date: "18",
       month: "Mar",
-      tags: "",
+      tags: [],
       presenter: "Anthony Hevia",
     },
     {
@@ -52,7 +52,7 @@ const IndexPage = ({ data }) => {
       location: "Zoom",
       date: "23",
       month: "Mar",
-      tags: "Hello World!",
+      tags: ["Hello World!"],
       presenter: "Robert Boyd",
     },
     {
@@ -62,7 +62,7 @@ const IndexPage = ({ data }) => {
       location: "Zoom",
       date: "25",
       month: "Mar",
-      tags: "",
+      tags: [],
       presenter: "Irene Tanner",
     },
   ];
