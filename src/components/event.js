@@ -26,10 +26,7 @@ const Event = (props) => {
             </span>
           </div>
         </AccordionSummary>
-        <AccordionDetails
-          className="AccordionContent"
-          onClick={() => setExpanded(!expanded)}
-        >
+        <AccordionDetails onClick={() => setExpanded(!expanded)}>
           <div className="ContentContainer">
             <div className="flex justify-between">
               <p className="text-xl px-2 text-black">{props.presenter}</p>

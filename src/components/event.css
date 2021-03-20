@@ -11,17 +11,6 @@
   background: linear-gradient(90deg, #dbc04a 1.5%, #ffffff 0%);
 }
 
-.AccordionContent {
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-}
-
-.AccordionContent:hover {
-  cursor: pointer;
-  margin-top: 0 !important;
-}
-
 a,
 a:visited {
   color: black;
