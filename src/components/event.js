@@ -27,7 +27,7 @@ const Event = (props) => {
       >
         <AccordionSummary>
           <div className="flex items-center justify-between w-full">
-            <h1 className="font-regular text-2xl lg:text-3xl px-1">
+            <h1 className="font-regular text-xl lg:text-3xl px-1">
               {props.title}
             </h1>
             <span className="font-medium text-2xl md:text-3xl lg:text4xl p-2">
