@@ -19,7 +19,16 @@ const AboutUs = forwardRef((props, ref) => {
           }
         `}
         render={(data) => (
-          <p className="leading-loose text-gray-300 xs:ml-12 justify-center sm:text-xs sm:ml-14 sm:mr-14 md:text-base md:mr-14 lg:text-2xl">
+          <p
+            className={`
+              text-gray-300 mx-20 text-xl leading-9
+              sm:text-justify
+              md:mx-24
+              lg:text-2xl lg:mx-28 lg:leading-loose
+              xl:text-3xl lg:mx-32 xl:leading-loose
+              2xl:mx-40
+            `}
+          >
             {data.markdownRemark.rawMarkdownBody}
           </p>
         )}

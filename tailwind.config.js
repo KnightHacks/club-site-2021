@@ -8,12 +8,6 @@ module.exports = {
         KHgold: "#dbc04a",
         KHblue: "#181d41",
       },
-      fontSize: {
-        sm: ["14px", "20px"],
-        base: ["16px", "24px"],
-        lg: ["1.5rem", "3rem"],
-        xl: ["24px", "32px"],
-      },
       fontFamily: {
         sans: ["sans-serif"],
         regular: ["Avenir Next Regular", "sans-serif"],
