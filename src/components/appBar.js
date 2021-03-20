@@ -35,10 +35,8 @@ const AppBar = forwardRef(
           <Button
             href="https://linktr.ee/knighthacks"
             className={`
-              text-white font-regular normal-case
-              xs:text-base
-              sm:text-lg
-              md:text-xl
+              text-base text-white font-regular normal-case
+              md:text-lg
               `}
             color="inherit"
           >
@@ -46,28 +44,52 @@ const AppBar = forwardRef(
           </Button>
           <ButtonGroup variant="none">
             <Button
-              className="font-regular normal-case focus:ring-0 focus:outline-none focus:border-b-2 focus:border-white xs:text-base sm:text-lg md:text-xl"
+              className={`
+                text-base
+                font-regular normal-case
+                focus:outline-none focus:ring-0
+                focus:text-KHgold
+                md:text-lg
+                `}
               color="inherit"
               onClick={() => scroll(aboutUsRef)}
             >
               About
             </Button>
             <Button
-              className="font-regular normal-case focus:outline-none focus:ring-2 focus:ring-white rounded-md xs:text-base sm:text-lg md:text-xl"
+              className={`
+                text-base
+                font-regular normal-case
+                focus:outline-none focus:ring-0
+                focus:text-KHgold
+                md:text-lg
+                `}
               color="inherit"
               onClick={() => scroll(eventsRef)}
             >
               Events
             </Button>
             <Button
-              className="font-regular normal-case focus:outline-none focus:ring-2 focus:ring-white rounded-md xs:text-base sm:text-lg md:text-xl"
+              className={`
+              text-base
+              font-regular normal-case
+              focus:outline-none focus:ring-0
+              focus:text-KHgold
+              md:text-lg
+              `}
               color="inherit"
               onClick={() => scroll(teamsRef)}
             >
               Team
             </Button>
             <Button
-              className="font-regular normal-case focus:outline-none focus:ring-2 focus:ring-white rounded-md xs:text-base sm:text-lg md:text-xl"
+              className={`
+              text-base
+              font-regular normal-case
+              focus:outline-none focus:ring-0
+              focus:text-KHgold
+              md:text-lg
+              `}
               color="inherit"
               onClick={() => scroll(contactUsRef)}
             >
