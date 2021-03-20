@@ -31,7 +31,7 @@ const Event = (props) => {
           onClick={() => setExpanded(!expanded)}
         >
           <div className="ContentContainer">
-            <div className="EventDetails">
+            <div className="flex justify-between">
               <p className="EventPresenter">{props.presenter}</p>
               <p className="EventTime">
                 {props.time} |

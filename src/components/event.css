@@ -22,14 +22,6 @@
   margin-top: 0 !important;
 }
 
-.EventDetails {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  margin-bottom: 0 !important;
-}
-
 .EventPresenter,
 .EventTime,
 .EventLocation {
