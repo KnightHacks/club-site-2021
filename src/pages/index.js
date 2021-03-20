@@ -128,13 +128,9 @@ const IndexPage = ({ data }) => {
             <h1 className="font-light flex justify-center text-gray-50 text-4xl md:text-5xl w-full my-5">
               Connect With Us
             </h1>
-            <div className="flex items-start justify-around w-full text-center flex-wrap">
-              <div>
-                <Newsletter />
-              </div>
-              <div>
-                <Contacts />
-              </div>
+            <div className="flex flex-col md:flex-row items-center justify-around w-full text-center">
+              <Newsletter />
+              <Contacts />
             </div>
           </div>
         </Particles>
