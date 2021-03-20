@@ -11,7 +11,15 @@ const Event = (props) => {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <div className={`CalendarContainer ${expanded ? "Expanded" : ""}`}>
+    <div
+      className={`
+        my-7 mx-8
+        sm:mx-16
+        md:mx-20
+        lg:mx-28
+        xl:mx-auto xl:max-w-screen-lg
+      `}
+    >
       <Accordion
         expanded={expanded}
         className="AccordionCard rounded-lg"
