@@ -32,12 +32,12 @@ const Event = (props) => {
         >
           <div className="ContentContainer">
             <div className="flex justify-between">
-              <p className="EventPresenter">{props.presenter}</p>
-              <p className="EventTime">
+              <p className="text-xl px-2 text-black">{props.presenter}</p>
+              <p className="text-xl px-2 text-black">
                 {props.time} |
                 <a
                   href="https://linktr.ee/knighthacks"
-                  className="EventLocation"
+                  className="text-xl px-2 text-black hover:text-gray-500"
                 >
                   {props.location}
                 </a>

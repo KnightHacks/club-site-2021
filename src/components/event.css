@@ -22,18 +22,6 @@
   margin-top: 0 !important;
 }
 
-.EventPresenter,
-.EventTime,
-.EventLocation {
-  font-size: 1.2rem;
-  padding: 0 1vw;
-  color: black !important;
-}
-
-.EventLocation:hover {
-  color: gray !important;
-}
-
 .EventDescription {
   font-family: "Avenir Next Ultra Light Italic", sans-serif;
   font-size: 1.3em;
