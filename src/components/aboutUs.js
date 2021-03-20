@@ -7,7 +7,7 @@ const AboutUs = forwardRef((props, ref) => {
       className="flex flex-col w-full text-center mt-14 mb-10 2xl:mb-24"
       ref={ref}
     >
-      <h1 className="font-light flex justify-center text-gray-50 text-5xl my-5 ml-6 lg:text-6xl">
+      <h1 className="font-light flex justify-center text-gray-50 text-4xl my-5 ml-6 lg:text-5xl">
         About Us
       </h1>
       <StaticQuery

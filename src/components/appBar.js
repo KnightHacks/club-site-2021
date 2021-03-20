@@ -31,17 +31,22 @@ const AppBar = forwardRef(
         position="fixed"
         ref={ref}
       >
-        <Toolbar className="flex justify-between">
+        <Toolbar className="flex justify-between xs:text-base sm:text-lg md:text-xl">
           <Button
             href="https://linktr.ee/knighthacks"
-            className="text-white font-regular normal-case xs:text-base sm:text-lg md:text-xl"
+            className={`
+              text-white font-regular normal-case
+              xs:text-base
+              sm:text-lg
+              md:text-xl
+              `}
             color="inherit"
           >
             Linktree
           </Button>
-          <ButtonGroup variant="text">
+          <ButtonGroup variant="none">
             <Button
-              className="font-regular normal-case focus:outline-none focus:ring-2 focus:ring-white rounded-md xs:text-base sm:text-lg md:text-xl"
+              className="font-regular normal-case focus:ring-0 focus:outline-none focus:border-b-2 focus:border-white xs:text-base sm:text-lg md:text-xl"
               color="inherit"
               onClick={() => scroll(aboutUsRef)}
             >

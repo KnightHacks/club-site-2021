@@ -116,7 +116,7 @@ const IndexPage = ({ data }) => {
           </div>
           <AboutUs ref={aboutUsRef} />
           <div className="my-6" ref={eventsRef}>
-            <h1 className="font-light flex justify-center text-gray-50 text-5xl w-full my-5">
+            <h1 className="font-light flex justify-center text-gray-50 text-4xl my-5 ml-6 lg:text-5xl">
               Upcoming Events
             </h1>
             {allEvents.map((event, index) => (
@@ -125,7 +125,7 @@ const IndexPage = ({ data }) => {
           </div>
           <Teams ref={teamsRef} />
           <div className="flex flex-col my-5" ref={contactUsRef}>
-            <h1 className="font-light flex justify-center text-gray-50 text-4xl md:text-5xl w-full my-5">
+            <h1 className="font-light flex justify-center text-gray-50 text-4xl my-5 ml-6 lg:text-5xl">
               Connect With Us
             </h1>
             <div className="flex items-start justify-around w-full text-center flex-wrap">
