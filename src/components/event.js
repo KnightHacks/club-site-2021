@@ -22,7 +22,7 @@ const Event = (props) => {
             <h1 className="font-regular text-2xl px-1">{props.title}</h1>
             <span className="font-medium text-2xl p-2">
               {props.date}
-              <span className="EventMonth">{props.month}</span>
+              <span className="font-regular ml-2">{props.month}</span>
             </span>
           </div>
         </AccordionSummary>

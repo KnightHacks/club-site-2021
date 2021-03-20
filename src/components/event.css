@@ -22,12 +22,6 @@
   margin-top: 0 !important;
 }
 
-.EventMonth {
-  font-size: 20px;
-  margin-left: 10px;
-  font-family: "Avenir Next Regular", sans-serif;
-}
-
 .EventDetails {
   display: flex;
   flex-direction: row;
