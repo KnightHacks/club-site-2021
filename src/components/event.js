@@ -38,7 +38,7 @@ const Event = (props) => {
         </AccordionSummary>
         <AccordionDetails onClick={() => setExpanded(!expanded)}>
           <div className="ContentContainer">
-            <div className="flex justify-between">
+            <div className="flex justify-between mb-3">
               <p className="text-xl lg:text-2xl px-2 text-black">
                 {props.presenter}
               </p>
