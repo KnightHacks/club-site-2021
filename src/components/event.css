@@ -3,11 +3,6 @@
   margin-bottom: 30px;
 }
 
-.AccordionCard {
-  border-radius: 10px !important;
-  margin-bottom: 30px;
-}
-
 .Expanded {
   margin-bottom: 30px;
 }
@@ -25,21 +20,6 @@
 .AccordionContent:hover {
   cursor: pointer;
   margin-top: 0 !important;
-}
-
-.AccordionHeader {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: baseline;
-}
-
-.AccordionSchedule {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
 }
 
 .EventTitle {

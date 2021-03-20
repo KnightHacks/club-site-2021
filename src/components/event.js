@@ -14,11 +14,11 @@ const Event = (props) => {
     <div className={`CalendarContainer ${expanded ? "Expanded" : ""}`}>
       <Accordion
         expanded={expanded}
-        className="AccordionCard"
+        className="AccordionCard rounded-lg"
         onChange={() => setExpanded(!expanded)}
       >
-        <AccordionSummary className="AccordionHeader">
-          <div className="AccordionSchedule">
+        <AccordionSummary>
+          <div className="flex items-center justify-between w-full">
             <h1 className="EventTitle"> {props.title} </h1>
             <span className="EventDate">
               {props.date}
