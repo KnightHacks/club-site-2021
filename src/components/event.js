@@ -55,7 +55,7 @@ const Event = (props) => {
               {props.tags.map((tag) => (
                 <div
                   style={{ backgroundColor: hash.hex(tag) }}
-                  className="rounded-full mx-1 mt-2 px-3 text-gray-700 font-light"
+                  className="rounded-full mx-1 mt-2 px-3 text-gray-600 font-regular"
                 >
                   {tag}
                 </div>
