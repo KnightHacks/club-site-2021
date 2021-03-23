@@ -2,6 +2,7 @@ import React from "react";
 import Carousel, {
   slidesToShowPlugin,
   slidesToScrollPlugin,
+  arrowsPlugin,
 } from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
 import CountUp from "react-countup";
@@ -17,6 +18,7 @@ import {
   faTwitter,
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
+import Icon from "react-fa";
 
 import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState, forwardRef } from "react";
@@ -112,19 +114,19 @@ const Teams = forwardRef((props, ref) => {
       </h1>
 
       <Carousel
+        arrows
         plugins={[
           "infinite",
-          "arrows",
           {
             resolve: slidesToShowPlugin,
             options: {
-              numberOfSlides: { itemsToShow },
+              numberOfSlides: itemsToShow,
             },
           },
           {
             resolve: slidesToScrollPlugin,
             options: {
-              numberOfSlides: { itemsToShow },
+              numberOfSlides: itemsToShow,
             },
           },
         ]}
