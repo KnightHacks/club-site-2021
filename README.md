@@ -1,44 +1,31 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
 <h1 align="center">
   Knight Hacks Club Site 2021
 </h1>
 
-## 🚀 Quick start
+## Installation
 
-1.  **Navigate into your new site’s directory and start it up.**
+```shell
+git clone https://github.com/KnightHacks/club-site-2021.git
+npm install
+```
 
-    ```shell
-    cd club-site-2021/
-    npm run develop
-    ```
+## Getting Started
 
-    or
+To run a live development server, run the following in a terminal:
 
-    ```shell
-    cd club-site-2021/
-    gatsby develop
-    ```
+```shell
+npm start
+```
 
-2.  **Open the code and start customizing!**
+This will host the website at http://localhost:8000. As you make updates to the
+code, the development server will automatically reload the page.
 
-    Your site is now running at http://localhost:8000!
+If you get errors, try running `npm install`. Different branches might have
+different dependencies installed, so running a fresh `npm install` after each
+branch switch is advisable.
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+## Project Structure
 
-3.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+This is a standard Gatsby project. The entrypoint page lives at
+`src/pages/index.js`, and most of major logic lives in various components in
+`src/components/`.
