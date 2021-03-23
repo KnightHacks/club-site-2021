@@ -115,18 +115,18 @@ const Teams = forwardRef((props, ref) => {
 
       <Carousel
         arrows
+        infinite
         plugins={[
-          "infinite",
           {
             resolve: slidesToShowPlugin,
             options: {
-              numberOfSlides: itemsToShow,
+              numberOfSlides: { itemsToShow },
             },
           },
           {
             resolve: slidesToScrollPlugin,
             options: {
-              numberOfSlides: itemsToShow,
+              numberOfSlides: { itemsToShow },
             },
           },
         ]}
