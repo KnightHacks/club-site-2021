@@ -1,5 +1,9 @@
 import React from "react";
-import Carousel from "react-elastic-carousel";
+import Carousel, {
+  slidesToShowPlugin,
+  slidesToScrollPlugin,
+} from "@brainhubeu/react-carousel";
+import "@brainhubeu/react-carousel/lib/style.css";
 import CountUp from "react-countup";
 import "./teams.css";
 import Card from "@material-ui/core/Card";
@@ -107,10 +111,24 @@ const Teams = forwardRef((props, ref) => {
       <h1 className="font-light flex justify-center text-gray-50 text-4xl my-5 ml-6 lg:text-5xl">
         Meet the Team
       </h1>
+
       <Carousel
-        itemsToShow={itemsToShow}
-        itemsToScroll={itemsToShow}
-        style={{ width: "90vw" }}
+        plugins={[
+          "infinite",
+          "arrows",
+          {
+            resolve: slidesToShowPlugin,
+            options: {
+              numberOfSlides: { itemsToShow },
+            },
+          },
+          {
+            resolve: slidesToScrollPlugin,
+            options: {
+              numberOfSlides: { itemsToShow },
+            },
+          },
+        ]}
       >
         {members.map((member, index) => (
           <Card

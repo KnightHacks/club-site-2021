@@ -48,7 +48,7 @@ const Event = (props) => {
                 </a>
               </p>
             </div>
-            <h3 className="font-lightitalic text-lg lg:text-xl px-2 text-gray-500">
+            <h3 className="font-light text-lg lg:text-xl px-2 text-gray-500">
               {props.description}
             </h3>
             <div className="flex justify-end">
