@@ -41,6 +41,10 @@ the filesystem that enable us to store _data_, like blocks of text and images,
 apart from the source code. If you know React, Gatsby will mostly feel familiar
 to you.
 
+We primarily use Gatsby to move data like director information and text on the
+website into more accessible files like markdown. This works via the main
+configuration file over at `gatsby-config.js` and graphql queries.
+
 Docs: https://www.gatsbyjs.com/
 
 ### React
