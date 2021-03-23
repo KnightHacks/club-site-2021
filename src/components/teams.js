@@ -5,7 +5,6 @@ import Carousel, {
 } from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
 import CountUp from "react-countup";
-import "./teams.css";
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
 import CardMedia from "@material-ui/core/CardMedia";
@@ -129,6 +128,7 @@ const Teams = forwardRef((props, ref) => {
             },
           },
         ]}
+        itemWidth={350}
       >
         {members.map((member, index) => (
           <Card
