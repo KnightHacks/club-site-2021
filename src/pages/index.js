@@ -46,10 +46,13 @@ const IndexPage = ({ data }) => {
       const data = await blob.json();
       console.log(data);
       const fixedData = data.events.map((event) => {
-        const date = new Date(event.date);
+        const date = new Date(event.date + ".000Z");
+        console.log(date);
         const day = date.getDate();
         const month = months[date.getMonth()];
-        const time = date.getHours() - 4 + ":" + date.getMinutes() + " p.m.";
+        const time = date.toLocaleTimeString([], {
+          timeStyle: "short",
+        });
         return {
           ...event,
           date: day,
@@ -62,7 +65,6 @@ const IndexPage = ({ data }) => {
     };
     getEvents();
   }, []);
-  console.log(allEvents);
 
   // const allEvents = [
   //   {
