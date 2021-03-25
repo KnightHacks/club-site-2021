@@ -1,4 +1,4 @@
 export const TextFieldStyle = {
   color: "white",
-  width: "100%",
+  width: "50%",
 };

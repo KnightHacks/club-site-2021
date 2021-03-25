@@ -68,6 +68,7 @@ const Teams = forwardRef((props, ref) => {
   const width = useWidth();
   const [itemsToShow, setItemsToShow] = useState(getItemsToShow(width));
   const [members, setMembers] = useState([]);
+
   const data = useStaticQuery(graphql`
     query teamsQuery {
       markdownRemark(frontmatter: { title: { eq: "Teams" } }) {
@@ -102,8 +103,8 @@ const Teams = forwardRef((props, ref) => {
   }, [width]);
 
   return (
-    <div className="Teams" ref={ref}>
-      <h1 className="font-light flex justify-center text-gray-50 text-5xl w-full my-5">
+    <div className="flex flex-col items-center w-full" ref={ref}>
+      <h1 className="font-light flex justify-center text-gray-50 text-4xl my-5 ml-6 lg:text-5xl">
         Meet the Team
       </h1>
       <Carousel
@@ -112,14 +113,17 @@ const Teams = forwardRef((props, ref) => {
         style={{ width: "90vw" }}
       >
         {members.map((member, index) => (
-          <Card className="TeamCard" key={index}>
+          <Card
+            className="font-regular w-5/6 focus:outline-none focus:ring-2 focus:ring-white rounded-md"
+            key={index}
+          >
             <CardHeader
-              className="TeamHeader"
+              className="pb-0"
               title={member.name}
               subheader={member.position}
             />
             <Typography
-              className="Major"
+              className="pl-4 pb-1.5 text-sm"
               align="left"
               variant="subtitle1"
               color="textSecondary"
@@ -129,18 +133,18 @@ const Teams = forwardRef((props, ref) => {
             </Typography>
 
             <CardMedia
-              className="TeamPicture"
+              className="pt-60 pb-2.5"
               image={Chris}
               title={member.name}
             />
-            <CardContent className="SocialIcons">
+            <CardContent className="flex items-start h-14">
               <Typography variant="body2" color="textSecondary" component="p">
                 {member.linkedin ? (
                   <a href={member.linkedin} draggable="false">
                     <FontAwesomeIcon
                       icon={faLinkedin}
                       color="#000000"
-                      className="Iconlink"
+                      className="mr-2 pr-0.5 pl-2 mt-0 text-4xl hover:text-gray-400"
                     />
                   </a>
                 ) : null}
@@ -149,7 +153,7 @@ const Teams = forwardRef((props, ref) => {
                     <FontAwesomeIcon
                       icon={faInstagram}
                       color="#000000"
-                      className="Iconlink"
+                      className="mr-2 pr-0.5 pl-2 text-4xl hover:text-gray-400"
                     />
                   </a>
                 ) : null}
@@ -158,7 +162,7 @@ const Teams = forwardRef((props, ref) => {
                     <FontAwesomeIcon
                       icon={faTwitter}
                       color="#000000"
-                      className="Iconlink"
+                      className="mr-2 pr-0.5 pl-2 text-4xl hover:text-gray-400"
                     />
                   </a>
                 ) : null}
@@ -166,7 +170,7 @@ const Teams = forwardRef((props, ref) => {
                   <a href={member.github} draggable="false">
                     <FontAwesomeIcon
                       icon={faGithub}
-                      className="Iconlink"
+                      className="mr-2 pr-0.5 pl-2 text-4xl hover:text-gray-400"
                       color="#000000"
                     />
                   </a>
@@ -175,7 +179,7 @@ const Teams = forwardRef((props, ref) => {
                   <a href={member.personal} draggable="false">
                     <FontAwesomeIcon
                       icon={faLaptopCode}
-                      className="Iconlink"
+                      className="mr-1 pr-0.5 pl-2 text-3xl hover:text-gray-400"
                       color="#000000"
                     />
                   </a>
@@ -186,28 +190,28 @@ const Teams = forwardRef((props, ref) => {
         ))}
       </Carousel>
 
-      <h1 className="font-light flex justify-center text-gray-50 text-3xl w-full my-5">
+      <h1 className="font-light flex items-start justify-around text-center text-gray-50 text-3xl w-full my-5 flex-wrap">
         Our Members
       </h1>
 
-      <div className="Members">
-        <div className="ClubMembers">
-          <h1 className="Counter">
+      <div className="font-light flex justify-center flex-row text-white mb-12">
+        <div className="text-4xl text-center my-0 mx-3.5">
+          <h1 className="mb-0">
             <CountUp
               end={data.markdownRemark.frontmatter.memberCount}
               duration={7}
             />
           </h1>
-          <span className="MemberSubtitle">active members</span>
+          <span className="m-0 text-2xl">active members</span>
         </div>
-        <div className="ClubDirectors">
-          <h1 className="Counter">
+        <div className="text-4xl text-center">
+          <h1 className="mb-0">
             <CountUp
               end={data.markdownRemark.frontmatter.directorCount}
               duration={7}
             />
           </h1>
-          <span className="MemberSubtitle">developers & directors</span>
+          <span className="m-0 text-2xl">developers & directors</span>
         </div>
       </div>
     </div>

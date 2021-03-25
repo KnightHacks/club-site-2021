@@ -72,7 +72,7 @@ const IndexPage = ({ data }) => {
   //     location: "Zoom",
   //     date: "16",
   //     month: "Mar",
-  //     tags: "Hello World!",
+  //     tags: ["Hello World!"],
   //     presenter: "Robert Boyd",
   //   },
   //   {
@@ -83,7 +83,7 @@ const IndexPage = ({ data }) => {
   //     location: "Zoom",
   //     date: "18",
   //     month: "Mar",
-  //     tags: "",
+  //     tags: [],
   //     presenter: "Anthony Hevia",
   //   },
   //   {
@@ -94,7 +94,7 @@ const IndexPage = ({ data }) => {
   //     location: "Zoom",
   //     date: "23",
   //     month: "Mar",
-  //     tags: "Hello World!",
+  //     tags: ["Hello World!"],
   //     presenter: "Robert Boyd",
   //   },
   //   {
@@ -104,7 +104,7 @@ const IndexPage = ({ data }) => {
   //     location: "Zoom",
   //     date: "25",
   //     month: "Mar",
-  //     tags: "",
+  //     tags: [],
   //     presenter: "Irene Tanner",
   //   },
   // ];
@@ -122,7 +122,16 @@ const IndexPage = ({ data }) => {
         <Particles>
           <title>Knight Hacks</title>
           <div className="relative h-screen">
-            <div className="mx-auto absolute align-baseline top-1/2 left-1/2 text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl transform -translate-y-2/4 -translate-x-2/4">
+            <div
+              className={`
+              mx-auto absolute align-baseline
+              top-1/2 left-1/2 text-xl
+              transform -translate-y-2/4 -translate-x-2/4
+              sm:text-3xl
+              md:text-4xl
+              xl:text-5xl
+              `}
+            >
               <img
                 src={KnightHacksLogo}
                 className="w-full p-6"
@@ -132,10 +141,10 @@ const IndexPage = ({ data }) => {
                 {data.site.siteMetadata.description}
               </h1>
             </div>
-            <div className=" flex absolute left-2/4 bottom-2">
+            <div className="flex absolute left-2/4 bottom-2 visible">
               <FontAwesomeIcon
                 icon={faChevronDown}
-                className=" cursor-pointer text-KHgold text-5xl xs:text-4xl sm:text-5xl md:text-6xl"
+                className="cursor-pointer text-KHgold text-5xl xs:text-4xl sm:text-5xl md:text-6xl"
                 onClick={() =>
                   window.scrollTo({
                     top:
@@ -149,25 +158,21 @@ const IndexPage = ({ data }) => {
           </div>
           <AboutUs ref={aboutUsRef} />
           <div className="my-6" ref={eventsRef}>
-            <h1 className="font-light flex justify-center text-gray-50 text-5xl w-full my-5">
+            <h1 className="font-light flex justify-center text-gray-50 text-4xl my-5 ml-6 lg:text-5xl">
               Upcoming Events
             </h1>
             {allEvents.map((event, index) => (
               <Event key={index} {...event} />
             ))}
-            <Teams ref={teamsRef} />
           </div>
+          <Teams ref={teamsRef} />
           <div className="flex flex-col my-5" ref={contactUsRef}>
-            <h1 className="font-light flex justify-center text-gray-50 text-5xl w-full my-5">
+            <h1 className="font-light flex justify-center text-gray-50 text-4xl my-5 ml-6 lg:text-5xl">
               Connect With Us
             </h1>
-            <div className="flex items-start justify-around w-full text-center flex-wrap">
-              <div>
-                <Newsletter />
-              </div>
-              <div>
-                <Contacts />
-              </div>
+            <div className="flex flex-col md:flex-row items-center justify-around w-full text-center">
+              <Newsletter />
+              <Contacts />
             </div>
           </div>
         </Particles>
@@ -178,7 +183,7 @@ const IndexPage = ({ data }) => {
 
 const Particles = ({ children }) => {
   return (
-    <div className="absolute">
+    <div className="absolute w-full">
       <ReactParticles
         params={particles_config}
         className="fixed top-0 left-0"
