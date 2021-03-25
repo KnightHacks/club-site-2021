@@ -44,10 +44,8 @@ const IndexPage = ({ data }) => {
         "https://api.knighthacks.org/api/club/get_events/?count=5&rdate=Today&confirmed=true"
       );
       const data = await blob.json();
-      console.log(data);
       const fixedData = data.events.map((event) => {
         const date = new Date(event.date + ".000Z");
-        console.log(date);
         const day = date.getDate();
         const month = months[date.getMonth()];
         const time = date.toLocaleTimeString([], {
