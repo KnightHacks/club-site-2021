@@ -3,6 +3,7 @@ import Carousel, {
   slidesToShowPlugin,
   slidesToScrollPlugin,
   arrowsPlugin,
+  autoplayPlugin,
 } from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
 import CountUp from "react-countup";
@@ -109,29 +110,11 @@ const Teams = forwardRef((props, ref) => {
 
   return (
     <div className="flex flex-col items-center w-full" ref={ref}>
-      <h1 className="font-light flex justify-center text-gray-50 text-4xl my-5 ml-6 lg:text-5xl">
+      <h1 className="font-light flex justify-center text-gray-50 text-4xl my-7 ml-6 lg:text-5xl">
         Meet the Team
       </h1>
 
-      <Carousel
-        arrows
-        infinite
-        plugins={[
-          {
-            resolve: slidesToShowPlugin,
-            options: {
-              numberOfSlides: { itemsToShow },
-            },
-          },
-          {
-            resolve: slidesToScrollPlugin,
-            options: {
-              numberOfSlides: { itemsToShow },
-            },
-          },
-        ]}
-        itemWidth={350}
-      >
+      <Carousel arrows infinite animationSpeed={1000} itemWidth={350}>
         {members.map((member, index) => (
           <Card
             className="font-regular w-5/6 focus:outline-none focus:ring-2 focus:ring-white rounded-md"
@@ -210,13 +193,13 @@ const Teams = forwardRef((props, ref) => {
         ))}
       </Carousel>
 
-      <h1 className="font-light flex items-start justify-around text-center text-gray-50 text-3xl w-full my-5 flex-wrap">
+      <h1 className="font-light flex items-start justify-around text-center text-gray-50 text-3xl w-full my-7 flex-wrap">
         Our Members
       </h1>
 
-      <div className="font-light flex justify-center flex-row text-white mb-12">
-        <div className="text-4xl text-center my-0 mx-3.5">
-          <h1 className="mb-0">
+      <div className="font-light flex justify-between flex-row text-white mb-12">
+        <div className="text-5xl text-center my-0 mx-3.5">
+          <h1 className="mb-0 font-bold">
             <CountUp
               end={data.markdownRemark.frontmatter.memberCount}
               duration={7}
@@ -224,8 +207,8 @@ const Teams = forwardRef((props, ref) => {
           </h1>
           <span className="m-0 text-2xl">active members</span>
         </div>
-        <div className="text-4xl text-center">
-          <h1 className="mb-0">
+        <div className="text-5xl text-center">
+          <h1 className="mb-0 font-bold">
             <CountUp
               end={data.markdownRemark.frontmatter.directorCount}
               duration={7}
