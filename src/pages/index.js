@@ -40,10 +40,8 @@ const IndexPage = ({ data }) => {
 
   useEffect(() => {
     const getEvents = async () => {
-      const isoDate = new Date().toISOString();
-      console.log(isoDate);
       const blob = await fetch(
-        "https://api.knighthacks.org/api/club/get_events/?start_date=" + isoDate
+        "https://api.knighthacks.org/api/club/get_events/?count=5&rdate=Today&confirmed=true"
       );
       const data = await blob.json();
       console.log(data);
@@ -51,10 +49,13 @@ const IndexPage = ({ data }) => {
         const date = new Date(event.date);
         const day = date.getDate();
         const month = months[date.getMonth()];
+        const time = date.getHours() - 4 + ":" + date.getMinutes() + " p.m.";
         return {
           ...event,
           date: day,
           month,
+          time: time,
+          location: "Zoom",
         };
       });
       setAllEvents(fixedData);
