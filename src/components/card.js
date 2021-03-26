@@ -38,6 +38,7 @@ export default function ImgMediaCard() {
           <Typography gutterBottom variant="h5" component="h2">
             First Last
           </Typography>
+
           <Typography variant="body2" color="textSecondary" component="p">
             A summary of the contributions that were made to the club
           </Typography>
@@ -59,9 +60,15 @@ export default function ImgMediaCard() {
           />
         </a>
 
-        <Button size="small" color="primary">
-          Learn More
-        </Button>
+        <Typography
+          className="pl-1 pb-1.5 text-base"
+          align="left"
+          variant="h2"
+          color="textSecondary"
+          component="p"
+        >
+          Years Active
+        </Typography>
       </CardActions>
     </Card>
   );
