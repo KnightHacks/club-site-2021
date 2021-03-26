@@ -1,7 +1,7 @@
 import React from 'react';
 import {Route, BrowserRouter as Router,Link,Switch} from "react-router-dom";
 //import from './directorsPage.js';
-import Director from '../../src/pages/Director';
+import directors from '../../src/pages/directors';
 function pastDirectors() {
     return (
         <Router>
@@ -13,7 +13,7 @@ function pastDirectors() {
             </h1>
              </Link>
              <Switch>
-             <Route path="/Director" component={Director}/>
+             <Route path="/Director" component={directors}/>
              </Switch>
 
              

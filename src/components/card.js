@@ -5,11 +5,13 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
+import Typography from "@material-ui/core/Typography";
 import Button from '@material-ui/core/Button';
+
 
 const useStyles = makeStyles({
   root: {
-    //maxWidth: 345,
+    maxWidth: 245,
   },
 });
 
@@ -21,9 +23,9 @@ export default function ImgMediaCard() {
       <CardActionArea>
         <CardMedia
           component="img"
-          alt="Contemplative Reptile"
+          alt="Student image"
           height="140"
-          image="/static/images/cards/contemplative-reptile.jpg"
+          image="../images/chris.jpg"
           title="Contemplative Reptile"
         />
         <CardContent>
