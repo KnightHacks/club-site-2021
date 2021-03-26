@@ -7,6 +7,7 @@ import Event from "../components/event.js";
 import AppBar from "../components/appBar.js";
 import AboutUs from "../components/aboutUs.js";
 import Teams from "../components/teams.js";
+import Directors from "../components/pastDirectors.js";
 import { StylesProvider } from "@material-ui/core/styles";
 import ReactParticles from "react-particles-js";
 import particles_config from "../particles-config";
@@ -124,6 +125,7 @@ const IndexPage = ({ data }) => {
             ))}
           </div>
           <Teams ref={teamsRef} />
+          <Directors/>
           <div className="flex flex-col my-5" ref={contactUsRef}>
             <h1 className="font-light flex justify-center text-gray-50 text-4xl my-5 ml-6 lg:text-5xl">
               Connect With Us
@@ -131,6 +133,7 @@ const IndexPage = ({ data }) => {
             <div className="flex flex-col md:flex-row items-center justify-around w-full text-center">
               <Newsletter />
               <Contacts />
+             
             </div>
           </div>
         </Particles>
