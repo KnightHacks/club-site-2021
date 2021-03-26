@@ -1,13 +1,19 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Card from "@material-ui/core/Card";
+import CardActionArea from "@material-ui/core/CardActionArea";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
-import Button from '@material-ui/core/Button';
-
+import Button from "@material-ui/core/Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faLinkedin,
+  faInstagram,
+  faTwitter,
+  faGithub,
+} from "@fortawesome/free-brands-svg-icons";
 
 const useStyles = makeStyles({
   root: {
@@ -23,25 +29,36 @@ export default function ImgMediaCard() {
       <CardActionArea>
         <CardMedia
           component="img"
-          alt="Student image"
+          alt="Student Image"
           height="140"
           image="../images/chris.jpg"
-          title="Contemplative Reptile"
+          title="Student Image"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Lizard
+            First Last
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+            A summary of the contributions that were made to the club
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
+        <a>
+          <FontAwesomeIcon
+            icon={faLinkedin}
+            color="#000000"
+            className="mr-2 pr-0.5 pl-2 mt-0 text-4xl hover:text-gray-400"
+          />
+        </a>
+        <a>
+          <FontAwesomeIcon
+            icon={faInstagram}
+            color="#000000"
+            className="mr-2 pr-0.5 pl-2 text-4xl hover:text-gray-400"
+          />
+        </a>
+
         <Button size="small" color="primary">
           Learn More
         </Button>

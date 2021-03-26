@@ -5,6 +5,13 @@ import Particles from "react-particles-js";
 import Card from "../components/card.js";
 import "./index.css";
 import {Grid} from '@material-ui/core';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faLinkedin,
+  faInstagram,
+  faTwitter,
+  faGithub,
+} from "@fortawesome/free-brands-svg-icons";
 
 
 
