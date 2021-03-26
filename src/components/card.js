@@ -31,7 +31,7 @@ export default function ImgMediaCard() {
           component="img"
           alt="Student Image"
           height="140"
-          image="../images/chris.jpg"
+          image="../../images/abr.jpg"
           title="Student Image"
         />
         <CardContent>
