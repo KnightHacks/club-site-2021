@@ -1,9 +1,8 @@
 import React from "react";
 import Carousel, {
-  slidesToShowPlugin,
   slidesToScrollPlugin,
+  slidesToShowPlugin,
   arrowsPlugin,
-  autoplayPlugin,
 } from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
 import CountUp from "react-countup";
@@ -12,6 +11,7 @@ import CardHeader from "@material-ui/core/CardHeader";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
+import FeatherIcon from "feather-icons-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLinkedin,
@@ -114,7 +114,54 @@ const Teams = forwardRef((props, ref) => {
         Meet the Team
       </h1>
 
-      <Carousel arrows infinite animationSpeed={1000} itemWidth={350}>
+      <Carousel
+        arrows
+        centered
+        infinite
+        itemWidth={350}
+        autoPlay={3000}
+        animationSpeed={2000}
+        plugins={[
+          {
+            resolve: slidesToShowPlugin,
+            options: {
+              numberOfSlides: itemsToShow,
+            },
+          },
+          {
+            resolve: slidesToScrollPlugin,
+            options: {
+              numberOfSlides: itemsToShow,
+            },
+          },
+          {
+            resolve: arrowsPlugin,
+            options: {
+              arrowLeft: (
+                <button>
+                  <FeatherIcon icon="chevrons-left" />
+                </button>
+              ),
+              arrowLeftDisabled: (
+                <button>
+                  <FeatherIcon icon="chevron-left" />
+                </button>
+              ),
+              arrowRight: (
+                <button>
+                  <FeatherIcon icon="chevrons-right" />
+                </button>
+              ),
+              arrowRightDisabled: (
+                <button>
+                  <FeatherIcon icon="chevron-right" />
+                </button>
+              ),
+              addArrowClickHandler: true,
+            },
+          },
+        ]}
+      >
         {members.map((member, index) => (
           <Card
             className="font-regular w-5/6 focus:outline-none focus:ring-2 focus:ring-white rounded-md"
@@ -196,7 +243,6 @@ const Teams = forwardRef((props, ref) => {
       <h1 className="font-light flex items-start justify-around text-center text-gray-50 text-3xl w-full my-7 flex-wrap">
         Our Members
       </h1>
-
       <div className="font-light flex justify-between flex-row text-white mb-12">
         <div className="text-5xl text-center my-0 mx-3.5">
           <h1 className="mb-0 font-bold">
