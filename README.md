@@ -26,9 +26,12 @@ branch switch is advisable.
 
 ## Project Structure
 
-This is a standard Gatsby project. The entrypoint page lives at
-`src/pages/index.js`, and most of major logic lives in various components in
-`src/components/`.
+If you're looking to work on this project, you should first examine
+`src/pages/index.js` in order to get an idea of the overall structure of the
+main page. That file should contain nearly all the other components, which are
+located in the `src/components/` directory. CSS is mostly handled inline via
+[Tailwind CSS](#tailwind-css) utility classes, though there are a few remaining
+`.css` files for effects Tailwind CSS doesn't include.
 
 ## Stack
 
