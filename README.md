@@ -1,44 +1,87 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
 <h1 align="center">
   Knight Hacks Club Site 2021
 </h1>
 
-## 🚀 Quick start
+## Installation
 
-1.  **Navigate into your new site’s directory and start it up.**
+```shell
+git clone https://github.com/KnightHacks/club-site-2021.git
+npm install
+```
 
-    ```shell
-    cd club-site-2021/
-    npm run develop
-    ```
+## Getting Started
 
-    or
+To run a live development server, run the following in a terminal:
 
-    ```shell
-    cd club-site-2021/
-    gatsby develop
-    ```
+```shell
+npm start
+```
 
-2.  **Open the code and start customizing!**
+This will host the website at http://localhost:8000. As you make updates to the
+code, the development server will automatically reload the page.
 
-    Your site is now running at http://localhost:8000!
+If you get errors, try running `npm install`. Different branches might have
+different dependencies installed, so running a fresh `npm install` after each
+branch switch is advisable.
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+## Project Structure
 
-3.  **Learn more**
+If you're looking to work on this project, you should first examine
+`src/pages/index.js` in order to get an idea of the overall structure of the
+main page. That file should contain nearly all the other components, which are
+located in the `src/components/` directory. CSS is mostly handled inline via
+[Tailwind CSS](#tailwind-css) utility classes, though there are a few remaining
+`.css` files for effects Tailwind CSS doesn't include.
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+## Stack
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+These are the major libraries/frameworks we use and what they are for.
 
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+### Gatsby
 
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+Gatsby is a wrapper framework for React that mainly provides useful plugins to
+the filesystem that enable us to store _data_, like blocks of text and images,
+apart from the source code. If you know React, Gatsby will mostly feel familiar
+to you.
 
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+We primarily use Gatsby to move data like director information and text on the
+website into more accessible files like markdown. This works via the main
+configuration file over at `gatsby-config.js` and graphql queries.
 
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+Docs: https://www.gatsbyjs.com/
+
+### React
+
+In order to be able to work on this project, you'll need to be familiar with
+React. React is a UI rendering library that is essentially a way to embed HTML
+in your JavaScript, which gives enables for powerful, programmatic control over
+the UI on the page. If you're not familiar with HTML, CSS, and JavaScript, you
+should learn those first so that React makes more sense.
+
+Docs: https://reactjs.org/docs/getting-started.html
+
+### Tailwind CSS
+
+Tailwind CSS is a CSS utility library. It provides useful prebuilt CSS classes
+that enable simple and effective styling without dealing with separate
+stylesheets. Tailwind CSS also provides responsive variants of classes to make
+it easier to build a webpage that adapts to any screen size. It feels most like
+inline CSS styles in regular HTML.
+
+Docs: https://tailwindcss.com/
+
+### Material-UI
+
+Material-UI is a prebuilt component library that provides useful UI building
+blocks, like text fields, buttons, and cards. This library will help you avoid
+rebuilding pretty and functional components that other people have already
+designed very well.
+
+Docs: https://material-ui.com/
+
+### Particles JS
+
+Particles JS provides the floating "stars" background of the page. You likely
+will not need to mess with it unless something breaks.
+
+Docs: https://vincentgarreau.com/particles.js/
