@@ -10,8 +10,8 @@ import {
 
 const Contacts = () => {
   return (
-    <div className="flex flex-col justify-center items-center text-center text-white w-full md:w-1/2">
-      <h1 className="font-light text-2xl md:text-3xl lg:text-4xl my-6 w-full">
+    <div className="flex flex-col justify-center items-center text-center text-white w-full md:w-1/2 h-full">
+      <h1 className="font-light text-xl md:text-2xl lg:text-3xl my-6 w-full">
         Join the conversation.
       </h1>
       <div className="flex flex-col items-center justify-center w-full">

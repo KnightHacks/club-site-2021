@@ -1,8 +1,17 @@
 .rec.rec-arrow {
-  border-radius: 60%;
-  background-color: #dbc04a !important;
+  border: none;
+  background-color: transparent !important;
+  color: white !important;
+  box-shadow: none;
 }
-
+.rec.rec-arrow:hover,
+.rec.rec-arrow:focus {
+  border: none !important;
+  background-color: transparent !important;
+  color: #dbc04a !important;
+  box-shadow: none !important;
+  outline: #dbc04a;
+}
 .rec.rec-arrow:disabled {
   visibility: hidden;
 }
@@ -10,11 +19,6 @@
   outline: none;
   box-shadow: none;
 }
-
 .rec-dot {
-  background-color: #dbc04a !important;
-}
-.rec-dot_active,
-.rec-dot:hover {
-  box-shadow: 0 0 1px 3px #dbc04a !important;
+  visibility: hidden;
 }

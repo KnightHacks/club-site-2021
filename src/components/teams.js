@@ -19,6 +19,7 @@ import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState, forwardRef } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Chris from "../images/chris.jpg";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const useWidth = () => {
   let tempWidth;
@@ -74,7 +75,11 @@ const Teams = forwardRef((props, ref) => {
       markdownRemark(frontmatter: { title: { eq: "Teams" } }) {
         frontmatter {
           members {
-            image
+            image {
+              childImageSharp {
+                gatsbyImageData(width: 375, height: 375, placeholder: BLURRED)
+              }
+            }
             linkedin
             major
             name
@@ -104,7 +109,7 @@ const Teams = forwardRef((props, ref) => {
 
   return (
     <div className="flex flex-col items-center w-full" ref={ref}>
-      <h1 className="font-light flex justify-center text-gray-50 text-4xl my-5 ml-6 lg:text-5xl">
+      <h1 className="font-light flex justify-center text-gray-50 text-4xl mt-14 my-6 ml-6 lg:text-5xl">
         Meet the Team
       </h1>
       <Carousel
@@ -132,11 +137,8 @@ const Teams = forwardRef((props, ref) => {
               {member.major}
             </Typography>
 
-            <CardMedia
-              className="pt-60 pb-2.5"
-              image={Chris}
-              title={member.name}
-            />
+            <GatsbyImage image={getImage(member.image)} />
+
             <CardContent className="flex items-start h-14">
               <Typography variant="body2" color="textSecondary" component="p">
                 {member.linkedin ? (
