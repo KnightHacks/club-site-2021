@@ -4,7 +4,6 @@ import CountUp from "react-countup";
 import "./teams.css";
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
-import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -18,7 +17,6 @@ import {
 import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState, forwardRef } from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import Chris from "../images/chris.jpg";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const useWidth = () => {
@@ -137,7 +135,17 @@ const Teams = forwardRef((props, ref) => {
               {member.major}
             </Typography>
 
-            <GatsbyImage image={getImage(member.image)} />
+            <GatsbyImage
+              image={getImage(member.image)}
+              imgStyle={{
+                userDrag: "none",
+                userSelect: "none",
+                MozUserSelect: "none",
+                WebkitUserDrag: "none",
+                WebkitUserSelect: "none",
+                msUserSelect: "none",
+              }}
+            />
 
             <CardContent className="flex items-start h-14">
               <Typography variant="body2" color="textSecondary" component="p">
