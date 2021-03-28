@@ -95,14 +95,14 @@ const IndexPage = ({ data }) => {
                 className="w-full p-6"
                 alt="Knight Hacks Logo"
               />
-              <h1 className="flex justify-center mt-3.5 whitespace-nowrap text-gray-50 font-light">
+              <h1 className="flex justify-center mt-3.5 whitespace-nowrap text-gray-50 font-light text-base sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl w-full">
                 {data.site.siteMetadata.description}
               </h1>
             </div>
-            <div className="flex absolute left-2/4 bottom-2 visible">
+            <div className="flex absolute bottom-2 visible w-full justify-center">
               <FontAwesomeIcon
                 icon={faChevronDown}
-                className="cursor-pointer text-KHgold text-5xl xs:text-4xl sm:text-5xl md:text-6xl"
+                className="cursor-pointer text-KHgold text-5xl md:text-9xl"
                 onClick={() =>
                   window.scrollTo({
                     top:
