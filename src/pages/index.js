@@ -46,7 +46,8 @@ const IndexPage = ({ data }) => {
     },
     {
       title: "Killing the Coding Interview",
-      description: "",
+      description:
+        "Want to be hired by FAANG companies? Want to perform better at coding interviews? Then come to Killing the Coding Interview March 13th at 2 pm! A one stop shop to learn the ins and outs of the coding interview process with helpful tips on what to prepare, how to prepare and live problem solving. Pulling from critically acclaimed resources like Cracking the Coding Interview, Leetcode and many more, this series is designed by students for students.",
       time: "2:00 p.m.",
       location: "Zoom",
       date: "3",
@@ -67,7 +68,8 @@ const IndexPage = ({ data }) => {
     },
     {
       title: "Killing the Coding Interview",
-      description: "",
+      description:
+        "Want to be hired by FAANG companies? Want to perform better at coding interviews? Then come to Killing the Coding Interview March 13th at 2 pm! A one stop shop to learn the ins and outs of the coding interview process with helpful tips on what to prepare, how to prepare and live problem solving. Pulling from critically acclaimed resources like Cracking the Coding Interview, Leetcode and many more, this series is designed by students for students.",
       time: "2:00 p.m.",
       location: "Zoom",
       date: "10",
