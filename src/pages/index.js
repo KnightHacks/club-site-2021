@@ -79,7 +79,7 @@ const IndexPage = ({ data }) => {
       <div className="relative bg-KHblue">
         <Particles>
           <title>Knight Hacks</title>
-          <div className="relative h-screen">
+          <div className="relative h-screen flex justify-center">
             <div
               className={`
               mx-auto absolute align-baseline
@@ -95,14 +95,14 @@ const IndexPage = ({ data }) => {
                 className="w-full p-6"
                 alt="Knight Hacks Logo"
               />
-              <h1 className="flex justify-center mt-3.5 whitespace-nowrap text-gray-50 font-light">
+              <h1 className="flex justify-center mt-3.5 whitespace-nowrap text-gray-50 font-light text-base sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl w-full">
                 {data.site.siteMetadata.description}
               </h1>
             </div>
-            <div className="flex absolute left-2/4 bottom-2 visible">
+            <div className="flex w-full justify-center absolute bottom-0">
               <FontAwesomeIcon
                 icon={faChevronDown}
-                className="cursor-pointer text-KHgold text-5xl xs:text-4xl sm:text-5xl md:text-6xl"
+                className="cursor-pointer text-KHgold text-5xl md:text-7xl w-12 md:w-32"
                 onClick={() =>
                   window.scrollTo({
                     top:
