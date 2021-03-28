@@ -6,10 +6,9 @@ import {
   ButtonGroup,
   useScrollTrigger,
 } from "@material-ui/core";
-import "./appBar.css";
 
 const AppBar = forwardRef(
-  ({ appBarRef, aboutUsRef, eventsRef, contactUsRef,teamsRef}, ref) => {
+  ({ appBarRef, aboutUsRef, eventsRef, contactUsRef, teamsRef }, ref) => {
     const trigger = useScrollTrigger({
       disableHysteresis: true,
       threshold: 0,
@@ -24,38 +23,73 @@ const AppBar = forwardRef(
 
     return React.cloneElement(
       <MaterialAppBar
-        className={trigger ? "opaque" : "transparent"}
+        className={
+          trigger
+            ? "bg-KHnavbar transition ease-out duration-300"
+            : "bg-transparent transition ease-out duration-300"
+        }
         position="fixed"
         ref={ref}
       >
-        <Toolbar className="buttons">
+        <Toolbar className="flex justify-between xs:text-base sm:text-lg md:text-xl">
           <Button
             href="https://linktr.ee/knighthacks"
-            className="button"
+            className={`
+              text-base text-white font-regular normal-case
+              md:text-lg
+              `}
             color="inherit"
           >
             Linktree
           </Button>
-          <ButtonGroup variant="text">
+          <ButtonGroup variant="none">
             <Button
-              className="button"
+              className={`
+                text-base
+                font-regular normal-case
+                focus:outline-none focus:ring-0
+                focus:text-KHgold
+                md:text-lg
+                `}
               color="inherit"
               onClick={() => scroll(aboutUsRef)}
             >
               About
             </Button>
             <Button
-              className="button"
+              className={`
+                text-base
+                font-regular normal-case
+                focus:outline-none focus:ring-0
+                focus:text-KHgold
+                md:text-lg
+                `}
               color="inherit"
               onClick={() => scroll(eventsRef)}
             >
               Events
             </Button>
-            <Button className="button" color="inherit" onClick={() => scroll(teamsRef)}>
+            <Button
+              className={`
+              text-base
+              font-regular normal-case
+              focus:outline-none focus:ring-0
+              focus:text-KHgold
+              md:text-lg
+              `}
+              color="inherit"
+              onClick={() => scroll(teamsRef)}
+            >
               Team
             </Button>
             <Button
-              className="button"
+              className={`
+              text-base
+              font-regular normal-case
+              focus:outline-none focus:ring-0
+              focus:text-KHgold
+              md:text-lg
+              `}
               color="inherit"
               onClick={() => scroll(contactUsRef)}
             >
