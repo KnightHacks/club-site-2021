@@ -102,7 +102,7 @@ const IndexPage = ({ data }) => {
             <div className="flex w-full justify-center absolute bottom-0">
               <FontAwesomeIcon
                 icon={faChevronDown}
-                className="cursor-pointer text-KHgold text-5xl md:text-9xl"
+                className="cursor-pointer text-KHgold text-5xl md:text-7xl w-12 md:w-32"
                 onClick={() =>
                   window.scrollTo({
                     top:
