@@ -76,10 +76,10 @@ const IndexPage = ({ data }) => {
         teamsRef={teamsRef}
         contactUsRef={contactUsRef}
       />
-      <div className="relative bg-KHblue">
+      <div className="bg-KHblue">
         <Particles>
           <title>Knight Hacks</title>
-          <div className="relative h-screen">
+          <div className="h-screen">
             <div
               className={`
               mx-auto absolute align-baseline
@@ -99,7 +99,7 @@ const IndexPage = ({ data }) => {
                 {data.site.siteMetadata.description}
               </h1>
             </div>
-            <div className="flex absolute bottom-2 visible w-full justify-center">
+            <div className="flex w-full justify-center absolute bottom-0">
               <FontAwesomeIcon
                 icon={faChevronDown}
                 className="cursor-pointer text-KHgold text-5xl md:text-9xl"
@@ -141,14 +141,14 @@ const IndexPage = ({ data }) => {
 
 const Particles = ({ children }) => {
   return (
-    <div className="absolute w-full">
+    <div className="w-full">
       <ReactParticles
         params={particles_config}
         className="fixed top-0 left-0"
         width="100vw"
         height="100vh"
       />
-      {children && <div className="relative">{children}</div>}
+      {children && <div>{children}</div>}
     </div>
   );
 };
