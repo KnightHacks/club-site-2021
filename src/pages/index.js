@@ -76,10 +76,10 @@ const IndexPage = ({ data }) => {
         teamsRef={teamsRef}
         contactUsRef={contactUsRef}
       />
-      <div className="bg-KHblue">
+      <div className="relative bg-KHblue">
         <Particles>
           <title>Knight Hacks</title>
-          <div className="h-screen">
+          <div className="relative h-screen flex justify-center">
             <div
               className={`
               mx-auto absolute align-baseline
@@ -141,14 +141,14 @@ const IndexPage = ({ data }) => {
 
 const Particles = ({ children }) => {
   return (
-    <div className="w-full">
+    <div className="absolute w-full">
       <ReactParticles
         params={particles_config}
         className="fixed top-0 left-0"
         width="100vw"
         height="100vh"
       />
-      {children && <div>{children}</div>}
+      {children && <div className="relative">{children}</div>}
     </div>
   );
 };
