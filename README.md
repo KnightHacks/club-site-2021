@@ -2,6 +2,8 @@
   Knight Hacks Club Site 2021
 </h1>
 
+![Image of KnightHacks logo](https://raw.githubusercontent.com/KnightHacks/club-site-2021/develop/src/assets/logos/knightHacksLogoGold.svg?token=AKBMWAKXK7OKJPEJZZVJWF3AL7FI2)
+
 ## Installation
 
 ```shell
