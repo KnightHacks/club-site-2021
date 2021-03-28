@@ -117,7 +117,7 @@ const Teams = forwardRef((props, ref) => {
       >
         {members.map((member, index) => (
           <Card
-            className="font-regular w-5/6 focus:outline-none focus:ring-2 focus:ring-white rounded-md"
+            className="font-regular w-max m-5 focus:outline-none focus:ring-2 focus:ring-white rounded-md"
             key={index}
           >
             <CardHeader
