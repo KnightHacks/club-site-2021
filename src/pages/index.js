@@ -26,7 +26,7 @@ const IndexPage = ({ data }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 6000);
+    setTimeout(() => setLoading(false), 1500);
   }, []);
 
   const allEvents = [
@@ -92,7 +92,7 @@ const IndexPage = ({ data }) => {
         <Loading />
       ) : (
         <StylesProvider injectFirst>
-          <FadeIn>
+          <FadeIn transitionDuration={800}>
             <AppBar
               ref={appBarRef}
               appBarRef={appBarRef}
