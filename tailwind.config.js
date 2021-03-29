@@ -19,7 +19,8 @@ module.exports = {
         italic: ["Avenir Next Italic", "sans-serif"],
       },
       screens: {
-        xs: "320px",
+        xxs: "320px",
+        xs: "400px",
         sm: "640px",
         md: "768px",
         lg: "1024px",
