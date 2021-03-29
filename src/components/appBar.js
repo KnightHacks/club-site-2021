@@ -1,11 +1,17 @@
-import React, { forwardRef } from "react";
+import React, { useState, forwardRef } from "react";
 import {
   AppBar as MaterialAppBar,
   Toolbar,
   Button,
   ButtonGroup,
   useScrollTrigger,
+  Hidden,
+  Menu,
+  MenuItem,
 } from "@material-ui/core";
+
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const AppBar = forwardRef(
   ({ appBarRef, aboutUsRef, eventsRef, contactUsRef, teamsRef }, ref) => {
@@ -20,6 +26,8 @@ const AppBar = forwardRef(
         behavior: "smooth",
       });
     };
+
+    const [anchorEl, setAnchorEl] = useState(null);
 
     return React.cloneElement(
       <MaterialAppBar
@@ -42,34 +50,67 @@ const AppBar = forwardRef(
           >
             Linktree
           </Button>
-          <ButtonGroup variant="none">
-            <Button
-              className={`
+          <Hidden smDown={true}>
+            <ButtonGroup variant="none">
+              <Button
+                className={`
                 text-base
                 font-regular normal-case
                 focus:outline-none focus:ring-0
                 focus:text-KHgold
                 md:text-lg
                 `}
-              color="inherit"
-              onClick={() => scroll(aboutUsRef)}
-            >
-              About
-            </Button>
-            <Button
-              className={`
+                color="inherit"
+                onClick={() => scroll(aboutUsRef)}
+              >
+                About
+              </Button>
+              <Button
+                className={`
                 text-base
                 font-regular normal-case
                 focus:outline-none focus:ring-0
                 focus:text-KHgold
                 md:text-lg
                 `}
-              color="inherit"
-              onClick={() => scroll(eventsRef)}
-            >
-              Events
-            </Button>
+                color="inherit"
+                onClick={() => scroll(eventsRef)}
+              >
+                Events
+              </Button>
+              <Button
+                className={`
+              text-base
+              font-regular normal-case
+              focus:outline-none focus:ring-0
+              focus:text-KHgold
+              md:text-lg
+              `}
+                color="inherit"
+                onClick={() => scroll(teamsRef)}
+              >
+                Team
+              </Button>
+              <Button
+                className={`
+              text-base
+              font-regular normal-case
+              focus:outline-none focus:ring-0
+              focus:text-KHgold
+              md:text-lg
+              `}
+                color="inherit"
+                onClick={() => scroll(contactUsRef)}
+              >
+                Contact Us
+              </Button>
+            </ButtonGroup>
+          </Hidden>
+          <Hidden smUp={true}>
             <Button
+              aria-controls="simple-menu"
+              aria-haspopup="true"
+              color="inherit"
               className={`
               text-base
               font-regular normal-case
@@ -77,25 +118,22 @@ const AppBar = forwardRef(
               focus:text-KHgold
               md:text-lg
               `}
-              color="inherit"
-              onClick={() => scroll(teamsRef)}
+              onClick={(event) => setAnchorEl(event.currentTarget)}
             >
-              Team
+              <FontAwesomeIcon icon={faBars} />
             </Button>
-            <Button
-              className={`
-              text-base
-              font-regular normal-case
-              focus:outline-none focus:ring-0
-              focus:text-KHgold
-              md:text-lg
-              `}
-              color="inherit"
-              onClick={() => scroll(contactUsRef)}
+            <Menu
+              anchorEl={anchorEl}
+              keepMounted
+              open={Boolean(anchorEl)}
+              onClose={() => setAnchorEl(null)}
             >
-              Contact Us
-            </Button>
-          </ButtonGroup>
+              <MenuItem>About</MenuItem>
+              <MenuItem>Events</MenuItem>
+              <MenuItem>Team</MenuItem>
+              <MenuItem>Contact Us</MenuItem>
+            </Menu>
+          </Hidden>
         </Toolbar>
       </MaterialAppBar>,
       { elevation: trigger ? 10 : 0 }
