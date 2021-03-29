@@ -13,7 +13,6 @@ import ReactParticles from "react-particles-js";
 import particles_config from "../particles-config";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-// import animations from "react-animation";
 import FadeIn from "react-fade-in";
 import "./index.css";
 
@@ -32,47 +31,59 @@ const IndexPage = ({ data }) => {
 
   const allEvents = [
     {
-      title: "Unit Testing",
+      title: "JPMorgan Chase UI/UX Workshop",
       description:
-        "Everyone knows testing your code is important, but how can you do it? At this workshop, we'll talk about the motivations for testing, how to write tests, and how tests can greatly improve your codebase and workflow. We'll be using JavaScript and the Mocha.js testing framework, but the concepts will be applicable to any language. No experience required.",
+        "Come learn about designing an engaging UI/UX experience! Creating an intuitive and simple UI is essential for any successful project. JPMorgan Chase will be recruiting and hosting this workshop, so don't miss it!",
       time: "7:30 p.m.",
       location: "Zoom",
-      date: "16",
-      month: "Mar",
-      tags: ["Hello World!"],
-      presenter: "Robert Boyd",
-    },
-    {
-      title: "Rust",
-      description:
-        'Rust has been the undisputed "most loved" programming language on the Stack Overflow Developer Survey for several years. Why? Come to this workshop and find out! Anthony will be returning to teach us the basics of Rust\'s unique memory management model and answer any questions about this innovative and promising new programming language.',
-      time: "7:30 p.m.",
-      location: "Zoom",
-      date: "18",
-      month: "Mar",
+      date: "1",
+      month: "Apr",
       tags: [],
-      presenter: "Anthony Hevia",
+      presenter: "JPMorgan Chase",
     },
     {
-      title: "TypeScript",
+      title: "Constitutional Revision",
       description:
-        "Does JavaScript want to make you tear your hair out with errors like `undefined is not a function` and `name is not defined`? Do you miss Java features like `interface` and `enum`? Do you just like typing out the types of your variables? TypeScript might just be what you're looking for! In this workshop, we'll explore TypeScript, a popular compile-to-JS language with a surprisingly good static type system and some other cool features.",
-      time: "7:30 p.m.",
+        "Knight Hacks is beginning the constitutional revision process. We want to make sure that our organizing document clearly states our organization's current mission, goals, and structure. Make your voice heard and provide suggestions and feedback by attending our constitutional revision meeting. The draft constitution produced as a result of this meeting will be presented to the active student members for a ratification vote.",
+      time: "2:00 p.m.",
       location: "Zoom",
-      date: "23",
-      month: "Mar",
-      tags: ["Hello World!"],
-      presenter: "Robert Boyd",
+      date: "2",
+      month: "Apr",
+      tags: ["Administrative"],
+      presenter: "",
     },
     {
-      title: "Getting Into Grad School",
-      description: "",
+      title: "Killing the Coding Interview",
+      description:
+        "Want to be hired by FAANG companies? Want to perform better at coding interviews? Then come to Killing the Coding Interview March 13th at 2 pm! A one stop shop to learn the ins and outs of the coding interview process with helpful tips on what to prepare, how to prepare and live problem solving. Pulling from critically acclaimed resources like Cracking the Coding Interview, Leetcode and many more, this series is designed by students for students.",
+      time: "2:00 p.m.",
+      location: "Zoom",
+      date: "3",
+      month: "Apr",
+      tags: [],
+      presenter: "Arjun Pherwani",
+    },
+    {
+      title: "Election Day",
+      description:
+        "Come learn about the candidates running for the executive board of Knight Hacks! You will be able to hear the candidates' speeches and ask them questions to better inform yourself to vote. Voting will be open for 48 hours from April 8th at 8:30pm to April 10th at 8:30pm, and all active dues-paying members are eligible to vote.",
       time: "7:30 p.m.",
       location: "Zoom",
-      date: "25",
-      month: "Mar",
+      date: "8",
+      month: "Apr",
+      tags: ["Election"],
+      presenter: "",
+    },
+    {
+      title: "Killing the Coding Interview",
+      description:
+        "Want to be hired by FAANG companies? Want to perform better at coding interviews? Then come to Killing the Coding Interview March 13th at 2 pm! A one stop shop to learn the ins and outs of the coding interview process with helpful tips on what to prepare, how to prepare and live problem solving. Pulling from critically acclaimed resources like Cracking the Coding Interview, Leetcode and many more, this series is designed by students for students.",
+      time: "2:00 p.m.",
+      location: "Zoom",
+      date: "10",
+      month: "Apr",
       tags: [],
-      presenter: "Irene Tanner",
+      presenter: "Arjun Pherwani",
     },
   ];
   return (
@@ -81,21 +92,20 @@ const IndexPage = ({ data }) => {
         <Loading />
       ) : (
         <StylesProvider injectFirst>
-          <FadeIn transitionDuration={800}>
-            <AppBar
-              ref={appBarRef}
-              appBarRef={appBarRef}
-              aboutUsRef={aboutUsRef}
-              eventsRef={eventsRef}
-              teamsRef={teamsRef}
-              contactUsRef={contactUsRef}
-            />
-            <div className="relative bg-KHblue">
-              <Particles>
-                <title>Knight Hacks</title>
-                <div className="relative h-screen">
-                  <div
-                    className={`
+          <AppBar
+            ref={appBarRef}
+            appBarRef={appBarRef}
+            aboutUsRef={aboutUsRef}
+            eventsRef={eventsRef}
+            teamsRef={teamsRef}
+            contactUsRef={contactUsRef}
+          />
+          <div className="relative bg-KHblue">
+            <Particles>
+              <title>Knight Hacks</title>
+              <div className="relative h-screen flex justify-center">
+                <div
+                  className={`
                   mx-auto absolute align-baseline
                   top-1/2 left-1/2 text-xl
                   transform -translate-y-2/4 -translate-x-2/4
@@ -103,48 +113,48 @@ const IndexPage = ({ data }) => {
                   md:text-4xl
                   xl:text-5xl
                   `}
-                  >
-                    <img
-                      src={KnightHacksLogo}
-                      className="w-full p-6"
-                      alt="Knight Hacks Logo"
-                    />
-                    <h1 className="flex justify-center mt-3.5 whitespace-nowrap text-gray-50 font-light">
-                      {data.site.siteMetadata.description}
-                    </h1>
-                  </div>
-                  <div className="flex absolute left-2/4 bottom-2 visible">
-                    <FontAwesomeIcon
-                      icon={faChevronDown}
-                      className="cursor-pointer text-KHgold text-5xl xs:text-4xl sm:text-5xl md:text-6xl"
-                      onClick={() =>
-                        window.scrollTo({
-                          top:
-                            aboutUsRef.current.offsetTop -
-                            appBarRef.current.clientHeight,
-                          behavior: "smooth",
-                        })
-                      }
-                    />
-                  </div>
-                </div>
-                <AboutUs ref={aboutUsRef} />
-                <div className="my-6" ref={eventsRef}>
-                  <h1 className="font-light flex justify-center text-gray-50 text-4xl mt-14 my-6 ml-6 lg:text-5xl">
-                    Upcoming Events
+                >
+                  <img
+                    src={KnightHacksLogo}
+                    className="w-full p-6"
+                    alt="Knight Hacks Logo"
+                  />
+                  <h1 className="flex justify-center mt-3.5 whitespace-nowrap text-gray-50 font-light text-base sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl w-full">
+                    {data.site.siteMetadata.description}
                   </h1>
-                  {allEvents.map((event, index) => (
-                    <Event key={index} {...event} />
-                  ))}
                 </div>
-                <Teams ref={teamsRef} />
-                <div className="flex flex-col my-5 h-96" ref={contactUsRef}>
-                  <h1 className="font-light flex justify-center text-gray-50 text-4xl mt-14 my-5 lg:text-5xl">
-                    Connect With Us
-                  </h1>
-                  <div className="my-6 flex flex-col md:flex-row items-center justify-around w-full text-center h-full">
-                    <Newsletter />
-                    <Contacts />
+                <div className="flex w-full justify-center absolute bottom-0">
+                  <FontAwesomeIcon
+                    icon={faChevronDown}
+                    className="cursor-pointer text-KHgold text-5xl md:text-7xl w-12 md:w-32"
+                    onClick={() =>
+                      window.scrollTo({
+                        top:
+                          aboutUsRef.current.offsetTop -
+                          appBarRef.current.clientHeight,
+                        behavior: "smooth",
+                      })
+                    }
+                  />
+                </div>
+              </div>
+              <AboutUs ref={aboutUsRef} />
+              <div className="my-6" ref={eventsRef}>
+                <h1 className="font-light flex justify-center text-gray-50 text-4xl mt-14 my-6 ml-6 lg:text-5xl">
+                  Upcoming Events
+                </h1>
+                {allEvents.map((event, index) => (
+                  <Event key={index} {...event} />
+                ))}
+              </div>
+              <Teams ref={teamsRef} />
+              <div className="flex flex-col my-5 h-96" ref={contactUsRef}>
+                <h1 className="font-light flex justify-center text-gray-50 text-4xl mt-14 my-5 lg:text-5xl">
+                  Connect With Us
+                </h1>
+                <div className="my-6 flex flex-col md:flex-row items-center justify-around w-full text-center h-full">
+                  <Newsletter />
+                  <Contacts />
                   </div>
                 </div>
               </Particles>
