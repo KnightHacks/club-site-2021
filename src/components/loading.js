@@ -19,6 +19,9 @@ const Loading = () => {
         className="w-full p-6"
         alt="Knight Hacks Logo"
       />
+      <h1 className="text-lg flex justify-center mt-3.5 whitespace-nowrap text-gray-300 font-lightitalic">
+        Loading...
+      </h1>
     </div>
   );
 };
