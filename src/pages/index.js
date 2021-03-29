@@ -13,6 +13,8 @@ import ReactParticles from "react-particles-js";
 import particles_config from "../particles-config";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+// import animations from "react-animation";
+import FadeIn from "react-fade-in";
 import "./index.css";
 
 const IndexPage = ({ data }) => {
@@ -79,20 +81,21 @@ const IndexPage = ({ data }) => {
         <Loading />
       ) : (
         <StylesProvider injectFirst>
-          <AppBar
-            ref={appBarRef}
-            appBarRef={appBarRef}
-            aboutUsRef={aboutUsRef}
-            eventsRef={eventsRef}
-            teamsRef={teamsRef}
-            contactUsRef={contactUsRef}
-          />
-          <div className="relative bg-KHblue">
-            <Particles>
-              <title>Knight Hacks</title>
-              <div className="relative h-screen">
-                <div
-                  className={`
+          <FadeIn transitionDuration={800}>
+            <AppBar
+              ref={appBarRef}
+              appBarRef={appBarRef}
+              aboutUsRef={aboutUsRef}
+              eventsRef={eventsRef}
+              teamsRef={teamsRef}
+              contactUsRef={contactUsRef}
+            />
+            <div className="relative bg-KHblue">
+              <Particles>
+                <title>Knight Hacks</title>
+                <div className="relative h-screen">
+                  <div
+                    className={`
                   mx-auto absolute align-baseline
                   top-1/2 left-1/2 text-xl
                   transform -translate-y-2/4 -translate-x-2/4
@@ -100,52 +103,53 @@ const IndexPage = ({ data }) => {
                   md:text-4xl
                   xl:text-5xl
                   `}
-                >
-                  <img
-                    src={KnightHacksLogo}
-                    className="w-full p-6"
-                    alt="Knight Hacks Logo"
-                  />
-                  <h1 className="flex justify-center mt-3.5 whitespace-nowrap text-gray-50 font-light">
-                    {data.site.siteMetadata.description}
+                  >
+                    <img
+                      src={KnightHacksLogo}
+                      className="w-full p-6"
+                      alt="Knight Hacks Logo"
+                    />
+                    <h1 className="flex justify-center mt-3.5 whitespace-nowrap text-gray-50 font-light">
+                      {data.site.siteMetadata.description}
+                    </h1>
+                  </div>
+                  <div className="flex absolute left-2/4 bottom-2 visible">
+                    <FontAwesomeIcon
+                      icon={faChevronDown}
+                      className="cursor-pointer text-KHgold text-5xl xs:text-4xl sm:text-5xl md:text-6xl"
+                      onClick={() =>
+                        window.scrollTo({
+                          top:
+                            aboutUsRef.current.offsetTop -
+                            appBarRef.current.clientHeight,
+                          behavior: "smooth",
+                        })
+                      }
+                    />
+                  </div>
+                </div>
+                <AboutUs ref={aboutUsRef} />
+                <div className="my-6" ref={eventsRef}>
+                  <h1 className="font-light flex justify-center text-gray-50 text-4xl mt-14 my-6 ml-6 lg:text-5xl">
+                    Upcoming Events
                   </h1>
+                  {allEvents.map((event, index) => (
+                    <Event key={index} {...event} />
+                  ))}
                 </div>
-                <div className="flex absolute left-2/4 bottom-2 visible">
-                  <FontAwesomeIcon
-                    icon={faChevronDown}
-                    className="cursor-pointer text-KHgold text-5xl xs:text-4xl sm:text-5xl md:text-6xl"
-                    onClick={() =>
-                      window.scrollTo({
-                        top:
-                          aboutUsRef.current.offsetTop -
-                          appBarRef.current.clientHeight,
-                        behavior: "smooth",
-                      })
-                    }
-                  />
+                <Teams ref={teamsRef} />
+                <div className="flex flex-col my-5 h-96" ref={contactUsRef}>
+                  <h1 className="font-light flex justify-center text-gray-50 text-4xl mt-14 my-5 lg:text-5xl">
+                    Connect With Us
+                  </h1>
+                  <div className="my-6 flex flex-col md:flex-row items-center justify-around w-full text-center h-full">
+                    <Newsletter />
+                    <Contacts />
+                  </div>
                 </div>
-              </div>
-              <AboutUs ref={aboutUsRef} />
-              <div className="my-6" ref={eventsRef}>
-                <h1 className="font-light flex justify-center text-gray-50 text-4xl mt-14 my-6 ml-6 lg:text-5xl">
-                  Upcoming Events
-                </h1>
-                {allEvents.map((event, index) => (
-                  <Event key={index} {...event} />
-                ))}
-              </div>
-              <Teams ref={teamsRef} />
-              <div className="flex flex-col my-5 h-96" ref={contactUsRef}>
-                <h1 className="font-light flex justify-center text-gray-50 text-4xl mt-14 my-5 lg:text-5xl">
-                  Connect With Us
-                </h1>
-                <div className="my-6 flex flex-col md:flex-row items-center justify-around w-full text-center h-full">
-                  <Newsletter />
-                  <Contacts />
-                </div>
-              </div>
-            </Particles>
-          </div>
+              </Particles>
+            </div>
+          </FadeIn>
         </StylesProvider>
       )}
     </>
