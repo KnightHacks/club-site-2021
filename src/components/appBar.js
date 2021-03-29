@@ -128,10 +128,38 @@ const AppBar = forwardRef(
               open={Boolean(anchorEl)}
               onClose={() => setAnchorEl(null)}
             >
-              <MenuItem>About</MenuItem>
-              <MenuItem>Events</MenuItem>
-              <MenuItem>Team</MenuItem>
-              <MenuItem>Contact Us</MenuItem>
+              <MenuItem
+                onClick={() => {
+                  scroll(aboutUsRef);
+                  setAnchorEl(null);
+                }}
+              >
+                About
+              </MenuItem>
+              <MenuItem
+                onClick={() => {
+                  scroll(eventsRef);
+                  setAnchorEl(null);
+                }}
+              >
+                Events
+              </MenuItem>
+              <MenuItem
+                onClick={() => {
+                  scroll(teamsRef);
+                  setAnchorEl(null);
+                }}
+              >
+                Team
+              </MenuItem>
+              <MenuItem
+                onClick={() => {
+                  scroll(contactUsRef);
+                  setAnchorEl(null);
+                }}
+              >
+                Contact Us
+              </MenuItem>
             </Menu>
           </Hidden>
         </Toolbar>
