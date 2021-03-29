@@ -43,7 +43,6 @@ const Newsletter = () => {
           placeholder="Email *"
           required
           onChange={(e) => setEmail(e.target.value)}
-          error={invalid}
           value={email}
           className="px-4 py-2 w-1/2 border-b text-white border-gray-900 bg-transparent focus:outline-none hover:border-blue-400 focus:border-blue-400 font-light"
         />
