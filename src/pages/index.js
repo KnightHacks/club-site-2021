@@ -83,7 +83,7 @@ const IndexPage = ({ data }) => {
     <StylesProvider injectFirst>
       <div className="relative bg-KHblue">
         <Particles>
-          <FadeIn>
+          <FadeIn transitionDuration={800}>
             <AppBar
               ref={appBarRef}
               appBarRef={appBarRef}
