@@ -27,22 +27,28 @@ const Event = (props) => {
       >
         <AccordionSummary>
           <div className="flex items-center justify-between w-full">
-            <h1 className="font-regular text-2xl px-1">{props.title}</h1>
-            <span className="font-medium text-2xl md:text-3xl lg:text4xl p-2">
+            <h1 className="font-regular text-xl sm:text-2xl px-1">
+              {props.title}
+            </h1>
+            <span className="font-medium p-2 text-lg sm:text-2xl">
               {props.date}
-              <span className="font-regular ml-2 text-2xl">{props.month}</span>
+              <span className="font-regular ml-2 text-lg sm:text-2xl">
+                {props.month}
+              </span>
             </span>
           </div>
         </AccordionSummary>
         <AccordionDetails onClick={() => setExpanded(!expanded)}>
           <div className="ContentContainer">
             <div className="flex justify-between mb-3">
-              <p className="text-xl px-2 text-black">{props.presenter}</p>
-              <p className="text-xl px-2 text-black">
+              <p className="px-2 text-black text-sm sm:text-xl">
+                {props.presenter}
+              </p>
+              <p className="text-sm sm:text-xl px-2 text-black">
                 {props.time} |
                 <a
                   href="https://linktr.ee/knighthacks"
-                  className="text-xl px-2 text-black hover:text-gray-500"
+                  className="text-sm sm:text-xl px-2 text-black hover:text-gray-500"
                 >
                   {props.location}
                 </a>
