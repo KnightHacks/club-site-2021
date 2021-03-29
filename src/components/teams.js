@@ -145,6 +145,7 @@ const Teams = forwardRef((props, ref) => {
                 WebkitUserSelect: "none",
                 msUserSelect: "none",
               }}
+              alt={member.name}
             />
 
             <CardContent className="flex items-start h-14">
