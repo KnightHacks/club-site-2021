@@ -26,7 +26,7 @@ const IndexPage = ({ data }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 1500);
+    requestAnimationFrame(() => requestAnimationFrame(() => setLoading(false)));
   }, []);
 
   const allEvents = [
@@ -92,17 +92,17 @@ const IndexPage = ({ data }) => {
         <Loading />
       ) : (
         <StylesProvider injectFirst>
-          <FadeIn transitionDuration={800}>
-            <AppBar
-              ref={appBarRef}
-              appBarRef={appBarRef}
-              aboutUsRef={aboutUsRef}
-              eventsRef={eventsRef}
-              teamsRef={teamsRef}
-              contactUsRef={contactUsRef}
-            />
-            <div className="relative bg-KHblue">
-              <Particles>
+          <div className="relative bg-KHblue">
+            <Particles>
+              <FadeIn transitionDuration={800}>
+                <AppBar
+                  ref={appBarRef}
+                  appBarRef={appBarRef}
+                  aboutUsRef={aboutUsRef}
+                  eventsRef={eventsRef}
+                  teamsRef={teamsRef}
+                  contactUsRef={contactUsRef}
+                />
                 <title>Knight Hacks</title>
                 <div className="relative h-screen flex justify-center">
                   <div
@@ -158,9 +158,9 @@ const IndexPage = ({ data }) => {
                     <Contacts />
                   </div>
                 </div>
-              </Particles>
-            </div>
-          </FadeIn>
+              </FadeIn>
+            </Particles>
+          </div>
         </StylesProvider>
       )}
     </>
