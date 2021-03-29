@@ -5,9 +5,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        KHgold: "#dbc04a",
+        KHgold: {
+          DEFAULT: "#dbc04a",
+          "slightly-dark": "#d9bd3f",
+        },
         KHblue: "#181d41",
-        KHnavbar: "#3b3d5b",
+        KHnavbar: {
+          DEFAULT: "#3b3d5b",
+          dark: "#32344d",
+        },
       },
       fontFamily: {
         sans: ["sans-serif"],
@@ -19,7 +25,8 @@ module.exports = {
         italic: ["Avenir Next Italic", "sans-serif"],
       },
       screens: {
-        xs: "320px",
+        xxs: "320px",
+        xs: "400px",
         sm: "640px",
         md: "768px",
         lg: "1024px",
@@ -30,8 +37,10 @@ module.exports = {
   },
   variants: {
     extend: {
+      backgroundColor: ["active"],
       borderStyle: ["hover", "focus"],
       borderWidth: ["hover", "focus"],
+      textColor: ["active"],
     },
   },
   plugins: [],

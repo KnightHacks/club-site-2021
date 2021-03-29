@@ -117,19 +117,19 @@ const Teams = forwardRef((props, ref) => {
       >
         {members.map((member, index) => (
           <Card
-            className="font-regular w-max m-5 focus:outline-none focus:ring-2 focus:ring-white rounded-md"
+            className="font-regular w-max m-1 sm:m-5 focus:outline-none focus:ring-2 focus:ring-white rounded-md text-xs"
             key={index}
           >
-            <CardHeader
-              className="pb-0"
-              title={member.name}
-              subheader={member.position}
-            />
+            <Typography className="mt-4 pl-4 pb-0 font-regular text-lg xs:text-2xl">
+              {member.name}
+            </Typography>
+            <Typography className="pl-4 pb-0 font-regular font-bold text-gray-500 text-xs sm:text-sm">
+              {member.position}
+            </Typography>
             <Typography
-              className="pl-4 pb-1.5 text-sm"
+              className="pl-4 pb-1.5 text-gray-400 font-regular text-xs sm:text-sm"
               align="left"
               variant="subtitle1"
-              color="textSecondary"
               component="p"
             >
               {member.major}
@@ -145,6 +145,7 @@ const Teams = forwardRef((props, ref) => {
                 WebkitUserSelect: "none",
                 msUserSelect: "none",
               }}
+              alt={member.name}
             />
 
             <CardContent className="flex items-start h-14">

@@ -1,4 +1,9 @@
+.lgksPe {
+  min-width: 30px !important;
+}
 .rec.rec-arrow {
+  margin: 0 !important;
+  padding: 0 !important;
   border: none;
   background-color: transparent !important;
   color: white !important;
