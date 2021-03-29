@@ -24,9 +24,9 @@ const IndexPage = ({ data }) => {
 
   const allEvents = [
     {
-      title: "JPMorgan Chase UI/UX Workshop",
+      title: "Design for Users, Not Requirements",
       description:
-        "Come learn about designing an engaging UI/UX experience! Creating an intuitive and simple UI is essential for any successful project. JPMorgan Chase will be recruiting and hosting this workshop, so don't miss it!",
+        "It’s easy to identify the list of things that need to go into your product or design; a little of this, a sprinkle of that. It becomes easy to lose track of the user and just start thinking that your pile of features is the best thing since sliced bread. Then when it gets into the hands of users it flops. I’ll show you the mindset needed to create something that is useful, usable, and even desirable.",
       time: "7:30 p.m.",
       location: "Zoom",
       date: "1",
