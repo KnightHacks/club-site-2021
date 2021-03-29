@@ -42,7 +42,7 @@ const AppBar = forwardRef(
           >
             Linktree
           </Button>
-          <ButtonGroup variant="none">
+          <div>
             <Button
               className={`
                 text-base
@@ -95,7 +95,7 @@ const AppBar = forwardRef(
             >
               Contact Us
             </Button>
-          </ButtonGroup>
+          </div>
         </Toolbar>
       </MaterialAppBar>,
       { elevation: trigger ? 10 : 0 }
