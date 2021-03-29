@@ -117,8 +117,10 @@ const AppBar = forwardRef(
               focus:outline-none focus:ring-0
               focus:text-KHgold
               md:text-lg
+              bg-opacity-0
               `}
               onClick={(event) => setAnchorEl(event.currentTarget)}
+              style={{ backgroundColor: "transparent" }}
             >
               <FontAwesomeIcon icon={faBars} />
             </Button>
@@ -129,6 +131,11 @@ const AppBar = forwardRef(
               onClose={() => setAnchorEl(null)}
             >
               <MenuItem
+                style={{
+                  backgroundColor: "#181d41",
+                  color: "white",
+                  fontFamily: "Avenir Next Regular",
+                }}
                 onClick={() => {
                   scroll(aboutUsRef);
                   setAnchorEl(null);
@@ -137,6 +144,11 @@ const AppBar = forwardRef(
                 About
               </MenuItem>
               <MenuItem
+                style={{
+                  backgroundColor: "#181d41",
+                  color: "white",
+                  fontFamily: "Avenir Next Regular",
+                }}
                 onClick={() => {
                   scroll(eventsRef);
                   setAnchorEl(null);
@@ -145,6 +157,11 @@ const AppBar = forwardRef(
                 Events
               </MenuItem>
               <MenuItem
+                style={{
+                  backgroundColor: "#181d41",
+                  color: "white",
+                  fontFamily: "Avenir Next Regular",
+                }}
                 onClick={() => {
                   scroll(teamsRef);
                   setAnchorEl(null);
@@ -153,6 +170,11 @@ const AppBar = forwardRef(
                 Team
               </MenuItem>
               <MenuItem
+                style={{
+                  backgroundColor: "#181d41",
+                  color: "white",
+                  fontFamily: "Avenir Next Regular",
+                }}
                 onClick={() => {
                   scroll(contactUsRef);
                   setAnchorEl(null);
