@@ -40,11 +40,11 @@ const Event = (props) => {
         </AccordionSummary>
         <AccordionDetails onClick={() => setExpanded(!expanded)}>
           <div className="ContentContainer">
-            <div className="flex justify-between mb-3">
+            <div className="flex mb-3 flex-col sm:justify-between sm:flex-row">
               <p className="px-2 text-black text-sm sm:text-xl">
                 {props.presenter}
               </p>
-              <p className="text-sm sm:text-xl px-2 text-black">
+              <p className="px-2 text-sm sm:text-xl text-black">
                 {props.time} |
                 <a
                   href="https://linktr.ee/knighthacks"
