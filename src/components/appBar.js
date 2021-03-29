@@ -22,20 +22,20 @@ const AppBar = forwardRef(
     };
 
     return React.cloneElement(
-      <MaterialAppBar
+      <div
         className={
-          trigger
+          "fixed w-full z-50 " +
+          (trigger
             ? "bg-KHnavbar transition ease-out duration-300"
-            : "bg-transparent transition ease-out duration-300"
+            : "bg-transparent transition ease-out duration-300")
         }
-        position="fixed"
         ref={ref}
       >
-        <Toolbar className="flex justify-between xs:text-base sm:text-lg md:text-xl">
+        <Toolbar className="text-white flex justify-between xs:text-base sm:text-lg md:text-xl">
           <Button
             href="https://linktr.ee/knighthacks"
             className={`
-              text-base text-white font-regular normal-case
+              text-base font-regular normal-case
               md:text-lg
               `}
             color="inherit"
@@ -97,7 +97,7 @@ const AppBar = forwardRef(
             </Button>
           </div>
         </Toolbar>
-      </MaterialAppBar>,
+      </div>,
       { elevation: trigger ? 10 : 0 }
     );
   }
