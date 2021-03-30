@@ -5,7 +5,7 @@ const AppBarLink = ({ className, children, ...props }) => {
   return (
     <a
       className={`
-        cursor-pointer text-base font-regular normal-case inline-block select-none px-4 py-4 
+        cursor-pointer text-base font-regular normal-case inline-block select-none px-4 py-4
         hover:text-KHgold active:bg-KHnavbar-dark active:text-KHgold-slightly-dark
         md:text-lg
         ${className}
@@ -68,7 +68,7 @@ const AppBar = forwardRef(
                 Linktree
               </AppBarLink>
             </div>
-            <div className={width <= 640 ? "hidden" : "visible"}>
+            <div className={width <= 500 ? "hidden" : "visible"}>
               <div className="mr-4">
                 <AppBarLink onClick={() => scroll(aboutUsRef)}>
                   About
@@ -82,7 +82,7 @@ const AppBar = forwardRef(
                 </AppBarLink>
               </div>
             </div>
-            <div className={width > 640 ? "hidden" : "visible"}>
+            <div className={width > 500 ? "hidden" : "visible"}>
               <div className="flex flex-col items-center justify-center">
                 <AppBarLink
                   aria-controls="simple-menu"
