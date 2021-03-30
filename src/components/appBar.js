@@ -1,6 +1,6 @@
-import React, { useState, forwardRef } from "react";
-import { useScrollTrigger, Hidden } from "@material-ui/core";
-
+import React, { useState, useEffect, forwardRef } from "react";
+import { useScrollTrigger } from "@material-ui/core";
+import useWidth from "../useWidth";
 const AppBarLink = ({ className, children, ...props }) => {
   return (
     <a
@@ -41,8 +41,14 @@ const AppBar = forwardRef(
         0px 4px 18px 3px rgba(0,0,0,0.12)
       `,
     };
-
+    const width = useWidth();
     const [isOpen, setIsOpen] = useState(false);
+
+    useEffect(() => {
+      if (width > 640) {
+        setIsOpen(false);
+      }
+    }, [width]);
 
     return React.cloneElement(
       <div
@@ -62,7 +68,7 @@ const AppBar = forwardRef(
                 Linktree
               </AppBarLink>
             </div>
-            <Hidden smDown={true}>
+            <div className={width <= 640 ? "hidden" : "visible"}>
               <div className="mr-4">
                 <AppBarLink onClick={() => scroll(aboutUsRef)}>
                   About
@@ -75,8 +81,8 @@ const AppBar = forwardRef(
                   Contact Us
                 </AppBarLink>
               </div>
-            </Hidden>
-            <Hidden smUp={true}>
+            </div>
+            <div className={width > 640 ? "hidden" : "visible"}>
               <div className="flex flex-col items-center justify-center">
                 <AppBarLink
                   aria-controls="simple-menu"
@@ -96,7 +102,7 @@ const AppBar = forwardRef(
                   <FontAwesomeIcon icon={faBars} />
                 </AppBarLink>
               </div>
-            </Hidden>
+            </div>
           </div>
           <div
             className={"flex flex-col ml-4 " + (isOpen ? "visible" : "hidden")}
