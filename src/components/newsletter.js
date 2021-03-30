@@ -26,7 +26,7 @@ const Newsletter = () => {
 
   return (
     <div className="flex flex-col justify-center items-center text-center text-white w-full md:w-1/2 h-full mt-16 sm:m-0">
-      <h1 className="text-xl md:text-2xl lg:text-3xl font-light text-white w-full">
+      <h1 className="text-xl md:text-2xl lg:text-3xl font-light text-gray-50 w-full">
         Sign up for our newsletter!
       </h1>
       <form
