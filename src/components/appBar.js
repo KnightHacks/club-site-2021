@@ -1,14 +1,21 @@
 import React, { useState, forwardRef } from "react";
-import {
-  AppBar as MaterialAppBar,
-  Toolbar,
-  Button,
-  ButtonGroup,
-  useScrollTrigger,
-  Hidden,
-  Menu,
-  MenuItem,
-} from "@material-ui/core";
+import { useScrollTrigger, Hidden } from "@material-ui/core";
+
+const AppBarLink = ({ className, children, ...props }) => {
+  return (
+    <a
+      className={`
+        cursor-pointer text-base font-regular normal-case inline-block select-none px-4 py-4 
+        hover:text-KHgold active:bg-KHnavbar-dark active:text-KHgold-slightly-dark
+        md:text-lg
+        ${className}
+      `}
+      {...props}
+    >
+      {children}
+    </a>
+  );
+};
 
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -27,143 +34,108 @@ const AppBar = forwardRef(
       });
     };
 
-    const [anchorEl, setAnchorEl] = useState(null);
+    const shadow = {
+      boxShadow: `
+        0px 6px 6px -3px rgba(0,0,0,0.2),
+        0px 10px 14px 1px rgba(0,0,0,0.14),
+        0px 4px 18px 3px rgba(0,0,0,0.12)
+      `,
+    };
+
+    const [isOpen, setIsOpen] = useState(false);
 
     return React.cloneElement(
-      <MaterialAppBar
+      <div
+        style={trigger ? shadow : null}
         className={
-          trigger
+          "fixed w-full z-50 " +
+          (trigger
             ? "bg-KHnavbar transition ease-out duration-300"
-            : "bg-transparent transition ease-out duration-300"
+            : "bg-transparent transition ease-out duration-300")
         }
-        position="fixed"
         ref={ref}
       >
-        <Toolbar className="flex justify-between xs:text-base sm:text-lg md:text-xl">
-          <Button
-            href="https://linktr.ee/knighthacks"
-            className={`
-              text-base text-white font-regular normal-case
+        <div className="text-white flex flex-col">
+          <div className="flex flex-row items-center justify-between xs:text-base sm:text-lg md:text-xl">
+            <div className="ml-4">
+              <AppBarLink href="https://linktr.ee/knighthacks">
+                Linktree
+              </AppBarLink>
+            </div>
+            <Hidden smDown={true}>
+              <div className="mr-4">
+                <AppBarLink onClick={() => scroll(aboutUsRef)}>
+                  About
+                </AppBarLink>
+                <AppBarLink onClick={() => scroll(eventsRef)}>
+                  Events
+                </AppBarLink>
+                <AppBarLink onClick={() => scroll(teamsRef)}>Team</AppBarLink>
+                <AppBarLink onClick={() => scroll(contactUsRef)}>
+                  Contact Us
+                </AppBarLink>
+              </div>
+            </Hidden>
+            <Hidden smUp={true}>
+              <div className="flex flex-col items-center justify-center">
+                <AppBarLink
+                  aria-controls="simple-menu"
+                  aria-haspopup="true"
+                  color="inherit"
+                  className={`
+              text-base
+              font-regular normal-case
+              focus:outline-none focus:ring-0
+              focus:text-KHgold
               md:text-lg
+              bg-opacity-0
               `}
-            color="inherit"
+                  onClick={() => setIsOpen(!isOpen)}
+                  style={{ backgroundColor: "transparent" }}
+                >
+                  <FontAwesomeIcon icon={faBars} />
+                </AppBarLink>
+              </div>
+            </Hidden>
+          </div>
+          <div
+            className={"flex flex-col ml-4 " + (isOpen ? "visible" : "hidden")}
           >
-            Linktree
-          </Button>
-          <Hidden smDown={true}>
-            <ButtonGroup variant="none">
-              <Button
-                className={`
-                text-base
-                font-regular normal-case
-                focus:outline-none focus:ring-0
-                focus:text-KHgold
-                md:text-lg
-                `}
-                color="inherit"
-                onClick={() => scroll(aboutUsRef)}
-              >
-                About
-              </Button>
-              <Button
-                className={`
-                text-base
-                font-regular normal-case
-                focus:outline-none focus:ring-0
-                focus:text-KHgold
-                md:text-lg
-                `}
-                color="inherit"
-                onClick={() => scroll(eventsRef)}
-              >
-                Events
-              </Button>
-              <Button
-                className={`
-              text-base
-              font-regular normal-case
-              focus:outline-none focus:ring-0
-              focus:text-KHgold
-              md:text-lg
-              `}
-                color="inherit"
-                onClick={() => scroll(teamsRef)}
-              >
-                Team
-              </Button>
-              <Button
-                className={`
-              text-base
-              font-regular normal-case
-              focus:outline-none focus:ring-0
-              focus:text-KHgold
-              md:text-lg
-              `}
-                color="inherit"
-                onClick={() => scroll(contactUsRef)}
-              >
-                Contact Us
-              </Button>
-            </ButtonGroup>
-          </Hidden>
-          <Hidden smUp={true}>
-            <Button
-              aria-controls="simple-menu"
-              aria-haspopup="true"
-              color="inherit"
-              className={`
-              text-base
-              font-regular normal-case
-              focus:outline-none focus:ring-0
-              focus:text-KHgold
-              md:text-lg
-              `}
-              onClick={(event) => setAnchorEl(event.currentTarget)}
+            <AppBarLink
+              onClick={async () => {
+                await setIsOpen(false);
+                scroll(aboutUsRef);
+              }}
             >
-              <FontAwesomeIcon icon={faBars} />
-            </Button>
-            <Menu
-              anchorEl={anchorEl}
-              keepMounted
-              open={Boolean(anchorEl)}
-              onClose={() => setAnchorEl(null)}
+              About
+            </AppBarLink>
+            <AppBarLink
+              onClick={async () => {
+                await setIsOpen(false);
+                scroll(eventsRef);
+              }}
             >
-              <MenuItem
-                onClick={() => {
-                  scroll(aboutUsRef);
-                  setAnchorEl(null);
-                }}
-              >
-                About
-              </MenuItem>
-              <MenuItem
-                onClick={() => {
-                  scroll(eventsRef);
-                  setAnchorEl(null);
-                }}
-              >
-                Events
-              </MenuItem>
-              <MenuItem
-                onClick={() => {
-                  scroll(teamsRef);
-                  setAnchorEl(null);
-                }}
-              >
-                Team
-              </MenuItem>
-              <MenuItem
-                onClick={() => {
-                  scroll(contactUsRef);
-                  setAnchorEl(null);
-                }}
-              >
-                Contact Us
-              </MenuItem>
-            </Menu>
-          </Hidden>
-        </Toolbar>
-      </MaterialAppBar>,
+              Events
+            </AppBarLink>
+            <AppBarLink
+              onClick={async () => {
+                await setIsOpen(false);
+                scroll(teamsRef);
+              }}
+            >
+              Team
+            </AppBarLink>
+            <AppBarLink
+              onClick={async () => {
+                await setIsOpen(false);
+                scroll(contactUsRef);
+              }}
+            >
+              Contact Us
+            </AppBarLink>
+          </div>
+        </div>
+      </div>,
       { elevation: trigger ? 10 : 0 }
     );
   }
