@@ -1,6 +1,6 @@
 import React from "react";
 import Carousel from "react-elastic-carousel";
-import CountUp from "react-countup";
+import CountUp, { startAnimation } from "react-countup";
 import "./teams.css";
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
@@ -88,6 +88,8 @@ const Teams = forwardRef((props, ref) => {
           }
           memberCount
           directorCount
+          hackathonCount
+          workshopCount
         }
       }
     }
@@ -201,28 +203,43 @@ const Teams = forwardRef((props, ref) => {
         ))}
       </Carousel>
 
-      <h1 className="font-light flex items-start justify-around text-center text-gray-50 text-3xl w-full my-5 flex-wrap">
-        Our Members
-      </h1>
-
-      <div className="font-light flex justify-center flex-row text-white mb-12">
-        <div className="text-4xl text-center my-0 mx-3.5">
+      <div className="font-light flex justify-center flex-row text-white my-10 sm:flex-row flex-col">
+        <div className="text-5xl sm:text-6xl md:text-7xl text-center my-3 mx-3.5 font-bold">
+          <h1 className="mb-0">
+            <CountUp
+              end={data.markdownRemark.frontmatter.workshopCount}
+              duration={10}
+            />
+            <sup className="text-4xl"> + </sup>
+          </h1>
+          <p className="m-0 text-xl"> workshops</p>
+        </div>
+        <div className="text-5xl sm:text-6xl md:text-7xl text-center my-3 mx-3.5 font-bold">
+          <h1 className="mb-0">
+            <CountUp
+              end={data.markdownRemark.frontmatter.hackathonCount}
+              duration={10}
+            />
+          </h1>
+          <p className="m-0 text-xl"> hackathons</p>
+        </div>
+        <div className="text-5xl sm:text-6xl md:text-7xl text-center my-3 mx-3.5 font-bold">
           <h1 className="mb-0">
             <CountUp
               end={data.markdownRemark.frontmatter.memberCount}
-              duration={7}
+              duration={10}
             />
           </h1>
-          <span className="m-0 text-2xl">active members</span>
+          <p className="m-0 text-xl"> active members</p>
         </div>
-        <div className="text-4xl text-center">
+        <div className="text-5xl sm:text-6xl md:text-7xl text-center my-3 mx-3.5 font-bold">
           <h1 className="mb-0">
             <CountUp
               end={data.markdownRemark.frontmatter.directorCount}
-              duration={7}
+              duration={10}
             />
           </h1>
-          <span className="m-0 text-2xl">developers & directors</span>
+          <p className="m-0 text-xl"> developers & directors</p>
         </div>
       </div>
     </div>

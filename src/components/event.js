@@ -60,7 +60,6 @@ const Event = (props) => {
             <div className="flex justify-end">
               {props.tags.map((tag) => (
                 <div
-                  key={tag}
                   style={{ backgroundColor: hash.hex(tag) }}
                   className="rounded-full mx-1 mt-2 px-3 text-gray-600 font-regular"
                 >
