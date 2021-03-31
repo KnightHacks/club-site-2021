@@ -5,7 +5,7 @@ const AppBarLink = ({ className, children, ...props }) => {
   return (
     <a
       className={`
-        cursor-pointer text-base font-regular normal-case inline-block select-none px-4 py-4
+        cursor-pointer text-base font-regular normal-case inline-block select-none px-8 py-4
         hover:text-KHgold active:bg-KHnavbar-dark active:text-KHgold-slightly-dark
         md:text-lg
         ${className}
@@ -63,13 +63,13 @@ const AppBar = forwardRef(
       >
         <div className="text-white flex flex-col">
           <div className="flex flex-row items-center justify-between xs:text-base sm:text-lg md:text-xl">
-            <div className="ml-4">
+            <div>
               <AppBarLink href="https://linktr.ee/knighthacks">
                 Linktree
               </AppBarLink>
             </div>
             <div className={width <= 500 ? "hidden" : "visible"}>
-              <div className="mr-4">
+              <div>
                 <AppBarLink onClick={() => scroll(aboutUsRef)}>
                   About
                 </AppBarLink>
@@ -87,15 +87,6 @@ const AppBar = forwardRef(
                 <AppBarLink
                   aria-controls="simple-menu"
                   aria-haspopup="true"
-                  color="inherit"
-                  className={`
-              text-base
-              font-regular normal-case
-              focus:outline-none focus:ring-0
-              focus:text-KHgold
-              md:text-lg
-              bg-opacity-0
-              `}
                   onClick={() => setIsOpen(!isOpen)}
                   style={{ backgroundColor: "transparent" }}
                 >
