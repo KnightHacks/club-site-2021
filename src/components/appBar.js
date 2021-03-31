@@ -61,7 +61,7 @@ const AppBar = forwardRef(
         }
         ref={ref}
       >
-        <div className="flex flex-row flex-wrap items-center justify-between xs:text-base sm:text-lg md:text-xl">
+        <div className="flex flex-row flex-nowrap overflow-hidden items-center justify-between xs:text-base sm:text-lg md:text-xl">
           <AppBarLink
             className="flex-auto"
             href="https://linktr.ee/knighthacks"
@@ -101,9 +101,8 @@ const AppBar = forwardRef(
              * Sorry.
              */
             maxHeight: isOpen ? 224 : 0,
-            overflow: "hidden",
           }}
-          className="transition-all flex flex-col"
+          className="overflow-hidden transition-all flex flex-col"
         >
           <AppBarLink
             onClick={async () => {
