@@ -10,7 +10,7 @@ import {
 
 const Contacts = () => {
   return (
-    <div className="flex flex-col justify-center items-center text-center text-white w-full md:w-1/2 h-full">
+    <div className="flex flex-col justify-center items-center text-center text-gray-50 w-full md:w-1/2 h-full">
       <h1 className="font-light text-xl md:text-2xl lg:text-3xl my-6 w-full">
         Join the conversation.
       </h1>
@@ -20,7 +20,7 @@ const Contacts = () => {
             <FontAwesomeIcon
               icon={faDiscord}
               color="white"
-              className="mb-8 text-7xl md:text-8xl lg:text-9xl hover:text-gray-500"
+              className="mb-8 text-6xl md:text-7xl lg:text-8xl hover:text-gray-500"
             />
           </a>
         </div>
@@ -29,28 +29,28 @@ const Contacts = () => {
             <FontAwesomeIcon
               icon={faGithub}
               color="white"
-              className="text-5xl md:text-6xl lg:text-7xl hover:text-gray-500"
+              className="text-4xl md:text-5xl lg:text-6xl hover:text-gray-500"
             />
           </a>
           <a href="https://www.instagram.com/knighthacks/">
             <FontAwesomeIcon
               icon={faInstagram}
               color="white"
-              className="text-5xl md:text-6xl lg:text-7xl hover:text-gray-500"
+              className="text-4xl md:text-5xl lg:text-6xl hover:text-gray-500"
             />
           </a>
           <a href="https://www.facebook.com/KnightHacks/">
             <FontAwesomeIcon
               icon={faFacebook}
               color="white"
-              className="text-5xl md:text-6xl lg:text-7xl hover:text-gray-500"
+              className="text-4xl md:text-5xl lg:text-6xl hover:text-gray-500"
             />
           </a>
           <a href="https://twitter.com/KnightHacks?lang=en/">
             <FontAwesomeIcon
               icon={faTwitter}
               color="white"
-              className="text-5xl md:text-6xl lg:text-7xl hover:text-gray-500"
+              className="text-4xl md:text-5xl lg:text-6xl hover:text-gray-500"
             />
           </a>
         </div>
