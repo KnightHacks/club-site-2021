@@ -62,11 +62,12 @@ const AppBar = forwardRef(
         ref={ref}
       >
         <div className="flex flex-row items-center justify-between xs:text-base sm:text-lg md:text-xl">
-          <div>
-            <AppBarLink href="https://linktr.ee/knighthacks">
-              Linktree
-            </AppBarLink>
-          </div>
+          <AppBarLink
+            className="flex-auto"
+            href="https://linktr.ee/knighthacks"
+          >
+            Linktree
+          </AppBarLink>
           <div className={width <= 500 ? "hidden" : "visible"}>
             <AppBarLink onClick={() => scroll(aboutUsRef)}>About</AppBarLink>
             <AppBarLink onClick={() => scroll(eventsRef)}>Events</AppBarLink>
@@ -92,9 +93,7 @@ const AppBar = forwardRef(
             </AppBarLink>
           </div>
         </div>
-        <div
-          className={"flex flex-col ml-4 " + (isOpen ? "visible" : "hidden")}
-        >
+        <div className={"flex flex-col " + (isOpen ? "visible" : "hidden")}>
           <AppBarLink
             onClick={async () => {
               await setIsOpen(false);
