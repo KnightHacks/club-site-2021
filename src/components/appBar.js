@@ -45,7 +45,7 @@ const AppBar = forwardRef(
     const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
-      if (width > 640) {
+      if (width > 500) {
         setIsOpen(false);
       }
     }, [width]);
