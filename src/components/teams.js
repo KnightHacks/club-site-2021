@@ -1,6 +1,6 @@
 import React from "react";
 import Carousel from "react-elastic-carousel";
-import CountUp from "react-countup";
+import CountUp, { startAnimation } from "react-countup";
 import "./teams.css";
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
@@ -69,6 +69,8 @@ const Teams = forwardRef((props, ref) => {
           }
           memberCount
           directorCount
+          hackathonCount
+          workshopCount
         }
       }
     }
@@ -182,28 +184,57 @@ const Teams = forwardRef((props, ref) => {
         ))}
       </Carousel>
 
-      <h1 className="font-light flex items-start justify-around text-center text-gray-50 text-3xl w-full my-5 flex-wrap">
-        Our Members
+      <h1 className="font-lightitalic text-center text-gray-50 text-3xl w-full mt-5 ">
+        ... and how we've grown!
       </h1>
 
-      <div className="font-light flex justify-center flex-row text-white mb-12">
-        <div className="text-4xl text-center my-0 mx-3.5">
-          <h1 className="mb-0">
-            <CountUp
-              end={data.markdownRemark.frontmatter.memberCount}
-              duration={7}
-            />
-          </h1>
-          <span className="m-0 text-2xl">active members</span>
+      <div className="font-light flex justify-between text-gray-50 mt-12 mb-10 flex-col sm:flex-row">
+        <div className="flex flex-col md:flex-row">
+          <div className="text-6xl lg:text-7xl text-center my-3 mx-5 lg:mx-7 font-bold">
+            <h1 className="mb-0">
+              <CountUp
+                end={data.markdownRemark.frontmatter.workshopCount}
+                duration={10}
+              />
+              <sup className="text-4xl"> + </sup>
+            </h1>
+            <p className="m-0 text-lg md:text-xl lg:text-2xl"> workshops</p>
+          </div>
+          <div className="text-6xl lg:text-7xl text-center my-3 mx-5 lg:mx-7 font-bold">
+            <h1 className="mb-0">
+              <CountUp
+                end={data.markdownRemark.frontmatter.hackathonCount}
+                duration={10}
+              />
+            </h1>
+            <p className="m-0 text-lg md:text-xl lg:text-2xl"> hackathons</p>
+          </div>
         </div>
-        <div className="text-4xl text-center">
-          <h1 className="mb-0">
-            <CountUp
-              end={data.markdownRemark.frontmatter.directorCount}
-              duration={7}
-            />
-          </h1>
-          <span className="m-0 text-2xl">developers & directors</span>
+        <div className="flex flex-col md:flex-row">
+          <div className="text-6xl lg:text-7xl text-center my-3 mx-5 lg:mx-7 font-bold">
+            <h1 className="mb-0">
+              <CountUp
+                end={data.markdownRemark.frontmatter.memberCount}
+                duration={10}
+              />
+            </h1>
+            <p className="m-0 text-lg md:text-xl lg:text-2xl">
+              {" "}
+              active members
+            </p>
+          </div>
+          <div className="text-6xl lg:text-7xl text-center my-3 mx-5 lg:mx-7 font-bold">
+            <h1 className="mb-0">
+              <CountUp
+                end={data.markdownRemark.frontmatter.directorCount}
+                duration={10}
+              />
+            </h1>
+            <p className="m-0 text-lg md:text-xl lg:text-2xl">
+              {" "}
+              developers & directors
+            </p>
+          </div>
         </div>
       </div>
     </div>
