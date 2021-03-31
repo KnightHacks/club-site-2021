@@ -7,6 +7,7 @@ import CardHeader from "@material-ui/core/CardHeader";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import useWidth from "../useWidth";
 import {
   faLinkedin,
   faInstagram,
@@ -18,26 +19,6 @@ import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState, forwardRef } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-
-const useWidth = () => {
-  let tempWidth;
-  if (typeof window !== "undefined") {
-    tempWidth = window.innerWidth;
-  }
-
-  const [width, setWidth] = useState(tempWidth);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  return width;
-};
 
 const getItemsToShow = (width) => {
   switch (true) {

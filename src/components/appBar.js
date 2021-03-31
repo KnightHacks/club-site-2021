@@ -1,11 +1,11 @@
-import React, { forwardRef } from "react";
+import React, { useState, useEffect, forwardRef } from "react";
 import { useScrollTrigger } from "@material-ui/core";
-
+import useWidth from "../useWidth";
 const AppBarLink = ({ className, children, ...props }) => {
   return (
     <a
       className={`
-        cursor-pointer text-base font-regular normal-case inline-block select-none px-4 py-4 
+        cursor-pointer text-base font-regular normal-case inline-block select-none px-4 py-4
         hover:text-KHgold active:bg-KHnavbar-dark active:text-KHgold-slightly-dark
         md:text-lg
         ${className}
@@ -16,6 +16,9 @@ const AppBarLink = ({ className, children, ...props }) => {
     </a>
   );
 };
+
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const AppBar = forwardRef(
   ({ appBarRef, aboutUsRef, eventsRef, contactUsRef, teamsRef }, ref) => {
@@ -38,6 +41,14 @@ const AppBar = forwardRef(
         0px 4px 18px 3px rgba(0,0,0,0.12)
       `,
     };
+    const width = useWidth();
+    const [isOpen, setIsOpen] = useState(false);
+
+    useEffect(() => {
+      if (width > 640) {
+        setIsOpen(false);
+      }
+    }, [width]);
 
     return React.cloneElement(
       <div
@@ -50,17 +61,82 @@ const AppBar = forwardRef(
         }
         ref={ref}
       >
-        <div className="text-white flex justify-between xs:text-base sm:text-lg md:text-xl">
-          <div className="ml-4">
-            <AppBarLink href="https://linktr.ee/knighthacks">
-              Linktree
-            </AppBarLink>
+        <div className="text-white flex flex-col">
+          <div className="flex flex-row items-center justify-between xs:text-base sm:text-lg md:text-xl">
+            <div className="ml-4">
+              <AppBarLink href="https://linktr.ee/knighthacks">
+                Linktree
+              </AppBarLink>
+            </div>
+            <div className={width <= 500 ? "hidden" : "visible"}>
+              <div className="mr-4">
+                <AppBarLink onClick={() => scroll(aboutUsRef)}>
+                  About
+                </AppBarLink>
+                <AppBarLink onClick={() => scroll(eventsRef)}>
+                  Events
+                </AppBarLink>
+                <AppBarLink onClick={() => scroll(teamsRef)}>Team</AppBarLink>
+                <AppBarLink onClick={() => scroll(contactUsRef)}>
+                  Contact Us
+                </AppBarLink>
+              </div>
+            </div>
+            <div className={width > 500 ? "hidden" : "visible"}>
+              <div className="flex flex-col items-center justify-center">
+                <AppBarLink
+                  aria-controls="simple-menu"
+                  aria-haspopup="true"
+                  color="inherit"
+                  className={`
+              text-base
+              font-regular normal-case
+              focus:outline-none focus:ring-0
+              focus:text-KHgold
+              md:text-lg
+              bg-opacity-0
+              `}
+                  onClick={() => setIsOpen(!isOpen)}
+                  style={{ backgroundColor: "transparent" }}
+                >
+                  <FontAwesomeIcon icon={faBars} />
+                </AppBarLink>
+              </div>
+            </div>
           </div>
-          <div className="mr-4">
-            <AppBarLink onClick={() => scroll(aboutUsRef)}>About</AppBarLink>
-            <AppBarLink onClick={() => scroll(eventsRef)}>Events</AppBarLink>
-            <AppBarLink onClick={() => scroll(teamsRef)}>Team</AppBarLink>
-            <AppBarLink onClick={() => scroll(contactUsRef)}>
+          <div
+            className={"flex flex-col ml-4 " + (isOpen ? "visible" : "hidden")}
+          >
+            <AppBarLink
+              onClick={async () => {
+                await setIsOpen(false);
+                scroll(aboutUsRef);
+              }}
+            >
+              About
+            </AppBarLink>
+            <AppBarLink
+              onClick={async () => {
+                await setIsOpen(false);
+                scroll(eventsRef);
+              }}
+            >
+              Events
+            </AppBarLink>
+            <AppBarLink
+              onClick={async () => {
+                await setIsOpen(false);
+                scroll(teamsRef);
+              }}
+            >
+              Team
+            </AppBarLink>
+            <AppBarLink
+              onClick={async () => {
+                await setIsOpen(false);
+                scroll(contactUsRef);
+              }}
+            >
               Contact Us
             </AppBarLink>
           </div>
