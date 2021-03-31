@@ -1,6 +1,9 @@
 import React, { useState, useEffect, forwardRef } from "react";
 import { useScrollTrigger } from "@material-ui/core";
 import useWidth from "../useWidth";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const AppBarLink = ({ className, children, ...props }) => {
   return (
     <a
@@ -16,9 +19,6 @@ const AppBarLink = ({ className, children, ...props }) => {
     </a>
   );
 };
-
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const AppBar = forwardRef(
   ({ appBarRef, aboutUsRef, eventsRef, contactUsRef, teamsRef }, ref) => {
