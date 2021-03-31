@@ -92,7 +92,19 @@ const AppBar = forwardRef(
             </AppBarLink>
           </div>
         </div>
-        <div className={"flex flex-col " + (isOpen ? "visible" : "hidden")}>
+        <div
+          style={{
+            /*
+             * 224 is the exact height of the links we are using. This will
+             * break if/when links are added/removed. There's no trivial way to
+             * do this automatically so I'm resorting to this hack for now.
+             * Sorry.
+             */
+            maxHeight: isOpen ? 224 : 0,
+            overflow: "hidden",
+          }}
+          className="transition-all flex flex-col"
+        >
           <AppBarLink
             onClick={async () => {
               await setIsOpen(false);
