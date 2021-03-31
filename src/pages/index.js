@@ -139,7 +139,7 @@ const IndexPage = ({ data }) => {
             </div>
             <Teams ref={teamsRef} />
             <div className="flex flex-col my-5 h-96" ref={contactUsRef}>
-              <h1 className="font-light flex justify-center text-gray-50 text-4xl mt-14 my-5 lg:text-5xl">
+              <h1 className="font-light flex justify-center text-gray-50 text-4xl mt-24 my-5 lg:text-5xl">
                 Connect With Us
               </h1>
               <div className="my-6 flex flex-col md:flex-row items-center justify-around w-full text-center h-full">
