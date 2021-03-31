@@ -87,7 +87,6 @@ const AppBar = forwardRef(
               aria-controls="simple-menu"
               aria-haspopup="true"
               onClick={() => setIsOpen(!isOpen)}
-              style={{ backgroundColor: "transparent" }}
             >
               <FontAwesomeIcon icon={faBars} />
             </AppBarLink>
