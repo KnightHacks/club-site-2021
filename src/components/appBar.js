@@ -61,7 +61,7 @@ const AppBar = forwardRef(
         }
         ref={ref}
       >
-        <div className="flex flex-row items-center justify-between xs:text-base sm:text-lg md:text-xl">
+        <div className="flex flex-row flex-wrap items-center justify-between xs:text-base sm:text-lg md:text-xl">
           <AppBarLink
             className="flex-auto"
             href="https://linktr.ee/knighthacks"
