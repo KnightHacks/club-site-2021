@@ -45,7 +45,7 @@ const AppBar = forwardRef(
     const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
-      if (width > 500) {
+      if (width > 600) {
         setIsOpen(false);
       }
     }, [width]);
@@ -68,7 +68,7 @@ const AppBar = forwardRef(
           >
             Linktree
           </AppBarLink>
-          <div className={width <= 500 ? "hidden" : "visible"}>
+          <div className={width <= 600 ? "hidden" : "visible"}>
             <AppBarLink onClick={() => scroll(aboutUsRef)}>About</AppBarLink>
             <AppBarLink onClick={() => scroll(eventsRef)}>Events</AppBarLink>
             <AppBarLink onClick={() => scroll(teamsRef)}>Team</AppBarLink>
@@ -78,9 +78,9 @@ const AppBar = forwardRef(
           </div>
           <div
             className={
-              width > 500
+              width > 600
                 ? "hidden"
-                : "visible" + "flex flex-col items-center justify-center"
+                : "visible" + " flex flex-col items-center justify-center"
             }
           >
             <AppBarLink
