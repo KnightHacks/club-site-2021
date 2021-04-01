@@ -22,6 +22,10 @@ const AppBarLink = ({ className, children, ...props }) => {
 
 const AppBar = forwardRef(
   ({ appBarRef, aboutUsRef, eventsRef, contactUsRef, teamsRef }, ref) => {
+    const HAMBURGER_HEIGHT = appBarRef.current
+      ? appBarRef.current.clientHeight * 4
+      : 0;
+
     const trigger = useScrollTrigger({
       disableHysteresis: true,
       threshold: 0,
@@ -29,7 +33,10 @@ const AppBar = forwardRef(
 
     const scroll = (toRef) => {
       window.scrollTo({
-        top: toRef.current.offsetTop - appBarRef.current.clientHeight,
+        top:
+          toRef.current.offsetTop -
+          appBarRef.current.clientHeight +
+          (isOpen ? HAMBURGER_HEIGHT : 0),
         behavior: "smooth",
       });
     };
@@ -95,42 +102,42 @@ const AppBar = forwardRef(
         <div
           style={{
             /*
-             * 224 is the exact height of the links we are using. This will
-             * break if/when links are added/removed. There's no trivial way to
-             * do this automatically so I'm resorting to this hack for now.
-             * Sorry.
+             * HAMBURGER_HEIGHT is the exact height of the links we are
+             * using. This will break if/when links are added/removed. There's
+             * no trivial way to do this automatically so I'm resorting to this
+             * hack for now. Sorry.
              */
-            maxHeight: isOpen ? 224 : 0,
+            maxHeight: isOpen ? HAMBURGER_HEIGHT : 0,
           }}
           className="overflow-hidden transition-all flex flex-col"
         >
           <AppBarLink
-            onClick={async () => {
-              await setIsOpen(false);
+            onClick={() => {
+              setIsOpen(false);
               scroll(aboutUsRef);
             }}
           >
             About
           </AppBarLink>
           <AppBarLink
-            onClick={async () => {
-              await setIsOpen(false);
+            onClick={() => {
+              setIsOpen(false);
               scroll(eventsRef);
             }}
           >
             Events
           </AppBarLink>
           <AppBarLink
-            onClick={async () => {
-              await setIsOpen(false);
+            onClick={() => {
+              setIsOpen(false);
               scroll(teamsRef);
             }}
           >
             Team
           </AppBarLink>
           <AppBarLink
-            onClick={async () => {
-              await setIsOpen(false);
+            onClick={() => {
+              setIsOpen(false);
               scroll(contactUsRef);
             }}
           >
