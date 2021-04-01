@@ -4,8 +4,6 @@ import useWidth from "../useWidth";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const HAMBURGER_HEIGHT = 224;
-
 const AppBarLink = ({ className, children, ...props }) => {
   return (
     <a
@@ -24,6 +22,8 @@ const AppBarLink = ({ className, children, ...props }) => {
 
 const AppBar = forwardRef(
   ({ appBarRef, aboutUsRef, eventsRef, contactUsRef, teamsRef }, ref) => {
+    const HAMBURGER_HEIGHT = appBarRef.current.clientHeight * 4;
+
     const trigger = useScrollTrigger({
       disableHysteresis: true,
       threshold: 0,
