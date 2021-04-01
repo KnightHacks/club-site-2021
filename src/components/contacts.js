@@ -20,11 +20,11 @@ const Contacts = () => {
             <FontAwesomeIcon
               icon={faDiscord}
               color="white"
-              className="mb-8 text-6xl md:text-7xl lg:text-8xl hover:text-gray-500"
+              className="mb-8 text-4xl md:text-7xl lg:text-8xl hover:text-gray-500"
             />
           </a>
         </div>
-        <div className="w-80 flex justify-between mb-4">
+        <div className="w-80 flex justify-evenly mb-4">
           <a href="https://github.com/KnightHacks">
             <FontAwesomeIcon
               icon={faGithub}
