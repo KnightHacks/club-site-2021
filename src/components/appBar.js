@@ -22,7 +22,9 @@ const AppBarLink = ({ className, children, ...props }) => {
 
 const AppBar = forwardRef(
   ({ appBarRef, aboutUsRef, eventsRef, contactUsRef, teamsRef }, ref) => {
-    const HAMBURGER_HEIGHT = appBarRef.current.clientHeight * 4;
+    const HAMBURGER_HEIGHT = appBarRef.current
+      ? appBarRef.current.clientHeight * 4
+      : 0;
 
     const trigger = useScrollTrigger({
       disableHysteresis: true,
