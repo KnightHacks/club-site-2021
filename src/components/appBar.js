@@ -145,7 +145,7 @@ const AppBar = forwardRef(
           </AppBarLink>
         </div>
       </div>,
-      { elevation: trigger ? 10 : 0 }
+      { elevation: trigger ? 25 : 0 }
     );
   }
 );
