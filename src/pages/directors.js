@@ -8,21 +8,9 @@ import "./index.css";
 import { Grid } from "@material-ui/core";
 
 const directors = ({ data }) => {
-  const appBarRef = useRef(null);
-  const aboutUsRef = useRef(null);
-  const eventsRef = useRef(null);
-  const teamsRef = useRef(null);
-  const contactUsRef = useRef(null);
+
   return (
     <StylesProvider injectFirst>
-      <AppBar
-        ref={appBarRef}
-        appBarRef={appBarRef}
-        aboutUsRef={aboutUsRef}
-        eventsRef={eventsRef}
-        teamsRef={teamsRef}
-        contactUsRef={contactUsRef}
-      />
       <Particles>
         <h1 className="font-light flex justify-center mt-24 text-gray-50 text-4xl my-5 ml-6 lg:text-5xl">
           Past Directors
