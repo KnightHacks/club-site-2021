@@ -77,7 +77,7 @@ const directors = forwardRef((props, ref) => {
           </h1>
 
           <div className="mt-32 ml-36 justify-center">
-            <Grid container spacing={3}>
+            <Grid container spacing={22}>
               <Grid item>
                 {members.map((member, index) => (
                   <Card key={index}>
@@ -132,39 +132,6 @@ const directors = forwardRef((props, ref) => {
                   </Card>
                 ))}
                 );
-              </Grid>
-              <Grid item>
-                <Card />
-              </Grid>
-              <Grid item>
-                <Card />
-              </Grid>
-              <Grid item>
-                <Card />
-              </Grid>
-              <Grid item>
-                <Card />
-              </Grid>
-              <Grid item>
-                <Card />
-              </Grid>
-              <Grid item>
-                <Card />
-              </Grid>
-              <Grid item>
-                <Card />
-              </Grid>
-              <Grid item>
-                <Card />
-              </Grid>
-              <Grid item>
-                <Card />
-              </Grid>
-              <Grid item>
-                <Card />
-              </Grid>
-              <Grid item>
-                <Card />
               </Grid>
             </Grid>
           </div>

@@ -4,7 +4,7 @@ members:
   [
     {
       name: "Test 1",
-      position: "",
+      position: "TEST TEST TEST ",
       contributions: "",
       image: "",
       linkedin: "",
