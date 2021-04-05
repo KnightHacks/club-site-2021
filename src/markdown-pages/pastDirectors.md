@@ -1,14 +1,33 @@
 ---
-title: "Directors"
+title: "pastDirectors"
 members:
   [
     {
-      name: "",
+      name: "Test 1",
       position: "",
       contributions: "",
       image: "",
       linkedin: "",
       instagram: "",
+      years: "",
+    },
+    {
+      name: "Test 2",
+      position: "",
+      contributions: "",
+      image: "",
+      linkedin: "",
+      instagram: "",
+      years: "",
+    },
+    {
+      name: "Test 3",
+      position: "",
+      contributions: "",
+      image: "",
+      linkedin: "",
+      instagram: "",
+      years: "",
     },
     {
       name: "",
@@ -17,6 +36,7 @@ members:
       image: "",
       linkedin: "",
       instagram: "",
+      years: "",
     },
     {
       name: "",
@@ -25,6 +45,7 @@ members:
       image: "",
       linkedin: "",
       instagram: "",
+      years: "",
     },
     {
       name: "",
@@ -33,22 +54,7 @@ members:
       image: "",
       linkedin: "",
       instagram: "",
-    },
-    {
-      name: "",
-      position: "",
-      contributions: "",
-      image: "",
-      linkedin: "",
-      instagram: "",
-    },
-    {
-      name: "",
-      position: "",
-      contributions: "",
-      image: "",
-      linkedin: "",
-      instagram: "",
+      years: "",
     },
   ]
 ---

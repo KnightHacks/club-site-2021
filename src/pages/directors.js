@@ -1,5 +1,5 @@
 import React, { forwardRef, useRef } from "react";
-import AppBar from "../components/appBar.js";
+
 import { StylesProvider } from "@material-ui/core/styles";
 import ReactParticles from "react-particles-js";
 import particles_config from "../particles-config";
@@ -14,21 +14,36 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useStaticQuery, graphql } from "gatsby";
 import { faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import index from "../../src/pages/index.js";
+import { useEffect, useState } from "react";
+
+const shuffleArray = (array) => {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * i);
+    const temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+
+  return array;
+};
 
 const directors = forwardRef((props, ref) => {
+  const [members, setMembers] = useState([]);
   const data = useStaticQuery(graphql`
     query pastDirectorsQuery {
       markdownRemark(frontmatter: { title: { eq: "pastDirectors" } }) {
         frontmatter {
-          directors {
+          members {
             image
             linkedin
             name
             position
             instagram
             github
+            years
           }
         }
       }
@@ -36,17 +51,12 @@ const directors = forwardRef((props, ref) => {
   `);
   useEffect(() => {
     const handleRandomize = () => {
-      const pastDirectors = shuffleArray(
-        data.markdownRemark.frontmatter.pastDirectors
-      );
-      setDirectors(pastDirectors);
+      const members = shuffleArray(data.markdownRemark.frontmatter.members);
+      setMembers(members);
     };
     handleRandomize();
   }, []);
 
-  useEffect(() => {
-    setItemsToShow(getItemsToShow(width));
-  }, [width]);
   return (
     <Router>
       <StylesProvider injectFirst>
@@ -59,26 +69,29 @@ const directors = forwardRef((props, ref) => {
           <Switch>
             <Route path="/index" component={index} exact={true} />
           </Switch>
-          <h1 className="font-light flex justify-center mt-24 text-gray-50 text-4xl my-5 ml-6 lg:text-5xl">
+          <h1
+            className="font-light flex justify-center mt-24 text-gray-50 text-4xl my-5 ml-6 lg:text-5xl"
+            ref={ref}
+          >
             Past Directors
           </h1>
 
           <div className="mt-32 ml-36 justify-center">
-            <Grid container spacing={6}>
+            <Grid container spacing={7}>
               <Grid item>
-                {pastDirectors.map((pastDirectors, index) => (
-                  <Card>
+                {members.map((member, index) => (
+                  <Card key={index}>
                     <CardActionArea>
                       <CardMedia
                         component="img"
                         alt="Student Image"
                         height="140"
-                        image={pastDirectors.image}
+                        image={member.image}
                         title="Student Image"
                       />
                       <CardContent>
                         <Typography gutterBottom variant="h5" component="h2">
-                          {pastDirectors.name}
+                          {member.name}
                         </Typography>
 
                         <Typography
@@ -86,19 +99,19 @@ const directors = forwardRef((props, ref) => {
                           color="textSecondary"
                           component="p"
                         >
-                          {pastDirectors.contributions}
+                          {member.contributions}
                         </Typography>
                       </CardContent>
                     </CardActionArea>
                     <CardActions>
-                      <a href={pastDirectors.linkedin}>
+                      <a href={member.linkedin}>
                         <FontAwesomeIcon
                           icon={faLinkedin}
                           color="#000000"
                           className="mr-2 pr-0.5 pl-2 mt-0 text-4xl hover:text-gray-400"
                         />
                       </a>
-                      <a href={pastDirectors.instagram}>
+                      <a href={member.instagram}>
                         <FontAwesomeIcon
                           icon={faInstagram}
                           color="#000000"
@@ -113,7 +126,7 @@ const directors = forwardRef((props, ref) => {
                         color="textSecondary"
                         component="p"
                       >
-                        Years Active
+                        {member.year}
                       </Typography>
                     </CardActions>
                   </Card>
