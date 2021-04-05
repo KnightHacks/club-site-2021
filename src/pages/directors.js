@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { forwardRef, useRef } from "react";
 import AppBar from "../components/appBar.js";
 import { StylesProvider } from "@material-ui/core/styles";
 import ReactParticles from "react-particles-js";
@@ -17,7 +17,36 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import index from "../../src/pages/index.js";
 
-const directors = ({ data }) => {
+const directors = forwardRef((props, ref) => {
+  const data = useStaticQuery(graphql`
+    query pastDirectorsQuery {
+      markdownRemark(frontmatter: { title: { eq: "pastDirectors" } }) {
+        frontmatter {
+          directors {
+            image
+            linkedin
+            name
+            position
+            instagram
+            github
+          }
+        }
+      }
+    }
+  `);
+  useEffect(() => {
+    const handleRandomize = () => {
+      const pastDirectors = shuffleArray(
+        data.markdownRemark.frontmatter.pastDirectors
+      );
+      setDirectors(pastDirectors);
+    };
+    handleRandomize();
+  }, []);
+
+  useEffect(() => {
+    setItemsToShow(getItemsToShow(width));
+  }, [width]);
   return (
     <Router>
       <StylesProvider injectFirst>
@@ -37,57 +66,58 @@ const directors = ({ data }) => {
           <div className="mt-32 ml-36 justify-center">
             <Grid container spacing={6}>
               <Grid item>
-                <Card>
-                  <CardActionArea>
-                    <CardMedia
-                      component="img"
-                      alt="Student Image"
-                      height="140"
-                      image="../../images/abr.jpg"
-                      title="Student Image"
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        First Last
-                      </Typography>
+                {pastDirectors.map((pastDirectors, index) => (
+                  <Card>
+                    <CardActionArea>
+                      <CardMedia
+                        component="img"
+                        alt="Student Image"
+                        height="140"
+                        image={pastDirectors.image}
+                        title="Student Image"
+                      />
+                      <CardContent>
+                        <Typography gutterBottom variant="h5" component="h2">
+                          {pastDirectors.name}
+                        </Typography>
+
+                        <Typography
+                          variant="body2"
+                          color="textSecondary"
+                          component="p"
+                        >
+                          {pastDirectors.contributions}
+                        </Typography>
+                      </CardContent>
+                    </CardActionArea>
+                    <CardActions>
+                      <a href={pastDirectors.linkedin}>
+                        <FontAwesomeIcon
+                          icon={faLinkedin}
+                          color="#000000"
+                          className="mr-2 pr-0.5 pl-2 mt-0 text-4xl hover:text-gray-400"
+                        />
+                      </a>
+                      <a href={pastDirectors.instagram}>
+                        <FontAwesomeIcon
+                          icon={faInstagram}
+                          color="#000000"
+                          className="mr-2 pr-0.5 pl-2 text-4xl hover:text-gray-400"
+                        />
+                      </a>
 
                       <Typography
-                        variant="body2"
+                        className="pl-1 pb-1.5 text-base"
+                        align="left"
+                        variant="h2"
                         color="textSecondary"
                         component="p"
                       >
-                        A summary of the contributions that were made to the
-                        club
+                        Years Active
                       </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <a>
-                      <FontAwesomeIcon
-                        icon={faLinkedin}
-                        color="#000000"
-                        className="mr-2 pr-0.5 pl-2 mt-0 text-4xl hover:text-gray-400"
-                      />
-                    </a>
-                    <a>
-                      <FontAwesomeIcon
-                        icon={faInstagram}
-                        color="#000000"
-                        className="mr-2 pr-0.5 pl-2 text-4xl hover:text-gray-400"
-                      />
-                    </a>
-
-                    <Typography
-                      className="pl-1 pb-1.5 text-base"
-                      align="left"
-                      variant="h2"
-                      color="textSecondary"
-                      component="p"
-                    >
-                      Years Active
-                    </Typography>
-                  </CardActions>
-                </Card>
+                    </CardActions>
+                  </Card>
+                ))}
                 );
               </Grid>
               <Grid item>
@@ -129,7 +159,7 @@ const directors = ({ data }) => {
       </StylesProvider>
     </Router>
   );
-};
+});
 
 const Particles = ({ children }) => {
   return (
