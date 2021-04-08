@@ -1,5 +1,5 @@
 import React, { forwardRef, useRef } from "react";
-
+import { makeStyles } from "@material-ui/core/styles";
 import { StylesProvider } from "@material-ui/core/styles";
 import ReactParticles from "react-particles-js";
 import particles_config from "../particles-config";
@@ -19,6 +19,11 @@ import { faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import index from "../../src/pages/index.js";
 import { useEffect, useState } from "react";
 
+const useStyles = makeStyles({
+  root: {
+    maxWidth: 345,
+  },
+});
 const shuffleArray = (array) => {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * i);
@@ -40,6 +45,7 @@ const directors = forwardRef((props, ref) => {
             image
             linkedin
             name
+            contributions
             position
             instagram
             github
@@ -76,11 +82,11 @@ const directors = forwardRef((props, ref) => {
             Past Directors
           </h1>
 
-          <div className="mt-32 ml-36 justify-center">
-            <Grid container spacing={22}>
-              <Grid item>
+          <div className=" ml-36 justify-center">
+            <Grid container spacing={1}>
+              <Grid Item>
                 {members.map((member, index) => (
-                  <Card key={index}>
+                  <Card className="pr-4 pl-10 px-8 ml-30 my-5" key={index}>
                     <CardActionArea>
                       <CardMedia
                         component="img"
@@ -126,12 +132,11 @@ const directors = forwardRef((props, ref) => {
                         color="textSecondary"
                         component="p"
                       >
-                        {member.year}
+                        {member.years}
                       </Typography>
                     </CardActions>
                   </Card>
                 ))}
-                );
               </Grid>
             </Grid>
           </div>
