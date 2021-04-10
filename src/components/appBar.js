@@ -4,18 +4,23 @@ import useWidth from "../useWidth";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const AppBarLink = ({ className, children, href, ...props }) => {
+const AppBarLink = ({ className, children, href, onMouseDown, ...props }) => {
   return (
     <button
       className={`
-        cursor-pointer text-base font-regular normal-case inline-block select-none px-8 py-4
+        cursor-pointer text-base font-regular normal-case inline-block
+        select-none px-8 py-4 my-1 mx-1
         hover:text-KHgold 
-        focus:bg-KHnavbar-dark focus:text-KHgold-slightly-dark 
         active:bg-KHnavbar-dark active:text-KHgold-slightly-dark
+        focus:ring focus:ring-gray-50
         md:text-lg
         ${className}
       `}
       onClick={href ? () => (window.location.href = href) : null}
+      onMouseDown={(event) => {
+        event.preventDefault();
+        onMouseDown(event);
+      }}
       {...props}
     >
       {children}
