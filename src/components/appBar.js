@@ -4,22 +4,40 @@ import useWidth from "../useWidth";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const AppBarLink = ({ className, children, href, onMouseDown, ...props }) => {
+const AppBarLink = ({
+  className,
+  children,
+  href,
+  onMouseDown,
+  onMouseUp,
+  ...props
+}) => {
+  const [active, setActive] = useState(false);
+  console.log(active);
   return (
     <button
-      className={`
+      className={
+        `
         cursor-pointer text-base font-regular normal-case inline-block
         select-none px-8 py-4 my-1 mx-1
         hover:text-KHgold 
-        active:bg-KHnavbar-dark active:text-KHgold-slightly-dark
         focus:ring focus:ring-gray-50
-        md:text-lg
-        ${className}
-      `}
+        md:text-lg ${className} ` +
+        (active ? "bg-KHnavbar-dark text-KHgold-slightly-dark" : "")
+      }
       onClick={href ? () => (window.location.href = href) : null}
       onMouseDown={(event) => {
         event.preventDefault();
-        onMouseDown(event);
+        if (onMouseDown) {
+          onMouseDown(event);
+        }
+        setActive(true);
+      }}
+      onMouseUp={(event) => {
+        if (onMouseUp) {
+          onMouseUp(event);
+        }
+        setActive(false);
       }}
       {...props}
     >
