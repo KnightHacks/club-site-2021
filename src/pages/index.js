@@ -24,59 +24,14 @@ const IndexPage = ({ data }) => {
 
   const allEvents = [
     {
-      title: "Design for Users, Not Requirements",
-      description:
-        "It’s easy to identify the list of things that need to go into your product or design; a little of this, a sprinkle of that. It becomes easy to lose track of the user and just start thinking that your pile of features is the best thing since sliced bread. Then when it gets into the hands of users it flops. I’ll show you the mindset needed to create something that is useful, usable, and even desirable.",
+      title: "GBM and Project Showcase",
+      description: "",
       time: "7:30 p.m.",
       location: "Zoom",
-      date: "1",
+      date: "22",
       month: "Apr",
-      tags: [],
-      presenter: "JPMorgan Chase",
-    },
-    {
-      title: "Constitutional Revision",
-      description:
-        "Knight Hacks is beginning the constitutional revision process. We want to make sure that our organizing document clearly states our organization's current mission, goals, and structure. Make your voice heard and provide suggestions and feedback by attending our constitutional revision meeting. The draft constitution produced as a result of this meeting will be presented to the active student members for a ratification vote.",
-      time: "2:00 p.m.",
-      location: "Zoom",
-      date: "2",
-      month: "Apr",
-      tags: ["Administrative"],
+      tags: ["GBM", "Projects"],
       presenter: "",
-    },
-    {
-      title: "Killing the Coding Interview",
-      description:
-        "Want to be hired by FAANG companies? Want to perform better at coding interviews? Then come to Killing the Coding Interview March 13th at 2 pm! A one stop shop to learn the ins and outs of the coding interview process with helpful tips on what to prepare, how to prepare and live problem solving. Pulling from critically acclaimed resources like Cracking the Coding Interview, Leetcode and many more, this series is designed by students for students.",
-      time: "2:00 p.m.",
-      location: "Zoom",
-      date: "3",
-      month: "Apr",
-      tags: [],
-      presenter: "Arjun Pherwani",
-    },
-    {
-      title: "Election Day",
-      description:
-        "Come learn about the candidates running for the executive board of Knight Hacks! You will be able to hear the candidates' speeches and ask them questions to better inform yourself to vote. Voting will be open for 48 hours from April 8th at 8:30pm to April 10th at 8:30pm, and all active dues-paying members are eligible to vote.",
-      time: "7:30 p.m.",
-      location: "Zoom",
-      date: "8",
-      month: "Apr",
-      tags: ["Election"],
-      presenter: "",
-    },
-    {
-      title: "Killing the Coding Interview",
-      description:
-        "Want to be hired by FAANG companies? Want to perform better at coding interviews? Then come to Killing the Coding Interview March 13th at 2 pm! A one stop shop to learn the ins and outs of the coding interview process with helpful tips on what to prepare, how to prepare and live problem solving. Pulling from critically acclaimed resources like Cracking the Coding Interview, Leetcode and many more, this series is designed by students for students.",
-      time: "2:00 p.m.",
-      location: "Zoom",
-      date: "10",
-      month: "Apr",
-      tags: [],
-      presenter: "Arjun Pherwani",
     },
   ];
   return (
