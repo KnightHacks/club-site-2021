@@ -1,7 +1,6 @@
 import React, {
   useState,
   useEffect,
-  forwardRef,
   createContext,
   useContext,
   useCallback,
@@ -65,7 +64,7 @@ const AppBarLink = ({
   );
 };
 
-const AppBar = forwardRef(({ appBarRef, children }, ref) => {
+const AppBar = ({ appBarRef, children }) => {
   const trigger = useScrollTrigger({
     disableHysteresis: true,
     threshold: 0,
@@ -114,7 +113,7 @@ const AppBar = forwardRef(({ appBarRef, children }, ref) => {
             ? "bg-KHnavbar transition ease-out duration-300"
             : "bg-transparent transition ease-out duration-300")
         }
-        ref={ref}
+        ref={appBarRef}
       >
         <div className="flex flex-row flex-nowrap overflow-hidden items-center justify-between xs:text-base sm:text-lg md:text-xl">
           <AppBarLink
@@ -158,6 +157,6 @@ const AppBar = forwardRef(({ appBarRef, children }, ref) => {
     </HamburgerOpenContext.Provider>,
     { elevation: trigger ? 10 : 0 }
   );
-});
+};
 
 export { AppBar, AppBarLink };
