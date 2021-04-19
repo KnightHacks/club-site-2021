@@ -14,6 +14,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import "./index.css";
 import FadeIn from "react-fade-in";
+const allEvents = [
+  {
+    title: "GBM and Project Showcase",
+    description: "",
+    time: "7:30 p.m.",
+    location: "Zoom",
+    date: "22",
+    month: "Apr",
+    tags: ["GBM", "Projects"],
+    presenter: "",
+  },
+];
 
 const IndexPage = ({ data }) => {
   const appBarRef = useRef(null);
@@ -22,18 +34,6 @@ const IndexPage = ({ data }) => {
   const teamsRef = useRef(null);
   const contactUsRef = useRef(null);
 
-  const allEvents = [
-    {
-      title: "GBM and Project Showcase",
-      description: "",
-      time: "7:30 p.m.",
-      location: "Zoom",
-      date: "22",
-      month: "Apr",
-      tags: ["GBM", "Projects"],
-      presenter: "",
-    },
-  ];
   return (
     <StylesProvider injectFirst>
       <div className="relative bg-KHblue">
