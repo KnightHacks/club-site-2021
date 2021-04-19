@@ -80,6 +80,7 @@ const AppBar = ({ appBarRef, children }) => {
   const width = useWidth();
 
   const [isOpen, setIsOpen] = useState(false);
+  const closeHamburger = useCallback(() => setIsOpen(false));
 
   const HAMBURGER_HEIGHT = appBarRef.current
     ? appBarRef.current.clientHeight * 4
@@ -100,8 +101,6 @@ const AppBar = ({ appBarRef, children }) => {
       setIsOpen(false);
     }
   }, [width]);
-
-  const closeHamburger = useCallback(() => setIsOpen(false));
 
   return React.cloneElement(
     <HamburgerOpenContext.Provider value={[closeHamburger, scroll]}>
