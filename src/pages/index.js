@@ -1,10 +1,10 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { graphql } from "gatsby";
 import KnightHacksLogo from "../assets/logos/knightHacksLogoGold.svg";
 import Newsletter from "../components/newsletter.js";
 import Contacts from "../components/contacts.js";
 import Event from "../components/event.js";
-import AppBar from "../components/appBar.js";
+import { AppBar, AppBarLink } from "../components/appBar.js";
 import AboutUs from "../components/aboutUs.js";
 import Teams from "../components/teams.js";
 import { StylesProvider } from "@material-ui/core/styles";
@@ -39,14 +39,12 @@ const IndexPage = ({ data }) => {
       <div className="relative bg-KHblue">
         <Particles>
           <FadeIn transitionDuration={800}>
-            <AppBar
-              ref={appBarRef}
-              appBarRef={appBarRef}
-              aboutUsRef={aboutUsRef}
-              eventsRef={eventsRef}
-              teamsRef={teamsRef}
-              contactUsRef={contactUsRef}
-            />
+            <AppBar ref={appBarRef} appBarRef={appBarRef}>
+              <AppBarLink scrollAnchor={aboutUsRef}>About</AppBarLink>
+              <AppBarLink scrollAnchor={eventsRef}>Events</AppBarLink>
+              <AppBarLink scrollAnchor={teamsRef}>Team</AppBarLink>
+              <AppBarLink scrollAnchor={contactUsRef}>Contact Us</AppBarLink>
+            </AppBar>
             <title>Knight Hacks</title>
             <div className="relative h-screen flex justify-center">
               <div
