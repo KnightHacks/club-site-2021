@@ -19,7 +19,7 @@ const AppBarLink = ({ className, children, href, onMouseDown, ...props }) => {
       onClick={href ? () => (window.location.href = href) : null}
       onMouseDown={(event) => {
         event.preventDefault();
-        onMouseDown(event);
+        if (onMouseDown) onMouseDown(event);
       }}
       {...props}
     >
