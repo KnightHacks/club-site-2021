@@ -40,7 +40,14 @@ const IndexPage = ({ data }) => {
       <div className="relative bg-KHblue">
         <Particles>
           <FadeIn transitionDuration={800}>
-            <AppBar ref={appBarRef}>
+            <AppBar
+              ref={appBarRef}
+              left={
+                <AppBarLink href="https://linktr.ee/knighthacks">
+                  Linktree
+                </AppBarLink>
+              }
+            >
               <AppBarLink scrollAnchor={aboutUsRef}>About</AppBarLink>
               <AppBarLink scrollAnchor={eventsRef}>Events</AppBarLink>
               <AppBarLink scrollAnchor={teamsRef}>Team</AppBarLink>

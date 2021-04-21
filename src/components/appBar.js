@@ -57,7 +57,7 @@ const AppBarLink = ({
   );
 };
 
-const AppBar = forwardRef(({ children }, ref) => {
+const AppBar = forwardRef(({ left, children }, ref) => {
   const trigger = useScrollTrigger({
     disableHysteresis: true,
     threshold: 0,
@@ -108,12 +108,11 @@ const AppBar = forwardRef(({ children }, ref) => {
         ref={ref}
       >
         <div className="flex flex-row flex-nowrap justify-between xs:text-base sm:text-lg md:text-xl">
-          <AppBarLink
-            className={isOpen ? "flex-auto text-left" : ""}
-            href="https://linktr.ee/knighthacks"
-          >
-            Linktree
-          </AppBarLink>
+          {isOpen
+            ? cloneElement(left, {
+                className: left.props.className + " flex-auto text-left",
+              })
+            : left}
           <div className={width <= 700 ? "hidden" : "visible"}>{children}</div>
           <div
             className={
