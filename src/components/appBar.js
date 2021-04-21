@@ -142,9 +142,10 @@ const AppBar = forwardRef(({ left, children }, ref) => {
           }}
           className="overflow-hidden transition-all flex flex-col"
         >
-          {children.map((child) => {
+          {children.map((child, index) => {
             return cloneElement(child, {
               className: child.props.className + " text-left",
+              key: index,
             });
           })}
         </div>
