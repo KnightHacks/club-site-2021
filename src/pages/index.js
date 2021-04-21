@@ -14,6 +14,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import "./index.css";
 import FadeIn from "react-fade-in";
+
 const allEvents = [
   {
     title: "GBM and Project Showcase",
