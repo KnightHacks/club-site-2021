@@ -39,8 +39,8 @@ const Event = (props) => {
           </div>
         </AccordionSummary>
         <AccordionDetails onClick={() => setExpanded(!expanded)}>
-          <div className="ContentContainer">
-            <div className="flex mb-3 flex-col xs:justify-between sm:flex-row">
+          <div className="ContentContainer w-full">
+            <div className="flex mb-3 flex-col xs:justify-between xs:flex-row">
               <p className="px-2 text-black text-sm xs:text-xl">
                 {props.presenter}
               </p>
@@ -60,6 +60,7 @@ const Event = (props) => {
             <div className="flex justify-end">
               {props.tags.map((tag) => (
                 <div
+                  key={tag}
                   style={{ backgroundColor: hash.hex(tag) }}
                   className="rounded-full mx-1 mt-2 px-3 text-gray-600 font-regular"
                 >

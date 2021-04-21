@@ -4,19 +4,27 @@ import useWidth from "../useWidth";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const AppBarLink = ({ className, children, ...props }) => {
+const AppBarLink = ({ className, children, href, onMouseDown, ...props }) => {
   return (
-    <a
+    <button
       className={`
-        cursor-pointer text-base font-regular normal-case inline-block select-none px-8 py-4
-        hover:text-KHgold active:bg-KHnavbar-dark active:text-KHgold-slightly-dark
+        cursor-pointer text-base font-regular normal-case inline-block
+        select-none px-8 py-4 my-1 mx-1
+        hover:text-KHgold 
+        active:bg-KHnavbar-dark active:text-KHgold-slightly-dark
+        focus:ring focus:ring-gray-50
         md:text-lg
         ${className}
       `}
+      onClick={href ? () => (window.location.href = href) : null}
+      onMouseDown={(event) => {
+        event.preventDefault();
+        if (onMouseDown) onMouseDown(event);
+      }}
       {...props}
     >
       {children}
-    </a>
+    </button>
   );
 };
 
@@ -52,7 +60,7 @@ const AppBar = forwardRef(
     const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
-      if (width > 600) {
+      if (width > 700) {
         setIsOpen(false);
       }
     }, [width]);
@@ -70,12 +78,12 @@ const AppBar = forwardRef(
       >
         <div className="flex flex-row flex-nowrap overflow-hidden items-center justify-between xs:text-base sm:text-lg md:text-xl">
           <AppBarLink
-            className={isOpen ? "flex-auto" : ""}
+            className={isOpen ? "flex-auto text-left" : ""}
             href="https://linktr.ee/knighthacks"
           >
             Linktree
           </AppBarLink>
-          <div className={width <= 600 ? "hidden" : "visible"}>
+          <div className={width <= 700 ? "hidden" : "visible"}>
             <AppBarLink onClick={() => scroll(aboutUsRef)}>About</AppBarLink>
             <AppBarLink onClick={() => scroll(eventsRef)}>Events</AppBarLink>
             <AppBarLink onClick={() => scroll(teamsRef)}>Team</AppBarLink>
@@ -85,7 +93,7 @@ const AppBar = forwardRef(
           </div>
           <div
             className={
-              width > 600
+              width > 700
                 ? "hidden"
                 : "visible" + " flex flex-col items-center justify-center"
             }
@@ -112,6 +120,7 @@ const AppBar = forwardRef(
           className="overflow-hidden transition-all flex flex-col"
         >
           <AppBarLink
+            className="text-left"
             onClick={() => {
               setIsOpen(false);
               scroll(aboutUsRef);
@@ -120,6 +129,7 @@ const AppBar = forwardRef(
             About
           </AppBarLink>
           <AppBarLink
+            className="text-left"
             onClick={() => {
               setIsOpen(false);
               scroll(eventsRef);
@@ -128,6 +138,7 @@ const AppBar = forwardRef(
             Events
           </AppBarLink>
           <AppBarLink
+            className="text-left"
             onClick={() => {
               setIsOpen(false);
               scroll(teamsRef);
@@ -136,6 +147,7 @@ const AppBar = forwardRef(
             Team
           </AppBarLink>
           <AppBarLink
+            className="text-left"
             onClick={() => {
               setIsOpen(false);
               scroll(contactUsRef);
