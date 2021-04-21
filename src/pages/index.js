@@ -66,57 +66,7 @@ const IndexPage = ({ data }) => {
       <AboutUs ref={aboutUsRef}>{data.aboutUsData.rawMarkdownBody}</AboutUs>
       <Events ref={eventsRef} />
       <Teams ref={teamsRef} data={data.teamsData.frontmatter} />
-      <div className="flex flex-col my-5 h-96" ref={contactUsRef}>
-        <h1 className="font-light flex justify-center text-gray-50 text-4xl mt-24 my-5 lg:text-5xl">
-          Connect With Us
-        </h1>
-        <div className="my-6 flex flex-col md:flex-row items-center justify-around w-full text-center h-full">
-          <Newsletter />
-          <Contacts
-            main={
-              <SocialMediaIcon
-                href="https://discord.gg/Kv5g9vf"
-                icon={faDiscord}
-                color="white"
-                className="mb-8 text-4xl md:text-7xl lg:text-8xl hover:text-gray-500"
-              />
-            }
-            email={
-              <a
-                href="mailto:team@knighthacks.org?subject=Let's%20talk.&body=Hey%20KnightHacks!"
-                className="font-light text-2xl text-white no-underline hover:text-gray-600"
-              >
-                team@knighthacks.org
-              </a>
-            }
-          >
-            <SocialMediaIcon
-              href="https://github.com/KnightHacks"
-              icon={faGithub}
-              color="white"
-              className="text-4xl md:text-5xl lg:text-6xl hover:text-gray-500"
-            />
-            <SocialMediaIcon
-              href="https://www.instagram.com/knighthacks/"
-              icon={faInstagram}
-              color="white"
-              className="text-4xl md:text-5xl lg:text-6xl hover:text-gray-500"
-            />
-            <SocialMediaIcon
-              href="https://www.facebook.com/KnightHacks/"
-              icon={faFacebook}
-              color="white"
-              className="text-4xl md:text-5xl lg:text-6xl hover:text-gray-500"
-            />
-            <SocialMediaIcon
-              href="https://twitter.com/KnightHacks?lang=en/"
-              icon={faTwitter}
-              color="white"
-              className="text-4xl md:text-5xl lg:text-6xl hover:text-gray-500"
-            />
-          </Contacts>
-        </div>
-      </div>
+      <ConnectWithUs ref={contactUsRef} />
     </Wrappers>
   );
 };
@@ -192,6 +142,64 @@ const Events = forwardRef((props, ref) => {
 });
 
 Events.displayName = "Events";
+
+const ConnectWithUs = forwardRef((props, ref) => {
+  return (
+    <div className="flex flex-col my-5 h-96" ref={ref}>
+      <h1 className="font-light flex justify-center text-gray-50 text-4xl mt-24 my-5 lg:text-5xl">
+        Connect With Us
+      </h1>
+      <div className="my-6 flex flex-col md:flex-row items-center justify-around w-full text-center h-full">
+        <Newsletter />
+        <Contacts
+          main={
+            <SocialMediaIcon
+              href="https://discord.gg/Kv5g9vf"
+              icon={faDiscord}
+              color="white"
+              className="mb-8 text-4xl md:text-7xl lg:text-8xl hover:text-gray-500"
+            />
+          }
+          email={
+            <a
+              href="mailto:team@knighthacks.org?subject=Let's%20talk.&body=Hey%20KnightHacks!"
+              className="font-light text-2xl text-white no-underline hover:text-gray-600"
+            >
+              team@knighthacks.org
+            </a>
+          }
+        >
+          <SocialMediaIcon
+            href="https://github.com/KnightHacks"
+            icon={faGithub}
+            color="white"
+            className="text-4xl md:text-5xl lg:text-6xl hover:text-gray-500"
+          />
+          <SocialMediaIcon
+            href="https://www.instagram.com/knighthacks/"
+            icon={faInstagram}
+            color="white"
+            className="text-4xl md:text-5xl lg:text-6xl hover:text-gray-500"
+          />
+          <SocialMediaIcon
+            href="https://www.facebook.com/KnightHacks/"
+            icon={faFacebook}
+            color="white"
+            className="text-4xl md:text-5xl lg:text-6xl hover:text-gray-500"
+          />
+          <SocialMediaIcon
+            href="https://twitter.com/KnightHacks?lang=en/"
+            icon={faTwitter}
+            color="white"
+            className="text-4xl md:text-5xl lg:text-6xl hover:text-gray-500"
+          />
+        </Contacts>
+      </div>
+    </div>
+  );
+});
+
+ConnectWithUs.displayName = "ConnectWithUs";
 
 const Particles = ({ children }) => {
   return (
