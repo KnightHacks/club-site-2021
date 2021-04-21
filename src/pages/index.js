@@ -58,7 +58,11 @@ const IndexPage = ({ data }) => {
         <AppBarLink scrollAnchor={teamsRef}>Team</AppBarLink>
         <AppBarLink scrollAnchor={contactUsRef}>Contact Us</AppBarLink>
       </AppBar>
-      <KHLogo subtitle={data.site.siteMetadata.description} />
+      <KHLogo
+        subtitle={data.site.siteMetadata.description}
+        scrollAnchor={aboutUsRef}
+        appBarRef={appBarRef}
+      />
       <AboutUs ref={aboutUsRef}>{data.aboutUsData.rawMarkdownBody}</AboutUs>
       <Events ref={eventsRef} />
       <Teams ref={teamsRef} data={data.teamsData.frontmatter} />
@@ -129,7 +133,7 @@ const Wrappers = ({ children }) => {
   );
 };
 
-const KHLogo = ({ subtitle }) => {
+const KHLogo = ({ subtitle, scrollAnchor, appBarRef }) => {
   return (
     <div className="relative h-screen flex justify-center">
       <div
@@ -151,19 +155,25 @@ const KHLogo = ({ subtitle }) => {
           {subtitle}
         </h1>
       </div>
-      <div className="flex w-full justify-center absolute bottom-0">
-        <FontAwesomeIcon
-          icon={faChevronDown}
-          className="cursor-pointer text-KHgold text-5xl md:text-7xl w-12 md:w-32"
-          onClick={() =>
-            window.scrollTo({
-              top:
-                aboutUsRef.current.offsetTop - appBarRef.current.clientHeight,
-              behavior: "smooth",
-            })
-          }
-        />
-      </div>
+      <CtaArrow scrollAnchor={scrollAnchor} appBarRef={appBarRef} />
+    </div>
+  );
+};
+
+const CtaArrow = ({ scrollAnchor, appBarRef }) => {
+  return (
+    <div className="flex w-full justify-center absolute bottom-0">
+      <FontAwesomeIcon
+        icon={faChevronDown}
+        className="cursor-pointer text-KHgold text-5xl md:text-7xl w-12 md:w-32"
+        onClick={() =>
+          window.scrollTo({
+            top:
+              scrollAnchor.current.offsetTop - appBarRef.current.clientHeight,
+            behavior: "smooth",
+          })
+        }
+      />
     </div>
   );
 };
