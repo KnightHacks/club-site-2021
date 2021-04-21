@@ -33,7 +33,7 @@ const AppBarLink = ({
         active:bg-KHnavbar-dark active:text-KHgold-slightly-dark
         focus:ring focus:ring-gray-50
         md:text-lg
-        ${className}
+        ${className || ""}
       `}
       onClick={
         href
