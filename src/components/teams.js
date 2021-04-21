@@ -6,6 +6,7 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import SocialMediaIcon from "./socialMediaIcon.js";
 import useWidth from "../useWidth";
 import {
   faLinkedin,
@@ -105,49 +106,44 @@ const Teams = forwardRef(({ data }, ref) => {
             <CardContent className="flex items-start h-14">
               <Typography variant="body2" color="textSecondary" component="p">
                 {member.linkedin ? (
-                  <a href={member.linkedin} draggable="false">
-                    <FontAwesomeIcon
-                      icon={faLinkedin}
-                      color="#000000"
-                      className="mr-2 pr-0.5 pl-2 mt-0 text-4xl hover:text-gray-400"
-                    />
-                  </a>
+                  <SocialMediaIcon
+                    href={member.linkedin}
+                    icon={faLinkedin}
+                    color="#000000"
+                    className="mr-2 pr-0.5 pl-2 mt-0 text-4xl hover:text-gray-400"
+                  />
                 ) : null}
                 {member.instagram ? (
-                  <a href={member.instagram} draggable="false">
-                    <FontAwesomeIcon
-                      icon={faInstagram}
-                      color="#000000"
-                      className="mr-2 pr-0.5 pl-2 text-4xl hover:text-gray-400"
-                    />
-                  </a>
+                  <SocialMediaIcon
+                    href={member.instagram}
+                    icon={faInstagram}
+                    color="#000000"
+                    className="mr-2 pr-0.5 pl-2 text-4xl hover:text-gray-400"
+                  />
                 ) : null}
                 {member.twitter ? (
-                  <a href={member.twitter} draggable="false">
-                    <FontAwesomeIcon
-                      icon={faTwitter}
-                      color="#000000"
-                      className="mr-2 pr-0.5 pl-2 text-4xl hover:text-gray-400"
-                    />
-                  </a>
+                  <SocialMediaIcon
+                    href={member.twitter}
+                    icon={faTwitter}
+                    color="#000000"
+                    className="mr-2 pr-0.5 pl-2 text-4xl hover:text-gray-400"
+                  />
                 ) : null}
                 {member.github ? (
-                  <a href={member.github} draggable="false">
-                    <FontAwesomeIcon
-                      icon={faGithub}
-                      className="mr-2 pr-0.5 pl-2 text-4xl hover:text-gray-400"
-                      color="#000000"
-                    />
-                  </a>
+                  <SocialMediaIcon
+                    href={member.github}
+                    icon={faGithub}
+                    className="mr-2 pr-0.5 pl-2 text-4xl hover:text-gray-400"
+                    color="#000000"
+                  />
                 ) : null}
                 {member.personal ? (
-                  <a href={member.personal} draggable="false">
-                    <FontAwesomeIcon
-                      icon={faLaptopCode}
-                      className="mr-1 pr-0.5 pl-2 text-3xl hover:text-gray-400"
-                      color="#000000"
-                    />
-                  </a>
+                  <SocialMediaIcon
+                    href={member.personal}
+                    icon={faLaptopCode}
+                    className="mr-1 pr-0.5 pl-2 text-3xl hover:text-gray-400"
+                    color="#000000"
+                  />
                 ) : null}
               </Typography>
             </CardContent>

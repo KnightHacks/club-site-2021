@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const SocialMediaIcon = ({ href, ...props }) => {
   return (
-    <a href={href}>
+    <a href={href} draggable="false">
       <FontAwesomeIcon {...props} />
     </a>
   );
