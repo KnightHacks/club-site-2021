@@ -121,6 +121,7 @@ const IndexPage = ({ data }) => {
                     <SocialMediaIcon
                       href="https://discord.gg/Kv5g9vf"
                       icon={faDiscord}
+                      color="white"
                       className="mb-8 text-4xl md:text-7xl lg:text-8xl hover:text-gray-500"
                     />
                   }
@@ -136,18 +137,26 @@ const IndexPage = ({ data }) => {
                   <SocialMediaIcon
                     href="https://github.com/KnightHacks"
                     icon={faGithub}
+                    color="white"
+                    className="text-4xl md:text-5xl lg:text-6xl hover:text-gray-500"
                   />
                   <SocialMediaIcon
                     href="https://www.instagram.com/knighthacks/"
                     icon={faInstagram}
+                    color="white"
+                    className="text-4xl md:text-5xl lg:text-6xl hover:text-gray-500"
                   />
                   <SocialMediaIcon
                     href="https://www.facebook.com/KnightHacks/"
                     icon={faFacebook}
+                    color="white"
+                    className="text-4xl md:text-5xl lg:text-6xl hover:text-gray-500"
                   />
                   <SocialMediaIcon
                     href="https://twitter.com/KnightHacks?lang=en/"
                     icon={faTwitter}
+                    color="white"
+                    className="text-4xl md:text-5xl lg:text-6xl hover:text-gray-500"
                   />
                 </Contacts>
               </div>
