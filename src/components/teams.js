@@ -180,17 +180,13 @@ const Teams = forwardRef(({ data }, ref) => {
             <h1 className="mb-0">
               <CountUp end={data.memberCount} duration={10} />
             </h1>
-            <p className="m-0 text-lg md:text-xl lg:text-2xl">
-              {" "}
-              active members
-            </p>
+            <p className="m-0 text-lg md:text-xl lg:text-2xl">active members</p>
           </div>
           <div className="text-6xl lg:text-7xl text-center my-3 mx-5 lg:mx-7 font-bold">
             <h1 className="mb-0">
               <CountUp end={data.directorCount} duration={10} />
             </h1>
             <p className="m-0 text-lg md:text-xl lg:text-2xl">
-              {" "}
               developers & directors
             </p>
           </div>
