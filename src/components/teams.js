@@ -1,12 +1,12 @@
 import React from "react";
 import Carousel from "react-elastic-carousel";
-import CountUp, { startAnimation } from "react-countup";
+import CountUp from "react-countup";
 import "./teams.css";
 import Card from "@material-ui/core/Card";
-import CardHeader from "@material-ui/core/CardHeader";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import SocialMediaIcon from "./socialMediaIcon.js";
 import useWidth from "../useWidth";
 import {
   faLinkedin,
@@ -17,7 +17,6 @@ import {
 
 import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState, forwardRef } from "react";
-import { useStaticQuery, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const getItemsToShow = (width) => {
@@ -44,41 +43,14 @@ const shuffleArray = (array) => {
   return array;
 };
 
-const Teams = forwardRef((props, ref) => {
+const Teams = forwardRef(({ data }, ref) => {
   const width = useWidth();
   const [itemsToShow, setItemsToShow] = useState(getItemsToShow(width));
   const [members, setMembers] = useState([]);
 
-  const data = useStaticQuery(graphql`
-    query teamsQuery {
-      markdownRemark(frontmatter: { title: { eq: "Teams" } }) {
-        frontmatter {
-          members {
-            image {
-              childImageSharp {
-                gatsbyImageData(width: 375, height: 375, placeholder: BLURRED)
-              }
-            }
-            linkedin
-            major
-            name
-            position
-            personal
-            instagram
-            github
-          }
-          memberCount
-          directorCount
-          hackathonCount
-          workshopCount
-        }
-      }
-    }
-  `);
-
   useEffect(() => {
     const handleRandomize = () => {
-      const members = shuffleArray(data.markdownRemark.frontmatter.members);
+      const members = shuffleArray(data.members);
       setMembers(members);
     };
     handleRandomize();
@@ -134,49 +106,44 @@ const Teams = forwardRef((props, ref) => {
             <CardContent className="flex items-start h-14">
               <Typography variant="body2" color="textSecondary" component="p">
                 {member.linkedin ? (
-                  <a href={member.linkedin} draggable="false">
-                    <FontAwesomeIcon
-                      icon={faLinkedin}
-                      color="#000000"
-                      className="mr-2 pr-0.5 pl-2 mt-0 text-4xl hover:text-gray-400"
-                    />
-                  </a>
+                  <SocialMediaIcon
+                    href={member.linkedin}
+                    icon={faLinkedin}
+                    color="#000000"
+                    className="mr-2 pr-0.5 pl-2 mt-0 text-4xl hover:text-gray-400"
+                  />
                 ) : null}
                 {member.instagram ? (
-                  <a href={member.instagram} draggable="false">
-                    <FontAwesomeIcon
-                      icon={faInstagram}
-                      color="#000000"
-                      className="mr-2 pr-0.5 pl-2 text-4xl hover:text-gray-400"
-                    />
-                  </a>
+                  <SocialMediaIcon
+                    href={member.instagram}
+                    icon={faInstagram}
+                    color="#000000"
+                    className="mr-2 pr-0.5 pl-2 text-4xl hover:text-gray-400"
+                  />
                 ) : null}
                 {member.twitter ? (
-                  <a href={member.twitter} draggable="false">
-                    <FontAwesomeIcon
-                      icon={faTwitter}
-                      color="#000000"
-                      className="mr-2 pr-0.5 pl-2 text-4xl hover:text-gray-400"
-                    />
-                  </a>
+                  <SocialMediaIcon
+                    href={member.twitter}
+                    icon={faTwitter}
+                    color="#000000"
+                    className="mr-2 pr-0.5 pl-2 text-4xl hover:text-gray-400"
+                  />
                 ) : null}
                 {member.github ? (
-                  <a href={member.github} draggable="false">
-                    <FontAwesomeIcon
-                      icon={faGithub}
-                      className="mr-2 pr-0.5 pl-2 text-4xl hover:text-gray-400"
-                      color="#000000"
-                    />
-                  </a>
+                  <SocialMediaIcon
+                    href={member.github}
+                    icon={faGithub}
+                    className="mr-2 pr-0.5 pl-2 text-4xl hover:text-gray-400"
+                    color="#000000"
+                  />
                 ) : null}
                 {member.personal ? (
-                  <a href={member.personal} draggable="false">
-                    <FontAwesomeIcon
-                      icon={faLaptopCode}
-                      className="mr-1 pr-0.5 pl-2 text-3xl hover:text-gray-400"
-                      color="#000000"
-                    />
-                  </a>
+                  <SocialMediaIcon
+                    href={member.personal}
+                    icon={faLaptopCode}
+                    className="mr-1 pr-0.5 pl-2 text-3xl hover:text-gray-400"
+                    color="#000000"
+                  />
                 ) : null}
               </Typography>
             </CardContent>
@@ -185,27 +152,21 @@ const Teams = forwardRef((props, ref) => {
       </Carousel>
 
       <h1 className="font-lightitalic text-center text-gray-50 text-3xl w-full mt-5 ">
-        ... and how we've grown!
+        ... and how we&apos;ve grown!
       </h1>
 
       <div className="font-light flex justify-between text-gray-50 mt-12 mb-10 flex-col sm:flex-row">
         <div className="flex flex-col md:flex-row">
           <div className="text-6xl lg:text-7xl text-center my-3 mx-5 lg:mx-7 font-bold">
             <h1 className="mb-0">
-              <CountUp
-                end={data.markdownRemark.frontmatter.workshopCount}
-                duration={10}
-              />
+              <CountUp end={data.workshopCount} duration={10} />
               <sup className="text-4xl"> + </sup>
             </h1>
             <p className="m-0 text-lg md:text-xl lg:text-2xl"> workshops</p>
           </div>
           <div className="text-6xl lg:text-7xl text-center my-3 mx-5 lg:mx-7 font-bold">
             <h1 className="mb-0">
-              <CountUp
-                end={data.markdownRemark.frontmatter.hackathonCount}
-                duration={10}
-              />
+              <CountUp end={data.hackathonCount} duration={10} />
             </h1>
             <p className="m-0 text-lg md:text-xl lg:text-2xl"> hackathons</p>
           </div>
@@ -213,25 +174,15 @@ const Teams = forwardRef((props, ref) => {
         <div className="flex flex-col md:flex-row">
           <div className="text-6xl lg:text-7xl text-center my-3 mx-5 lg:mx-7 font-bold">
             <h1 className="mb-0">
-              <CountUp
-                end={data.markdownRemark.frontmatter.memberCount}
-                duration={10}
-              />
+              <CountUp end={data.memberCount} duration={10} />
             </h1>
-            <p className="m-0 text-lg md:text-xl lg:text-2xl">
-              {" "}
-              active members
-            </p>
+            <p className="m-0 text-lg md:text-xl lg:text-2xl">active members</p>
           </div>
           <div className="text-6xl lg:text-7xl text-center my-3 mx-5 lg:mx-7 font-bold">
             <h1 className="mb-0">
-              <CountUp
-                end={data.markdownRemark.frontmatter.directorCount}
-                duration={10}
-              />
+              <CountUp end={data.directorCount} duration={10} />
             </h1>
             <p className="m-0 text-lg md:text-xl lg:text-2xl">
-              {" "}
               developers & directors
             </p>
           </div>
@@ -240,5 +191,7 @@ const Teams = forwardRef((props, ref) => {
     </div>
   );
 });
+
+Teams.displayName = "Teams";
 
 export default Teams;
