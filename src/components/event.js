@@ -7,7 +7,16 @@ import ColorHash from "color-hash-ts";
 
 const hash = new ColorHash({ lightness: 0.8 });
 
-const Event = (props) => {
+const Event = ({
+  title,
+  date,
+  month,
+  time,
+  presenter,
+  location,
+  description,
+  tags,
+}) => {
   const [expanded, setExpanded] = useState(false);
 
   return (
@@ -27,13 +36,11 @@ const Event = (props) => {
       >
         <AccordionSummary>
           <div className="flex items-center justify-between w-full">
-            <h1 className="font-regular text-xl xs:text-2xl px-1">
-              {props.title}
-            </h1>
+            <h1 className="font-regular text-xl xs:text-2xl px-1">{title}</h1>
             <span className="font-medium p-2 text-lg xs:text-2xl">
-              {props.date}
+              {date}
               <span className="font-regular ml-2 text-lg xs:text-2xl">
-                {props.month}
+                {month}
               </span>
             </span>
           </div>
@@ -41,24 +48,22 @@ const Event = (props) => {
         <AccordionDetails onClick={() => setExpanded(!expanded)}>
           <div className="ContentContainer w-full">
             <div className="flex mb-3 flex-col xs:justify-between xs:flex-row">
-              <p className="px-2 text-black text-sm xs:text-xl">
-                {props.presenter}
-              </p>
+              <p className="px-2 text-black text-sm xs:text-xl">{presenter}</p>
               <p className="px-2 text-sm xs:text-xl text-black">
-                {props.time} |
+                {time} |
                 <a
                   href="https://linktr.ee/knighthacks"
                   className="text-sm xs:text-xl px-2 text-black hover:text-gray-500"
                 >
-                  {props.location}
+                  {location}
                 </a>
               </p>
             </div>
             <h3 className="font-light font-semibold text-lg lg:text-xl px-2 text-gray-500">
-              {props.description}
+              {description}
             </h3>
             <div className="flex justify-end">
-              {props.tags.map((tag) => (
+              {tags.map((tag) => (
                 <div
                   key={tag}
                   style={{ backgroundColor: hash.hex(tag) }}
