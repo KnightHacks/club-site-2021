@@ -184,7 +184,7 @@ const Teams = forwardRef((props, ref) => {
       </Carousel>
 
       <h1 className="font-lightitalic text-center text-gray-50 text-3xl w-full mt-5 ">
-        ... and how we've grown!
+        ... and how we&apos;ve grown!
       </h1>
 
       <div className="font-light flex justify-between text-gray-50 mt-12 mb-10 flex-col sm:flex-row">
