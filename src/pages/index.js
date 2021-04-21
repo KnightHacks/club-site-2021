@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, forwardRef } from "react";
 import { graphql } from "gatsby";
 import KnightHacksLogo from "../assets/logos/knightHacksLogoGold.svg";
 import Newsletter from "../components/newsletter.js";
@@ -60,14 +60,7 @@ const IndexPage = ({ data }) => {
       </AppBar>
       <KHLogo subtitle={data.site.siteMetadata.description} />
       <AboutUs ref={aboutUsRef}>{data.aboutUsData.rawMarkdownBody}</AboutUs>
-      <div className="my-6" ref={eventsRef}>
-        <h1 className="font-light flex justify-center text-gray-50 text-4xl mt-14 my-6 ml-6 lg:text-5xl">
-          Upcoming Events
-        </h1>
-        {allEvents.map((event, index) => (
-          <Event key={index} {...event} />
-        ))}
-      </div>
+      <Events ref={eventsRef} />
       <Teams ref={teamsRef} data={data.teamsData.frontmatter} />
       <div className="flex flex-col my-5 h-96" ref={contactUsRef}>
         <h1 className="font-light flex justify-center text-gray-50 text-4xl mt-24 my-5 lg:text-5xl">
@@ -174,6 +167,21 @@ const KHLogo = ({ subtitle }) => {
     </div>
   );
 };
+
+const Events = forwardRef((props, ref) => {
+  return (
+    <div className="my-6" ref={ref}>
+      <h1 className="font-light flex justify-center text-gray-50 text-4xl mt-14 my-6 ml-6 lg:text-5xl">
+        Upcoming Events
+      </h1>
+      {allEvents.map((event, index) => (
+        <Event key={index} {...event} />
+      ))}
+    </div>
+  );
+});
+
+Events.displayName = "Events";
 
 const Particles = ({ children }) => {
   return (
