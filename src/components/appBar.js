@@ -12,7 +12,7 @@ import useWidth from "../useWidth";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const HamburgerOpenContext = createContext([() => {}, () => {}]);
+const HamburgerContext = createContext([() => {}, () => {}]);
 
 const AppBarLink = ({
   className,
@@ -23,7 +23,7 @@ const AppBarLink = ({
   onClick,
   ...props
 }) => {
-  const [closeHamburger, scroll] = useContext(HamburgerOpenContext);
+  const [closeHamburger, scroll] = useContext(HamburgerContext);
   return (
     <button
       className={`
@@ -94,7 +94,7 @@ const AppBar = forwardRef(({ children }, ref) => {
   }, [width]);
 
   return React.cloneElement(
-    <HamburgerOpenContext.Provider value={[closeHamburger, scroll]}>
+    <HamburgerContext.Provider value={[closeHamburger, scroll]}>
       <div
         style={trigger ? shadow : null}
         className={
@@ -148,7 +148,7 @@ const AppBar = forwardRef(({ children }, ref) => {
           })}
         </div>
       </div>
-    </HamburgerOpenContext.Provider>,
+    </HamburgerContext.Provider>,
     { elevation: trigger ? 10 : 0 }
   );
 });
