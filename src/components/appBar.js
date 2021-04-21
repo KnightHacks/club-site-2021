@@ -75,7 +75,9 @@ const AppBar = forwardRef(({ children }, ref) => {
   const [isOpen, setIsOpen] = useState(false);
   const closeHamburger = useCallback(() => setIsOpen(false));
 
-  const HAMBURGER_HEIGHT = ref.current ? ref.current.clientHeight * 4 : 0;
+  const HAMBURGER_HEIGHT = ref.current
+    ? ref.current.clientHeight * children.length
+    : 0;
 
   const scroll = (toRef) => {
     window.scrollTo({
