@@ -4,6 +4,7 @@ import React, {
   createContext,
   useContext,
   useCallback,
+  cloneElement,
 } from "react";
 import { useScrollTrigger } from "@material-ui/core";
 import useWidth from "../useWidth";
@@ -33,7 +34,17 @@ const AppBarLink = ({
         md:text-lg
         ${className}
       `}
-      onClick={href ? () => (window.location.href = href) : null}
+      onClick={
+        href
+          ? () => (window.location.href = href)
+          : scrollAnchor
+          ? (event) => {
+              closeHamburger();
+              scroll(scrollAnchor);
+              if (onClick) onClick(event);
+            }
+          : onClick
+      }
       onMouseDown={(event) => {
         event.preventDefault();
         if (onMouseDown) onMouseDown(event);
@@ -131,7 +142,11 @@ const AppBar = ({ appBarRef, children }) => {
           }}
           className="overflow-hidden transition-all flex flex-col"
         >
-          {children}
+          {children.map((child) => {
+            return cloneElement(child, {
+              className: child.props.className + " text-left",
+            });
+          })}
         </div>
       </div>
     </HamburgerOpenContext.Provider>,
