@@ -113,12 +113,12 @@ const AppBar = forwardRef(({ left, children }, ref) => {
                 className: left.props.className + " flex-auto text-left",
               })
             : left}
-          <div className={width <= 700 ? "hidden" : "visible"}>{children}</div>
+          <div className={width > 700 ? "visible" : "hidden"}>{children}</div>
           <div
             className={
-              width > 700
-                ? "hidden"
-                : "visible" + " flex flex-col items-center justify-center"
+              width <= 700
+                ? "visible" + " flex flex-col items-center justify-center"
+                : "hidden"
             }
           >
             <AppBarLink
