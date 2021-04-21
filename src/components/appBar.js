@@ -107,7 +107,7 @@ const AppBar = forwardRef(({ children }, ref) => {
         }
         ref={ref}
       >
-        <div className="flex flex-row flex-nowrap overflow-hidden items-center justify-between xs:text-base sm:text-lg md:text-xl">
+        <div className="flex flex-row flex-nowrap justify-between xs:text-base sm:text-lg md:text-xl">
           <AppBarLink
             className={isOpen ? "flex-auto text-left" : ""}
             href="https://linktr.ee/knighthacks"
