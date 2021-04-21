@@ -16,7 +16,6 @@ import {
 
 import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState, forwardRef } from "react";
-import { useStaticQuery, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const getItemsToShow = (width) => {
@@ -43,41 +42,14 @@ const shuffleArray = (array) => {
   return array;
 };
 
-const Teams = forwardRef((props, ref) => {
+const Teams = forwardRef(({ data }, ref) => {
   const width = useWidth();
   const [itemsToShow, setItemsToShow] = useState(getItemsToShow(width));
   const [members, setMembers] = useState([]);
 
-  const data = useStaticQuery(graphql`
-    query teamsQuery {
-      markdownRemark(frontmatter: { title: { eq: "Teams" } }) {
-        frontmatter {
-          members {
-            image {
-              childImageSharp {
-                gatsbyImageData(width: 375, height: 375, placeholder: BLURRED)
-              }
-            }
-            linkedin
-            major
-            name
-            position
-            personal
-            instagram
-            github
-          }
-          memberCount
-          directorCount
-          hackathonCount
-          workshopCount
-        }
-      }
-    }
-  `);
-
   useEffect(() => {
     const handleRandomize = () => {
-      const members = shuffleArray(data.markdownRemark.frontmatter.members);
+      const members = shuffleArray(data.members);
       setMembers(members);
     };
     handleRandomize();
@@ -191,20 +163,14 @@ const Teams = forwardRef((props, ref) => {
         <div className="flex flex-col md:flex-row">
           <div className="text-6xl lg:text-7xl text-center my-3 mx-5 lg:mx-7 font-bold">
             <h1 className="mb-0">
-              <CountUp
-                end={data.markdownRemark.frontmatter.workshopCount}
-                duration={10}
-              />
+              <CountUp end={data.workshopCount} duration={10} />
               <sup className="text-4xl"> + </sup>
             </h1>
             <p className="m-0 text-lg md:text-xl lg:text-2xl"> workshops</p>
           </div>
           <div className="text-6xl lg:text-7xl text-center my-3 mx-5 lg:mx-7 font-bold">
             <h1 className="mb-0">
-              <CountUp
-                end={data.markdownRemark.frontmatter.hackathonCount}
-                duration={10}
-              />
+              <CountUp end={data.hackathonCount} duration={10} />
             </h1>
             <p className="m-0 text-lg md:text-xl lg:text-2xl"> hackathons</p>
           </div>
@@ -212,10 +178,7 @@ const Teams = forwardRef((props, ref) => {
         <div className="flex flex-col md:flex-row">
           <div className="text-6xl lg:text-7xl text-center my-3 mx-5 lg:mx-7 font-bold">
             <h1 className="mb-0">
-              <CountUp
-                end={data.markdownRemark.frontmatter.memberCount}
-                duration={10}
-              />
+              <CountUp end={data.memberCount} duration={10} />
             </h1>
             <p className="m-0 text-lg md:text-xl lg:text-2xl">
               {" "}
@@ -224,10 +187,7 @@ const Teams = forwardRef((props, ref) => {
           </div>
           <div className="text-6xl lg:text-7xl text-center my-3 mx-5 lg:mx-7 font-bold">
             <h1 className="mb-0">
-              <CountUp
-                end={data.markdownRemark.frontmatter.directorCount}
-                duration={10}
-              />
+              <CountUp end={data.directorCount} duration={10} />
             </h1>
             <p className="m-0 text-lg md:text-xl lg:text-2xl">
               {" "}

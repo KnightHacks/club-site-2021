@@ -91,7 +91,7 @@ const IndexPage = ({ data }) => {
               </div>
             </div>
             <AboutUs ref={aboutUsRef}>
-              {data.markdownRemark.rawMarkdownBody}
+              {data.aboutUsData.rawMarkdownBody}
             </AboutUs>
             <div className="my-6" ref={eventsRef}>
               <h1 className="font-light flex justify-center text-gray-50 text-4xl mt-14 my-6 ml-6 lg:text-5xl">
@@ -101,7 +101,7 @@ const IndexPage = ({ data }) => {
                 <Event key={index} {...event} />
               ))}
             </div>
-            <Teams ref={teamsRef} />
+            <Teams ref={teamsRef} data={data.teamsData.frontmatter} />
             <div className="flex flex-col my-5 h-96" ref={contactUsRef}>
               <h1 className="font-light flex justify-center text-gray-50 text-4xl mt-24 my-5 lg:text-5xl">
                 Connect With Us
@@ -139,8 +139,30 @@ export const query = graphql`
         description
       }
     }
-    markdownRemark(frontmatter: { title: { eq: "About Us" } }) {
+    aboutUsData: markdownRemark(frontmatter: { title: { eq: "About Us" } }) {
       rawMarkdownBody
+    }
+    teamsData: markdownRemark(frontmatter: { title: { eq: "Teams" } }) {
+      frontmatter {
+        members {
+          image {
+            childImageSharp {
+              gatsbyImageData(width: 375, height: 375, placeholder: BLURRED)
+            }
+          }
+          linkedin
+          major
+          name
+          position
+          personal
+          instagram
+          github
+        }
+        memberCount
+        directorCount
+        hackathonCount
+        workshopCount
+      }
     }
   }
 `;
