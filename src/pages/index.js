@@ -71,13 +71,13 @@ const KHLogo = ({ subtitle, scrollAnchor, appBarRef }) => {
     <div className="relative h-screen flex justify-center">
       <div
         className={`
-                  mx-auto absolute align-baseline
-                  top-1/2 left-1/2 text-xl
-                  transform -translate-y-2/4 -translate-x-2/4
-                  sm:text-3xl
-                  md:text-4xl
-                  xl:text-5xl
-                `}
+          mx-auto absolute align-baseline
+          top-1/2 left-1/2 text-xl
+          transform -translate-y-2/4 -translate-x-2/4
+          sm:text-3xl
+          md:text-4xl
+          xl:text-5xl
+        `}
       >
         <img
           src={KnightHacksLogo}
