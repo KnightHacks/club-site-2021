@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { graphql } from "gatsby";
 import KnightHacksLogo from "../assets/logos/knightHacksLogoGold.svg";
 import Newsletter from "../components/newsletter.js";
-import Contacts from "../components/contacts.js";
+import { Contacts, SocialMediaIcon } from "../components/contacts.js";
 import Event from "../components/event.js";
 import { AppBar, AppBarLink } from "../components/appBar.js";
 import AboutUs from "../components/aboutUs.js";
@@ -14,6 +14,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import "./index.css";
 import FadeIn from "react-fade-in";
+import {
+  faFacebook,
+  faGithub,
+  faInstagram,
+  faTwitter,
+  faDiscord,
+} from "@fortawesome/free-brands-svg-icons";
 
 const allEvents = [
   {
@@ -108,7 +115,40 @@ const IndexPage = ({ data }) => {
               </h1>
               <div className="my-6 flex flex-col md:flex-row items-center justify-around w-full text-center h-full">
                 <Newsletter />
-                <Contacts />
+                <Contacts
+                  main={
+                    <SocialMediaIcon
+                      href="https://discord.gg/Kv5g9vf"
+                      icon={faDiscord}
+                      className="mb-8 text-4xl md:text-7xl lg:text-8xl hover:text-gray-500"
+                    />
+                  }
+                  email={
+                    <a
+                      href="mailto:team@knighthacks.org?subject=Let's%20talk.&body=Hey%20KnightHacks!"
+                      className="font-light text-2xl text-white no-underline hover:text-gray-600"
+                    >
+                      team@knighthacks.org
+                    </a>
+                  }
+                >
+                  <SocialMediaIcon
+                    href="https://github.com/KnightHacks"
+                    icon={faGithub}
+                  />
+                  <SocialMediaIcon
+                    href="https://www.instagram.com/knighthacks/"
+                    icon={faInstagram}
+                  />
+                  <SocialMediaIcon
+                    href="https://www.facebook.com/KnightHacks/"
+                    icon={faFacebook}
+                  />
+                  <SocialMediaIcon
+                    href="https://twitter.com/KnightHacks?lang=en/"
+                    icon={faTwitter}
+                  />
+                </Contacts>
               </div>
             </div>
           </FadeIn>
