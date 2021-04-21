@@ -5,6 +5,7 @@ import React, {
   useContext,
   useCallback,
   cloneElement,
+  forwardRef,
 } from "react";
 import { useScrollTrigger } from "@material-ui/core";
 import useWidth from "../useWidth";
@@ -56,7 +57,7 @@ const AppBarLink = ({
   );
 };
 
-const AppBar = ({ appBarRef, children }) => {
+const AppBar = forwardRef(({ children }, ref) => {
   const trigger = useScrollTrigger({
     disableHysteresis: true,
     threshold: 0,
@@ -74,15 +75,13 @@ const AppBar = ({ appBarRef, children }) => {
   const [isOpen, setIsOpen] = useState(false);
   const closeHamburger = useCallback(() => setIsOpen(false));
 
-  const HAMBURGER_HEIGHT = appBarRef.current
-    ? appBarRef.current.clientHeight * 4
-    : 0;
+  const HAMBURGER_HEIGHT = ref.current ? ref.current.clientHeight * 4 : 0;
 
   const scroll = (toRef) => {
     window.scrollTo({
       top:
         toRef.current.offsetTop -
-        appBarRef.current.clientHeight +
+        ref.current.clientHeight +
         (isOpen ? HAMBURGER_HEIGHT : 0),
       behavior: "smooth",
     });
@@ -104,7 +103,7 @@ const AppBar = ({ appBarRef, children }) => {
             ? "bg-KHnavbar transition ease-out duration-300"
             : "bg-transparent transition ease-out duration-300")
         }
-        ref={appBarRef}
+        ref={ref}
       >
         <div className="flex flex-row flex-nowrap overflow-hidden items-center justify-between xs:text-base sm:text-lg md:text-xl">
           <AppBarLink
@@ -152,6 +151,6 @@ const AppBar = ({ appBarRef, children }) => {
     </HamburgerOpenContext.Provider>,
     { elevation: trigger ? 10 : 0 }
   );
-};
+});
 
 export { AppBar, AppBarLink };

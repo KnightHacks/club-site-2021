@@ -18,7 +18,7 @@ const allEvents = [
   {
     title: "GBM and Project Showcase",
     description:
-    "To close the semester, come to our General Body Meeting. Students that participated in our project development program will showcase the projects they have been working on this past semester. After the showcase, the club's new officers will talk about tentative plans for the club and 2021 hackathon in the fall. Then, feel free to stay for game night. Play some games and hang out with your fellow Knight Hacks members. Also, there will be a surprise, so make sure to come!",
+      "To close the semester, come to our General Body Meeting. Students that participated in our project development program will showcase the projects they have been working on this past semester. After the showcase, the club's new officers will talk about tentative plans for the club and 2021 hackathon in the fall. Then, feel free to stay for game night. Play some games and hang out with your fellow Knight Hacks members. Also, there will be a surprise, so make sure to come!",
     time: "7:30 p.m.",
     location: "Zoom",
     date: "22",
@@ -40,7 +40,7 @@ const IndexPage = ({ data }) => {
       <div className="relative bg-KHblue">
         <Particles>
           <FadeIn transitionDuration={800}>
-            <AppBar ref={appBarRef} appBarRef={appBarRef}>
+            <AppBar ref={appBarRef}>
               <AppBarLink scrollAnchor={aboutUsRef}>About</AppBarLink>
               <AppBarLink scrollAnchor={eventsRef}>Events</AppBarLink>
               <AppBarLink scrollAnchor={teamsRef}>Team</AppBarLink>
