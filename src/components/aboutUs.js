@@ -1,14 +1,6 @@
 import React, { forwardRef } from "react";
-import { useStaticQuery, graphql } from "gatsby";
 
-const AboutUs = forwardRef((props, ref) => {
-  const data = useStaticQuery(graphql`
-    query aboutQuery {
-      markdownRemark(frontmatter: { title: { eq: "About Us" } }) {
-        rawMarkdownBody
-      }
-    }
-  `);
+const AboutUs = forwardRef(({ children }, ref) => {
   return (
     <div
       className="flex flex-col w-full text-center mt-14 mb-10 2xl:mb-24"
@@ -27,7 +19,7 @@ const AboutUs = forwardRef((props, ref) => {
           2xl:mx-40
         `}
       >
-        {data.markdownRemark.rawMarkdownBody}
+        {children}
       </p>
     </div>
   );

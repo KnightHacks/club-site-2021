@@ -90,7 +90,9 @@ const IndexPage = ({ data }) => {
                 />
               </div>
             </div>
-            <AboutUs ref={aboutUsRef} />
+            <AboutUs ref={aboutUsRef}>
+              {data.markdownRemark.rawMarkdownBody}
+            </AboutUs>
             <div className="my-6" ref={eventsRef}>
               <h1 className="font-light flex justify-center text-gray-50 text-4xl mt-14 my-6 ml-6 lg:text-5xl">
                 Upcoming Events
@@ -136,6 +138,9 @@ export const query = graphql`
       siteMetadata {
         description
       }
+    }
+    markdownRemark(frontmatter: { title: { eq: "About Us" } }) {
+      rawMarkdownBody
     }
   }
 `;
