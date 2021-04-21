@@ -1,7 +1,14 @@
 import React, { forwardRef } from "react";
-import { StaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 
 const AboutUs = forwardRef((props, ref) => {
+  const data = useStaticQuery(graphql`
+    query aboutQuery {
+      markdownRemark(frontmatter: { title: { eq: "About Us" } }) {
+        rawMarkdownBody
+      }
+    }
+  `);
   return (
     <div
       className="flex flex-col w-full text-center mt-14 mb-10 2xl:mb-24"
@@ -10,17 +17,8 @@ const AboutUs = forwardRef((props, ref) => {
       <h1 className="font-light flex justify-center text-gray-100 text-4xl my-5 ml-6 lg:text-5xl">
         About Us
       </h1>
-      <StaticQuery
-        query={graphql`
-          query aboutQuery {
-            markdownRemark(frontmatter: { title: { eq: "About Us" } }) {
-              rawMarkdownBody
-            }
-          }
-        `}
-        render={(data) => (
-          <p
-            className={`
+      <p
+        className={`
               text-gray-100 mx-8 text-xl leading-9
               sm:text-justify sm:mx-16
               md:mx-20
@@ -28,11 +26,9 @@ const AboutUs = forwardRef((props, ref) => {
               xl:text-2xl lg:mx-32 xl:leading-loose
               2xl:mx-40
             `}
-          >
-            {data.markdownRemark.rawMarkdownBody}
-          </p>
-        )}
-      />
+      >
+        {data.markdownRemark.rawMarkdownBody}
+      </p>
     </div>
   );
 });
