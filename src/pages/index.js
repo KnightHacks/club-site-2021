@@ -34,12 +34,8 @@ const IndexPage = ({ data }) => {
   return (
     <Wrappers>
       <title>Knight Hacks</title>
-      <AppBar
-        ref={appBarRef}
-        left={
-          <AppBarLink href="https://linktr.ee/knighthacks">Linktree</AppBarLink>
-        }
-      >
+      <AppBar ref={appBarRef}>
+        <AppBarLink href="https://linktr.ee/knighthacks">Linktree</AppBarLink>
         <AppBarLink scrollAnchor={aboutUsRef}>About</AppBarLink>
         <AppBarLink scrollAnchor={eventsRef}>Events</AppBarLink>
         <AppBarLink scrollAnchor={teamsRef}>Team</AppBarLink>

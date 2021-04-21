@@ -60,7 +60,10 @@ const AppBarLink = ({
   );
 };
 
-const AppBar = forwardRef(({ left, children }, ref) => {
+const AppBar = forwardRef(({ children }, ref) => {
+  const left = children[0];
+  const right = children.slice(1);
+
   const trigger = useScrollTrigger({
     disableHysteresis: true,
     threshold: 0,
@@ -79,7 +82,7 @@ const AppBar = forwardRef(({ left, children }, ref) => {
   const closeHamburger = useCallback(() => setIsOpen(false));
 
   const HAMBURGER_HEIGHT = ref.current
-    ? ref.current.clientHeight * children.length
+    ? ref.current.clientHeight * right.length
     : 0;
 
   const scroll = (toRef) => {
@@ -116,7 +119,7 @@ const AppBar = forwardRef(({ left, children }, ref) => {
                 className: left.props.className + " flex-auto text-left",
               })
             : left}
-          <div className={width > 700 ? "visible" : "hidden"}>{children}</div>
+          <div className={width > 700 ? "visible" : "hidden"}>{right}</div>
           <div
             className={
               width <= 700
@@ -145,7 +148,7 @@ const AppBar = forwardRef(({ left, children }, ref) => {
           }}
           className="overflow-hidden transition-all flex flex-col"
         >
-          {children.map((child, index) => {
+          {right.map((child, index) => {
             return cloneElement(child, {
               className: child.props.className + " text-left",
               key: index,
