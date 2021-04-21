@@ -1,9 +1,8 @@
 import React from "react";
 import Carousel from "react-elastic-carousel";
-import CountUp, { startAnimation } from "react-countup";
+import CountUp from "react-countup";
 import "./teams.css";
 import Card from "@material-ui/core/Card";
-import CardHeader from "@material-ui/core/CardHeader";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
