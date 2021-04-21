@@ -60,6 +60,15 @@ const AppBarLink = ({
   );
 };
 
+/**
+ * @desc This component creates an accessible navbar for the top of the screen
+ * that collapses to a hamburger menu and main item for smaller devices.
+ * <AppBarLink /> should be used for navbar items. The first link will be
+ * displayed on its own on the left. The remaining items will align to the
+ * right.
+ *
+ * @author Rob
+ */
 const AppBar = forwardRef(({ children }, ref) => {
   const left = children[0];
   const right = children.slice(1);
