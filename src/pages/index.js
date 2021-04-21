@@ -46,6 +46,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <StylesProvider injectFirst>
+      <title>Knight Hacks</title>
       <div className="relative bg-KHblue">
         <Particles>
           <FadeIn transitionDuration={800}>
@@ -62,7 +63,6 @@ const IndexPage = ({ data }) => {
               <AppBarLink scrollAnchor={teamsRef}>Team</AppBarLink>
               <AppBarLink scrollAnchor={contactUsRef}>Contact Us</AppBarLink>
             </AppBar>
-            <title>Knight Hacks</title>
             <div className="relative h-screen flex justify-center">
               <div
                 className={`
