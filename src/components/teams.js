@@ -241,4 +241,6 @@ const Teams = forwardRef((props, ref) => {
   );
 });
 
+Teams.displayName = "Teams";
+
 export default Teams;
