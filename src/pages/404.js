@@ -19,7 +19,11 @@ const NotFoundPage = () => {
           </h1>
           <Link
             to="/"
-            className="flex justify-center font-light text-sm text-gray-50 hover:text-gray-200"
+            className={`
+              flex justify-center font-light
+              text-sm text-gray-50
+              hover:text-gray-200
+              `}
           >
             Go Home
           </Link>

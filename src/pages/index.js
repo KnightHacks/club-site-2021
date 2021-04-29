@@ -84,7 +84,16 @@ const KHLogo = ({ subtitle, scrollAnchor, appBarRef }) => {
           className="w-full p-6"
           alt="Knight Hacks Logo"
         />
-        <h1 className="flex justify-center mt-3.5 whitespace-nowrap text-gray-50 font-light text-sm sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl w-full">
+        <h1
+          className={`
+          flex justify-center mt-3.5 whitespace-nowrap
+          text-gray-50 font-light text-sm w-full
+          sm:text-2xl
+          md:text-3xl
+          lg:text-5xl
+          xl:text-6xl
+          `}
+        >
           {subtitle}
         </h1>
       </div>
@@ -114,7 +123,13 @@ const CtaArrow = ({ scrollAnchor, appBarRef }) => {
 const Events = forwardRef((props, ref) => {
   return (
     <div className="my-6" ref={ref}>
-      <h1 className="font-light flex justify-center text-gray-50 text-4xl mt-14 my-6 ml-6 lg:text-5xl">
+      <h1
+        className={`
+        font-light flex justify-center
+        text-gray-50 text-4xl mt-14 my-6 ml-6
+        lg:text-5xl
+        `}
+      >
         Upcoming Events
       </h1>
       {allEvents.map((event, index) => (
@@ -129,10 +144,22 @@ Events.displayName = "Events";
 const ConnectWithUs = forwardRef((props, ref) => {
   return (
     <div className="flex flex-col my-5 h-96" ref={ref}>
-      <h1 className="font-light flex justify-center text-gray-50 text-4xl mt-24 my-5 lg:text-5xl">
+      <h1
+        className={`
+        font-light flex justify-center
+        text-gray-50 text-4xl mt-24 my-5
+        lg:text-5xl
+        `}
+      >
         Connect With Us
       </h1>
-      <div className="my-6 flex flex-col md:flex-row items-center justify-around w-full text-center h-full">
+      <div
+        className={`
+        flex flex-col w-full h-full
+        my-6 items-center justify-around text-center
+        md:flex-row
+        `}
+      >
         <Newsletter />
         <Contacts
           main={
@@ -140,13 +167,22 @@ const ConnectWithUs = forwardRef((props, ref) => {
               href="https://discord.gg/Kv5g9vf"
               icon={faDiscord}
               color="white"
-              className="mb-8 text-4xl md:text-7xl lg:text-8xl hover:text-gray-500"
+              className={`
+                mb-8 text-4xl
+                md:text-7xl
+                lg:text-8xl
+                hover:text-gray-500
+                `}
             />
           }
           email={
             <a
               href="mailto:team@knighthacks.org?subject=Let's%20talk.&body=Hey%20KnightHacks!"
-              className="font-light text-2xl text-white no-underline hover:text-gray-600"
+              className={`
+                text-2xl text-white
+                no-underline font-light
+                hover:text-gray-600
+                `}
             >
               team@knighthacks.org
             </a>
@@ -156,25 +192,45 @@ const ConnectWithUs = forwardRef((props, ref) => {
             href="https://github.com/KnightHacks"
             icon={faGithub}
             color="white"
-            className="text-4xl md:text-5xl lg:text-6xl hover:text-gray-500"
+            className={`
+              text-4xl
+              md:text-5xl
+              lg:text-6xl
+              hover:text-gray-500
+              `}
           />
           <SocialMediaIcon
             href="https://www.instagram.com/knighthacks/"
             icon={faInstagram}
             color="white"
-            className="text-4xl md:text-5xl lg:text-6xl hover:text-gray-500"
+            className={`
+              text-4xl
+              md:text-5xl
+              lg:text-6xl
+              hover:text-gray-500
+              `}
           />
           <SocialMediaIcon
             href="https://www.facebook.com/KnightHacks/"
             icon={faFacebook}
             color="white"
-            className="text-4xl md:text-5xl lg:text-6xl hover:text-gray-500"
+            className={`
+              text-4xl
+              md:text-5xl
+              lg:text-6xl
+              hover:text-gray-500
+              `}
           />
           <SocialMediaIcon
             href="https://twitter.com/KnightHacks?lang=en/"
             icon={faTwitter}
             color="white"
-            className="text-4xl md:text-5xl lg:text-6xl hover:text-gray-500"
+            className={`
+              text-4xl
+              md:text-5xl
+              lg:text-6xl
+              hover:text-gray-500
+              `}
           />
         </Contacts>
       </div>
