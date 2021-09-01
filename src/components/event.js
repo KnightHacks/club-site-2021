@@ -4,20 +4,19 @@ import AccordionDetails from "@material-ui/core/AccordionDetails";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
 import "./event.css";
 import ColorHash from "color-hash-ts";
+import dayjs from "dayjs";
 
 const hash = new ColorHash({ lightness: 0.8 });
 
-const Event = ({
-  title,
-  date,
-  month,
-  time,
-  presenter,
-  location,
-  description,
-  tags,
-}) => {
+const Event = ({ name, start, presenter, location, description, tags }) => {
   const [expanded, setExpanded] = useState(false);
+  const parsedStart = dayjs(start);
+
+  const month = parsedStart.format("MMM");
+  const day = parsedStart.format("D");
+  const time = parsedStart.format("h:mm a");
+
+  console.log({ name, start, presenter, location, description, tags });
 
   return (
     <div
@@ -36,9 +35,9 @@ const Event = ({
       >
         <AccordionSummary>
           <div className="flex items-center justify-between w-full">
-            <h1 className="font-regular text-xl xs:text-2xl px-1">{title}</h1>
+            <h1 className="font-regular text-xl xs:text-2xl px-1">{name}</h1>
             <span className="font-medium p-2 text-lg xs:text-2xl">
-              {date}
+              {day}
               <span className="font-regular ml-2 text-lg xs:text-2xl">
                 {month}
               </span>

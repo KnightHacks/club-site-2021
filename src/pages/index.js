@@ -1,4 +1,4 @@
-import React, { useRef, forwardRef } from "react";
+import React, { useRef, forwardRef, useEffect, useState } from "react";
 import { graphql } from "gatsby";
 import KnightHacksLogo from "../assets/logos/knightHacksLogoGold.svg";
 import Newsletter from "../components/newsletter.js";
@@ -22,7 +22,9 @@ import {
   faTwitter,
   faDiscord,
 } from "@fortawesome/free-brands-svg-icons";
-import allEvents from "../assets/json/events.json";
+import { API } from "@knighthacks/hackathon";
+
+const api = new API();
 
 const IndexPage = ({ data }) => {
   const appBarRef = useRef(null);
@@ -112,12 +114,21 @@ const CtaArrow = ({ scrollAnchor, appBarRef }) => {
 };
 
 const Events = forwardRef((props, ref) => {
+  const [events, setEvents] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      const clubEvents = await api.club.getEvents();
+      setEvents(clubEvents);
+    })();
+  }, []);
+
   return (
     <div className="my-6" ref={ref}>
       <h1 className="font-light flex justify-center text-gray-50 text-4xl mt-14 my-6 ml-6 lg:text-5xl">
         Upcoming Events
       </h1>
-      {allEvents.map((event, index) => (
+      {events.map((event, index) => (
         <Event key={index} {...event} />
       ))}
     </div>
