@@ -16,8 +16,6 @@ const Event = ({ name, start, presenter, location, description, tags }) => {
   const day = parsedStart.format("D");
   const time = parsedStart.format("h:mm a");
 
-  console.log({ name, start, presenter, location, description, tags });
-
   return (
     <div
       className={`
