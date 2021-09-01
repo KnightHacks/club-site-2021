@@ -126,7 +126,7 @@ members:
     },
   ]
 memberCount: 127
-directorCount: 24
+directorCount: 15
 hackathonCount: 4
 workshopCount: 50
 ---
