@@ -118,7 +118,11 @@ const Events = forwardRef((props, ref) => {
 
   useEffect(() => {
     (async () => {
-      const clubEvents = await api.club.getEvents();
+      const clubEvents = await api.club.getEvents({
+        rdate: "Today",
+        confirmed: true,
+        count: 10,
+      });
       setEvents(clubEvents);
     })();
   }, []);
