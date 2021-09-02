@@ -54,13 +54,13 @@ members:
       name: "Jasmine Moy",
       position: "Social Media Director",
       major: "Computer Science",
-      image: "../images/current/jasmine.jpg",
+      image: "../images/current/jasmine.jpeg",
     },
     {
       name: "Jenan Abas",
       position: "Outreach & Events Director",
       major: "Computer Science",
-      image: "../images/current/jenan.jpg",
+      image: "../images/current/jenan.jpeg",
     },
     {
       name: "Jonathan Dieu",
@@ -74,7 +74,7 @@ members:
       name: "Karan Patel",
       position: "Treasurer",
       major: "Computer Science",
-      image: "../images/current/karan.jpg",
+      image: "../images/current/karan.jpeg",
     },
     {
       name: "Melanie Ehrlich",
@@ -112,7 +112,7 @@ members:
       name: "Suneet Tipirneni",
       position: "Projects Co-Director",
       major: "Computer Science",
-      image: "../images/current/suneet.jpg",
+      image: "../images/current/suneet.jpeg",
       linkedin: "https://www.linkedin.com/in/suneettipirneni/",
       github: "https://github.com/suneettipirneni",
     },
