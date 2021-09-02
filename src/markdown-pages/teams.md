@@ -124,6 +124,14 @@ members:
       linkedin: "https://www.linkedin.com/in/victoria-n-williamson/",
       instagram: "https://www.instagram.com/victdub/",
     },
+    {
+      name: "Weiyi Chen",
+      position: "Sponsorship Director",
+      major: "Computer Science",
+      image: "../images/current/weiyi.jpeg",
+      linkedin: "https://www.linkedin.com/in/weiyi-chen-/",
+      instagram: "https://www.instagram.com/sophiecheenn/",
+    },
   ]
 memberCount: 127
 directorCount: 15
