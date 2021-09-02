@@ -1,10 +1,11 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, forwardRef, useEffect, useState } from "react";
 import { graphql } from "gatsby";
 import KnightHacksLogo from "../assets/logos/knightHacksLogoGold.svg";
 import Newsletter from "../components/newsletter.js";
 import Contacts from "../components/contacts.js";
+import SocialMediaIcon from "../components/socialMediaIcon.js";
 import Event from "../components/event.js";
-import AppBar from "../components/appBar.js";
+import { AppBar, AppBarLink } from "../components/appBar.js";
 import AboutUs from "../components/aboutUs.js";
 import Teams from "../components/teams.js";
 import { StylesProvider } from "@material-ui/core/styles";
@@ -13,6 +14,17 @@ import particles_config from "../particles-config";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import "./index.css";
+import FadeIn from "react-fade-in";
+import {
+  faFacebook,
+  faGithub,
+  faInstagram,
+  faTwitter,
+  faDiscord,
+} from "@fortawesome/free-brands-svg-icons";
+import { API } from "@knighthacks/hackathon";
+
+const api = new API();
 
 const months = [
   "Jan",
@@ -36,151 +48,171 @@ const IndexPage = ({ data }) => {
   const teamsRef = useRef(null);
   const contactUsRef = useRef(null);
 
-  const [allEvents, setAllEvents] = useState([]);
+  return (
+    <Wrappers>
+      <title>Knight Hacks</title>
+      <AppBar ref={appBarRef}>
+        <AppBarLink href="https://linktr.ee/knighthacks">Linktree</AppBarLink>
+        <AppBarLink scrollAnchor={aboutUsRef}>About</AppBarLink>
+        <AppBarLink scrollAnchor={eventsRef}>Events</AppBarLink>
+        <AppBarLink scrollAnchor={teamsRef}>Team</AppBarLink>
+        <AppBarLink scrollAnchor={contactUsRef}>Contact Us</AppBarLink>
+      </AppBar>
+      <KHLogo
+        subtitle={data.site.siteMetadata.description}
+        scrollAnchor={aboutUsRef}
+        appBarRef={appBarRef}
+      />
+      <AboutUs ref={aboutUsRef}>{data.aboutUsData.rawMarkdownBody}</AboutUs>
+      <Events ref={eventsRef} />
+      <Teams ref={teamsRef} data={data.teamsData.frontmatter} />
+      <ConnectWithUs ref={contactUsRef} />
+    </Wrappers>
+  );
+};
 
-  useEffect(() => {
-    const getEvents = async () => {
-      const blob = await fetch(
-        "https://api.knighthacks.org/api/club/get_events/?count=5&rdate=Today&confirmed=true"
-      );
-      const data = await blob.json();
-      const fixedData = data.events.map((event) => {
-        const date = new Date(event.date + ".000Z");
-        const day = date.getDate();
-        const month = months[date.getMonth()];
-        const time = date.toLocaleTimeString([], {
-          timeStyle: "short",
-        });
-        return {
-          ...event,
-          date: day,
-          month,
-          time: time,
-          location: "Zoom",
-        };
-      });
-      setAllEvents(fixedData);
-    };
-    getEvents();
-  }, []);
-
-  // const allEvents = [
-  //   {
-  //     title: "Unit Testing",
-  //     description:
-  //       "Everyone knows testing your code is important, but how can you do it? At this workshop, we'll talk about the motivations for testing, how to write tests, and how tests can greatly improve your codebase and workflow. We'll be using JavaScript and the Mocha.js testing framework, but the concepts will be applicable to any language. No experience required.",
-  //     time: "7:30 p.m.",
-  //     location: "Zoom",
-  //     date: "16",
-  //     month: "Mar",
-  //     tags: ["Hello World!"],
-  //     presenter: "Robert Boyd",
-  //   },
-  //   {
-  //     title: "Rust",
-  //     description:
-  //       'Rust has been the undisputed "most loved" programming language on the Stack Overflow Developer Survey for several years. Why? Come to this workshop and find out! Anthony will be returning to teach us the basics of Rust\'s unique memory management model and answer any questions about this innovative and promising new programming language.',
-  //     time: "7:30 p.m.",
-  //     location: "Zoom",
-  //     date: "18",
-  //     month: "Mar",
-  //     tags: [],
-  //     presenter: "Anthony Hevia",
-  //   },
-  //   {
-  //     title: "TypeScript",
-  //     description:
-  //       "Does JavaScript want to make you tear your hair out with errors like `undefined is not a function` and `name is not defined`? Do you miss Java features like `interface` and `enum`? Do you just like typing out the types of your variables? TypeScript might just be what you're looking for! In this workshop, we'll explore TypeScript, a popular compile-to-JS language with a surprisingly good static type system and some other cool features.",
-  //     time: "7:30 p.m.",
-  //     location: "Zoom",
-  //     date: "23",
-  //     month: "Mar",
-  //     tags: ["Hello World!"],
-  //     presenter: "Robert Boyd",
-  //   },
-  //   {
-  //     title: "Getting Into Grad School",
-  //     description: "",
-  //     time: "7:30 p.m.",
-  //     location: "Zoom",
-  //     date: "25",
-  //     month: "Mar",
-  //     tags: [],
-  //     presenter: "Irene Tanner",
-  //   },
-  // ];
+const Wrappers = ({ children }) => {
   return (
     <StylesProvider injectFirst>
-      <AppBar
-        ref={appBarRef}
-        appBarRef={appBarRef}
-        aboutUsRef={aboutUsRef}
-        eventsRef={eventsRef}
-        teamsRef={teamsRef}
-        contactUsRef={contactUsRef}
-      />
       <div className="relative bg-KHblue">
         <Particles>
-          <title>Knight Hacks</title>
-          <div className="relative h-screen">
-            <div
-              className={`
-              mx-auto absolute align-baseline
-              top-1/2 left-1/2 text-xl
-              transform -translate-y-2/4 -translate-x-2/4
-              sm:text-3xl
-              md:text-4xl
-              xl:text-5xl
-              `}
-            >
-              <img
-                src={KnightHacksLogo}
-                className="w-full p-6"
-                alt="Knight Hacks Logo"
-              />
-              <h1 className="flex justify-center mt-3.5 whitespace-nowrap text-gray-50 font-light">
-                {data.site.siteMetadata.description}
-              </h1>
-            </div>
-            <div className="flex absolute left-2/4 bottom-2 visible">
-              <FontAwesomeIcon
-                icon={faChevronDown}
-                className="cursor-pointer text-KHgold text-5xl xs:text-4xl sm:text-5xl md:text-6xl"
-                onClick={() =>
-                  window.scrollTo({
-                    top:
-                      aboutUsRef.current.offsetTop -
-                      appBarRef.current.clientHeight,
-                    behavior: "smooth",
-                  })
-                }
-              />
-            </div>
-          </div>
-          <AboutUs ref={aboutUsRef} />
-          <div className="my-6" ref={eventsRef}>
-            <h1 className="font-light flex justify-center text-gray-50 text-4xl my-5 ml-6 lg:text-5xl">
-              Upcoming Events
-            </h1>
-            {allEvents.map((event, index) => (
-              <Event key={index} {...event} />
-            ))}
-          </div>
-          <Teams ref={teamsRef} />
-          <div className="flex flex-col my-5" ref={contactUsRef}>
-            <h1 className="font-light flex justify-center text-gray-50 text-4xl my-5 ml-6 lg:text-5xl">
-              Connect With Us
-            </h1>
-            <div className="flex flex-col md:flex-row items-center justify-around w-full text-center">
-              <Newsletter />
-              <Contacts />
-            </div>
-          </div>
+          <FadeIn transitionDuration={800}>{children}</FadeIn>
         </Particles>
       </div>
     </StylesProvider>
   );
 };
+
+const KHLogo = ({ subtitle, scrollAnchor, appBarRef }) => {
+  return (
+    <div className="relative h-screen flex justify-center">
+      <div
+        className={`
+          mx-auto absolute align-baseline
+          top-1/2 left-1/2 text-xl
+          transform -translate-y-2/4 -translate-x-2/4
+          sm:text-3xl
+          md:text-4xl
+          xl:text-5xl
+        `}
+      >
+        <img
+          src={KnightHacksLogo}
+          className="w-full p-6"
+          alt="Knight Hacks Logo"
+        />
+        <h1 className="flex justify-center mt-3.5 whitespace-nowrap text-gray-50 font-light text-sm sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl w-full">
+          {subtitle}
+        </h1>
+      </div>
+      <CtaArrow scrollAnchor={scrollAnchor} appBarRef={appBarRef} />
+    </div>
+  );
+};
+
+const CtaArrow = ({ scrollAnchor, appBarRef }) => {
+  return (
+    <div className="flex w-full justify-center absolute bottom-0">
+      <FontAwesomeIcon
+        icon={faChevronDown}
+        className="cursor-pointer text-KHgold text-5xl md:text-7xl w-12 md:w-32"
+        onClick={() =>
+          window.scrollTo({
+            top:
+              scrollAnchor.current.offsetTop - appBarRef.current.clientHeight,
+            behavior: "smooth",
+          })
+        }
+      />
+    </div>
+  );
+};
+
+const Events = forwardRef((props, ref) => {
+  const [events, setEvents] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      const clubEvents = await api.club.getEvents({
+        rdate: "Today",
+        confirmed: true,
+        count: 10,
+      });
+      setEvents(clubEvents);
+    })();
+  }, []);
+
+  return (
+    <div className="my-6" ref={ref}>
+      <h1 className="font-light flex justify-center text-gray-50 text-4xl mt-14 my-6 ml-6 lg:text-5xl">
+        Upcoming Events
+      </h1>
+      {events.map((event, index) => (
+        <Event key={index} {...event} />
+      ))}
+    </div>
+  );
+});
+
+Events.displayName = "Events";
+
+const ConnectWithUs = forwardRef((props, ref) => {
+  return (
+    <div className="flex flex-col my-5 h-96" ref={ref}>
+      <h1 className="font-light flex justify-center text-gray-50 text-4xl mt-24 my-5 lg:text-5xl">
+        Connect With Us
+      </h1>
+      <div className="my-6 flex flex-col md:flex-row items-center justify-around w-full text-center h-full">
+        <Newsletter />
+        <Contacts
+          main={
+            <SocialMediaIcon
+              href="https://discord.gg/Kv5g9vf"
+              icon={faDiscord}
+              color="white"
+              className="mb-8 text-4xl md:text-7xl lg:text-8xl hover:text-gray-500"
+            />
+          }
+          email={
+            <a
+              href="mailto:team@knighthacks.org?subject=Let's%20talk.&body=Hey%20KnightHacks!"
+              className="font-light text-2xl text-white no-underline hover:text-gray-600"
+            >
+              team@knighthacks.org
+            </a>
+          }
+        >
+          <SocialMediaIcon
+            href="https://github.com/KnightHacks"
+            icon={faGithub}
+            color="white"
+            className="text-4xl md:text-5xl lg:text-6xl hover:text-gray-500"
+          />
+          <SocialMediaIcon
+            href="https://www.instagram.com/knighthacks/"
+            icon={faInstagram}
+            color="white"
+            className="text-4xl md:text-5xl lg:text-6xl hover:text-gray-500"
+          />
+          <SocialMediaIcon
+            href="https://www.facebook.com/KnightHacks/"
+            icon={faFacebook}
+            color="white"
+            className="text-4xl md:text-5xl lg:text-6xl hover:text-gray-500"
+          />
+          <SocialMediaIcon
+            href="https://twitter.com/KnightHacks?lang=en/"
+            icon={faTwitter}
+            color="white"
+            className="text-4xl md:text-5xl lg:text-6xl hover:text-gray-500"
+          />
+        </Contacts>
+      </div>
+    </div>
+  );
+});
+
+ConnectWithUs.displayName = "ConnectWithUs";
 
 const Particles = ({ children }) => {
   return (
@@ -201,6 +233,31 @@ export const query = graphql`
     site {
       siteMetadata {
         description
+      }
+    }
+    aboutUsData: markdownRemark(frontmatter: { title: { eq: "About Us" } }) {
+      rawMarkdownBody
+    }
+    teamsData: markdownRemark(frontmatter: { title: { eq: "Teams" } }) {
+      frontmatter {
+        members {
+          image {
+            childImageSharp {
+              gatsbyImageData(width: 375, height: 375, placeholder: BLURRED)
+            }
+          }
+          linkedin
+          major
+          name
+          position
+          personal
+          instagram
+          github
+        }
+        memberCount
+        directorCount
+        hackathonCount
+        workshopCount
       }
     }
   }

@@ -17,5 +17,7 @@ redirects:
     "ops": "https://ucf.zoom.us/j/98281000067?pwd=TzNWRTdmMmc2TUk4MElSREhLRGp1UT09",
     "feedback": "https://forms.gle/EfMQnpxb6SefA4tH7",
     "vote": "https://forms.gle/KaefRH5FZuX3kZ789",
+    "qr": "https://discord.gg/Kv5g9vf",
+	"youtube": "https://www.youtube.com/channel/UC_i6HblrGGeNdmKd1QbKlKg",
   }
 ---

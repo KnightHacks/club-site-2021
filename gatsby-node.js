@@ -22,6 +22,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             feedback
             facebook
             dues
+            qr
+            youtube
           }
         }
       }
