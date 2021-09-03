@@ -56,13 +56,22 @@ const IndexPage = ({ data }) => {
 
 const Wrappers = ({ children }) => {
   return (
-    <StylesProvider injectFirst>
-      <div className="relative bg-KHblue">
-        <Particles>
+    <AnimatedHue
+      style={{
+        display: "flex",
+        height: "100%",
+        width: "100%",
+      }}
+    >
+      <StylesProvider injectFirst>
+        <div>
+          {children}
+          {/* <Particles>
           <FadeIn transitionDuration={800}>{children}</FadeIn>
-        </Particles>
-      </div>
-    </StylesProvider>
+        </Particles> */}
+        </div>
+      </StylesProvider>
+    </AnimatedHue>
   );
 };
 
