@@ -9,12 +9,10 @@ import { AppBar, AppBarLink } from "../components/appBar.js";
 import AboutUs from "../components/aboutUs.js";
 import Teams from "../components/teams.js";
 import { StylesProvider } from "@material-ui/core/styles";
-import ReactParticles from "react-particles-js";
-import particles_config from "../particles-config";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import AnimatedHue from "../components/animatedHue";
 import "./index.css";
-import FadeIn from "react-fade-in";
 import {
   faFacebook,
   faGithub,
@@ -192,20 +190,6 @@ const ConnectWithUs = forwardRef((props, ref) => {
 });
 
 ConnectWithUs.displayName = "ConnectWithUs";
-
-const Particles = ({ children }) => {
-  return (
-    <div className="absolute w-full">
-      <ReactParticles
-        params={particles_config}
-        className="fixed top-0 left-0"
-        width="100vw"
-        height="100vh"
-      />
-      {children && <div className="relative">{children}</div>}
-    </div>
-  );
-};
 
 export const query = graphql`
   query MyQuery {
