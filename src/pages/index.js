@@ -26,21 +26,6 @@ import { API } from "@knighthacks/hackathon";
 
 const api = new API();
 
-const months = [
-  "Jan",
-  "Feb",
-  "Mar",
-  "Apr",
-  "May",
-  "Jun",
-  "Jul",
-  "Aug",
-  "Sep",
-  "Oct",
-  "Nov",
-  "Dec",
-];
-
 const IndexPage = ({ data }) => {
   const appBarRef = useRef(null);
   const aboutUsRef = useRef(null);
