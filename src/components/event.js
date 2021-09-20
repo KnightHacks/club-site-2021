@@ -12,6 +12,8 @@ const Event = ({ name, start, presenter, location, description, tags }) => {
   const [expanded, setExpanded] = useState(false);
   const parsedStart = dayjs(start);
 
+  console.log({ name, start, presenter, location, description, tags });
+
   const month = parsedStart.format("MMM");
   const day = parsedStart.format("D");
   const time = parsedStart.format("h:mm a");
@@ -43,7 +45,9 @@ const Event = ({ name, start, presenter, location, description, tags }) => {
         <AccordionDetails onClick={() => setExpanded(!expanded)}>
           <div className="ContentContainer w-full">
             <div className="flex mb-3 flex-col xs:justify-between xs:flex-row">
-              <p className="px-2 text-black text-sm xs:text-xl">{presenter}</p>
+              <p className="px-2 text-black text-sm xs:text-xl">
+                {presenter.name}
+              </p>
               <p className="px-2 text-sm xs:text-xl text-black">
                 {time} |
                 <a
