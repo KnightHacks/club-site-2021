@@ -124,7 +124,6 @@ const Events = forwardRef((props, ref) => {
   //       confirmed: true,
   //       count: 10,
   //     });
-
   //     setEvents(clubEvents);
   //   })();
   // }, []);
