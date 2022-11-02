@@ -111,7 +111,7 @@ members:
       position: "Sponsorship Director",
       major: "Computer Science",
       image: "../images/current/yasminie.jpg",
-      linkedin: "www.linkedin.com/in/yasminie-sahadeo"
+      linkedin: "https://www.linkedin.com/in/yasminie-sahadeo"
     },
     {
       name: "Yousef Osman",
@@ -146,20 +146,20 @@ members:
       position: "Data Team Lead",
       major: "Computer Science",
       image: "../images/current/clayton.jpg",
-      linkedin: "https://www.linkedin.com/in/mark-bruckert/"
+      linkedin: "https://www.linkedin.com/in/clayton-monfils-9a6126220/"
     },
     {
       name: "Daisy Nguyen",
-      position: "Social Media Team Member",
+      position: "Sponsorship Team Member",
       major: "Computer Science",
       image: "../images/current/daisy.jpg",
-      linkedin: "https://www.linkedin.com/in/mark-bruckert/"
+      linkedin: "https://www.linkedin.com/in/nguyen-daisy/"
     },
     {
       name: "Fridjinah Francois",
       position: "Social Media Team Member",
       major: "Computer Science",
-      image: "../images/current/nopic.jpg",
+      image: "../images/current/fridjinah.jpg",
     },
     {
       name: "Jasmine Moy",
@@ -180,8 +180,16 @@ members:
       position: "Social Media Team Member",
       major: "Computer Science",
       image: "../images/current/victoria.jpg",
-      linkedin: "www.linkedin.com/in/victoriaoppel"
+      linkedin: "https://www.linkedin.com/in/victoriaoppel"
     },
+    {
+      name: "Melanie Ehrlich",
+      position: "Communications Director",
+      major: "Computer Science",
+      image: "../images/current/melaniee.jpg", 
+      linkedin: "https://www.linkedin.com/in/melanie-ehrlich/",
+      website: "https://melaniee.dev/"
+    }
   ]
 memberCount: 127
 directorCount: 15
