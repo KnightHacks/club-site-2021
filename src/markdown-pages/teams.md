@@ -3,135 +3,193 @@ title: "Teams"
 members:
   [
     {
-      name: "Aileen Pongnon",
-      position: "Secretary",
-      major: "Computer Science",
-      image: "../images/current/aileen.jpg",
-    },
-    {
-      name: "Arjun Pherwani",
-      position: "Development Director",
-      major: "Computer Science",
-      image: "../images/current/Arjun.jpeg",
-      linkedin: "https://www.linkedin.com/in/arjun-pherwani/",
-      github: "https://www.github.com/APherwani",
-    },
-    {
-      name: "Avery Reyna",
-      position: "Workshops Director",
-      major: "Social Sciences",
-      image: "../images/current/avery.jpeg",
-    },
-    {
-      name: "Cydni Turner",
-      position: "Mentorship Co-Director",
-      major: "Computer Science",
-      image: "../images/current/Cydni.jpeg",
-    },
-    {
-      name: "Eli Smith",
-      position: "Projects Co-Director",
-      major: "Computer Science",
-      image: "../images/current/eli.jpg",
-      linkedin: "https://www.linkedin.com/in/elijahmsmith/",
-      github: "https://github.com/ElijahMSmith?tab=repositories",
-    },
-    {
-      name: "Fridjinah Francois",
-      position: "Mentorship Co-Director",
-      major: "Mathematics",
-      image: "../images/current/Fridjinah.jpg",
-    },
-    {
-      name: "Harold Padilla",
+      name: "Elijah Smith",
       position: "President",
-      major: "Information Technology",
-      image: "../images/current/harold.jpg",
-      linkedin: "https://www.linkedin.com/in/harold-padilla/",
-      instagram: "https://www.instagram.com/that_big_music_nerd/",
-    },
-    {
-      name: "Jasmine Moy",
-      position: "Social Media Director",
       major: "Computer Science",
-      image: "../images/current/jasmine.jpeg",
+      image: "../images/current/elijah.jpg",
+      linkedin: "https://linkedin.com/in/elijahmsmith"
     },
     {
-      name: "Jenan Abas",
-      position: "Outreach & Events Director",
-      major: "Computer Science",
-      image: "../images/current/jenan.jpeg",
-    },
-    {
-      name: "Jonathan Dieu",
-      position: "Finance Director",
-      major: "Computer Science",
-      image: "../images/current/jon.png",
-      linkedin: "https://www.linkedin.com/in/jonathan-h-dieu/",
-      instagram: "https://www.instagram.com/jonnydieuski/",
-    },
-    {
-      name: "Karan Patel",
-      position: "Treasurer",
-      major: "Computer Science",
-      image: "../images/current/karan.jpeg",
-    },
-    {
-      name: "Melanie Ehrlich",
-      position: "Communications Director",
-      major: "Computer Science",
-      image: "../images/current/melanie.jpeg",
-      linkedin: "https://www.linkedin.com/in/melanie-ehrlich",
-      instagram: "https://instagram.com/melaniie.exe",
-      github: "https://github.com/mel4ni3",
-      personal: "https://mel4ni3.github.io/",
-    },
-    {
-      name: "Nicholas Yardich",
-      position: "Logistics Director",
-      major: "Computer Science",
-      image: "../images/current/nicholas.png",
-      linkedin: "https://www.linkedin.com/in/nyardich/",
-    },
-    {
-      name: "Robert Boyd",
+      name: "Geela Margo Ramos",
       position: "Vice President",
       major: "Computer Science",
-      image: "../images/current/rob.jpg",
-      linkedin: "https://www.linkedin.com/in/robertboyd3",
-      github: "https://github.com/rob-3",
+      image: "../images/current/geela.jpg",
+      linkedin: "https://www.linkedin.com/in/geela-margo-ramos-330929190/"
+    },
+    {
+      name: "Rachel Biesiedzinski",
+      position: "Secretary",
+      major: "Computer Science",
+      image: "../images/current/nopic.jpg",
+    },
+    {
+      name: "Anisha Ranjan",
+      position: "Communications Director",
+      major: "Computer Science",
+      image: "../images/current/anisha.jpg",
+      linkedin: "https://www.linkedin.com/in/anisha-ranjan"
+    },
+    {
+      name: "Christian Vasquez",
+      position: "Mentorship Director",
+      major: "Computer Science",
+      image: "../images/current/christian.jpg",
+      linkedin: "https://www.linkedin.com/in/christian-vasquez-a82236202"
+    },
+    {
+      name: "Christopher Onyiuke",
+      position: "Lead Hackathon Organizer",
+      major: "Computer Science",
+      image: "../images/current/chris.jpg",
+      linkedin: "https://www.linkedin.com/in/christopheronyiuke/"
+    },
+    {
+      name: "DeNiro Dumas",
+      position: "Workshops Director",
+      major: "Computer Science",
+      image: "../images/current/deniro.jpg",
+      linkedin: "https://www.linkedin.com/in/deniro-dumas-7b57491ba/"
+    },
+    {
+      name: "Maggie LaFratta",
+      position: "Logistics Director",
+      major: "Computer Science",
+      image: "../images/current/maggie.jpg",
+      linkedin: "https://www.linkedin.com/in/maggie-lafratta-7a3aaa1a8/"
+    },
+    {
+      name: "Melanie Prado",
+      position: "Outreach Director",
+      major: "Computer Science",
+      image: "../images/current/melanie.jpg",
+      linkedin: "https://www.linkedin.com/in/melanie-prado-035275231"
+    },
+    {
+      name: "Nicole Vall",
+      position: "Mentorship Director",
+      major: "Computer Science",
+      image: "../images/current/nicole.jpg",
+      linkedin: "https://www.linkedin.com/in/nicolevall/"
     },
     {
       name: "Sabrina Lopez",
       position: "Design Director",
       major: "Computer Science",
       image: "../images/current/sabrina.jpg",
-      linkedin: "https://www.linkedin.com/in/sabrina-lopez015/",
+      linkedin: "https://www.linkedin.com/in/sabrina-lopez015/"
     },
     {
-      name: "Suneet Tipirneni",
-      position: "Projects Co-Director",
+      name: "Sachin Shenoy",
+      position: "Finance Director",
       major: "Computer Science",
-      image: "../images/current/suneet.jpeg",
-      linkedin: "https://www.linkedin.com/in/suneettipirneni/",
-      github: "https://github.com/suneettipirneni",
+      image: "../images/current/sachin.jpg",
+      linkedin: "www.linkedin.com/in/sachin-shenoy-a818291b4"
     },
     {
-      name: "Victoria Williamson",
-      position: "Lead Hackathon Organizer",
-      major: "Computer Science and Statistics ",
-      image: "../images/current/victoria.png",
-      linkedin: "https://www.linkedin.com/in/victoria-n-williamson/",
-      instagram: "https://www.instagram.com/victdub/",
+      name: "Stanley Pierre",
+      position: "Projects Director",
+      major: "Computer Science",
+      image: "../images/current/stanley.jpg",
+      linkedin: "https://www.linkedin.com/in/stanley-pierre/"
     },
     {
-      name: "Weiyi Chen",
+      name: "Tim Yang",
+      position: "Projects Director",
+      major: "Computer Science",
+      image: "../images/current/tim.jpg",
+      linkedin: "https://www.linkedin.com/in/tim-yang-49258b18b/"
+    },
+    {
+      name: "Vi Dang",
+      position: "Design Director",
+      major: "Computer Science",
+      image: "../images/current/vi.jpg",
+      linkedin: "https://www.linkedin.com/in/vidaang/"
+    },
+    {
+      name: "Yasminie Sahadeo",
       position: "Sponsorship Director",
       major: "Computer Science",
-      image: "../images/current/weiyi.jpeg",
-      linkedin: "https://www.linkedin.com/in/weiyi-chen-/",
-      instagram: "https://www.instagram.com/sophiecheenn/",
+      image: "../images/current/yasminie.jpg",
+      linkedin: "https://www.linkedin.com/in/yasminie-sahadeo"
     },
+    {
+      name: "Yousef Osman",
+      position: "Hacker Experience Director",
+      major: "Computer Science",
+      image: "../images/current/yousef.jpg",
+      linkedin: "https://www.linkedin.com/in/yousef-osman-517157208"
+    },
+    {
+      name: "Mark Bruckert",
+      position: "Frontend Development Team Lead",
+      major: "Computer Science",
+      image: "../images/current/mark.jpg",
+      linkedin: "https://www.linkedin.com/in/mark-bruckert/"
+    },
+    {
+      name: "Vedant Ghate",
+      position: "Frontend Development Team Lead",
+      major: "Computer Science",
+      image: "../images/current/vedant.jpg",
+      linkedin: "https://www.linkedin.com/in/ghatevedant/"
+    },
+    {
+      name: "Warren Snipes",
+      position: "Backend Development Team Lead",
+      major: "Computer Science",
+      image: "../images/current/nopic.jpg",
+      linkedin: "https://www.linkedin.com/in/warren-snipes/"
+    },
+    {
+      name: "Clayton Monfils",
+      position: "Data Team Lead",
+      major: "Computer Science",
+      image: "../images/current/clayton.jpg",
+      linkedin: "https://www.linkedin.com/in/clayton-monfils-9a6126220/"
+    },
+    {
+      name: "Daisy Nguyen",
+      position: "Sponsorship Team Member",
+      major: "Computer Science",
+      image: "../images/current/daisy.jpg",
+      linkedin: "https://www.linkedin.com/in/nguyen-daisy/"
+    },
+    {
+      name: "Fridjinah Francois",
+      position: "Social Media Team Member",
+      major: "Computer Science",
+      image: "../images/current/fridjinah.jpg",
+    },
+    {
+      name: "Jasmine Moy",
+      position: "Social Media Coordinator",
+      major: "Computer Science",
+      image: "../images/current/jasmine.jpg",
+      linkedin: "https://www.linkedin.com/in/jasmine-moy/"
+    },
+    {
+      name: "Martin McCarthy",
+      position: "Social Media Team Member",
+      major: "Computer Science",
+      image: "../images/current/martin.jpg",
+      linkedin: "https://www.linkedin.com/in/martin-mccarthy-682b431b3/"
+    },
+    {
+      name: "Victoria Oppel",
+      position: "Social Media Team Member",
+      major: "Computer Science",
+      image: "../images/current/victoria.jpg",
+      linkedin: "https://www.linkedin.com/in/victoriaoppel"
+    },
+    {
+      name: "Melanie Ehrlich",
+      position: "Communications Director",
+      major: "Computer Science",
+      image: "../images/current/melaniee.jpg", 
+      linkedin: "https://www.linkedin.com/in/melanie-ehrlich/",
+      website: "https://melaniee.dev/"
+    }
   ]
 memberCount: 127
 directorCount: 15

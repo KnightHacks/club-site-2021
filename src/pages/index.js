@@ -21,6 +21,7 @@ import {
   faInstagram,
   faTwitter,
   faDiscord,
+  faTiktok,
 } from "@fortawesome/free-brands-svg-icons";
 import { API } from "@knighthacks/hackathon";
 
@@ -39,7 +40,7 @@ const IndexPage = ({ data }) => {
       <AppBar ref={appBarRef}>
         <AppBarLink href="https://linktr.ee/knighthacks">Linktree</AppBarLink>
         <AppBarLink scrollAnchor={aboutUsRef}>About</AppBarLink>
-        <AppBarLink scrollAnchor={eventsRef}>Events</AppBarLink>
+        {/* <AppBarLink scrollAnchor={eventsRef}>Events</AppBarLink> */}
         <AppBarLink scrollAnchor={teamsRef}>Team</AppBarLink>
         <AppBarLink scrollAnchor={contactUsRef}>Contact Us</AppBarLink>
       </AppBar>
@@ -116,26 +117,25 @@ const CtaArrow = ({ scrollAnchor, appBarRef }) => {
 const Events = forwardRef((props, ref) => {
   const [events, setEvents] = useState([]);
 
-  useEffect(() => {
-    (async () => {
-      const clubEvents = await api.club.getEvents({
-        rdate: "Today",
-        confirmed: true,
-        count: 5,
-      });
-
-      setEvents(clubEvents);
-    })();
-  }, []);
+  // useEffect(() => {
+  //   (async () => {
+  //     const clubEvents = await api.club.getEvents({
+  //       rdate: "Today",
+  //       confirmed: true,
+  //       count: 10,
+  //     });
+  //     setEvents(clubEvents);
+  //   })();
+  // }, []);
 
   return (
     <div className="my-6" ref={ref}>
-      <h1 className="font-light flex justify-center text-gray-50 text-4xl mt-14 my-6 ml-6 lg:text-5xl">
+      {/* <h1 className="font-light flex justify-center text-gray-50 text-4xl mt-14 my-6 ml-6 lg:text-5xl">
         Upcoming Events
       </h1>
       {events.map((event, index) => (
         <Event key={index} {...event} />
-      ))}
+      ))} */}
     </div>
   );
 });
@@ -192,6 +192,12 @@ const ConnectWithUs = forwardRef((props, ref) => {
             color="white"
             className="text-4xl md:text-5xl lg:text-6xl hover:text-gray-500"
           />
+          <SocialMediaIcon
+            href="https://www.tiktok.com/@knight.hacks"
+            icon={faTiktok}
+            color="white"
+            className="text-4xl md:text-5xl lg:text-6xl hover:text-gray-500"
+          />
         </Contacts>
       </div>
     </div>
@@ -236,9 +242,6 @@ export const query = graphql`
           major
           name
           position
-          personal
-          instagram
-          github
         }
         memberCount
         directorCount
