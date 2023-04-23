@@ -1,5 +1,5 @@
 <h1 align="center">
-  Knight Hacks Club Site 2021
+  Knight Hacks Club Site
 </h1>
 
 ## Installation
